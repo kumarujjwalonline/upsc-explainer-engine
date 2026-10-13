@@ -98,3 +98,14 @@ n8n edits the job file in `jobs/` when you ask for changes on WhatsApp, then re-
 ## Pauses
 
 `[pause]` inside a narration line marks the end of one sentence and the start of the next. The voice step records the parts separately and joins them with exactly 0.75 s of silence (`LINE_GAP`); the tag is never sent to ElevenLabs. Every line is also followed by 0.75 s of silence in the video and the voice sample.
+
+## Publishing a finished video (Drive upload → YouTube)
+
+Videos made outside this engine are published by `.github/workflows/publish.yml`, run by the
+n8n workflow "UPSC Video Publisher" when a video lands in the Drive folder
+"Upsc Explainers - Upload Final Videos":
+
+1. `analyze`: `scripts/publish_analyze.py` transcribes the video (faster-whisper) and makes a numbered frame sheet.
+2. Claude (in n8n) writes the title, description with chapters, tags, the Shorts plan (one per section) and the thumbnail text.
+3. `cut`: `scripts/publish_cut.py` cuts the 9:16 Shorts with a hook banner and draws the 1280x720 thumbnail.
+4. n8n uploads the long video to YouTube as private with the thumbnail and queues the Shorts a few hours apart.

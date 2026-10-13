@@ -1,0 +1,109 @@
+name: Publish finished video
+
+# Triggered by n8n when Ujjwal drops a finished video into the Drive upload folder.
+# analyze: transcript + frame sheet, so Claude can plan the Shorts, title and thumbnail.
+# cut: cuts the Shorts and draws the thumbnail from Claude's plan.
+# Free on public repos. Outputs go to a GitHub Release, and n8n is called back with the links.
+on:
+  workflow_dispatch:
+    inputs:
+      job_id:
+        description: "Name for this video (letters, digits, dashes)"
+        required: true
+      mode:
+        type: choice
+        options: [analyze, cut]
+        default: analyze
+      video_url:
+        description: "Download link of the finished video"
+        required: true
+      plan:
+        description: "cut only: JSON plan from Claude (shorts and thumbnail)"
+        required: false
+        default: ""
+      callback_url:
+        description: "n8n webhook to call when done"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      TAG: publish-${{ inputs.job_id }}-${{ inputs.mode }}-${{ github.run_number }}
+      RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-noto-core > /dev/null
+          pip install --quiet pillow ${{ inputs.mode == 'analyze' && 'faster-whisper' || '' }}
+
+      - name: Restore speech model
+        if: inputs.mode == 'analyze'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: whisper-large-v3-turbo-v1
+
+      - name: Download video
+        env:
+          VIDEO_URL: ${{ inputs.video_url }}
+        run: |
+          mkdir -p out
+          curl -sSL --fail --retry 3 -o video.mp4 "$VIDEO_URL"
+          ffprobe -v error -show_entries format=duration -of csv=p=0 video.mp4
+
+      - name: Transcribe and frame sheet
+        if: inputs.mode == 'analyze'
+        run: python3 scripts/publish_analyze.py video.mp4 out
+
+      - name: Cut Shorts and thumbnail
+        if: inputs.mode == 'cut'
+        env:
+          PLAN: ${{ inputs.plan }}
+        run: |
+          printf '%s' "$PLAN" > plan.json
+          python3 scripts/publish_cut.py video.mp4 plan.json out
+
+      - name: Publish files
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          JOB_ID: ${{ inputs.job_id }}
+          MODE: ${{ inputs.mode }}
+        run: |
+          cd out
+          shopt -s nullglob
+          files=(*.mp4 *.jpg *.json)
+          gh release create "$TAG" --title "${{ inputs.job_id }} (${{ inputs.mode }})" --notes "Made by $RUN_URL" --prerelease "${files[@]}"
+          base="https://github.com/${{ github.repository }}/releases/download/$TAG"
+          python3 - "$base" <<'PY'
+          import json, os, sys, glob
+          base = sys.argv[1]
+          out = {"job_id": os.environ.get("JOB_ID"), "mode": os.environ.get("MODE"), "status": "done", "run": os.environ["RUN_URL"]}
+          if os.path.exists("transcript.json"):
+              out["transcript"] = json.load(open("transcript.json"))
+              out["frames"] = base + "/frames.jpg"
+          out["shorts"] = [{"id": os.path.basename(f)[:-4], "url": base + "/" + os.path.basename(f)} for f in sorted(glob.glob("*.mp4"))]
+          if os.path.exists("thumbnail.jpg"):
+              out["thumbnail"] = base + "/thumbnail.jpg"
+          json.dump(out, open("../result.json", "w"), ensure_ascii=False)
+          PY
+
+      - name: Tell n8n
+        if: success() && inputs.callback_url != ''
+        run: |
+          curl -sS -X POST -H 'Content-Type: application/json' --data @result.json "${{ inputs.callback_url }}"
+
+      - name: Tell n8n about a failure
+        if: failure() && inputs.callback_url != ''
+        run: |
+          curl -sS -X POST -H 'Content-Type: application/json' \
+            --data "{\"job_id\":\"${{ inputs.job_id }}\",\"mode\":\"${{ inputs.mode }}\",\"status\":\"failed\",\"run\":\"$RUN_URL\"}" \
+            "${{ inputs.callback_url }}"
