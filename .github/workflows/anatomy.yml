@@ -1,0 +1,41 @@
+name: Build anatomy models
+# Downloads BodyParts3D (DBCLS, CC BY 4.0) and builds the organ models used by the 3D body walkthrough.
+on:
+  workflow_dispatch:
+    inputs:
+      step:
+        description: "lists = fetch part lists only; build = build the GLB models"
+        default: build
+permissions:
+  contents: write
+jobs:
+  anatomy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Part lists
+        run: |
+          mkdir -p data/bodyparts3d
+          B=https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST
+          for f in partof_parts_list_e.txt partof_element_parts.txt isa_element_parts.txt isa_parts_list_e.txt partof_inclusion_relation_list.txt; do
+            curl -fsSL --retry 3 -o data/bodyparts3d/$f $B/$f
+          done
+          ls -la data/bodyparts3d
+      - name: Build models
+        if: inputs.step == 'build'
+        run: |
+          pip install --break-system-packages trimesh fast-simplification numpy scipy networkx
+          mkdir -p /tmp/obj
+          for z in partof isa; do
+            curl -fsSL --retry 3 -o /tmp/$z.zip https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/${z}_BP3D_4.0_obj_99.zip
+            unzip -qo /tmp/$z.zip -d /tmp/obj/$z && rm /tmp/$z.zip
+          done
+          set -o pipefail; python3 scripts/build_anatomy.py /tmp/obj data/bodyparts3d public/anatomy 2>&1 | tee /tmp/build.log || { tail -15 /tmp/build.log | sed "s/^/::error::/"; exit 1; }
+          grep -E 'warning|Error|Traceback' /tmp/build.log | head -5 | sed 's/^/::error::/' || true
+      - name: Commit
+        run: |
+          git config user.name "anatomy-bot"; git config user.email "actions@github.com"
+          git add data/bodyparts3d public/anatomy 2>/dev/null || git add data/bodyparts3d
+          git commit -m "Anatomy models from BodyParts3D (${{ inputs.step }})" || echo "nothing to commit"
+          git pull --rebase -q && git push

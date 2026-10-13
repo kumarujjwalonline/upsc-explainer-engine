@@ -1,0 +1,171 @@
+name: Render explainer
+
+# Triggered by n8n (GitHub API: workflow_dispatch) after it commits jobs/<job_id>.json.
+# Free on public repos. Outputs go to a GitHub Release, and n8n is called back with the links.
+on:
+  workflow_dispatch:
+    inputs:
+      job_id:
+        description: "Job file name in jobs/ (without .json)"
+        required: true
+      mode:
+        description: "sample = 30 s voice check, full = video + Shorts + thumbnail, preview = no voice, half-size layout check"
+        required: true
+        default: full
+        type: choice
+        options: [sample, full, preview]
+      callback_url:
+        description: "n8n webhook to call when done (optional)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: render-${{ inputs.job_id }}
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      JOB: jobs/${{ inputs.job_id }}.json
+      TAG: render-${{ inputs.job_id }}-${{ github.run_number }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package.json
+
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-noto-core > /dev/null
+          npm install --no-audit --no-fund
+          npx remotion browser ensure
+
+      - name: Audio check tools (free speech recognition)
+        if: inputs.mode != 'preview'
+        run: pip install --quiet faster-whisper praat-parselmouth numpy pillow
+
+      - name: Restore speech model
+        if: inputs.mode != 'preview'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: whisper-large-v3-turbo-v1
+
+      - name: Type check
+        continue-on-error: true
+        run: npx tsc --noEmit
+
+      - name: Sound effects
+        run: bash scripts/sfx.sh public/sfx
+
+      - name: Restore earlier voice clips
+        uses: actions/cache/restore@v4
+        with:
+          path: .voice-cache
+          key: voice-${{ inputs.job_id }}-${{ github.run_id }}
+          restore-keys: voice-${{ inputs.job_id }}-
+
+      - name: Voice (Kumar Ujjwal Hindi, Upsc Explainers)
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVEN_MODEL: ${{ vars.ELEVEN_MODEL || 'eleven_v3' }}
+        run: |
+          mkdir -p out
+          set -o pipefail
+          if ! bash scripts/voice_qc.sh "$JOB" ${{ inputs.mode == 'preview' && 'none' || inputs.mode }} 2>&1 | tee out/voice.log; then
+            msg=$(grep -v '^\s*$' out/voice.log | tail -n 25 | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')
+            echo "::error title=Voice step failed::$msg"
+            exit 1
+          fi
+
+      - name: Remember pronunciations for future videos
+        if: success() && inputs.mode != 'preview'
+        run: |
+          if [ "$(python3 scripts/remember_pron.py)" = "changed" ]; then
+            git config user.name "explainer-bot"
+            git config user.email "explainer-bot@users.noreply.github.com"
+            git add pronunciations/indian-english.json
+            git commit -m "Pronunciation dictionary: learned from ${{ inputs.job_id }}"
+            for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep 3; done
+          fi
+
+      - name: Save voice clips for later runs
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .voice-cache
+          key: voice-${{ inputs.job_id }}-${{ github.run_id }}
+
+      - name: Source screenshots
+        if: inputs.mode != 'sample'
+        continue-on-error: true
+        run: |
+          if python3 -c "import json,sys; j=json.load(open('out/job.final.json')); sys.exit(0 if any((s.get('visual') or {}).get('type')=='source' for s in j['scenes']) else 1)"; then
+            pip install --quiet playwright pillow
+            python3 -m playwright install --with-deps chromium > /dev/null
+            python3 scripts/fetch_sources.py out/job.final.json
+          fi
+
+      - name: Stock footage (Wikimedia Commons, Pexels if a key exists)
+        if: inputs.mode != 'sample'
+        continue-on-error: true
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python3 scripts/fetch_footage.py out/job.final.json
+
+      - name: Render
+        if: inputs.mode != 'sample'
+        run: node scripts/render.mjs out/job.final.json ${{ inputs.mode == 'preview' && 'preview' || 'all' }}
+
+      - name: Sync check sheets
+        if: inputs.mode != 'sample'
+        run: |
+          pip install --quiet pillow
+          VIDEO=$(ls out/*-long.mp4 out/*-preview.mp4 2>/dev/null | head -1)
+          python3 scripts/sync_sheets.py out/job.final.json "$VIDEO"
+
+      - name: Publish files
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          JOB_ID: ${{ inputs.job_id }}
+          MODE: ${{ inputs.mode }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          cd out
+          shopt -s nullglob
+          files=(*.mp4 *.mp3 *.png *.jpg job.final*.json audio-qc*.json sync*.json sources-report*.json footage-report*.json)
+          ls -la
+          gh release create "$TAG" --title "$JOB_ID ($MODE)" --notes "Rendered by $RUN_URL" --prerelease "${files[@]}"
+          node ../scripts/result.mjs "https://github.com/${{ github.repository }}/releases/download/$TAG"
+
+      - name: Tell n8n
+        if: success() && inputs.callback_url != ''
+        run: |
+          curl -sS -X POST -H 'Content-Type: application/json' --data @out/result.json "${{ inputs.callback_url }}"
+
+      - name: Keep logs of a failed run
+        if: failure()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd out 2>/dev/null || exit 0
+          shopt -s nullglob
+          logs=(*.log audio-qc*.json)
+          [ ${#logs[@]} -gt 0 ] && gh release create "debug-${{ inputs.job_id }}-${{ github.run_number }}" --title "debug ${{ inputs.job_id }}" --notes "Logs of a failed run" --prerelease "${logs[@]}" || true
+
+      - name: Tell n8n about a failure
+        if: failure() && inputs.callback_url != ''
+        run: |
+          curl -sS -X POST -H 'Content-Type: application/json' \
+            --data "{\"job_id\":\"${{ inputs.job_id }}\",\"mode\":\"${{ inputs.mode }}\",\"status\":\"failed\",\"run\":\"${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" \
+            "${{ inputs.callback_url }}"
