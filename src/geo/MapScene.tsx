@@ -54,7 +54,9 @@ export const MapScene: React.FC<{spec: MapSpec}> = ({spec}) => {
   const mercator = geoMercator()
     .center(center)
     .scale((W / (2 * Math.PI)) * zoom)
-    .translate([W / 2, H / 2]);
+    .translate([W / 2, H / 2])
+    // Clip to the frame: at high zoom, unclipped country paths are huge and make each frame very slow to paint.
+    .clipExtent([[-20, -20], [W + 20, H + 20]]);
 
   const globeMode = spec.projection === 'globe-to-flat';
   // Globe phase: rotate the Earth to the focus, then cross-fade to the flat map.
