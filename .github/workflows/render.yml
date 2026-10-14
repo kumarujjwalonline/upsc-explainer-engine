@@ -9,11 +9,11 @@ on:
         description: "Job file name in jobs/ (without .json)"
         required: true
       mode:
-        description: "sample = 30 s voice check, full = video + Shorts + thumbnail, preview = no voice, half-size layout check"
+        description: "transcribe = word timings for takes in voice-takes/<id>/ (committed back), sample = 30 s voice check, full = video + Shorts + thumbnail, voiced = like full but uses the scene audio already committed in public/jobs/<id>/ (voiced in a Claude thread), preview = no voice, half-size layout check"
         required: true
         default: full
         type: choice
-        options: [sample, full, preview]
+        options: [sample, full, voiced, preview, transcribe]
       callback_url:
         description: "n8n webhook to call when done (optional)"
         required: false
@@ -27,7 +27,32 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  transcribe:
+    if: inputs.mode == 'transcribe'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore speech model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: whisper-large-v3-turbo-v1
+      - name: Transcribe takes
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install --quiet faster-whisper numpy
+          python3 scripts/transcribe_takes.py voice-takes/${{ inputs.job_id }}
+      - name: Commit word timings
+        run: |
+          git config user.name "explainer-bot"
+          git config user.email "explainer-bot@users.noreply.github.com"
+          git add voice-takes/${{ inputs.job_id }}/*.words.json
+          git commit -m "Word timings for ${{ inputs.job_id }} voice takes"
+          git push origin HEAD:${{ github.ref_name }}
+
   render:
+    if: inputs.mode != 'transcribe'
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:
@@ -49,11 +74,11 @@ jobs:
           npx remotion browser ensure
 
       - name: Audio check tools (free speech recognition)
-        if: inputs.mode != 'preview'
+        if: inputs.mode != 'preview' && inputs.mode != 'voiced'
         run: pip install --quiet faster-whisper praat-parselmouth numpy pillow
 
       - name: Restore speech model
-        if: inputs.mode != 'preview'
+        if: inputs.mode != 'preview' && inputs.mode != 'voiced'
         uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface
@@ -80,14 +105,14 @@ jobs:
         run: |
           mkdir -p out
           set -o pipefail
-          if ! bash scripts/voice_qc.sh "$JOB" ${{ inputs.mode == 'preview' && 'none' || inputs.mode }} 2>&1 | tee out/voice.log; then
+          if ! bash scripts/voice_qc.sh "$JOB" ${{ (inputs.mode == 'preview' || inputs.mode == 'voiced') && 'none' || inputs.mode }} 2>&1 | tee out/voice.log; then
             msg=$(grep -v '^\s*$' out/voice.log | tail -n 25 | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')
             echo "::error title=Voice step failed::$msg"
             exit 1
           fi
 
       - name: Remember pronunciations for future videos
-        if: success() && inputs.mode != 'preview'
+        if: success() && inputs.mode != 'preview' && inputs.mode != 'voiced'
         run: |
           if [ "$(python3 scripts/remember_pron.py)" = "changed" ]; then
             git config user.name "explainer-bot"
