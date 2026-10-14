@@ -1,1699 +1,1688 @@
 {
-  "id": "semiconductors",
-  "title": "Semiconductors Explained for UPSC | Fab vs ATMP/OSAT | nm Nodes | India Semiconductor Mission 2.0",
-  "format": "16:9",
-  "tracker": {
-    "title": "Lesson progress",
-    "objectives": [
-      {
-        "id": "o1",
-        "label": "What is a chip"
-      },
-      {
-        "id": "o2",
-        "label": "nm nodes"
-      },
-      {
-        "id": "o3",
-        "label": "Fab vs ATMP/OSAT"
-      },
-      {
-        "id": "o4",
-        "label": "Global chip map"
-      },
-      {
-        "id": "o5",
-        "label": "India Semiconductor Mission"
-      },
-      {
-        "id": "o6",
-        "label": "ISM 2.0, challenges & recap"
-      }
-    ]
+ "id": "semiconductors",
+ "title": "Semiconductors Explained for UPSC | Fab vs ATMP/OSAT | nm Nodes | India Semiconductor Mission 2.0",
+ "format": "16:9",
+ "tracker": {
+  "title": "Lesson progress",
+  "objectives": [
+   {
+    "id": "o1",
+    "label": "What is a chip"
+   },
+   {
+    "id": "o2",
+    "label": "nm nodes"
+   },
+   {
+    "id": "o3",
+    "label": "Fab vs ATMP/OSAT"
+   },
+   {
+    "id": "o4",
+    "label": "Global chip map"
+   },
+   {
+    "id": "o5",
+    "label": "India Semiconductor Mission"
+   },
+   {
+    "id": "o6",
+    "label": "ISM 2.0, challenges & recap"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "id": "S00",
+   "narration": "[curious] दुनिया के लगभग 20 percent chip design engineers India में हैं, फिर भी India में आज तक एक भी commercial chip fab नहीं चल रहा। [pause] ऐसा क्यों?",
+   "durationSec": 10.16,
+   "audio": "jobs/semiconductors/S00.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Chip design engineers",
+     "items": [
+      "~20% of the world",
+      "are in India"
+     ],
+     "tone": "good"
+    },
+    "right": {
+     "heading": "Commercial chip fabs",
+     "items": [
+      "0 running in India",
+      "first one: under construction"
+     ],
+     "tone": "bad"
+    }
+   },
+   "onScreen": "20% of the world's chip designers… 0 commercial fabs. Why?",
+   "sfx": "hit"
   },
-  "scenes": [
-    {
-      "id": "S00",
-      "narration": "[curious] दुनिया के लगभग 20 percent chip design engineers India में हैं, फिर भी India में आज तक एक भी commercial chip fab नहीं चल रहा। [pause] ऐसा क्यों?",
-      "durationSec": 10.98,
-      "audio": "jobs/semiconductors/S00.mp3",
-      "objective": "o1",
-      "completes": [],
-      "visual": {
-        "type": "compare",
-        "left": {
-          "heading": "Chip design engineers",
-          "items": [
-            "~20% of the world",
-            "are in India"
-          ],
-          "tone": "good"
-        },
-        "right": {
-          "heading": "Commercial chip fabs",
-          "items": [
-            "0 running in India",
-            "first one: under construction"
-          ],
-          "tone": "bad"
-        }
-      },
-      "onScreen": "20% of the world's chip designers… 0 commercial fabs. Why?",
-      "sfx": "hit"
+  {
+   "id": "S01",
+   "narration": "[serious] क्योंकि chip design करना और chip बनाना, दो बिल्कुल अलग काम हैं। [pause] और chip बनाने वाले देश दुनिया में गिने-चुने हैं, इसलिए जब 2021 में दुनिया भर में chips कम पड़े, तो Maruti Suzuki को September में अपना production लगभग 60 percent घटाना पड़ा।",
+   "durationSec": 17.88,
+   "audio": "jobs/semiconductors/S01.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://dailymirror.lk/business/Indias-Maruti-Suzuki-to-cut-production-by-60-due-to-chip-shortage/215-219464",
+    "publisher": "Daily Mirror (Reuters report)",
+    "date": "1 Sep 2021",
+    "title": "India's Maruti Suzuki to cut production by 60% due to chip shortage",
+    "why": "Shows how a chip shortage stopped car production"
+   },
+   "onScreen": "Sept 2021: Maruti cuts output ~60% (chip shortage)",
+   "sfx": "tick"
+  },
+  {
+   "id": "S02",
+   "narration": "[curious] सोचिए, जो chip आपके नाख़ून से भी छोटा है, वो पूरी car industry को कैसे रोक सकता है? [pause] और India अब ये chip ख़ुद बनाने में इतनी मेहनत क्यों कर रहा है?",
+   "durationSec": 11.92,
+   "audio": "jobs/semiconductors/S02.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "question",
+    "text": "How can a chip smaller than your fingernail stop a whole car industry?",
+    "highlight": [
+     "smaller than your fingernail"
+    ]
+   },
+   "sfx": "whoosh"
+  },
+  {
+   "id": "S03",
+   "narration": "[confident] आज के lesson में हम चार सवालों के जवाब समझेंगे। [pause] पहला सवाल है कि chip असल में होता क्या है। [pause] दूसरा सवाल है कि 3 nm और 28 nm जैसे nodes का मतलब क्या है। [pause] तीसरा सवाल है कि fab और ATMP या OSAT में क्या फ़र्क है। [pause] और चौथा सवाल है कि India Semiconductor Mission अब तक कहाँ पहुँचा है।",
+   "durationSec": 24.35,
+   "audio": "jobs/semiconductors/S03.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "points",
+    "heading": "Today's four questions",
+    "items": [
+     "What is a chip, really?",
+     "What do 3 nm and 28 nm mean?",
+     "Fab vs ATMP/OSAT: what is the difference?",
+     "Where has the India Semiconductor Mission reached?"
+    ],
+    "highlight": [
+     "3 nm",
+     "ATMP/OSAT"
+    ]
+   },
+   "sfx": "pop"
+  },
+  {
+   "id": "S04",
+   "narration": "[explaining] सबसे पहले, semiconductor क्या है? [pause] ये ऐसा material है जो copper की तरह आसानी से बिजली भी नहीं चलाता, और rubber की तरह बिजली को पूरी तरह रोकता भी नहीं। [pause] ये दोनों के बीच में है, इसीलिए इसे semi-conductor कहते हैं।",
+   "durationSec": 16.46,
+   "audio": "jobs/semiconductors/S04.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "flow",
+    "heading": "How well does it carry current?",
+    "steps": [
+     {
+      "label": "Copper",
+      "sub": "Conductor: current flows freely",
+      "icon": "bolt"
+     },
+     {
+      "label": "Silicon",
+      "sub": "Semiconductor: in between",
+      "icon": "gear"
+     },
+     {
+      "label": "Rubber",
+      "sub": "Insulator: current stops",
+      "icon": "cross"
+     }
+    ]
+   },
+   "onScreen": "Conductor · SEMICONDUCTOR · Insulator"
+  },
+  {
+   "id": "S05",
+   "narration": "[explaining] सबसे ज़्यादा इस्तेमाल होने वाला semiconductor है silicon, जो रेत और quartz में silica के रूप में मिलता है। [pause] इसमें बहुत थोड़ी सी impurity मिलाकर, जिसे doping कहते हैं, हम तय कर सकते हैं कि बिजली कब चले और कब रुके।",
+   "durationSec": 15.11,
+   "audio": "jobs/semiconductors/S05.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "formula",
+    "heading": "Silicon, the most used semiconductor",
+    "lines": [
+     {
+      "text": "Sand / quartz → silica (SiO₂)",
+      "note": "where silicon comes from"
+     },
+     {
+      "text": "Pure silicon + tiny impurity",
+      "note": "this is called doping"
+     },
+     {
+      "text": "We decide when current flows and when it stops",
+      "final": true
+     }
+    ]
+   },
+   "onScreen": "Silicon + doping = controllable current",
+   "compact": true
+  },
+  {
+   "id": "S06",
+   "narration": "[explaining] इसी control से बनता है transistor, यानी एक बहुत छोटा switch, जो on होने पर 1 और off होने पर 0 बताता है। [pause] आपका phone, laptop और ATM, सब इन्हीं 1 और 0 की भाषा पर चलते हैं।",
+   "durationSec": 14.39,
+   "audio": "jobs/semiconductors/S06.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Switch ON",
+     "items": [
+      "current flows",
+      "reads as 1"
+     ],
+     "tone": "good"
     },
-    {
-      "id": "S01",
-      "narration": "[serious] क्योंकि chip design करना और chip बनाना, दो बिल्कुल अलग काम हैं। [pause] और chip बनाने वाले देश दुनिया में गिने-चुने हैं, इसलिए जब 2021 में दुनिया भर में chips कम पड़े, तो Maruti Suzuki को September में अपना production लगभग 60 percent घटाना पड़ा।",
-      "durationSec": 18.92,
-      "audio": "jobs/semiconductors/S01.mp3",
-      "objective": "o1",
-      "completes": [],
-      "visual": {
-        "type": "source",
-        "url": "https://dailymirror.lk/business/Indias-Maruti-Suzuki-to-cut-production-by-60-due-to-chip-shortage/215-219464",
-        "publisher": "Daily Mirror (Reuters report)",
-        "date": "1 Sep 2021",
-        "title": "India's Maruti Suzuki to cut production by 60% due to chip shortage",
-        "why": "Shows how a chip shortage stopped car production",
-        "shot_error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://dailymirror.lk/business/Indias-Maruti-Suzuki-to-cut-production-by-60-due-to-chip-shortage/215-219464\nCal"
-      },
-      "onScreen": "Sept 2021: Maruti cuts output ~60% (chip shortage)",
-      "sfx": "tick"
-    },
-    {
-      "id": "S02",
-      "narration": "[curious] सोचिए, जो chip आपके नाख़ून से भी छोटा है, वो पूरी car industry को कैसे रोक सकता है? [pause] और India अब ये chip ख़ुद बनाने में इतनी मेहनत क्यों कर रहा है?",
-      "durationSec": 11.95,
-      "audio": "jobs/semiconductors/S02.mp3",
-      "objective": "o1",
-      "completes": [],
-      "visual": {
-        "type": "question",
-        "text": "How can a chip smaller than your fingernail stop a whole car industry?",
-        "highlight": [
-          "smaller than your fingernail"
-        ]
-      },
-      "sfx": "whoosh"
-    },
-    {
-      "id": "S03",
-      "narration": "[confident] आज के lesson में हम चार सवालों के जवाब समझेंगे। [pause] पहला सवाल है कि chip असल में होता क्या है। [pause] दूसरा सवाल है कि 3 nm और 28 nm जैसे nodes का मतलब क्या है। [pause] तीसरा सवाल है कि fab और ATMP या OSAT में क्या फ़र्क है। [pause] और चौथा सवाल है कि India Semiconductor Mission अब तक कहाँ पहुँचा है।",
-      "durationSec": 26.45,
-      "audio": "jobs/semiconductors/S03.mp3",
-      "objective": "o1",
-      "completes": [],
-      "visual": {
-        "type": "points",
-        "heading": "Today's four questions",
-        "items": [
-          "What is a chip, really?",
-          "What do 3 nm and 28 nm mean?",
-          "Fab vs ATMP/OSAT: what is the difference?",
-          "Where has the India Semiconductor Mission reached?"
-        ],
-        "highlight": [
-          "3 nm",
-          "ATMP/OSAT"
-        ]
-      },
-      "sfx": "pop"
-    },
-    {
-      "id": "S04",
-      "narration": "[explaining] सबसे पहले, semiconductor क्या है? [pause] ये ऐसा material है जो copper की तरह आसानी से बिजली भी नहीं चलाता, और rubber की तरह बिजली को पूरी तरह रोकता भी नहीं। [pause] ये दोनों के बीच में है, इसीलिए इसे semi-conductor कहते हैं।",
-      "durationSec": 16.42,
-      "audio": "jobs/semiconductors/S04.mp3",
-      "objective": "o1",
-      "completes": [],
-      "visual": {
-        "type": "flow",
-        "heading": "How well does it carry current?",
-        "steps": [
-          {
-            "label": "Copper",
-            "sub": "Conductor: current flows freely",
-            "icon": "bolt"
-          },
-          {
-            "label": "Silicon",
-            "sub": "Semiconductor: in between",
-            "icon": "gear"
-          },
-          {
-            "label": "Rubber",
-            "sub": "Insulator: current stops",
-            "icon": "cross"
-          }
-        ]
-      },
-      "onScreen": "Conductor · SEMICONDUCTOR · Insulator"
-    },
-    {
-      "id": "S05",
-      "narration": "[explaining] सबसे ज़्यादा इस्तेमाल होने वाला semiconductor है silicon, जो रेत और quartz में silica के रूप में मिलता है। [pause] इसमें बहुत थोड़ी सी impurity मिलाकर, जिसे doping कहते हैं, हम तय कर सकते हैं कि बिजली कब चले और कब रुके।",
-      "durationSec": 15.98,
-      "audio": "jobs/semiconductors/S05.mp3",
-      "objective": "o1",
-      "completes": [],
-      "visual": {
-        "type": "formula",
-        "heading": "Silicon, the most used semiconductor",
-        "lines": [
-          {
-            "text": "Sand / quartz → silica (SiO₂)",
-            "note": "where silicon comes from"
-          },
-          {
-            "text": "Pure silicon + tiny impurity",
-            "note": "this is called doping"
-          },
-          {
-            "text": "We decide when current flows and when it stops",
-            "final": true
-          }
-        ]
-      },
-      "onScreen": "Silicon + doping = controllable current",
-      "compact": true
-    },
-    {
-      "id": "S06",
-      "narration": "[explaining] इसी control से बनता है transistor, यानी एक बहुत छोटा switch, जो on होने पर 1 और off होने पर 0 बताता है। [pause] आपका phone, laptop और ATM, सब इन्हीं 1 और 0 की भाषा पर चलते हैं।",
-      "durationSec": 15.83,
-      "audio": "jobs/semiconductors/S06.mp3",
-      "objective": "o1",
-      "completes": [],
-      "visual": {
-        "type": "compare",
-        "left": {
-          "heading": "Switch ON",
-          "items": [
-            "current flows",
-            "reads as 1"
-          ],
-          "tone": "good"
-        },
-        "right": {
-          "heading": "Switch OFF",
-          "items": [
-            "current stops",
-            "reads as 0"
-          ],
-          "tone": "muted"
-        }
-      },
-      "onScreen": "Transistor = tiny switch · ON = 1 · OFF = 0",
-      "sfx": "tick"
-    },
-    {
-      "id": "S07",
-      "narration": "[measured] एक chip, यानी integrated circuit, में ऐसे अरबों transistors एक साथ बने होते हैं। [pause] जैसे Apple के A17 Pro chip में लगभग 19 billion transistors हैं।",
-      "durationSec": 12.51,
-      "audio": "jobs/semiconductors/S07.mp3",
-      "objective": "o1",
-      "completes": [],
-      "visual": {
-        "type": "stat",
-        "value": 19,
-        "suffix": " billion",
-        "label": "transistors in Apple’s A17 Pro chip",
-        "source": "Tom's Hardware, Sept 2023"
-      },
-      "onScreen": "Chip = integrated circuit",
-      "sfx": "ping",
-      "compact": true
-    },
-    {
-      "id": "S08",
-      "narration": "[thoughtful] अब सवाल ये है कि इतने सारे transistors एक छोटे से chip पर आते कैसे हैं? [pause] इसका जवाब छुपा है nm, यानी nanometre में।",
-      "durationSec": 9.63,
-      "audio": "jobs/semiconductors/S08.mp3",
-      "objective": "o1",
-      "completes": [
-        "o1"
-      ],
-      "visual": {
-        "type": "question",
-        "text": "How do billions of transistors fit on one tiny chip? The answer is in nm.",
-        "highlight": [
-          "nm"
-        ]
-      },
-      "sfx": "whoosh"
-    },
-    {
-      "id": "S09",
-      "narration": "[explaining] एक nanometre, एक metre का एक अरबवाँ हिस्सा होता है। [pause] U.S. National Nanotechnology Initiative के अनुसार, इंसान का एक बाल लगभग 80,000 से 1,00,000 nanometre चौड़ा होता है।",
-      "durationSec": 15.11,
-      "audio": "jobs/semiconductors/S09.mp3",
-      "objective": "o2",
-      "completes": [],
-      "visual": {
-        "type": "source",
-        "url": "https://www.nano.gov/about-nanotechnology/just-how-small-is-nano",
-        "publisher": "U.S. National Nanotechnology Initiative",
-        "date": "nano.gov",
-        "title": "Just How Small Is \"Nano\"?",
-        "why": "Gives the width of a human hair in nanometres",
-        "shot_error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://www.nano.gov/about-nanotechnology/just-how-small-is-nano\nCall log:\n  - navigating to \"https://www.nano.g"
-      },
-      "onScreen": "1 nm = 10⁻⁹ m · Human hair ≈ 80,000–100,000 nm"
-    },
-    {
-      "id": "S10",
-      "narration": "[explaining] Chip की दुनिया में आप 28 nm, 7 nm या 3 nm जैसे नाम सुनते हैं। [pause] इन्हें technology node या process node कहते हैं। [pause] Node जितना छोटा होता है, transistors उतने ही छोटे और पास-पास होते हैं।",
-      "durationSec": 17.65,
-      "audio": "jobs/semiconductors/S10.mp3",
-      "objective": "o2",
-      "completes": [],
-      "visual": {
-        "type": "flow",
-        "heading": "Technology (process) node",
-        "steps": [
-          {
-            "label": "28 nm",
-            "sub": "bigger, fewer transistors"
-          },
-          {
-            "label": "7 nm",
-            "sub": "smaller, more packed"
-          },
-          {
-            "label": "3 nm",
-            "sub": "smallest, most packed"
-          }
-        ]
-      },
-      "onScreen": "Process node: 28 nm → 7 nm → 3 nm",
-      "sfx": "pop"
-    },
-    {
-      "id": "S11",
-      "narration": "[explaining] छोटे node के तीन बड़े फ़ायदे हैं। [pause] पहला, एक chip पर ज़्यादा transistors आते हैं। [pause] दूसरा, chip ज़्यादा तेज़ काम करता है। [pause] और तीसरा, बिजली कम ख़र्च होती है, इसलिए आपके phone की battery ज़्यादा देर चलती है।",
-      "durationSec": 17.63,
-      "audio": "jobs/semiconductors/S11.mp3",
-      "objective": "o2",
-      "completes": [],
-      "visual": {
-        "type": "points",
-        "heading": "Three benefits of a smaller node",
-        "items": [
-          "More transistors on one chip",
-          "The chip works faster",
-          "It uses less power, so the battery lasts longer"
-        ],
-        "highlight": [
-          "More transistors",
-          "faster",
-          "less power"
-        ]
-      }
-    },
-    {
-      "id": "S12",
-      "narration": "[emphatic] लेकिन UPSC के लिए एक trap याद रखिए। [pause] आज 3 nm का मतलब ये नहीं है कि chip का कोई हिस्सा सच में 3 nanometre का है। [pause] IEEE Spectrum के अनुसार, अब node का नाम किसी एक असली हिस्से का size नहीं बताता, ये बस एक नई generation का नाम है।",
-      "durationSec": 20.81,
-      "audio": "jobs/semiconductors/S12.mp3",
-      "objective": "o2",
-      "completes": [],
-      "visual": {
-        "type": "source",
-        "url": "https://spectrum.ieee.org/the-status-of-moores-law-its-complicated",
-        "publisher": "IEEE Spectrum",
-        "date": "Oct 2013",
-        "title": "The Status of Moore's Law: It's Complicated",
-        "why": "Node names no longer match any real feature size",
-        "shot_error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://spectrum.ieee.org/the-status-of-moores-law-its-complicated\nCall log:\n  - navigating to \"https://spectrum"
-      },
-      "onScreen": "\"3 nm\" ≠ any 3 nm feature · node name = generation label",
-      "sfx": "hit"
-    },
-    {
-      "id": "S13",
-      "narration": "[measured] Intel का example देखिए। [pause] उसके 2001 वाले 130 nm chips में transistor का gate असल में सिर्फ़ 70 nm लंबा था।",
-      "durationSec": 11.42,
-      "audio": "jobs/semiconductors/S13.mp3",
-      "objective": "o2",
-      "completes": [],
-      "visual": {
-        "type": "compare",
-        "left": {
-          "heading": "Intel node name (2001)",
-          "items": [
-            "130 nm"
-          ],
-          "tone": "muted"
-        },
-        "right": {
-          "heading": "Real gate length",
-          "items": [
-            "only ~70 nm"
-          ],
-          "tone": "accent"
-        }
-      },
-      "sfx": "tick"
-    },
-    {
-      "id": "S14",
-      "narration": "[explaining] Nodes को दो groups में समझिए। [pause] सबसे advanced nodes, जैसे 3 nm और 2 nm, smartphones, AI और data centres के processors में लगते हैं। [pause] Mature या legacy nodes, यानी 28 nm और उससे बड़े, cars, appliances, power devices और defence electronics में ज़्यादा लगते हैं।",
-      "durationSec": 23.76,
-      "audio": "jobs/semiconductors/S14.mp3",
-      "objective": "o2",
-      "completes": [],
-      "visual": {
-        "type": "compare",
-        "left": {
-          "heading": "Advanced nodes (3 nm, 2 nm)",
-          "items": [
-            "Smartphones",
-            "AI processors",
-            "Data centres"
-          ],
-          "tone": "accent"
-        },
-        "right": {
-          "heading": "Mature nodes (28 nm and above)",
-          "items": [
-            "Cars",
-            "Appliances",
-            "Power devices",
-            "Defence electronics"
-          ],
-          "tone": "good"
-        }
-      }
-    },
-    {
-      "id": "S15",
-      "narration": "[confident] Taiwan की company TSMC ने 2 nm chips का mass production 2025 के आख़िर में शुरू किया, और India का पहला commercial fab 28 से 110 nm के बीच के chips बनाएगा।",
-      "durationSec": 15.59,
-      "audio": "jobs/semiconductors/S15.mp3",
-      "objective": "o2",
-      "completes": [
-        "o2"
-      ],
-      "visual": {
-        "type": "compare",
-        "left": {
-          "heading": "TSMC, Taiwan",
-          "items": [
-            "2 nm chips",
-            "mass production: end of 2025"
-          ],
-          "tone": "accent"
-        },
-        "right": {
-          "heading": "India's first commercial fab",
-          "items": [
-            "Tata, Dholera",
-            "28 nm to 110 nm chips"
-          ],
-          "tone": "good"
-        }
-      },
-      "onScreen": "TSMC 2 nm: volume production Q4 2025 · Tata Dholera fab: 28–110 nm"
-    },
-    {
-      "id": "S16",
-      "narration": "[curious] अब असली सवाल ये है कि एक chip बनता कैसे है? [pause] इसके तीन बड़े stages हैं, design, fabrication और ATMP।",
-      "durationSec": 9.95,
-      "audio": "jobs/semiconductors/S16.mp3",
-      "objective": "o3",
-      "completes": [],
-      "visual": {
-        "type": "flow",
-        "heading": "How a chip is made",
-        "steps": [
-          {
-            "label": "Design",
-            "sub": "the blueprint",
-            "icon": "code"
-          },
-          {
-            "label": "Fabrication",
-            "sub": "the fab",
-            "icon": "factory"
-          },
-          {
-            "label": "ATMP",
-            "sub": "pack and test",
-            "icon": "check"
-          }
-        ]
-      },
-      "sfx": "pop"
-    },
-    {
-      "id": "S17",
-      "narration": "[explaining] पहला stage है design। [pause] यहाँ engineers computer पर chip का पूरा नक्शा बनाते हैं, कि कौन सा transistor कहाँ होगा। [pause] Nvidia और Qualcomm जैसी companies सिर्फ़ design करती हैं, इसलिए इन्हें fabless companies कहते हैं।",
-      "durationSec": 16.76,
-      "audio": "jobs/semiconductors/S17.mp3",
-      "objective": "o3",
-      "completes": [],
-      "visual": {
-        "type": "hub",
-        "center": {
-          "label": "Chip design",
-          "icon": "code"
-        },
-        "spokes": [
-          {
-            "label": "Map of every transistor",
-            "icon": "doc"
-          },
-          {
-            "label": "Done on computers",
-            "icon": "brain"
-          },
-          {
-            "label": "Fabless: Nvidia",
-            "icon": "chart"
-          },
-          {
-            "label": "Fabless: Qualcomm",
-            "icon": "phone"
-          }
-        ]
-      },
-      "onScreen": "Design · fabless = design only (e.g. Nvidia, Qualcomm)"
-    },
-    {
-      "id": "S18",
-      "narration": "[explaining] दूसरा stage है fabrication, और जिस factory में ये होता है उसे fab या foundry कहते हैं। [pause] यहाँ silicon की एक पतली गोल plate, जिसे wafer कहते हैं, उस पर सैकड़ों steps में transistors बनाए जाते हैं। [pause] इनमें सबसे important step है photolithography, यानी रोशनी से wafer पर design छापना।",
-      "durationSec": 22.64,
-      "audio": "jobs/semiconductors/S18.mp3",
-      "objective": "o3",
-      "completes": [],
-      "visual": {
-        "type": "flow",
-        "heading": "Inside a fab",
-        "steps": [
-          {
-            "label": "Wafer",
-            "sub": "thin round silicon plate"
-          },
-          {
-            "label": "Hundreds of steps",
-            "sub": "transistors built layer by layer"
-          },
-          {
-            "label": "Photolithography",
-            "sub": "light prints the design"
-          }
-        ]
-      },
-      "onScreen": "Fab / foundry · wafer · photolithography"
-    },
-    {
-      "id": "S19",
-      "narration": "[measured] Fab बनाना बहुत मुश्किल और बहुत महँगा है। [pause] इसके लिए लगभग धूल-मुक्त cleanroom, बहुत शुद्ध पानी, बिना रुकावट की बिजली और बहुत महँगी machines चाहिए। [pause] इसीलिए Tata के Dholera fab में लगभग 91,000 crore rupees का investment है।",
-      "durationSec": 20.19,
-      "audio": "jobs/semiconductors/S19.mp3",
-      "objective": "o3",
-      "completes": [],
-      "visual": {
-        "type": "source",
-        "url": "https://www.tataworld.com/news/openinside/tata-group-to-build-the-nations-first-fab-in-dholera",
-        "publisher": "Tata Group",
-        "date": "2024",
-        "title": "Tata Group to build the nation's first fab in Dholera",
-        "why": "Investment, partner and capacity of the Dholera fab",
-        "shot_error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://www.tataworld.com/news/openinside/tata-group-to-build-the-nations-first-fab-in-dholera\nCall log:\n  - nav"
-      },
-      "onScreen": "Tata Dholera fab ≈ ₹91,000 crore",
-      "sfx": "ping"
-    },
-    {
-      "id": "S20",
-      "narration": "[explaining] तीसरा stage है ATMP, यानी Assembly, Testing, Marking और Packaging। [pause] पहले wafer को काटकर उसके छोटे-छोटे chips अलग किए जाते हैं। [pause] फिर हर chip को एक मज़बूत package में बंद करके उसके connections जोड़े जाते हैं, और आख़िर में हर chip को test करके उस पर पहचान का mark लगाया जाता है।",
-      "durationSec": 23.71,
-      "audio": "jobs/semiconductors/S20.mp3",
-      "objective": "o3",
-      "completes": [],
-      "visual": {
-        "type": "flow",
-        "heading": "ATMP, step by step",
-        "steps": [
-          {
-            "label": "Cut the wafer",
-            "sub": "separate each chip"
-          },
-          {
-            "label": "Package",
-            "sub": "seal it, connect it"
-          },
-          {
-            "label": "Test",
-            "sub": "check every chip"
-          },
-          {
-            "label": "Mark",
-            "sub": "print its identity"
-          }
-        ]
-      },
-      "onScreen": "ATMP = Assembly · Testing · Marking · Packaging"
-    },
-    {
-      "id": "S21",
-      "narration": "[explaining] अब ATMP और OSAT का फ़र्क समझिए। [pause] ATMP उस काम का नाम है। [pause] जब कोई company यही काम दूसरी companies के लिए service की तरह करती है, तो उसे OSAT, यानी Outsourced Semiconductor Assembly and Test, कहते हैं।",
-      "durationSec": 18.81,
-      "audio": "jobs/semiconductors/S21.mp3",
-      "objective": "o3",
-      "completes": [],
-      "visual": {
-        "type": "compare",
-        "left": {
-          "heading": "ATMP",
-          "items": [
-            "the name of the work",
-            "Assembly, Testing, Marking, Packaging"
-          ],
-          "tone": "accent"
-        },
-        "right": {
-          "heading": "OSAT",
-          "items": [
-            "the same work as a service",
-            "Outsourced Semiconductor Assembly and Test"
-          ],
-          "tone": "good"
-        }
-      },
-      "onScreen": "ATMP = the process · OSAT = ATMP as an outsourced service"
-    },
-    {
-      "id": "S22",
-      "narration": "[explaining] जैसे Micron का Sanand plant अपने ही wafers से memory products तैयार करता है, इसलिए उसे ATMP कहा जाता है। [pause] वहीं CG Semi का Sanand plant दूसरों के लिए assembly और testing की service देता है, इसलिए उसे OSAT कहा जाता है।",
-      "durationSec": 18.82,
-      "audio": "jobs/semiconductors/S22.mp3",
-      "objective": "o3",
-      "completes": [],
-      "visual": {
-        "type": "source",
-        "url": "https://negd.gov.in/wp-content/uploads/2025/09/PIB2161666.pdf",
-        "publisher": "Press Information Bureau",
-        "date": "28 Aug 2025",
-        "title": "CG Semi OSAT pilot line at Sanand",
-        "why": "CG Semi offers assembly and test as a service",
-        "shot_error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://negd.gov.in/wp-content/uploads/2025/09/PIB2161666.pdf\nCall log:\n  - navigating to \"https://negd.gov.in/w"
-      },
-      "onScreen": "Micron Sanand = ATMP (own chips) · CG Semi Sanand = OSAT (service)"
-    },
-    {
-      "id": "S23",
-      "narration": "[emphatic] तो fab और ATMP का फ़र्क याद रखिए। [pause] Fab, chip के अंदर transistors बनाता है, जबकि ATMP उस chip को pack और test करके इस्तेमाल के लिए तैयार करता है। [pause] Fab में बहुत ज़्यादा पैसा, technology और समय लगता है, जबकि ATMP कम लागत में और जल्दी शुरू हो जाता है।",
-      "durationSec": 23.05,
-      "audio": "jobs/semiconductors/S23.mp3",
-      "objective": "o3",
-      "completes": [],
-      "visual": {
-        "type": "compare",
-        "left": {
-          "heading": "FAB",
-          "items": [
-            "makes the transistors",
-            "very high cost",
-            "takes years"
-          ],
-          "tone": "accent"
-        },
-        "right": {
-          "heading": "ATMP / OSAT",
-          "items": [
-            "packs and tests the chip",
-            "lower cost",
-            "faster start"
-          ],
-          "tone": "good"
-        }
-      },
-      "sfx": "hit"
-    },
-    {
-      "id": "S24",
-      "narration": "[thoughtful] यही वजह है कि India के ज़्यादातर approved projects ATMP और OSAT के हैं। [pause] ये जल्दी production शुरू करते हैं, लोगों में skills बनाते हैं, और fab के लिए ज़मीन तैयार करते हैं।",
-      "durationSec": 14.86,
-      "audio": "jobs/semiconductors/S24.mp3",
-      "objective": "o3",
-      "completes": [
-        "o3"
-      ],
-      "visual": {
-        "type": "stat",
-        "value": 9,
-        "suffix": " of 12",
-        "label": "approved ISM projects are packaging units",
-        "source": "DataM Intelligence, 30 Jun 2026"
-      },
-      "onScreen": "9 of 12 ISM projects = packaging (ATMP/OSAT)",
-      "sfx": "ping",
-      "compact": true
-    },
-    {
-      "id": "S25",
-      "narration": "[curious] अब एक नज़र दुनिया के chip map पर डालते हैं। [pause] Chip बनाने की ये पूरी chain अलग-अलग देशों में बँटी हुई है।",
-      "durationSec": 8.39,
-      "audio": "jobs/semiconductors/S25.mp3",
-      "objective": "o4",
-      "completes": [],
-      "visual": {
-        "type": "map",
-        "map": {
-          "projection": "globe-to-flat",
-          "from": {
-            "center": [
-              80,
-              20
-            ],
-            "zoom": 0.9
-          },
-          "focus": {
-            "center": [
-              60,
-              25
-            ],
-            "zoom": 1.15
-          },
-          "highlights": [
-            {
-              "iso3": "USA",
-              "tone": "accent"
-            },
-            {
-              "iso3": "NLD",
-              "tone": "warn",
-              "delay": 10
-            },
-            {
-              "iso3": "TWN",
-              "tone": "bad",
-              "delay": 20
-            },
-            {
-              "iso3": "CHN",
-              "tone": "neutral",
-              "delay": 25
-            },
-            {
-              "iso3": "MYS",
-              "tone": "neutral",
-              "delay": 30
-            },
-            {
-              "iso3": "IND",
-              "tone": "good",
-              "delay": 35
-            }
-          ],
-          "routes": [
-            {
-              "points": [
-                [
-                  -120,
-                  37
-                ],
-                [
-                  5.4,
-                  51.4
-                ]
-              ],
-              "tone": "accent",
-              "delay": 30
-            },
-            {
-              "points": [
-                [
-                  5.4,
-                  51.4
-                ],
-                [
-                  121,
-                  24
-                ]
-              ],
-              "tone": "accent",
-              "delay": 45
-            },
-            {
-              "points": [
-                [
-                  121,
-                  24
-                ],
-                [
-                  101.7,
-                  3.1
-                ]
-              ],
-              "tone": "accent",
-              "delay": 60
-            }
-          ]
-        }
-      },
-      "sfx": "whoosh"
-    },
-    {
-      "id": "S26",
-      "narration": "[explaining] Chip design में America की companies सबसे आगे हैं। [pause] सबसे advanced EUV lithography machines सिर्फ़ Netherlands की company ASML बनाती है। [pause] और ATMP का बड़ा हिस्सा East और South-East Asia में होता है, जैसे China, Taiwan और Malaysia में।",
-      "durationSec": 20.15,
-      "audio": "jobs/semiconductors/S26.mp3",
-      "objective": "o4",
-      "completes": [],
-      "visual": {
-        "type": "map",
-        "map": {
-          "focus": {
-            "center": [
-              40,
-              30
-            ],
-            "zoom": 1.25
-          },
-          "from": {
-            "center": [
-              -60,
-              35
-            ],
-            "zoom": 1.6
-          },
-          "highlights": [
-            {
-              "iso3": "USA",
-              "tone": "accent"
-            },
-            {
-              "iso3": "NLD",
-              "tone": "warn",
-              "delay": 40
-            },
-            {
-              "iso3": "CHN",
-              "tone": "good",
-              "delay": 80
-            },
-            {
-              "iso3": "TWN",
-              "tone": "good",
-              "delay": 85
-            },
-            {
-              "iso3": "MYS",
-              "tone": "good",
-              "delay": 90
-            }
-          ],
-          "markers": [
-            {
-              "at": [
-                -122,
-                37.4
-              ],
-              "label": "Chip design",
-              "tone": "accent",
-              "delay": 10
-            },
-            {
-              "at": [
-                5.4,
-                51.4
-              ],
-              "label": "ASML: EUV machines",
-              "tone": "warn",
-              "delay": 45
-            },
-            {
-              "at": [
-                110,
-                15
-              ],
-              "label": "ATMP hub",
-              "tone": "good",
-              "delay": 95
-            }
-          ]
-        }
-      },
-      "onScreen": "Design: USA · EUV machines: ASML (Netherlands) · ATMP: East & South-East Asia"
-    },
-    {
-      "id": "S27",
-      "narration": "[serious] लेकिन सबसे बड़ा concentration fabrication में है। [pause] Boston Consulting Group की एक report के अनुसार, 2019 में 10 nm से छोटे सबसे advanced logic chips की लगभग 92 percent capacity अकेले Taiwan में थी।",
-      "durationSec": 17.55,
-      "audio": "jobs/semiconductors/S27.mp3",
-      "objective": "o4",
-      "completes": [],
-      "visual": {
-        "type": "map",
-        "map": {
-          "from": {
-            "center": [
-              110,
-              25
-            ],
-            "zoom": 2.5
-          },
-          "focus": {
-            "center": [
-              121,
-              23.8
-            ],
-            "zoom": 14
-          },
-          "highlights": [
-            {
-              "iso3": "TWN",
-              "tone": "bad"
-            }
-          ],
-          "markers": [
-            {
-              "at": [
-                120.97,
-                24.8
-              ],
-              "label": "Hsinchu",
-              "tone": "accent",
-              "delay": 40
-            }
-          ],
-          "labels": [
-            {
-              "at": [
-                121.3,
-                22.4
-              ],
-              "text": "~92% of the most advanced chips (2019)"
-            }
-          ]
-        }
-      },
-      "onScreen": "2019: ~92% of <10 nm logic capacity in Taiwan",
-      "sfx": "hit"
-    },
-    {
-      "id": "S28",
-      "narration": "[thoughtful] अब सोचिए, अगर किसी युद्ध, भूकंप या pandemic की वजह से ये एक जगह रुक जाए, तो दुनिया भर के phones, cars और defence systems पर असर पड़ेगा। [pause] इसीलिए आज chips को सिर्फ़ business नहीं, बल्कि national security का मुद्दा माना जाता है।",
-      "durationSec": 17.79,
-      "audio": "jobs/semiconductors/S28.mp3",
-      "objective": "o4",
-      "completes": [],
-      "visual": {
-        "type": "hub",
-        "center": {
-          "label": "One region stops",
-          "icon": "cross"
-        },
-        "spokes": [
-          {
-            "label": "Phones",
-            "icon": "phone"
-          },
-          {
-            "label": "Cars",
-            "icon": "truck"
-          },
-          {
-            "label": "Defence systems",
-            "icon": "lock"
-          },
-          {
-            "label": "National security",
-            "icon": "globe"
-          }
-        ]
-      },
-      "onScreen": "One region → global risk · chips = national security"
-    },
-    {
-      "id": "S29",
-      "narration": "[explaining] इसीलिए America ने 2022 में CHIPS and Science Act बनाया, और Europe, Japan और South Korea भी अपने यहाँ chip plants के लिए भारी subsidy दे रहे हैं। [pause] India Semiconductor Mission भी इसी global race का हिस्सा है।",
-      "durationSec": 17.01,
-      "audio": "jobs/semiconductors/S29.mp3",
-      "objective": "o4",
-      "completes": [
-        "o4"
-      ],
-      "visual": {
-        "type": "map",
-        "map": {
-          "focus": {
-            "center": [
-              70,
-              30
-            ],
-            "zoom": 1.3
-          },
-          "from": {
-            "center": [
-              -40,
-              35
-            ],
-            "zoom": 1.3
-          },
-          "highlights": [
-            {
-              "iso3": "USA",
-              "tone": "accent"
-            },
-            {
-              "iso3": "DEU",
-              "tone": "accent",
-              "delay": 20
-            },
-            {
-              "iso3": "FRA",
-              "tone": "accent",
-              "delay": 20
-            },
-            {
-              "iso3": "JPN",
-              "tone": "accent",
-              "delay": 35
-            },
-            {
-              "iso3": "KOR",
-              "tone": "accent",
-              "delay": 40
-            },
-            {
-              "iso3": "IND",
-              "tone": "good",
-              "delay": 60
-            }
-          ],
-          "markers": [
-            {
-              "at": [
-                -98,
-                39
-              ],
-              "label": "CHIPS Act 2022",
-              "delay": 10
-            },
-            {
-              "at": [
-                10,
-                50
-              ],
-              "label": "EU",
-              "delay": 22
-            },
-            {
-              "at": [
-                138,
-                36
-              ],
-              "label": "Japan",
-              "delay": 36
-            },
-            {
-              "at": [
-                127.8,
-                36.5
-              ],
-              "label": "S. Korea",
-              "delay": 42
-            },
-            {
-              "at": [
-                78,
-                22
-              ],
-              "label": "India: ISM",
-              "tone": "good",
-              "delay": 62
-            }
-          ]
-        }
-      },
-      "onScreen": "USA CHIPS Act 2022 · EU · Japan · South Korea · India ISM"
-    },
-    {
-      "id": "S30",
-      "narration": "[explaining] India Semiconductor Mission, यानी ISM, को Union Cabinet ने December 2021 में मंज़ूरी दी, और इसका कुल outlay 76,000 crore rupees था। [pause] ये Ministry of Electronics and IT, यानी MeitY, के तहत Digital India Corporation का एक special division है।",
-      "durationSec": 20.03,
-      "audio": "jobs/semiconductors/S30.mp3",
-      "objective": "o5",
-      "completes": [],
-      "visual": {
-        "type": "source",
-        "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/feb/doc202627782201.pdf",
-        "publisher": "Press Information Bureau",
-        "date": "7 Feb 2026",
-        "title": "India Semiconductor Mission: factsheet",
-        "why": "Approval date, outlay and structure of ISM",
-        "shot_error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/feb/doc202627782201.pdf\nCall log:\n  - naviga"
-      },
-      "onScreen": "ISM 1.0 · Dec 2021 · ₹76,000 crore · MeitY / Digital India Corporation"
-    },
-    {
-      "id": "S31",
-      "narration": "[explaining] इसके तहत सरकार silicon fab, display fab, compound semiconductor और ATMP या OSAT units को project cost का 50 percent तक fiscal support देती है। [pause] और chip design करने वाली Indian companies और startups के लिए Design Linked Incentive, यानी DLI, scheme है।",
-      "durationSec": 21.07,
-      "audio": "jobs/semiconductors/S31.mp3",
-      "objective": "o5",
-      "completes": [],
-      "visual": {
-        "type": "flow",
-        "heading": "What ISM gives",
-        "steps": [
-          {
-            "label": "Centre",
-            "icon": "money"
-          },
-          {
-            "label": "Up to 50% of project cost",
-            "sub": "fabs, display, compound, ATMP/OSAT",
-            "icon": "factory"
-          },
-          {
-            "label": "DLI scheme",
-            "sub": "for Indian chip design startups",
-            "icon": "code"
-          }
-        ]
-      },
-      "onScreen": "Up to 50% fiscal support · DLI scheme for chip design",
-      "sfx": "ping"
-    },
-    {
-      "id": "S32",
-      "narration": "[measured] अब तक ISM के तहत 12 projects approve हो चुके हैं, जिनमें कुल लगभग 1.64 lakh crore rupees का investment है। [pause] इनमें 1 silicon fab, 2 compound semiconductor fabs और 9 packaging units हैं।",
-      "durationSec": 16.33,
-      "audio": "jobs/semiconductors/S32.mp3",
-      "objective": "o5",
-      "completes": [],
-      "visual": {
-        "type": "stat",
-        "value": 1.64,
-        "decimals": 2,
-        "prefix": "₹",
-        "suffix": " lakh crore",
-        "label": "invested across 12 approved ISM projects",
-        "source": "Inc42, 5 May 2026"
-      },
-      "onScreen": "1 silicon fab · 2 compound fabs · 9 packaging units",
-      "sfx": "ping",
-      "compact": true
-    },
-    {
-      "id": "S33",
-      "narration": "[explaining] चलिए इन्हें India के map पर देखते हैं। [pause] सबसे बड़ा project है Gujarat के Dholera में Tata Electronics का fab, जो Taiwan की company PSMC के साथ मिलकर बन रहा है। [pause] इसकी capacity होगी हर महीने 50,000 wafers तक।",
-      "durationSec": 18.54,
-      "audio": "jobs/semiconductors/S33.mp3",
-      "objective": "o5",
-      "completes": [],
-      "visual": {
-        "type": "map",
-        "map": {
-          "projection": "globe-to-flat",
-          "from": {
-            "center": [
-              78,
-              20
-            ],
-            "zoom": 1
-          },
-          "focus": {
-            "center": [
-              74,
-              22.5
-            ],
-            "zoom": 9
-          },
-          "highlights": [
-            {
-              "iso3": "IND",
-              "tone": "neutral"
-            }
-          ],
-          "markers": [
-            {
-              "at": [
-                72.2,
-                22.25
-              ],
-              "label": "Dholera: Tata–PSMC fab",
-              "tone": "accent",
-              "delay": 50
-            }
-          ]
-        }
-      },
-      "onScreen": "Dholera: Tata–PSMC fab · up to 50,000 wafers/month",
-      "sfx": "whoosh"
-    },
-    {
-      "id": "S34",
-      "narration": "[explaining] Gujarat के ही Sanand में Micron, CG Semi और Kaynes के plants हैं। [pause] Assam के Jagiroad में Tata का अपना packaging plant बन रहा है, और Uttar Pradesh में Jewar के पास HCL और Foxconn का joint venture approve हुआ है।",
-      "durationSec": 17.03,
-      "audio": "jobs/semiconductors/S34.mp3",
-      "objective": "o5",
-      "completes": [],
-      "visual": {
-        "type": "map",
-        "map": {
-          "from": {
-            "center": [
-              74,
-              22.5
-            ],
-            "zoom": 9
-          },
-          "focus": {
-            "center": [
-              80.5,
-              22.5
-            ],
-            "zoom": 4.6
-          },
-          "highlights": [
-            {
-              "iso3": "IND",
-              "tone": "neutral"
-            }
-          ],
-          "markers": [
-            {
-              "at": [
-                72.2,
-                22.25
-              ],
-              "label": "Dholera",
-              "tone": "muted",
-              "delay": 0
-            },
-            {
-              "at": [
-                72.38,
-                22.99
-              ],
-              "label": "Sanand: Micron, CG Semi, Kaynes",
-              "tone": "accent",
-              "delay": 15
-            },
-            {
-              "at": [
-                92.2,
-                26.1
-              ],
-              "label": "Jagiroad (Assam): Tata",
-              "tone": "accent",
-              "delay": 120
-            },
-            {
-              "at": [
-                77.55,
-                28.13
-              ],
-              "label": "Jewar (UP): HCL–Foxconn",
-              "tone": "accent",
-              "delay": 200
-            }
-          ]
-        }
-      },
-      "onScreen": "Sanand: Micron · CG Semi · Kaynes · Jagiroad: Tata · Jewar: HCL–Foxconn"
-    },
-    {
-      "id": "S35",
-      "narration": "[explaining] Odisha में SiCSem का silicon carbide fab और 3D Glass Solutions का unit approve हुआ है। [pause] Punjab के Mohali में CDIL का unit है, और Andhra Pradesh में ASIP का packaging unit। [pause] और May 2026 में Gujarat के दो और units approve हुए, Crystal Matrix और Suchi Semicon।",
-      "durationSec": 22.98,
-      "audio": "jobs/semiconductors/S35.mp3",
-      "objective": "o5",
-      "completes": [],
-      "visual": {
-        "type": "map",
-        "map": {
-          "focus": {
-            "center": [
-              80.5,
-              22.5
-            ],
-            "zoom": 4.6
-          },
-          "highlights": [
-            {
-              "iso3": "IND",
-              "tone": "neutral"
-            }
-          ],
-          "markers": [
-            {
-              "at": [
-                72.2,
-                22.25
-              ],
-              "label": "Dholera",
-              "tone": "muted",
-              "delay": 0
-            },
-            {
-              "at": [
-                72.38,
-                22.99
-              ],
-              "label": "Sanand",
-              "tone": "muted",
-              "delay": 0
-            },
-            {
-              "at": [
-                92.2,
-                26.1
-              ],
-              "label": "Jagiroad",
-              "tone": "muted",
-              "delay": 0
-            },
-            {
-              "at": [
-                77.55,
-                28.13
-              ],
-              "label": "Jewar",
-              "tone": "muted",
-              "delay": 0
-            },
-            {
-              "at": [
-                85.82,
-                20.3
-              ],
-              "label": "Odisha: SiCSem, 3D Glass",
-              "tone": "accent",
-              "delay": 10
-            },
-            {
-              "at": [
-                76.72,
-                30.7
-              ],
-              "label": "Mohali: CDIL",
-              "tone": "accent",
-              "delay": 150
-            },
-            {
-              "at": [
-                80.6,
-                16.5
-              ],
-              "label": "Andhra Pradesh: ASIP",
-              "tone": "accent",
-              "delay": 200
-            },
-            {
-              "at": [
-                72.83,
-                21.17
-              ],
-              "label": "Surat: Suchi Semicon",
-              "tone": "accent",
-              "delay": 330
-            },
-            {
-              "at": [
-                72.0,
-                22.0
-              ],
-              "label": "Dholera: Crystal Matrix",
-              "tone": "accent",
-              "delay": 360
-            }
-          ]
-        }
-      },
-      "onScreen": "Odisha: SiCSem, 3D Glass · Mohali: CDIL · Andhra Pradesh: ASIP · May 2026: Crystal Matrix, Suchi"
-    },
-    {
-      "id": "S36",
-      "narration": "[serious] अब एक बड़े milestone की बात करते हैं। [pause] February 2026 में Prime Minister ने Micron के Sanand plant का उद्घाटन किया, जहाँ से India में बने पहले semiconductor memory modules का commercial production शुरू हुआ।",
-      "durationSec": 15.51,
-      "audio": "jobs/semiconductors/S36.mp3",
-      "objective": "o5",
-      "completes": [],
-      "visual": {
-        "type": "source",
-        "url": "https://www.pmindia.gov.in/en/news_updates/pm-to-visit-gujarat-on-28th-february/",
-        "publisher": "Prime Minister's Office",
-        "date": "28 Feb 2026",
-        "title": "PM to visit Gujarat on 28th February",
-        "why": "Micron's Sanand ATMP and the first made-in-India memory modules",
-        "shot_error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://www.pmindia.gov.in/en/news_updates/pm-to-visit-gujarat-on-28th-february/\nCall log:\n  - navigating to \"ht"
-      },
-      "onScreen": "Feb 2026: Micron Sanand · first made-in-India memory modules",
-      "sfx": "ping"
-    },
-    {
-      "id": "S37",
-      "narration": "[measured] और September 2026 में SEMICON India में Prime Minister ने बताया कि अब India में पाँच chip assembly और packaging plants commercial production में हैं। [pause] लेकिन ध्यान दीजिए, ये सभी ATMP या OSAT units हैं, और India का पहला commercial fab, Dholera, अभी बन रहा है।",
-      "durationSec": 22.06,
-      "audio": "jobs/semiconductors/S37.mp3",
-      "objective": "o5",
-      "completes": [],
-      "visual": {
-        "type": "source",
-        "url": "https://www.eetimes.com/semicon-india-2026-india-starts-packaging-chips-as-ecosystem-takes-shape/",
-        "publisher": "EE Times",
-        "date": "Sept 2026",
-        "title": "SEMICON India 2026: India starts packaging chips as ecosystem takes shape",
-        "why": "Five packaging plants in production; Dholera fab still being built",
-        "shot_error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://www.eetimes.com/semicon-india-2026-india-starts-packaging-chips-as-ecosystem-takes-shape/\nCall log:\n  - "
-      },
-      "onScreen": "Sept 2026: 5 packaging plants in production · 0 commercial fabs yet"
-    },
-    {
-      "id": "S38",
-      "narration": "[explaining] Prelims के लिए एक और fact याद रखिए। [pause] India के पास पहले से एक सरकारी fab है, Mohali का Semi-Conductor Laboratory, यानी SCL। [pause] यहीं बना Vikram 3201, एक 32-bit processor, जिसे ISRO के लिए बनाया गया और September 2025 में SEMICON India में पेश किया गया।",
-      "durationSec": 22.24,
-      "audio": "jobs/semiconductors/S38.mp3",
-      "objective": "o5",
-      "completes": [],
-      "visual": {
-        "type": "source",
-        "url": "https://www.theregister.com/2025/09/03/india_hails_first_homegrown_chip/",
-        "publisher": "The Register",
-        "date": "3 Sep 2025",
-        "title": "India hails first homegrown chip",
-        "why": "Vikram 3201 made at SCL Mohali",
-        "shot_error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://www.theregister.com/2025/09/03/india_hails_first_homegrown_chip/\nCall log:\n  - navigating to \"https://ww"
-      },
-      "onScreen": "SCL Mohali (govt fab, 180 nm) · Vikram 3201: 32-bit, shown Sept 2025"
-    },
-    {
-      "id": "S39",
-      "narration": "[thoughtful] Chip design में India पहले से मज़बूत है। [pause] MeitY के Secretary के अनुसार, दुनिया के लगभग 20 percent semiconductor design engineers India में हैं। [pause] DLI scheme का मक़सद है कि यही talent Indian companies के अपने chips भी design करे।",
-      "durationSec": 18.29,
-      "audio": "jobs/semiconductors/S39.mp3",
-      "objective": "o5",
-      "completes": [
-        "o5"
-      ],
-      "visual": {
-        "type": "source",
-        "url": "https://newsonair.gov.in/india-accounts-for-20-of-global-semiconductor-design-workforce-says-meity/",
-        "publisher": "All India Radio News",
-        "date": "19 Sep 2026",
-        "title": "India accounts for 20% of global semiconductor design workforce, says MeitY",
-        "why": "MeitY Secretary's figure on India's design talent",
-        "shot_error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://newsonair.gov.in/india-accounts-for-20-of-global-semiconductor-design-workforce-says-meity/\nCall log:\n  "
-      },
-      "onScreen": "~20% of the world's chip design workforce is in India"
-    },
-    {
-      "id": "S40",
-      "narration": "[confident] अब बात करते हैं ISM के अगले phase की। [pause] July 2026 में Union Cabinet ने India Semiconductor Mission 2.0 को मंज़ूरी दी, जिसका outlay लगभग 1.27 lakh crore rupees है।",
-      "durationSec": 16.27,
-      "audio": "jobs/semiconductors/S40.mp3",
-      "objective": "o6",
-      "completes": [],
-      "visual": {
-        "type": "timeline",
-        "heading": "India Semiconductor Mission",
-        "nodes": [
-          {
-            "date": "Dec 2021",
-            "label": "ISM 1.0: ₹76,000 crore"
-          },
-          {
-            "date": "Feb 2026",
-            "label": "Micron Sanand opens",
-            "tone": "good"
-          },
-          {
-            "date": "May 2026",
-            "label": "12 projects approved"
-          },
-          {
-            "date": "July 2026",
-            "label": "ISM 2.0: ~₹1.27 lakh crore",
-            "tone": "accent"
-          }
-        ]
-      },
-      "onScreen": "ISM 2.0 · July 2026 · ~₹1.27 lakh crore"
-    },
-    {
-      "id": "S41",
-      "narration": "[explaining] ISM 2.0 में focus बदल गया है। [pause] अब ज़ोर है chip design, Indian IP, और semiconductor equipment, chemicals, gases और materials पर। [pause] मक़सद ये है कि India में सिर्फ़ plants नहीं, बल्कि पूरी supply chain बने।",
-      "durationSec": 19.18,
-      "audio": "jobs/semiconductors/S41.mp3",
-      "objective": "o6",
-      "completes": [],
-      "visual": {
-        "type": "hub",
-        "center": {
-          "label": "ISM 2.0: full supply chain",
-          "icon": "link"
-        },
-        "spokes": [
-          {
-            "label": "Chip design",
-            "icon": "code"
-          },
-          {
-            "label": "Indian IP",
-            "icon": "lock"
-          },
-          {
-            "label": "Equipment",
-            "icon": "gear"
-          },
-          {
-            "label": "Chemicals and gases",
-            "icon": "bolt"
-          },
-          {
-            "label": "Materials",
-            "icon": "factory"
-          }
-        ]
-      },
-      "onScreen": "Focus: design · Indian IP · equipment · chemicals · gases · materials"
-    },
-    {
-      "id": "S42",
-      "narration": "[measured] Incentives भी बदले गए हैं। [pause] Silicon fab के लिए support 50 से घटकर 40 percent हुआ है, और conventional packaging के लिए 25 percent। [pause] वहीं equipment और materials बनाने वाली companies को 30 percent तक support मिलेगा।",
-      "durationSec": 18.24,
-      "audio": "jobs/semiconductors/S42.mp3",
-      "objective": "o6",
-      "completes": [],
-      "visual": {
-        "type": "source",
-        "url": "https://www.business-standard.com/industry/news/cabinet-clears-india-semiconductor-mission-2-mobile-manufacturing-126071500754_1.html",
-        "publisher": "Business Standard",
-        "date": "15 Jul 2026",
-        "title": "Cabinet clears India Semiconductor Mission 2.0",
-        "why": "New support rates under ISM 2.0",
-        "shot_error": "Page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://www.business-standard.com/industry/news/cabinet-clears-india-semiconductor-mission-2-mobile-manufacturin"
-      },
-      "onScreen": "Silicon fab 50% → 40% · Conventional packaging 25% · Equipment & materials up to 30%"
-    },
-    {
-      "id": "S43",
-      "narration": "[thoughtful] Mains के लिए challenges याद रखिए। [pause] पहला challenge है कि fab को लगातार शुद्ध पानी और बिना रुकावट बिजली चाहिए। [pause] दूसरा challenge है कि advanced machines और technology के लिए हम अभी भी विदेशी companies पर निर्भर हैं।",
-      "durationSec": 18.34,
-      "audio": "jobs/semiconductors/S43.mp3",
-      "objective": "o6",
-      "completes": [],
-      "visual": {
-        "type": "points",
-        "heading": "Challenges (Mains)",
-        "items": [
-          "1. Fabs need steady ultrapure water and uninterrupted power",
-          "2. Advanced machines and technology still come from abroad"
-        ],
-        "highlight": [
-          "water",
-          "power",
-          "abroad"
-        ]
-      }
-    },
-    {
-      "id": "S44",
-      "narration": "[thoughtful] तीसरा challenge है fab चलाने वाले experienced engineers की कमी। [pause] और चौथा challenge है उन global companies से मुक़ाबला, जिनके पास दशकों का अनुभव और बहुत बड़ा scale है।",
-      "durationSec": 14.46,
-      "audio": "jobs/semiconductors/S44.mp3",
-      "objective": "o6",
-      "completes": [],
-      "visual": {
-        "type": "points",
-        "heading": "Challenges (Mains)",
-        "items": [
-          "3. Shortage of experienced fab engineers",
-          "4. Competition with global giants that have decades of experience and huge scale"
-        ],
-        "highlight": [
-          "experienced fab engineers",
-          "huge scale"
-        ]
-      }
-    },
-    {
-      "id": "S45",
-      "narration": "[confident] तो आगे का रास्ता क्या है? [pause] पहला कदम है mature nodes और packaging में मज़बूत पकड़ बनाना। [pause] दूसरा कदम है design, materials और talent में निवेश करके धीरे-धीरे advanced nodes की तरफ़ बढ़ना। [pause] और तीसरा कदम है भरोसेमंद partner देशों के साथ मिलकर एक trusted supply chain बनाना।",
-      "durationSec": 23.66,
-      "audio": "jobs/semiconductors/S45.mp3",
-      "objective": "o6",
-      "completes": [],
-      "visual": {
-        "type": "flow",
-        "heading": "Way forward",
-        "steps": [
-          {
-            "label": "Mature nodes + packaging",
-            "sub": "build a strong base",
-            "icon": "factory"
-          },
-          {
-            "label": "Design, materials, talent",
-            "sub": "then move to advanced nodes",
-            "icon": "brain"
-          },
-          {
-            "label": "Trusted partners",
-            "sub": "a trusted supply chain",
-            "icon": "link"
-          }
-        ]
-      },
-      "onScreen": "Way forward",
-      "sfx": "pop"
-    },
-    {
-      "id": "S46",
-      "narration": "[calm] तो आज हमने सीखा कि chip अरबों transistors से बनता है, और आज nm node का नाम एक generation का label है। [pause] Fab chip के अंदर transistors बनाता है, और ATMP या OSAT उसे pack और test करके तैयार करता है।",
-      "durationSec": 20.38,
-      "audio": "jobs/semiconductors/S46.mp3",
-      "objective": "o6",
-      "completes": [],
-      "visual": {
-        "type": "points",
-        "heading": "Recap",
-        "items": [
-          "A chip is made of billions of transistors",
-          "A nm node name is a generation label",
-          "Fab makes the transistors; ATMP/OSAT packs and tests the chip"
-        ],
-        "highlight": [
-          "generation label",
-          "Fab",
-          "ATMP/OSAT"
-        ]
-      }
-    },
-    {
-      "id": "S47",
-      "narration": "[calm] ISM ने December 2021 में 76,000 crore rupees से शुरुआत की, और आज 12 projects approve हो चुके हैं। [pause] अब ISM 2.0 का लक्ष्य है पूरी supply chain को India में लाना।",
-      "durationSec": 17.29,
-      "audio": "jobs/semiconductors/S47.mp3",
-      "objective": "o6",
-      "completes": [],
-      "visual": {
-        "type": "points",
-        "heading": "Recap",
-        "items": [
-          "ISM began in Dec 2021 with ₹76,000 crore",
-          "12 projects approved so far",
-          "ISM 2.0: bring the full supply chain to India"
-        ],
-        "highlight": [
-          "₹76,000 crore",
-          "12 projects",
-          "ISM 2.0"
-        ]
-      }
-    },
-    {
-      "id": "S48",
-      "narration": "[confident] अगली बार जब आप अपना phone उठाएँ, तो एक सवाल ज़रूर पूछिए। [pause] इसका chip कहाँ design हुआ, कहाँ बना, और कहाँ pack हुआ? [pause] India की कोशिश है कि आने वाले सालों में इन तीनों सवालों का जवाब India हो।",
-      "durationSec": 16.9,
-      "audio": "jobs/semiconductors/S48.mp3",
-      "objective": "o6",
-      "completes": [
-        "o6"
-      ],
-      "visual": {
-        "type": "question",
-        "text": "Your phone’s chip: designed where, made where, packed where?",
-        "highlight": [
-          "designed",
-          "made",
-          "packed"
-        ]
-      },
-      "onScreen": "Designed in? Made in? Packed in? → INDIA",
-      "sfx": "hit"
+    "right": {
+     "heading": "Switch OFF",
+     "items": [
+      "current stops",
+      "reads as 0"
+     ],
+     "tone": "muted"
     }
-  ],
-  "shorts": [
-    {
-      "id": "short-1",
-      "hook": "Your phone runs on billions of tiny switches",
-      "scenes": [
-        "S04",
-        "S05",
-        "S06",
-        "S07"
-      ]
+   },
+   "onScreen": "Transistor = tiny switch · ON = 1 · OFF = 0",
+   "sfx": "tick"
+  },
+  {
+   "id": "S07",
+   "narration": "[measured] एक chip, यानी integrated circuit, में ऐसे अरबों transistors एक साथ बने होते हैं। [pause] जैसे Apple के A17 Pro chip में लगभग 19 billion transistors हैं।",
+   "durationSec": 11.93,
+   "audio": "jobs/semiconductors/S07.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "stat",
+    "value": 19,
+    "suffix": " billion",
+    "label": "transistors in Apple’s A17 Pro chip",
+    "source": "Tom's Hardware, Sept 2023"
+   },
+   "onScreen": "Chip = integrated circuit",
+   "sfx": "ping",
+   "compact": true
+  },
+  {
+   "id": "S08",
+   "narration": "[thoughtful] अब सवाल ये है कि इतने सारे transistors एक छोटे से chip पर आते कैसे हैं? [pause] इसका जवाब छुपा है nm, यानी nanometre में।",
+   "durationSec": 9.09,
+   "audio": "jobs/semiconductors/S08.mp3",
+   "objective": "o1",
+   "completes": [
+    "o1"
+   ],
+   "visual": {
+    "type": "question",
+    "text": "How do billions of transistors fit on one tiny chip? The answer is in nm.",
+    "highlight": [
+     "nm"
+    ]
+   },
+   "sfx": "whoosh"
+  },
+  {
+   "id": "S09",
+   "narration": "[explaining] एक nanometre, एक metre का एक अरबवाँ हिस्सा होता है। [pause] U.S. National Nanotechnology Initiative के अनुसार, इंसान का एक बाल लगभग 80,000 से 1,00,000 nanometre चौड़ा होता है।",
+   "durationSec": 14.01,
+   "audio": "jobs/semiconductors/S09.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://www.nano.gov/about-nanotechnology/just-how-small-is-nano",
+    "publisher": "U.S. National Nanotechnology Initiative",
+    "date": "nano.gov",
+    "title": "Just How Small Is \"Nano\"?",
+    "why": "Gives the width of a human hair in nanometres"
+   },
+   "onScreen": "1 nm = 10⁻⁹ m · Human hair ≈ 80,000–100,000 nm"
+  },
+  {
+   "id": "S10",
+   "narration": "[explaining] Chip की दुनिया में आप 28 nm, 7 nm या 3 nm जैसे नाम सुनते हैं। [pause] इन्हें technology node या process node कहते हैं। [pause] Node जितना छोटा होता है, transistors उतने ही छोटे और पास-पास होते हैं।",
+   "durationSec": 16.08,
+   "audio": "jobs/semiconductors/S10.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "flow",
+    "heading": "Technology (process) node",
+    "steps": [
+     {
+      "label": "28 nm",
+      "sub": "bigger, fewer transistors"
+     },
+     {
+      "label": "7 nm",
+      "sub": "smaller, more packed"
+     },
+     {
+      "label": "3 nm",
+      "sub": "smallest, most packed"
+     }
+    ]
+   },
+   "onScreen": "Process node: 28 nm → 7 nm → 3 nm",
+   "sfx": "pop"
+  },
+  {
+   "id": "S11",
+   "narration": "[explaining] छोटे node के तीन बड़े फ़ायदे हैं। [pause] पहला, एक chip पर ज़्यादा transistors आते हैं। [pause] दूसरा, chip ज़्यादा तेज़ काम करता है। [pause] और तीसरा, बिजली कम ख़र्च होती है, इसलिए आपके phone की battery ज़्यादा देर चलती है।",
+   "durationSec": 15.97,
+   "audio": "jobs/semiconductors/S11.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "points",
+    "heading": "Three benefits of a smaller node",
+    "items": [
+     "More transistors on one chip",
+     "The chip works faster",
+     "It uses less power, so the battery lasts longer"
+    ],
+    "highlight": [
+     "More transistors",
+     "faster",
+     "less power"
+    ]
+   }
+  },
+  {
+   "id": "S12",
+   "narration": "[emphatic] लेकिन UPSC के लिए एक trap याद रखिए। [pause] आज 3 nm का मतलब ये नहीं है कि chip का कोई हिस्सा सच में 3 nanometre का है। [pause] IEEE Spectrum के अनुसार, अब node का नाम किसी एक असली हिस्से का size नहीं बताता, ये बस एक नई generation का नाम है।",
+   "durationSec": 18.43,
+   "audio": "jobs/semiconductors/S12.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://spectrum.ieee.org/the-status-of-moores-law-its-complicated",
+    "publisher": "IEEE Spectrum",
+    "date": "Oct 2013",
+    "title": "The Status of Moore's Law: It's Complicated",
+    "why": "Node names no longer match any real feature size"
+   },
+   "onScreen": "\"3 nm\" ≠ any 3 nm feature · node name = generation label",
+   "sfx": "hit"
+  },
+  {
+   "id": "S13",
+   "narration": "[measured] Intel का example देखिए। [pause] उसके 2001 वाले 130 nm chips में transistor का gate असल में सिर्फ़ 70 nm लंबा था।",
+   "durationSec": 10.55,
+   "audio": "jobs/semiconductors/S13.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Intel node name (2001)",
+     "items": [
+      "130 nm"
+     ],
+     "tone": "muted"
     },
-    {
-      "id": "short-2",
-      "hook": "3nm chips have nothing that is 3nm",
-      "scenes": [
-        "S09",
-        "S10",
-        "S12",
-        "S13"
-      ]
-    },
-    {
-      "id": "short-3",
-      "hook": "Making a chip vs packing a chip",
-      "scenes": [
-        "S16",
-        "S18",
-        "S20",
-        "S23"
-      ]
-    },
-    {
-      "id": "short-4",
-      "hook": "92% of the most advanced chips, one island",
-      "scenes": [
-        "S25",
-        "S26",
-        "S27",
-        "S28"
-      ]
-    },
-    {
-      "id": "short-5",
-      "hook": "Where India is making chips",
-      "scenes": [
-        "S32",
-        "S33",
-        "S34",
-        "S35"
-      ]
-    },
-    {
-      "id": "short-6",
-      "hook": "India's ₹1.27 lakh crore chip bet",
-      "scenes": [
-        "S40",
-        "S41",
-        "S42"
-      ]
+    "right": {
+     "heading": "Real gate length",
+     "items": [
+      "only ~70 nm"
+     ],
+     "tone": "accent"
     }
-  ],
-  "thumbnail": {
-    "headline": "20% DESIGNERS, 0 FABS?",
-    "sub": "Fab vs OSAT · ISM 2.0"
+   },
+   "sfx": "tick"
+  },
+  {
+   "id": "S14",
+   "narration": "[explaining] Nodes को दो groups में समझिए। [pause] सबसे advanced nodes, जैसे 3 nm और 2 nm, smartphones, AI और data centres के processors में लगते हैं। [pause] Mature या legacy nodes, यानी 28 nm और उससे बड़े, cars, appliances, power devices और defence electronics में ज़्यादा लगते हैं।",
+   "durationSec": 21.73,
+   "audio": "jobs/semiconductors/S14.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Advanced nodes (3 nm, 2 nm)",
+     "items": [
+      "Smartphones",
+      "AI processors",
+      "Data centres"
+     ],
+     "tone": "accent"
+    },
+    "right": {
+     "heading": "Mature nodes (28 nm and above)",
+     "items": [
+      "Cars",
+      "Appliances",
+      "Power devices",
+      "Defence electronics"
+     ],
+     "tone": "good"
+    }
+   }
+  },
+  {
+   "id": "S15",
+   "narration": "[confident] Taiwan की company TSMC ने 2 nm chips का mass production 2025 के आख़िर में शुरू किया, और India का पहला commercial fab 28 से 110 nm के बीच के chips बनाएगा।",
+   "durationSec": 13.75,
+   "audio": "jobs/semiconductors/S15.mp3",
+   "objective": "o2",
+   "completes": [
+    "o2"
+   ],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "TSMC, Taiwan",
+     "items": [
+      "2 nm chips",
+      "mass production: end of 2025"
+     ],
+     "tone": "accent"
+    },
+    "right": {
+     "heading": "India's first commercial fab",
+     "items": [
+      "Tata, Dholera",
+      "28 nm to 110 nm chips"
+     ],
+     "tone": "good"
+    }
+   },
+   "onScreen": "TSMC 2 nm: volume production Q4 2025 · Tata Dholera fab: 28–110 nm"
+  },
+  {
+   "id": "S16",
+   "narration": "[curious] अब असली सवाल ये है कि एक chip बनता कैसे है? [pause] इसके तीन बड़े stages हैं, design, fabrication और ATMP।",
+   "durationSec": 9.48,
+   "audio": "jobs/semiconductors/S16.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "flow",
+    "heading": "How a chip is made",
+    "steps": [
+     {
+      "label": "Design",
+      "sub": "the blueprint",
+      "icon": "code"
+     },
+     {
+      "label": "Fabrication",
+      "sub": "the fab",
+      "icon": "factory"
+     },
+     {
+      "label": "ATMP",
+      "sub": "pack and test",
+      "icon": "check"
+     }
+    ]
+   },
+   "sfx": "pop"
+  },
+  {
+   "id": "S17",
+   "narration": "[explaining] पहला stage है design। [pause] यहाँ engineers computer पर chip का पूरा नक्शा बनाते हैं, कि कौन सा transistor कहाँ होगा। [pause] Nvidia और Qualcomm जैसी companies सिर्फ़ design करती हैं, इसलिए इन्हें fabless companies कहते हैं।",
+   "durationSec": 15.39,
+   "audio": "jobs/semiconductors/S17.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "hub",
+    "center": {
+     "label": "Chip design",
+     "icon": "code"
+    },
+    "spokes": [
+     {
+      "label": "Map of every transistor",
+      "icon": "doc"
+     },
+     {
+      "label": "Done on computers",
+      "icon": "brain"
+     },
+     {
+      "label": "Fabless: Nvidia",
+      "icon": "chart"
+     },
+     {
+      "label": "Fabless: Qualcomm",
+      "icon": "phone"
+     }
+    ]
+   },
+   "onScreen": "Design · fabless = design only (e.g. Nvidia, Qualcomm)"
+  },
+  {
+   "id": "S18",
+   "narration": "[explaining] दूसरा stage है fabrication, और जिस factory में ये होता है उसे fab या foundry कहते हैं। [pause] यहाँ silicon की एक पतली गोल plate, जिसे wafer कहते हैं, उस पर सैकड़ों steps में transistors बनाए जाते हैं। [pause] इनमें सबसे important step है photolithography, यानी रोशनी से wafer पर design छापना।",
+   "durationSec": 20.63,
+   "audio": "jobs/semiconductors/S18.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "flow",
+    "heading": "Inside a fab",
+    "steps": [
+     {
+      "label": "Wafer",
+      "sub": "thin round silicon plate"
+     },
+     {
+      "label": "Hundreds of steps",
+      "sub": "transistors built layer by layer"
+     },
+     {
+      "label": "Photolithography",
+      "sub": "light prints the design"
+     }
+    ]
+   },
+   "onScreen": "Fab / foundry · wafer · photolithography"
+  },
+  {
+   "id": "S19",
+   "narration": "[measured] Fab बनाना बहुत मुश्किल और बहुत महँगा है। [pause] इसके लिए लगभग धूल-मुक्त cleanroom, बहुत शुद्ध पानी, बिना रुकावट की बिजली और बहुत महँगी machines चाहिए। [pause] इसीलिए Tata के Dholera fab में लगभग 91,000 crore rupees का investment है।",
+   "durationSec": 17.87,
+   "audio": "jobs/semiconductors/S19.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://www.tataworld.com/news/openinside/tata-group-to-build-the-nations-first-fab-in-dholera",
+    "publisher": "Tata Group",
+    "date": "2024",
+    "title": "Tata Group to build the nation's first fab in Dholera",
+    "why": "Investment, partner and capacity of the Dholera fab"
+   },
+   "onScreen": "Tata Dholera fab ≈ ₹91,000 crore",
+   "sfx": "ping"
+  },
+  {
+   "id": "S20",
+   "narration": "[explaining] तीसरा stage है ATMP, यानी Assembly, Testing, Marking और Packaging। [pause] पहले wafer को काटकर उसके छोटे-छोटे chips अलग किए जाते हैं। [pause] फिर हर chip को एक मज़बूत package में बंद करके उसके connections जोड़े जाते हैं, और आख़िर में हर chip को test करके उस पर पहचान का mark लगाया जाता है।",
+   "durationSec": 20.66,
+   "audio": "jobs/semiconductors/S20.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "flow",
+    "heading": "ATMP, step by step",
+    "steps": [
+     {
+      "label": "Cut the wafer",
+      "sub": "separate each chip"
+     },
+     {
+      "label": "Package",
+      "sub": "seal it, connect it"
+     },
+     {
+      "label": "Test",
+      "sub": "check every chip"
+     },
+     {
+      "label": "Mark",
+      "sub": "print its identity"
+     }
+    ]
+   },
+   "onScreen": "ATMP = Assembly · Testing · Marking · Packaging"
+  },
+  {
+   "id": "S21",
+   "narration": "[explaining] अब ATMP और OSAT का फ़र्क समझिए। [pause] ATMP उस काम का नाम है। [pause] जब कोई company यही काम दूसरी companies के लिए service की तरह करती है, तो उसे OSAT, यानी Outsourced Semiconductor Assembly and Test, कहते हैं।",
+   "durationSec": 16.35,
+   "audio": "jobs/semiconductors/S21.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "ATMP",
+     "items": [
+      "the name of the work",
+      "Assembly, Testing, Marking, Packaging"
+     ],
+     "tone": "accent"
+    },
+    "right": {
+     "heading": "OSAT",
+     "items": [
+      "the same work as a service",
+      "Outsourced Semiconductor Assembly and Test"
+     ],
+     "tone": "good"
+    }
+   },
+   "onScreen": "ATMP = the process · OSAT = ATMP as an outsourced service"
+  },
+  {
+   "id": "S22",
+   "narration": "[explaining] जैसे Micron का Sanand plant अपने ही wafers से memory products तैयार करता है, इसलिए उसे ATMP कहा जाता है। [pause] वहीं CG Semi का Sanand plant दूसरों के लिए assembly और testing की service देता है, इसलिए उसे OSAT कहा जाता है।",
+   "durationSec": 15.29,
+   "audio": "jobs/semiconductors/S22.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://negd.gov.in/wp-content/uploads/2025/09/PIB2161666.pdf",
+    "publisher": "Press Information Bureau",
+    "date": "28 Aug 2025",
+    "title": "CG Semi OSAT pilot line at Sanand",
+    "why": "CG Semi offers assembly and test as a service"
+   },
+   "onScreen": "Micron Sanand = ATMP (own chips) · CG Semi Sanand = OSAT (service)"
+  },
+  {
+   "id": "S23",
+   "narration": "[emphatic] तो fab और ATMP का फ़र्क याद रखिए। [pause] Fab, chip के अंदर transistors बनाता है, जबकि ATMP उस chip को pack और test करके इस्तेमाल के लिए तैयार करता है। [pause] Fab में बहुत ज़्यादा पैसा, technology और समय लगता है, जबकि ATMP कम लागत में और जल्दी शुरू हो जाता है।",
+   "durationSec": 19.68,
+   "audio": "jobs/semiconductors/S23.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "FAB",
+     "items": [
+      "makes the transistors",
+      "very high cost",
+      "takes years"
+     ],
+     "tone": "accent"
+    },
+    "right": {
+     "heading": "ATMP / OSAT",
+     "items": [
+      "packs and tests the chip",
+      "lower cost",
+      "faster start"
+     ],
+     "tone": "good"
+    }
+   },
+   "sfx": "hit"
+  },
+  {
+   "id": "S24",
+   "narration": "[thoughtful] यही वजह है कि India के ज़्यादातर approved projects ATMP और OSAT के हैं। [pause] ये जल्दी production शुरू करते हैं, लोगों में skills बनाते हैं, और fab के लिए ज़मीन तैयार करते हैं।",
+   "durationSec": 12.27,
+   "audio": "jobs/semiconductors/S24.mp3",
+   "objective": "o3",
+   "completes": [
+    "o3"
+   ],
+   "visual": {
+    "type": "stat",
+    "value": 9,
+    "suffix": " of 12",
+    "label": "approved ISM projects are packaging units",
+    "source": "DataM Intelligence, 30 Jun 2026"
+   },
+   "onScreen": "9 of 12 ISM projects = packaging (ATMP/OSAT)",
+   "sfx": "ping",
+   "compact": true
+  },
+  {
+   "id": "S25",
+   "narration": "[curious] अब एक नज़र दुनिया के chip map पर डालते हैं। [pause] Chip बनाने की ये पूरी chain अलग-अलग देशों में बँटी हुई है।",
+   "durationSec": 7.89,
+   "audio": "jobs/semiconductors/S25.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "map",
+    "map": {
+     "projection": "globe-to-flat",
+     "from": {
+      "center": [
+       80,
+       20
+      ],
+      "zoom": 0.9
+     },
+     "focus": {
+      "center": [
+       60,
+       25
+      ],
+      "zoom": 1.15
+     },
+     "highlights": [
+      {
+       "iso3": "USA",
+       "tone": "accent"
+      },
+      {
+       "iso3": "NLD",
+       "tone": "warn",
+       "delay": 10
+      },
+      {
+       "iso3": "TWN",
+       "tone": "bad",
+       "delay": 20
+      },
+      {
+       "iso3": "CHN",
+       "tone": "neutral",
+       "delay": 25
+      },
+      {
+       "iso3": "MYS",
+       "tone": "neutral",
+       "delay": 30
+      },
+      {
+       "iso3": "IND",
+       "tone": "good",
+       "delay": 35
+      }
+     ],
+     "routes": [
+      {
+       "points": [
+        [
+         -120,
+         37
+        ],
+        [
+         5.4,
+         51.4
+        ]
+       ],
+       "tone": "accent",
+       "delay": 30
+      },
+      {
+       "points": [
+        [
+         5.4,
+         51.4
+        ],
+        [
+         121,
+         24
+        ]
+       ],
+       "tone": "accent",
+       "delay": 45
+      },
+      {
+       "points": [
+        [
+         121,
+         24
+        ],
+        [
+         101.7,
+         3.1
+        ]
+       ],
+       "tone": "accent",
+       "delay": 60
+      }
+     ]
+    }
+   },
+   "sfx": "whoosh"
+  },
+  {
+   "id": "S26",
+   "narration": "[explaining] Chip design में America की companies सबसे आगे हैं। [pause] सबसे advanced EUV lithography machines सिर्फ़ Netherlands की company ASML बनाती है। [pause] और ATMP का बड़ा हिस्सा East और South-East Asia में होता है, जैसे China, Taiwan और Malaysia में।",
+   "durationSec": 17.21,
+   "audio": "jobs/semiconductors/S26.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "map",
+    "map": {
+     "focus": {
+      "center": [
+       40,
+       30
+      ],
+      "zoom": 1.25
+     },
+     "from": {
+      "center": [
+       -60,
+       35
+      ],
+      "zoom": 1.6
+     },
+     "highlights": [
+      {
+       "iso3": "USA",
+       "tone": "accent"
+      },
+      {
+       "iso3": "NLD",
+       "tone": "warn",
+       "delay": 40
+      },
+      {
+       "iso3": "CHN",
+       "tone": "good",
+       "delay": 80
+      },
+      {
+       "iso3": "TWN",
+       "tone": "good",
+       "delay": 85
+      },
+      {
+       "iso3": "MYS",
+       "tone": "good",
+       "delay": 90
+      }
+     ],
+     "markers": [
+      {
+       "at": [
+        -122,
+        37.4
+       ],
+       "label": "Chip design",
+       "tone": "accent",
+       "delay": 10
+      },
+      {
+       "at": [
+        5.4,
+        51.4
+       ],
+       "label": "ASML: EUV machines",
+       "tone": "warn",
+       "delay": 45
+      },
+      {
+       "at": [
+        110,
+        15
+       ],
+       "label": "ATMP hub",
+       "tone": "good",
+       "delay": 95
+      }
+     ]
+    }
+   },
+   "onScreen": "Design: USA · EUV machines: ASML (Netherlands) · ATMP: East & South-East Asia"
+  },
+  {
+   "id": "S27",
+   "narration": "[serious] लेकिन सबसे बड़ा concentration fabrication में है। [pause] Boston Consulting Group की एक report के अनुसार, 2019 में 10 nm से छोटे सबसे advanced logic chips की लगभग 92 percent capacity अकेले Taiwan में थी।",
+   "durationSec": 15.58,
+   "audio": "jobs/semiconductors/S27.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "map",
+    "map": {
+     "from": {
+      "center": [
+       110,
+       25
+      ],
+      "zoom": 2.5
+     },
+     "focus": {
+      "center": [
+       121,
+       23.8
+      ],
+      "zoom": 14
+     },
+     "highlights": [
+      {
+       "iso3": "TWN",
+       "tone": "bad"
+      }
+     ],
+     "markers": [
+      {
+       "at": [
+        120.97,
+        24.8
+       ],
+       "label": "Hsinchu",
+       "tone": "accent",
+       "delay": 40
+      }
+     ],
+     "labels": [
+      {
+       "at": [
+        121.3,
+        22.4
+       ],
+       "text": "~92% of the most advanced chips (2019)"
+      }
+     ]
+    }
+   },
+   "onScreen": "2019: ~92% of <10 nm logic capacity in Taiwan",
+   "sfx": "hit"
+  },
+  {
+   "id": "S28",
+   "narration": "[thoughtful] अब सोचिए, अगर किसी युद्ध, भूकंप या pandemic की वजह से ये एक जगह रुक जाए, तो दुनिया भर के phones, cars और defence systems पर असर पड़ेगा। [pause] इसीलिए आज chips को सिर्फ़ business नहीं, बल्कि national security का मुद्दा माना जाता है।",
+   "durationSec": 17.08,
+   "audio": "jobs/semiconductors/S28.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "hub",
+    "center": {
+     "label": "One region stops",
+     "icon": "cross"
+    },
+    "spokes": [
+     {
+      "label": "Phones",
+      "icon": "phone"
+     },
+     {
+      "label": "Cars",
+      "icon": "truck"
+     },
+     {
+      "label": "Defence systems",
+      "icon": "lock"
+     },
+     {
+      "label": "National security",
+      "icon": "globe"
+     }
+    ]
+   },
+   "onScreen": "One region → global risk · chips = national security"
+  },
+  {
+   "id": "S29",
+   "narration": "[explaining] इसीलिए America ने 2022 में CHIPS and Science Act बनाया, और Europe, Japan और South Korea भी अपने यहाँ chip plants के लिए भारी subsidy दे रहे हैं। [pause] India Semiconductor Mission भी इसी global race का हिस्सा है।",
+   "durationSec": 16.05,
+   "audio": "jobs/semiconductors/S29.mp3",
+   "objective": "o4",
+   "completes": [
+    "o4"
+   ],
+   "visual": {
+    "type": "map",
+    "map": {
+     "focus": {
+      "center": [
+       70,
+       30
+      ],
+      "zoom": 1.3
+     },
+     "from": {
+      "center": [
+       -40,
+       35
+      ],
+      "zoom": 1.3
+     },
+     "highlights": [
+      {
+       "iso3": "USA",
+       "tone": "accent"
+      },
+      {
+       "iso3": "DEU",
+       "tone": "accent",
+       "delay": 20
+      },
+      {
+       "iso3": "FRA",
+       "tone": "accent",
+       "delay": 20
+      },
+      {
+       "iso3": "JPN",
+       "tone": "accent",
+       "delay": 35
+      },
+      {
+       "iso3": "KOR",
+       "tone": "accent",
+       "delay": 40
+      },
+      {
+       "iso3": "IND",
+       "tone": "good",
+       "delay": 60
+      }
+     ],
+     "markers": [
+      {
+       "at": [
+        -98,
+        39
+       ],
+       "label": "CHIPS Act 2022",
+       "delay": 10
+      },
+      {
+       "at": [
+        10,
+        50
+       ],
+       "label": "EU",
+       "delay": 22
+      },
+      {
+       "at": [
+        138,
+        36
+       ],
+       "label": "Japan",
+       "delay": 36
+      },
+      {
+       "at": [
+        127.8,
+        36.5
+       ],
+       "label": "S. Korea",
+       "delay": 42
+      },
+      {
+       "at": [
+        78,
+        22
+       ],
+       "label": "India: ISM",
+       "tone": "good",
+       "delay": 62
+      }
+     ]
+    }
+   },
+   "onScreen": "USA CHIPS Act 2022 · EU · Japan · South Korea · India ISM"
+  },
+  {
+   "id": "S30",
+   "narration": "[explaining] India Semiconductor Mission, यानी ISM, को Union Cabinet ने December 2021 में मंज़ूरी दी, और इसका कुल outlay 76,000 crore rupees था। [pause] ये Ministry of Electronics and IT, यानी MeitY, के तहत Digital India Corporation का एक special division है।",
+   "durationSec": 18.26,
+   "audio": "jobs/semiconductors/S30.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/feb/doc202627782201.pdf",
+    "publisher": "Press Information Bureau",
+    "date": "7 Feb 2026",
+    "title": "India Semiconductor Mission: factsheet",
+    "why": "Approval date, outlay and structure of ISM"
+   },
+   "onScreen": "ISM 1.0 · Dec 2021 · ₹76,000 crore · MeitY / Digital India Corporation"
+  },
+  {
+   "id": "S31",
+   "narration": "[explaining] इसके तहत सरकार silicon fab, display fab, compound semiconductor और ATMP या OSAT units को project cost का 50 percent तक fiscal support देती है। [pause] और chip design करने वाली Indian companies और startups के लिए Design Linked Incentive, यानी DLI, scheme है।",
+   "durationSec": 19.06,
+   "audio": "jobs/semiconductors/S31.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "flow",
+    "heading": "What ISM gives",
+    "steps": [
+     {
+      "label": "Centre",
+      "icon": "money"
+     },
+     {
+      "label": "Up to 50% of project cost",
+      "sub": "fabs, display, compound, ATMP/OSAT",
+      "icon": "factory"
+     },
+     {
+      "label": "DLI scheme",
+      "sub": "for Indian chip design startups",
+      "icon": "code"
+     }
+    ]
+   },
+   "onScreen": "Up to 50% fiscal support · DLI scheme for chip design",
+   "sfx": "ping"
+  },
+  {
+   "id": "S32",
+   "narration": "[measured] अब तक ISM के तहत 12 projects approve हो चुके हैं, जिनमें कुल लगभग 1.64 lakh crore rupees का investment है। [pause] इनमें 1 silicon fab, 2 compound semiconductor fabs और 9 packaging units हैं।",
+   "durationSec": 14.67,
+   "audio": "jobs/semiconductors/S32.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "stat",
+    "value": 1.64,
+    "decimals": 2,
+    "prefix": "₹",
+    "suffix": " lakh crore",
+    "label": "invested across 12 approved ISM projects",
+    "source": "Inc42, 5 May 2026"
+   },
+   "onScreen": "1 silicon fab · 2 compound fabs · 9 packaging units",
+   "sfx": "ping",
+   "compact": true
+  },
+  {
+   "id": "S33",
+   "narration": "[explaining] चलिए इन्हें India के map पर देखते हैं। [pause] सबसे बड़ा project है Gujarat के Dholera में Tata Electronics का fab, जो Taiwan की company PSMC के साथ मिलकर बन रहा है। [pause] इसकी capacity होगी हर महीने 50,000 wafers तक।",
+   "durationSec": 16.14,
+   "audio": "jobs/semiconductors/S33.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "map",
+    "map": {
+     "projection": "globe-to-flat",
+     "from": {
+      "center": [
+       78,
+       20
+      ],
+      "zoom": 1
+     },
+     "focus": {
+      "center": [
+       74,
+       22.5
+      ],
+      "zoom": 9
+     },
+     "highlights": [
+      {
+       "iso3": "IND",
+       "tone": "neutral"
+      }
+     ],
+     "markers": [
+      {
+       "at": [
+        72.2,
+        22.25
+       ],
+       "label": "Dholera: Tata–PSMC fab",
+       "tone": "accent",
+       "delay": 50
+      }
+     ]
+    }
+   },
+   "onScreen": "Dholera: Tata–PSMC fab · up to 50,000 wafers/month",
+   "sfx": "whoosh"
+  },
+  {
+   "id": "S34",
+   "narration": "[explaining] Gujarat के ही Sanand में Micron, CG Semi और Kaynes के plants हैं। [pause] Assam के Jagiroad में Tata का अपना packaging plant बन रहा है, और Uttar Pradesh में Jewar के पास HCL और Foxconn का joint venture approve हुआ है।",
+   "durationSec": 15.37,
+   "audio": "jobs/semiconductors/S34.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "map",
+    "map": {
+     "from": {
+      "center": [
+       74,
+       22.5
+      ],
+      "zoom": 9
+     },
+     "focus": {
+      "center": [
+       80.5,
+       22.5
+      ],
+      "zoom": 4.6
+     },
+     "highlights": [
+      {
+       "iso3": "IND",
+       "tone": "neutral"
+      }
+     ],
+     "markers": [
+      {
+       "at": [
+        72.2,
+        22.25
+       ],
+       "label": "Dholera",
+       "tone": "muted",
+       "delay": 0
+      },
+      {
+       "at": [
+        72.38,
+        22.99
+       ],
+       "label": "Sanand: Micron, CG Semi, Kaynes",
+       "tone": "accent",
+       "delay": 15
+      },
+      {
+       "at": [
+        92.2,
+        26.1
+       ],
+       "label": "Jagiroad (Assam): Tata",
+       "tone": "accent",
+       "delay": 120
+      },
+      {
+       "at": [
+        77.55,
+        28.13
+       ],
+       "label": "Jewar (UP): HCL–Foxconn",
+       "tone": "accent",
+       "delay": 200
+      }
+     ]
+    }
+   },
+   "onScreen": "Sanand: Micron · CG Semi · Kaynes · Jagiroad: Tata · Jewar: HCL–Foxconn"
+  },
+  {
+   "id": "S35",
+   "narration": "[explaining] Odisha में SiCSem का silicon carbide fab और 3D Glass Solutions का unit approve हुआ है। [pause] Punjab के Mohali में CDIL का unit है, और Andhra Pradesh में ASIP का packaging unit। [pause] और May 2026 में Gujarat के दो और units approve हुए, Crystal Matrix और Suchi Semicon।",
+   "durationSec": 20.08,
+   "audio": "jobs/semiconductors/S35.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "map",
+    "map": {
+     "focus": {
+      "center": [
+       80.5,
+       22.5
+      ],
+      "zoom": 4.6
+     },
+     "highlights": [
+      {
+       "iso3": "IND",
+       "tone": "neutral"
+      }
+     ],
+     "markers": [
+      {
+       "at": [
+        72.2,
+        22.25
+       ],
+       "label": "Dholera",
+       "tone": "muted",
+       "delay": 0
+      },
+      {
+       "at": [
+        72.38,
+        22.99
+       ],
+       "label": "Sanand",
+       "tone": "muted",
+       "delay": 0
+      },
+      {
+       "at": [
+        92.2,
+        26.1
+       ],
+       "label": "Jagiroad",
+       "tone": "muted",
+       "delay": 0
+      },
+      {
+       "at": [
+        77.55,
+        28.13
+       ],
+       "label": "Jewar",
+       "tone": "muted",
+       "delay": 0
+      },
+      {
+       "at": [
+        85.82,
+        20.3
+       ],
+       "label": "Odisha: SiCSem, 3D Glass",
+       "tone": "accent",
+       "delay": 10
+      },
+      {
+       "at": [
+        76.72,
+        30.7
+       ],
+       "label": "Mohali: CDIL",
+       "tone": "accent",
+       "delay": 150
+      },
+      {
+       "at": [
+        80.6,
+        16.5
+       ],
+       "label": "Andhra Pradesh: ASIP",
+       "tone": "accent",
+       "delay": 200
+      },
+      {
+       "at": [
+        72.83,
+        21.17
+       ],
+       "label": "Surat: Suchi Semicon",
+       "tone": "accent",
+       "delay": 330
+      },
+      {
+       "at": [
+        72.0,
+        22.0
+       ],
+       "label": "Dholera: Crystal Matrix",
+       "tone": "accent",
+       "delay": 360
+      }
+     ]
+    }
+   },
+   "onScreen": "Odisha: SiCSem, 3D Glass · Mohali: CDIL · Andhra Pradesh: ASIP · May 2026: Crystal Matrix, Suchi"
+  },
+  {
+   "id": "S36",
+   "narration": "[serious] अब एक बड़े milestone की बात करते हैं। [pause] February 2026 में Prime Minister ने Micron के Sanand plant का उद्घाटन किया, जहाँ से India में बने पहले semiconductor memory modules का commercial production शुरू हुआ।",
+   "durationSec": 14.05,
+   "audio": "jobs/semiconductors/S36.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://www.pmindia.gov.in/en/news_updates/pm-to-visit-gujarat-on-28th-february/",
+    "publisher": "Prime Minister's Office",
+    "date": "28 Feb 2026",
+    "title": "PM to visit Gujarat on 28th February",
+    "why": "Micron's Sanand ATMP and the first made-in-India memory modules"
+   },
+   "onScreen": "Feb 2026: Micron Sanand · first made-in-India memory modules",
+   "sfx": "ping"
+  },
+  {
+   "id": "S37",
+   "narration": "[measured] और September 2026 में SEMICON India में Prime Minister ने बताया कि अब India में पाँच chip assembly और packaging plants commercial production में हैं। [pause] लेकिन ध्यान दीजिए, ये सभी ATMP या OSAT units हैं, और India का पहला commercial fab, Dholera, अभी बन रहा है।",
+   "durationSec": 18.67,
+   "audio": "jobs/semiconductors/S37.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://www.eetimes.com/semicon-india-2026-india-starts-packaging-chips-as-ecosystem-takes-shape/",
+    "publisher": "EE Times",
+    "date": "Sept 2026",
+    "title": "SEMICON India 2026: India starts packaging chips as ecosystem takes shape",
+    "why": "Five packaging plants in production; Dholera fab still being built"
+   },
+   "onScreen": "Sept 2026: 5 packaging plants in production · 0 commercial fabs yet"
+  },
+  {
+   "id": "S38",
+   "narration": "[explaining] Prelims के लिए एक और fact याद रखिए। [pause] India के पास पहले से एक सरकारी fab है, Mohali का Semi-Conductor Laboratory, यानी SCL। [pause] यहीं बना Vikram 3201, एक 32-bit processor, जिसे ISRO के लिए बनाया गया और September 2025 में SEMICON India में पेश किया गया।",
+   "durationSec": 20.91,
+   "audio": "jobs/semiconductors/S38.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://www.theregister.com/2025/09/03/india_hails_first_homegrown_chip/",
+    "publisher": "The Register",
+    "date": "3 Sep 2025",
+    "title": "India hails first homegrown chip",
+    "why": "Vikram 3201 made at SCL Mohali"
+   },
+   "onScreen": "SCL Mohali (govt fab, 180 nm) · Vikram 3201: 32-bit, shown Sept 2025"
+  },
+  {
+   "id": "S39",
+   "narration": "[thoughtful] Chip design में India पहले से मज़बूत है। [pause] MeitY के Secretary के अनुसार, दुनिया के लगभग 20 percent semiconductor design engineers India में हैं। [pause] DLI scheme का मक़सद है कि यही talent Indian companies के अपने chips भी design करे।",
+   "durationSec": 15.75,
+   "audio": "jobs/semiconductors/S39.mp3",
+   "objective": "o5",
+   "completes": [
+    "o5"
+   ],
+   "visual": {
+    "type": "source",
+    "url": "https://newsonair.gov.in/india-accounts-for-20-of-global-semiconductor-design-workforce-says-meity/",
+    "publisher": "All India Radio News",
+    "date": "19 Sep 2026",
+    "title": "India accounts for 20% of global semiconductor design workforce, says MeitY",
+    "why": "MeitY Secretary's figure on India's design talent"
+   },
+   "onScreen": "~20% of the world's chip design workforce is in India"
+  },
+  {
+   "id": "S40",
+   "narration": "[confident] अब बात करते हैं ISM के अगले phase की। [pause] July 2026 में Union Cabinet ने India Semiconductor Mission 2.0 को मंज़ूरी दी, जिसका outlay लगभग 1.27 lakh crore rupees है।",
+   "durationSec": 14.43,
+   "audio": "jobs/semiconductors/S40.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "timeline",
+    "heading": "India Semiconductor Mission",
+    "nodes": [
+     {
+      "date": "Dec 2021",
+      "label": "ISM 1.0: ₹76,000 crore"
+     },
+     {
+      "date": "Feb 2026",
+      "label": "Micron Sanand opens",
+      "tone": "good"
+     },
+     {
+      "date": "May 2026",
+      "label": "12 projects approved"
+     },
+     {
+      "date": "July 2026",
+      "label": "ISM 2.0: ~₹1.27 lakh crore",
+      "tone": "accent"
+     }
+    ]
+   },
+   "onScreen": "ISM 2.0 · July 2026 · ~₹1.27 lakh crore"
+  },
+  {
+   "id": "S41",
+   "narration": "[explaining] ISM 2.0 में focus बदल गया है। [pause] अब ज़ोर है chip design, Indian IP, और semiconductor equipment, chemicals, gases और materials पर। [pause] मक़सद ये है कि India में सिर्फ़ plants नहीं, बल्कि पूरी supply chain बने।",
+   "durationSec": 16.47,
+   "audio": "jobs/semiconductors/S41.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "hub",
+    "center": {
+     "label": "ISM 2.0: full supply chain",
+     "icon": "link"
+    },
+    "spokes": [
+     {
+      "label": "Chip design",
+      "icon": "code"
+     },
+     {
+      "label": "Indian IP",
+      "icon": "lock"
+     },
+     {
+      "label": "Equipment",
+      "icon": "gear"
+     },
+     {
+      "label": "Chemicals and gases",
+      "icon": "bolt"
+     },
+     {
+      "label": "Materials",
+      "icon": "factory"
+     }
+    ]
+   },
+   "onScreen": "Focus: design · Indian IP · equipment · chemicals · gases · materials"
+  },
+  {
+   "id": "S42",
+   "narration": "[measured] Incentives भी बदले गए हैं। [pause] Silicon fab के लिए support 50 से घटकर 40 percent हुआ है, और conventional packaging के लिए 25 percent। [pause] वहीं equipment और materials बनाने वाली companies को 30 percent तक support मिलेगा।",
+   "durationSec": 15.35,
+   "audio": "jobs/semiconductors/S42.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://www.business-standard.com/industry/news/cabinet-clears-india-semiconductor-mission-2-mobile-manufacturing-126071500754_1.html",
+    "publisher": "Business Standard",
+    "date": "15 Jul 2026",
+    "title": "Cabinet clears India Semiconductor Mission 2.0",
+    "why": "New support rates under ISM 2.0"
+   },
+   "onScreen": "Silicon fab 50% → 40% · Conventional packaging 25% · Equipment & materials up to 30%"
+  },
+  {
+   "id": "S43",
+   "narration": "[thoughtful] Mains के लिए challenges याद रखिए। [pause] पहला challenge है कि fab को लगातार शुद्ध पानी और बिना रुकावट बिजली चाहिए। [pause] दूसरा challenge है कि advanced machines और technology के लिए हम अभी भी विदेशी companies पर निर्भर हैं।",
+   "durationSec": 15.58,
+   "audio": "jobs/semiconductors/S43.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "points",
+    "heading": "Challenges (Mains)",
+    "items": [
+     "1. Fabs need steady ultrapure water and uninterrupted power",
+     "2. Advanced machines and technology still come from abroad"
+    ],
+    "highlight": [
+     "water",
+     "power",
+     "abroad"
+    ]
+   }
+  },
+  {
+   "id": "S44",
+   "narration": "[thoughtful] तीसरा challenge है fab चलाने वाले experienced engineers की कमी। [pause] और चौथा challenge है उन global companies से मुक़ाबला, जिनके पास दशकों का अनुभव और बहुत बड़ा scale है।",
+   "durationSec": 12.42,
+   "audio": "jobs/semiconductors/S44.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "points",
+    "heading": "Challenges (Mains)",
+    "items": [
+     "3. Shortage of experienced fab engineers",
+     "4. Competition with global giants that have decades of experience and huge scale"
+    ],
+    "highlight": [
+     "experienced fab engineers",
+     "huge scale"
+    ]
+   }
+  },
+  {
+   "id": "S45",
+   "narration": "[confident] तो आगे का रास्ता क्या है? [pause] पहला कदम है mature nodes और packaging में मज़बूत पकड़ बनाना। [pause] दूसरा कदम है design, materials और talent में निवेश करके धीरे-धीरे advanced nodes की तरफ़ बढ़ना। [pause] और तीसरा कदम है भरोसेमंद partner देशों के साथ मिलकर एक trusted supply chain बनाना।",
+   "durationSec": 21.09,
+   "audio": "jobs/semiconductors/S45.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "flow",
+    "heading": "Way forward",
+    "steps": [
+     {
+      "label": "Mature nodes + packaging",
+      "sub": "build a strong base",
+      "icon": "factory"
+     },
+     {
+      "label": "Design, materials, talent",
+      "sub": "then move to advanced nodes",
+      "icon": "brain"
+     },
+     {
+      "label": "Trusted partners",
+      "sub": "a trusted supply chain",
+      "icon": "link"
+     }
+    ]
+   },
+   "onScreen": "Way forward",
+   "sfx": "pop"
+  },
+  {
+   "id": "S46",
+   "narration": "[calm] तो आज हमने सीखा कि chip अरबों transistors से बनता है, और आज nm node का नाम एक generation का label है। [pause] Fab chip के अंदर transistors बनाता है, और ATMP या OSAT उसे pack और test करके तैयार करता है।",
+   "durationSec": 16.14,
+   "audio": "jobs/semiconductors/S46.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "points",
+    "heading": "Recap",
+    "items": [
+     "A chip is made of billions of transistors",
+     "A nm node name is a generation label",
+     "Fab makes the transistors; ATMP/OSAT packs and tests the chip"
+    ],
+    "highlight": [
+     "generation label",
+     "Fab",
+     "ATMP/OSAT"
+    ]
+   }
+  },
+  {
+   "id": "S47",
+   "narration": "[calm] ISM ने December 2021 में 76,000 crore rupees से शुरुआत की, और आज 12 projects approve हो चुके हैं। [pause] अब ISM 2.0 का लक्ष्य है पूरी supply chain को India में लाना।",
+   "durationSec": 14.1,
+   "audio": "jobs/semiconductors/S47.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "points",
+    "heading": "Recap",
+    "items": [
+     "ISM began in Dec 2021 with ₹76,000 crore",
+     "12 projects approved so far",
+     "ISM 2.0: bring the full supply chain to India"
+    ],
+    "highlight": [
+     "₹76,000 crore",
+     "12 projects",
+     "ISM 2.0"
+    ]
+   }
+  },
+  {
+   "id": "S48",
+   "narration": "[confident] अगली बार जब आप अपना phone उठाएँ, तो एक सवाल ज़रूर पूछिए। [pause] इसका chip कहाँ design हुआ, कहाँ बना, और कहाँ pack हुआ? [pause] India की कोशिश है कि आने वाले सालों में इन तीनों सवालों का जवाब India हो।",
+   "durationSec": 15.07,
+   "audio": "jobs/semiconductors/S48.mp3",
+   "objective": "o6",
+   "completes": [
+    "o6"
+   ],
+   "visual": {
+    "type": "question",
+    "text": "Your phone’s chip: designed where, made where, packed where?",
+    "highlight": [
+     "designed",
+     "made",
+     "packed"
+    ]
+   },
+   "onScreen": "Designed in? Made in? Packed in? → INDIA",
+   "sfx": "hit"
   }
+ ],
+ "shorts": [
+  {
+   "id": "short-1",
+   "hook": "Your phone runs on billions of tiny switches",
+   "scenes": [
+    "S04",
+    "S05",
+    "S06",
+    "S07"
+   ]
+  },
+  {
+   "id": "short-2",
+   "hook": "3nm chips have nothing that is 3nm",
+   "scenes": [
+    "S09",
+    "S10",
+    "S12",
+    "S13"
+   ]
+  },
+  {
+   "id": "short-3",
+   "hook": "Making a chip vs packing a chip",
+   "scenes": [
+    "S16",
+    "S18",
+    "S20",
+    "S23"
+   ]
+  },
+  {
+   "id": "short-4",
+   "hook": "92% of the most advanced chips, one island",
+   "scenes": [
+    "S25",
+    "S26",
+    "S27",
+    "S28"
+   ]
+  },
+  {
+   "id": "short-5",
+   "hook": "Where India is making chips",
+   "scenes": [
+    "S32",
+    "S33",
+    "S34",
+    "S35"
+   ]
+  },
+  {
+   "id": "short-6",
+   "hook": "India's ₹1.27 lakh crore chip bet",
+   "scenes": [
+    "S40",
+    "S41",
+    "S42"
+   ]
+  }
+ ],
+ "thumbnail": {
+  "headline": "20% DESIGNERS, 0 FABS?",
+  "sub": "Fab vs OSAT · ISM 2.0"
+ }
 }
