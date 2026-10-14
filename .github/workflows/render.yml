@@ -54,7 +54,7 @@ jobs:
   render:
     if: inputs.mode != 'transcribe'
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 350
     env:
       JOB: jobs/${{ inputs.job_id }}.json
       TAG: render-${{ inputs.job_id }}-${{ github.run_number }}
