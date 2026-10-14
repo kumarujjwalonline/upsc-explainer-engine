@@ -146,7 +146,7 @@ const heightAt = (packs: Pack[], lon: number, lat: number) => {
 
 type Win = {west: number; east: number; south: number; north: number};
 // Only the part of a pack the camera can see is meshed, at up to the height grid's own detail.
-const buildGeometry = (p: Pack, fr: Frame, exag: number, win: Win) => {
+const buildGeometry = (p: Pack, fr: Frame, exag: number, win: Win, finer: Win[]) => {
   const pm = p.meta;
   const m = {west: Math.max(pm.west, win.west), east: Math.min(pm.east, win.east), south: Math.max(pm.south, win.south), north: Math.min(pm.north, win.north)};
   if (m.east <= m.west || m.north <= m.south) return null;
@@ -163,8 +163,15 @@ const buildGeometry = (p: Pack, fr: Frame, exag: number, win: Win) => {
       const lon = m.west + ((m.east - m.west) * c) / cols;
       const [x, z] = toLocal(fr, lon, lat);
       const h = Math.max(0, sampleH(p, lon, lat) ?? 0);
+      // A coarse pack's smoothed valleys sit above the finer pack's real valley floors and
+      // would poke through; sink it wherever a finer pack fully covers (outside its feathered rim).
+      const under = finer.some((b) => {
+        const ix = (b.east - b.west) * 0.07;
+        const iy = (b.north - b.south) * 0.07;
+        return lon > b.west + ix && lon < b.east - ix && lat > b.south + iy && lat < b.north - iy;
+      });
       pos[k++] = x;
-      pos[k++] = (h / 1000) * exag;
+      pos[k++] = (h / 1000) * exag - (under ? 4 * exag : 0);
       pos[k++] = z;
       uv[q++] = (lon - pm.west) / (pm.east - pm.west);
       uv[q++] = (lat - pm.south) / (pm.north - pm.south);
@@ -243,7 +250,7 @@ const makeCamera = (packs: Pack[], fr: Frame, exag: number, c: ReturnType<typeof
   const offs = [[0, 0], [r, 0], [-r, 0], [0, r], [0, -r]];
   for (const [dx, dy] of offs) hs += heightAt(packs, c.lon + dx / (KX * fr.cos0), c.lat + dy / KY);
   const [tx, tz] = toLocal(fr, c.lon, c.lat);
-  const ty = c.dist > 2500 ? 0 : ((hs / offs.length) / 1000) * exag;
+  const ty = c.dist > 3500 ? 0 : ((hs / offs.length) / 1000) * exag;
   const T = (c.tilt * Math.PI) / 180;
   const H = (c.heading * Math.PI) / 180;
   const cam = new THREE.PerspectiveCamera(34, aspect, Math.max(0.05, c.dist * 0.02), c.dist * 12 + 30000);
@@ -327,7 +334,7 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
       north: Math.max(...spec.cam.map((k) => k.lat)) + dLat,
     };
   }, [spec.cam]);
-  const geoms = useMemo(() => (data && fr ? data.packs.map((p) => buildGeometry(p, fr, exag, win)) : []), [data, fr, exag, win]);
+  const geoms = useMemo(() => (data && fr ? data.packs.map((p, i) => buildGeometry(p, fr, exag, win, data.packs.slice(i + 1).map((q) => q.meta))) : []), [data, fr, exag, win]);
 
   const globeMatrix = useMemo(() => {
     if (!fr) return null;
@@ -346,8 +353,8 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
   const cam = makeCamera(data.packs, fr, exag, c, W / Hh);
 
   // Globe ↔ terrain cross-fade by altitude.
-  const terrainO = spec.globe ? interpolate(c.dist, [1500, 3200], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 1;
-  const globeO = spec.globe ? interpolate(c.dist, [1200, 2600], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 0;
+  const terrainO = spec.globe ? interpolate(c.dist, [2700, 4200], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 1;
+  const globeO = spec.globe ? interpolate(c.dist, [2500, 3900], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 0;
   const night = !!spec.night;
   const tint = night ? new THREE.Color(0.42, 0.5, 0.72) : new THREE.Color(1, 1, 1);
   const fogColor = night ? '#0A1424' : '#9FB4CC';
@@ -356,7 +363,7 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
   const v = new THREE.Vector3();
   const proj = (lon: number, lat: number, lift = 0.02): [number, number, boolean] => {
     const [x, z] = toLocal(fr, lon, lat);
-    const y = c.dist > 2500 ? 0 : (heightAt(data.packs, lon, lat) / 1000) * exag + lift * Math.min(1, c.dist / 40);
+    const y = c.dist > 3500 ? 0 : (heightAt(data.packs, lon, lat) / 1000) * exag + lift * Math.min(1, c.dist / 40);
     v.set(x, y, z).project(cam);
     return [((v.x + 1) / 2) * W, ((1 - v.y) / 2) * Hh, v.z < 1 && v.z > -1];
   };
@@ -682,7 +689,7 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
       <div style={{position: 'absolute', left: 18 * u, bottom: 14 * u, fontFamily: fonts.body, fontSize: 15 * u, color: 'rgba(255,255,255,0.75)', letterSpacing: 0.5}}>
         {spec.globe && globeO > 0.5 ? 'Natural Earth' : 'Imagery: Copernicus Sentinel-2 / Natural Earth · Elevation: Terrarium (SRTM et al.) · Borders: Survey of India outline'}
         {'   ·   '}
-        {c.dist > 2500 ? `Eye alt ${Math.round(c.dist).toLocaleString('en-IN')} km` : `Eye alt ${eye >= 10000 ? Math.round(eye / 1000).toLocaleString('en-IN') + ' km' : Math.round(eye).toLocaleString('en-IN') + ' m'}`}
+        {c.dist > 3500 ? `Eye alt ${Math.round(c.dist).toLocaleString('en-IN')} km` : `Eye alt ${eye >= 10000 ? Math.round(eye / 1000).toLocaleString('en-IN') + ' km' : Math.round(eye).toLocaleString('en-IN') + ' m'}`}
       </div>
     </div>
   );

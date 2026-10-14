@@ -12,10 +12,12 @@ const [jobPath = 'out/job.final.json', what = 'all'] = process.argv.slice(2);
 const job = JSON.parse(fs.readFileSync(jobPath, 'utf8'));
 fs.mkdirSync('out', {recursive: true});
 
+// Optional local Chrome (e.g. a preinstalled headless shell) instead of Remotion's download.
+const browserExecutable = process.env.REMOTION_CHROME || null;
 const serveUrl = await bundle({entryPoint: path.resolve('src/index.ts'), publicDir: path.resolve('public')});
 
 const video = async (name, inputProps, scale = 1) => {
-  const composition = await selectComposition({serveUrl, id: 'Explainer', inputProps});
+  const composition = await selectComposition({serveUrl, id: 'Explainer', inputProps, browserExecutable});
   const outputLocation = `out/${name}.mp4`;
   let last = -1;
   await renderMedia({
@@ -30,6 +32,8 @@ const video = async (name, inputProps, scale = 1) => {
     // 3D scenes (body walkthrough, molecules) need WebGL; GitHub runners have no GPU,
     // so Chrome renders it in software (SwiftShader via ANGLE).
     chromiumOptions: {gl: 'swangle'},
+    browserExecutable,
+    timeoutInMilliseconds: 240000,
     concurrency: Math.max(2, os.cpus().length),
     onProgress: ({progress}) => {
       const p = Math.floor(progress * 10);
@@ -47,7 +51,7 @@ if (what === 'preview') await video(`${job.id}-preview`, {job, format: '16:9'}, 
 if (what === 'all' || what === 'shorts' || what === 'preview')
   for (const s of job.shorts || []) await video(`${job.id}-${s.id}`, {job, format: '9:16', sceneIds: s.scenes, hook: s.hook}, what === 'preview' ? 0.5 : 1);
 if (what === 'all' || what === 'thumb' || what === 'preview') {
-  const composition = await selectComposition({serveUrl, id: 'Thumbnail', inputProps: {job}});
-  await renderStill({composition, serveUrl, output: `out/${job.id}-thumbnail.png`, inputProps: {job}, chromiumOptions: {gl: 'swangle'}});
+  const composition = await selectComposition({serveUrl, id: 'Thumbnail', inputProps: {job}, browserExecutable});
+  await renderStill({composition, serveUrl, output: `out/${job.id}-thumbnail.png`, inputProps: {job}, chromiumOptions: {gl: 'swangle'}, browserExecutable});
   console.log('Rendered thumbnail');
 }

@@ -7,3 +7,5 @@ __pycache__
 public/lac/
 public/terrain/*/
 public/terrain/globe.jpg
+public/sfx/
+package-lock.json

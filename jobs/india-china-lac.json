@@ -149,8 +149,7 @@
       "y": 0.3
      }
     ]
-   },
-   "sfx": "pop"
+   }
   },
   {
    "id": "S01",
@@ -185,8 +184,8 @@
       "t": 14.04,
       "lon": 84.5,
       "lat": 31.0,
-      "dist": 2100,
-      "tilt": 30,
+      "dist": 2900,
+      "tilt": 8,
       "heading": 0
      }
     ],
@@ -294,10 +293,10 @@
      },
      {
       "t": 9,
-      "lon": 85,
-      "lat": 30.5,
-      "dist": 2300,
-      "tilt": 28,
+      "lon": 84.5,
+      "lat": 31.0,
+      "dist": 2900,
+      "tilt": 8,
       "heading": 0
      }
     ],
@@ -408,17 +407,17 @@
       "t": 0,
       "lon": 84.5,
       "lat": 31.0,
-      "dist": 2300,
-      "tilt": 28,
+      "dist": 2900,
+      "tilt": 8,
       "heading": 0
      },
      {
       "t": 13.3,
       "lon": 84.5,
       "lat": 31.0,
-      "dist": 2000,
-      "tilt": 32,
-      "heading": 4
+      "dist": 2700,
+      "tilt": 10,
+      "heading": 3
      }
     ],
     "layers": [
@@ -490,8 +489,8 @@
       "t": 0,
       "lon": 84.5,
       "lat": 31.0,
-      "dist": 2000,
-      "tilt": 30,
+      "dist": 2700,
+      "tilt": 10,
       "heading": 0
      },
      {
@@ -822,18 +821,18 @@
     "cam": [
      {
       "t": 0,
-      "lon": 85.0,
-      "lat": 30.5,
-      "dist": 2300,
-      "tilt": 30,
+      "lon": 84.5,
+      "lat": 31.0,
+      "dist": 2900,
+      "tilt": 8,
       "heading": 0
      },
      {
       "t": 13.836621,
       "lon": 85.0,
-      "lat": 30.5,
-      "dist": 2100,
-      "tilt": 33,
+      "lat": 30.0,
+      "dist": 3100,
+      "tilt": 22,
       "heading": 3
      }
     ],
@@ -1004,18 +1003,18 @@
      {
       "t": 0,
       "lon": 94.3,
-      "lat": 28.1,
+      "lat": 28.0,
       "dist": 820,
-      "tilt": 40,
+      "tilt": 22,
       "heading": 0
      },
      {
       "t": 14.67,
       "lon": 94.4,
       "lat": 28.0,
-      "dist": 700,
-      "tilt": 44,
-      "heading": 5
+      "dist": 720,
+      "tilt": 26,
+      "heading": 4
      }
     ],
     "layers": [
@@ -1040,7 +1039,7 @@
       ],
       "label": "Bhutan's eastern edge",
       "t0": 9.38,
-      "side": "left"
+      "side": "right"
      },
      {
       "kind": "pin",
@@ -1340,8 +1339,8 @@
       "dur": 2.5,
       "label": "Johnson Line, 1865 (approx.)",
       "labelAt": [
-       78.4,
-       35.85
+       77.9,
+       35.9
       ]
      },
      {
@@ -1361,8 +1360,8 @@
      {
       "kind": "label",
       "at": [
-       79.4,
-       35.5
+       79.7,
+       35.25
       ],
       "text": "AKSAI CHIN",
       "t0": 0.5,
@@ -1542,17 +1541,17 @@
     "cam": [
      {
       "t": 0,
-      "lon": 78.6,
+      "lon": 78.2,
       "lat": 35.2,
-      "dist": 650,
+      "dist": 680,
       "tilt": 35,
       "heading": 0
      },
      {
       "t": 23.32,
-      "lon": 78.4,
+      "lon": 78.1,
       "lat": 35.4,
-      "dist": 600,
+      "dist": 620,
       "tilt": 38,
       "heading": 6
      }
@@ -3177,19 +3176,19 @@
     "cam": [
      {
       "t": 0,
-      "lon": 84.0,
-      "lat": 29.8,
-      "dist": 1700,
-      "tilt": 30,
+      "lon": 84.5,
+      "lat": 30.5,
+      "dist": 2800,
+      "tilt": 8,
       "heading": 0
      },
      {
       "t": 11.75,
-      "lon": 84.0,
-      "lat": 29.8,
-      "dist": 1500,
-      "tilt": 34,
-      "heading": 5
+      "lon": 84.5,
+      "lat": 30.5,
+      "dist": 2600,
+      "tilt": 10,
+      "heading": 3
      }
     ],
     "layers": [
@@ -3299,19 +3298,19 @@
     "cam": [
      {
       "t": 0,
-      "lon": 85.0,
+      "lon": 84.5,
       "lat": 31.0,
-      "dist": 2200,
-      "tilt": 30,
+      "dist": 2900,
+      "tilt": 8,
       "heading": 0
      },
      {
       "t": 12.801088,
-      "lon": 85.0,
+      "lon": 84.5,
       "lat": 31.0,
-      "dist": 2000,
-      "tilt": 33,
-      "heading": 4
+      "dist": 2700,
+      "tilt": 10,
+      "heading": 3
      }
     ],
     "layers": [
@@ -3492,19 +3491,19 @@
     "cam": [
      {
       "t": 0,
-      "lon": 85.0,
-      "lat": 30.8,
-      "dist": 2300,
-      "tilt": 30,
+      "lon": 84.5,
+      "lat": 31.0,
+      "dist": 2900,
+      "tilt": 8,
       "heading": 0
      },
      {
       "t": 15.91,
-      "lon": 85.0,
-      "lat": 30.8,
-      "dist": 2100,
-      "tilt": 33,
-      "heading": 4
+      "lon": 84.5,
+      "lat": 31.0,
+      "dist": 2700,
+      "tilt": 10,
+      "heading": 3
      }
     ],
     "layers": [
@@ -3682,18 +3681,18 @@
     "cam": [
      {
       "t": 0,
-      "lon": 85.0,
+      "lon": 84.5,
       "lat": 31.0,
-      "dist": 1800,
-      "tilt": 30,
+      "dist": 2800,
+      "tilt": 8,
       "heading": 0
      },
      {
-      "t": 6.6273003500000005,
-      "lon": 85.0,
+      "t": 5.42233665,
+      "lon": 84.5,
       "lat": 31.0,
-      "dist": 2600,
-      "tilt": 25,
+      "dist": 3400,
+      "tilt": 5,
       "heading": 0
      },
      {

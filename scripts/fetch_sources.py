@@ -92,7 +92,7 @@ def capture(ctx, url, sid):
 
 
 with sync_playwright() as p:
-    browser = p.chromium.launch(args=["--disable-blink-features=AutomationControlled"])
+    browser = p.chromium.launch(executable_path=os.environ.get("CHROME_PATH") or None, args=["--disable-blink-features=AutomationControlled"])
     ctx = browser.new_context(viewport={"width": 1280, "height": 900}, locale="en-IN",
                               user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36")
     ctx.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
