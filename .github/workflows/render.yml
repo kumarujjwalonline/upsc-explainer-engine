@@ -40,7 +40,8 @@ jobs:
           key: whisper-large-v3-turbo-v1
       - name: Transcribe takes
         run: |
-          pip install --quiet faster-whisper
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install --quiet faster-whisper numpy
           python3 scripts/transcribe_takes.py voice-takes/${{ inputs.job_id }}
       - name: Commit word timings
         run: |

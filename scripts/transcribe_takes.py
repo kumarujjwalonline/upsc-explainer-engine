@@ -6,7 +6,10 @@ their spelling), writes s*.words.json as {"text", "words": [{"text", "type": "wo
 import glob
 import json
 import os
+import subprocess
 import sys
+
+import numpy as np
 
 from faster_whisper import WhisperModel
 
@@ -17,7 +20,10 @@ for mp3 in sorted(glob.glob(os.path.join(d, "s*.mp3"))):
     k = os.path.basename(mp3)[:-4]
     t = texts.get(k)
     t = t if isinstance(t, str) else (t or {}).get("text", "")
-    segs, _ = model.transcribe(mp3, language="hi", word_timestamps=True, beam_size=5, initial_prompt=t[:600], condition_on_previous_text=True)
+    # decode with ffmpeg: some PyAV builds reject faster-whisper's own decoder arguments
+    pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", mp3, "-ac", "1", "-ar", "16000", "-f", "f32le", "-"], capture_output=True, check=True).stdout
+    audio = np.frombuffer(pcm, dtype=np.float32)
+    segs, _ = model.transcribe(audio, language="hi", word_timestamps=True, beam_size=5, initial_prompt=t[:600], condition_on_previous_text=True)
     words = []
     for s in segs:
         for w in s.words or []:
