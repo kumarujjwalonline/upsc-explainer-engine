@@ -194,12 +194,23 @@
    "objective": "o1",
    "completes": [],
    "visual": {
-    "type": "source",
-    "url": "https://legislative.gov.in/constitution-of-india/",
-    "publisher": "Legislative Department, Government of India",
-    "date": "Constitution of India",
-    "title": "Articles 82 and 170: readjustment after each census",
-    "why": "Seats are to be readjusted upon the completion of each census"
+    "type": "compare",
+    "left": {
+     "heading": "Article 82",
+     "items": [
+      "Lok Sabha seats",
+      "readjusted after each census"
+     ],
+     "tone": "accent"
+    },
+    "right": {
+     "heading": "Article 170",
+     "items": [
+      "Vidhan Sabha seats",
+      "readjusted after each census"
+     ],
+     "tone": "good"
+    }
    },
    "onScreen": "Article 82 → Lok Sabha · Article 170 → State Assemblies"
   },
@@ -283,12 +294,22 @@
     "o1"
    ],
    "visual": {
-    "type": "source",
-    "url": "https://api.sci.gov.in/supremecourt/2012/33795/33795_2012_4_10_53780_Judgement_23-Jul-2024.pdf",
-    "publisher": "Supreme Court of India",
-    "date": "23 Jul 2024",
-    "title": "Kishorchandra Chhanganlal Rathod v. Union of India, 2024 INSC 579",
-    "why": "Courts can review a delimitation order that is manifestly arbitrary"
+    "type": "compare",
+    "left": {
+     "heading": "Article 329",
+     "items": [
+      "courts cannot question delimitation laws"
+     ],
+     "tone": "muted"
+    },
+    "right": {
+     "heading": "Supreme Court, July 2024",
+     "items": [
+      "can review an order that is \"manifestly arbitrary\"",
+      "2024 INSC 579"
+     ],
+     "tone": "accent"
+    }
    },
    "onScreen": "Art. 329: bar on courts · SC 2024: review if \"manifestly arbitrary\"",
    "sfx": "ping"
@@ -1370,14 +1391,27 @@
    "objective": "o5",
    "completes": [],
    "visual": {
-    "type": "source",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2252748&reg=3&lang=1",
-    "publisher": "Press Information Bureau",
-    "date": "16 Apr 2026",
-    "title": "Amit Shah's intervention on the three Bills",
-    "why": "The 50 percent model and the South’s share"
+    "type": "formula",
+    "heading": "Amit Shah's 50% model (16 Apr 2026)",
+    "lines": [
+     {
+      "text": "Tamil Nadu: 39 → 59"
+     },
+     {
+      "text": "Kerala: 20 → 30"
+     },
+     {
+      "text": "South: 129 → 195 seats"
+     },
+     {
+      "text": "Share: 23.76% → 23.87%",
+      "final": true,
+      "note": "PIB, 16 Apr 2026"
+     }
+    ]
    },
-   "onScreen": "\"50% model\": TN 39 → 59 · Kerala 20 → 30 · South 129 → 195 · share 23.76% → 23.87%"
+   "onScreen": "\"50% model\": TN 39 → 59 · Kerala 20 → 30 · South 129 → 195 · share 23.76% → 23.87%",
+   "compact": true
   },
   {
    "id": "S40",
@@ -1448,12 +1482,22 @@
    "objective": "o5",
    "completes": [],
    "visual": {
-    "type": "source",
-    "url": "https://thenewsmill.com/2026/04/dmk-mp-kanimozhi-calls-delimitation-the-greatest-assault-on-federal-structure/",
-    "publisher": "The News Mill",
-    "date": "17 Apr 2026",
-    "title": "Kanimozhi calls delimitation the greatest assault on the federal structure",
-    "why": "The DMK’s objection in the Lok Sabha"
+    "type": "compare",
+    "left": {
+     "heading": "The Bill",
+     "items": [
+      "seats shared on Census 2011",
+      "15 years old"
+     ],
+     "tone": "bad"
+    },
+    "right": {
+     "heading": "Kanimozhi (DMK)",
+     "items": [
+      "\"the greatest assault on the federal structure\""
+     ],
+     "tone": "accent"
+    }
    },
    "onScreen": "Objection 2: why Census 2011 when Census 2027 is under way?"
   },
