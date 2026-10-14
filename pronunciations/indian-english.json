@@ -1,7 +1,8 @@
 {
  "_about": "Indian-English pronunciation dictionary. guide: how each English word should sound (checked in the audio). always: words the voice is always given in this spelling, because it said them wrongly before. Updated automatically by the render workflow.",
  "always": {
-  "fat": "फैट"
+  "fat": "फैट",
+  "Mahavira": "महावीर"
  },
  "guide": {
   "actually": "एक्चुअली",
