@@ -1,0 +1,3832 @@
+{
+ "id": "india-china-lac",
+ "title": "India-China Border (LAC) Explained",
+ "format": "16:9",
+ "tracker": {
+  "title": "LAC",
+  "objectives": [
+   {
+    "id": "o1",
+    "label": "What is the LAC (3 sectors)"
+   },
+   {
+    "id": "o2",
+    "label": "McMahon Line"
+   },
+   {
+    "id": "o3",
+    "label": "Aksai Chin"
+   },
+   {
+    "id": "o4",
+    "label": "2020 standoff & buffer zones"
+   },
+   {
+    "id": "o5",
+    "label": "Disengagement & talks"
+   },
+   {
+    "id": "o6",
+    "label": "Way forward & recap"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "id": "S00",
+   "narration": "India की सबसे तनाव भरी border पर, दोनों देशों के सैनिकों को एक-दूसरे पर गोली चलाने की इजाज़त ही नहीं है। [pause] ऐसा क्यों?",
+   "durationSec": 8.716,
+   "audio": "lac/S00.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh",
+     "eladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.22,
+      "lat": 34.75,
+      "dist": 55,
+      "tilt": 58,
+      "heading": 75
+     },
+     {
+      "t": 8.715556,
+      "lon": 78.22,
+      "lat": 34.755,
+      "dist": 40,
+      "tilt": 56,
+      "heading": 95
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 5,
+      "t0": 0.2,
+      "dur": 1.5,
+      "flicker": true
+     },
+     {
+      "kind": "units",
+      "pts": [
+       [
+        78.175,
+        34.735
+       ],
+       [
+        78.18,
+        34.765
+       ],
+       [
+        78.172,
+        34.75
+       ]
+      ],
+      "t0": 1.0,
+      "stagger": 0.2
+     },
+     {
+      "kind": "units",
+      "pts": [
+       [
+        78.262,
+        34.742
+       ],
+       [
+        78.258,
+        34.77
+       ],
+       [
+        78.268,
+        34.757
+       ]
+      ],
+      "t0": 1.3,
+      "stagger": 0.2,
+      "tone": "bad"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.1,
+       34.8
+      ],
+      "text": "INDIA",
+      "t0": 1.0,
+      "size": 34
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.36,
+       34.8
+      ],
+      "text": "CHINA",
+      "t0": 1.3,
+      "size": 34,
+      "tone": "bad"
+     },
+     {
+      "kind": "stamp",
+      "text": "NO FIRING",
+      "t0": 4.94,
+      "tone": "bad",
+      "out": 7.37,
+      "sub": "Within 2 km of the LAC"
+     },
+     {
+      "kind": "stamp",
+      "text": "?",
+      "t0": 7.47,
+      "tone": "accent",
+      "y": 0.3
+     }
+    ]
+   },
+   "sfx": "pop"
+  },
+  {
+   "id": "S01",
+   "narration": "और फिर भी June 2020 में Galwan में हमारे 20 जवान शहीद हुए। [pause] ये कहानी है लगभग 3,488 km लंबी Line of Actual Control, यानी LAC की, जिसके बारे में India और China आज तक तय नहीं कर पाए कि वो ज़मीन पर कहाँ से गुज़रती है।",
+   "durationSec": 20.375,
+   "audio": "lac/S01.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh",
+     "eladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.205,
+      "lat": 34.752,
+      "dist": 40,
+      "tilt": 55,
+      "heading": 110
+     },
+     {
+      "t": 10.239999999999998,
+      "lon": 78.205,
+      "lat": 34.752,
+      "dist": 48,
+      "tilt": 52,
+      "heading": 130
+     },
+     {
+      "t": 14.04,
+      "lon": 84.5,
+      "lat": 31.0,
+      "dist": 2100,
+      "tilt": 30,
+      "heading": 0
+     }
+    ],
+    "layers": [
+     {
+      "kind": "pin",
+      "at": [
+       78.205,
+       34.752
+      ],
+      "label": "Galwan Valley",
+      "t0": 2.4,
+      "sub": "June 2020",
+      "out": 10.54
+     },
+     {
+      "kind": "stamp",
+      "text": "20",
+      "t0": 1.42,
+      "tone": "accent",
+      "sub": "Indian soldiers martyred",
+      "out": 10.34,
+      "y": 0.3
+     },
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": 11.34,
+      "dur": 3.5
+     },
+     {
+      "kind": "line",
+      "ref": "lac_middle",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": 11.34,
+      "dur": 3.5
+     },
+     {
+      "kind": "line",
+      "ref": "lac_sikkim",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": 11.34,
+      "dur": 3.5
+     },
+     {
+      "kind": "line",
+      "ref": "lac_east",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": 11.34,
+      "dur": 3.5
+     },
+     {
+      "kind": "label",
+      "at": [
+       84.0,
+       33.2
+      ],
+      "text": "LINE OF ACTUAL CONTROL",
+      "t0": 12.7,
+      "size": 36,
+      "tone": "warn",
+      "sub": "~3,488 km"
+     }
+    ],
+    "night": false,
+    "exag": 1.6
+   },
+   "sfx": "hit"
+  },
+  {
+   "id": "S02",
+   "narration": "आपके exam के लिए ये topic GS-2 International Relations, GS-3 Border Management और Geography, तीनों में आता है। [pause] और Prelims में यहाँ से सीधे map-based सवाल पूछे जाते हैं।",
+   "durationSec": 12.47,
+   "audio": "lac/S02.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78,
+      "lat": 18,
+      "dist": 15000,
+      "tilt": 0,
+      "heading": 0
+     },
+     {
+      "t": 4.5,
+      "lon": 82,
+      "lat": 26,
+      "dist": 7000,
+      "tilt": 10,
+      "heading": 0
+     },
+     {
+      "t": 9,
+      "lon": 85,
+      "lat": 30.5,
+      "dist": 2300,
+      "tilt": 28,
+      "heading": 0
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": 8.0,
+      "dur": 3
+     },
+     {
+      "kind": "line",
+      "ref": "lac_middle",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": 8.0,
+      "dur": 3
+     },
+     {
+      "kind": "line",
+      "ref": "lac_sikkim",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": 8.0,
+      "dur": 3
+     },
+     {
+      "kind": "line",
+      "ref": "lac_east",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": 8.0,
+      "dur": 3
+     }
+    ],
+    "globe": true,
+    "drift": 0
+   },
+   "onScreen": "GS-II · GS-III · Prelims maps"
+  },
+  {
+   "id": "S03",
+   "narration": "आज के lesson में हम छह चीज़ें समझेंगे। [pause] LAC क्या है और इसके तीन sectors कौन से हैं, McMahon Line की कहानी, Aksai Chin का विवाद, 2020 का standoff और buffer zones, disengagement कैसे हुआ, और आगे का रास्ता क्या है।",
+   "durationSec": 16.272,
+   "audio": "lac/S03.wav",
+   "visual": {
+    "type": "points",
+    "heading": "Today's 6 questions",
+    "items": [
+     "What is the LAC, and its 3 sectors?",
+     "The McMahon Line",
+     "The Aksai Chin dispute",
+     "2020 standoff and buffer zones",
+     "How disengagement happened",
+     "The way forward"
+    ]
+   }
+  },
+  {
+   "id": "S04",
+   "narration": "पहले एक basic सवाल समझते हैं। [pause] Border, LoC और LAC, इन तीनों में फ़र्क क्या है?",
+   "durationSec": 7.22,
+   "audio": "lac/S04.wav",
+   "visual": {
+    "type": "question",
+    "text": "Border vs LoC vs LAC: what is the difference?",
+    "highlight": [
+     "LoC",
+     "LAC"
+    ]
+   },
+   "objective": "o1"
+  },
+  {
+   "id": "S05",
+   "narration": "International border वो होती है, जिस पर दोनों देश सहमत हों और जो ज़मीन पर mark हो। [pause] Pakistan के साथ Line of Control यानी LoC, 1972 के Simla Agreement के बाद एक signed map पर तय की गई थी। [pause] लेकिन China के साथ LAC सिर्फ़ वो line है, जहाँ तक दोनों देशों की सेनाएँ असल में control रखती हैं, और इसका कोई साझा map भी पूरी तरह तय नहीं है।",
+   "durationSec": 24.65,
+   "audio": "lac/S05.wav",
+   "visual": {
+    "type": "points",
+    "heading": "Three kinds of lines",
+    "items": [
+     "International Border: agreed by both and marked on the ground",
+     "LoC (with Pakistan): set on a signed map after the Simla Agreement, 1972",
+     "LAC (with China): where each army actually holds, with no agreed map"
+    ]
+   },
+   "objective": "o1"
+  },
+  {
+   "id": "S06",
+   "narration": "India के अनुसार LAC लगभग 3,488 km लंबी है, जबकि China इसे सिर्फ़ लगभग 2,000 km मानता है। [pause] यानी दोनों देश इसकी लंबाई पर भी एकमत नहीं हैं।",
+   "durationSec": 13.3,
+   "audio": "lac/S06.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 84.5,
+      "lat": 31.0,
+      "dist": 2300,
+      "tilt": 28,
+      "heading": 0
+     },
+     {
+      "t": 13.3,
+      "lon": 84.5,
+      "lat": 31.0,
+      "dist": 2000,
+      "tilt": 32,
+      "heading": 4
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "color": "#FF8A1F",
+      "width": 5,
+      "t0": 0.5,
+      "dur": 3
+     },
+     {
+      "kind": "line",
+      "ref": "lac_middle",
+      "color": "#FF8A1F",
+      "width": 5,
+      "t0": 0.5,
+      "dur": 3
+     },
+     {
+      "kind": "line",
+      "ref": "lac_sikkim",
+      "color": "#FF8A1F",
+      "width": 5,
+      "t0": 0.5,
+      "dur": 3
+     },
+     {
+      "kind": "line",
+      "ref": "lac_east",
+      "color": "#FF8A1F",
+      "width": 5,
+      "t0": 0.5,
+      "dur": 3
+     },
+     {
+      "kind": "stamp",
+      "text": "3,488 km",
+      "t0": 2.14,
+      "sub": "India's count",
+      "y": 0.18,
+      "tone": "accent"
+     },
+     {
+      "kind": "stamp",
+      "text": "~2,000 km",
+      "t0": 7.38,
+      "sub": "China's count",
+      "y": 0.5,
+      "tone": "bad"
+     }
+    ]
+   },
+   "objective": "o1"
+  },
+  {
+   "id": "S07",
+   "narration": "इस पूरी line को तीन sectors में बाँटा जाता है। [pause] पहला है Western sector, यानी Ladakh, जो लगभग 1,597 km लंबा है, और सबसे ज़्यादा विवाद यहीं है।",
+   "durationSec": 12.9,
+   "audio": "lac/S07.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 84.5,
+      "lat": 31.0,
+      "dist": 2000,
+      "tilt": 30,
+      "heading": 0
+     },
+     {
+      "t": 3.5,
+      "lon": 78.8,
+      "lat": 34.3,
+      "dist": 560,
+      "tilt": 42,
+      "heading": 15
+     },
+     {
+      "t": 12.9,
+      "lon": 78.9,
+      "lat": 34.3,
+      "dist": 480,
+      "tilt": 45,
+      "heading": 25
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "color": "#FF8A1F",
+      "width": 6,
+      "t0": 4.25,
+      "dur": 2.5
+     },
+     {
+      "kind": "label",
+      "at": [
+       79.4,
+       35.6
+      ],
+      "text": "WESTERN SECTOR",
+      "t0": 5.25,
+      "size": 40,
+      "tone": "accent",
+      "sub": "Ladakh · ~1,597 km"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       77.58,
+       34.16
+      ],
+      "label": "Leh",
+      "t0": 3.0
+     }
+    ]
+   },
+   "objective": "o1"
+  },
+  {
+   "id": "S08",
+   "narration": "दूसरा है Middle sector, यानी Himachal Pradesh और Uttarakhand, जो लगभग 545 km का है। [pause] ये सबसे कम विवादित sector है, और यही एक sector है जिसके maps दोनों देशों ने आपस में exchange किए हैं।",
+   "durationSec": 14.662,
+   "audio": "lac/S08.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.9,
+      "lat": 34.3,
+      "dist": 480,
+      "tilt": 45,
+      "heading": 25
+     },
+     {
+      "t": 3.5,
+      "lon": 79.6,
+      "lat": 31.2,
+      "dist": 520,
+      "tilt": 45,
+      "heading": 10
+     },
+     {
+      "t": 14.662358,
+      "lon": 79.8,
+      "lat": 31.0,
+      "dist": 460,
+      "tilt": 47,
+      "heading": 20
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "color": "#FF8A1F",
+      "width": 3,
+      "t0": -1
+     },
+     {
+      "kind": "line",
+      "ref": "lac_middle",
+      "color": "#F2C94C",
+      "width": 6,
+      "t0": 0.74,
+      "dur": 2.5
+     },
+     {
+      "kind": "label",
+      "at": [
+       80.2,
+       32.4
+      ],
+      "text": "MIDDLE SECTOR",
+      "t0": 1.74,
+      "size": 40,
+      "tone": "warn",
+      "sub": "Himachal & Uttarakhand · ~545 km"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       79.97,
+       30.83
+      ],
+      "label": "Barahoti",
+      "t0": 8.13,
+      "side": "left"
+     },
+     {
+      "kind": "stamp",
+      "text": "Maps exchanged",
+      "t0": 11.13,
+      "sub": "The only sector",
+      "y": 0.62,
+      "tone": "good"
+     }
+    ]
+   },
+   "objective": "o1"
+  },
+  {
+   "id": "S09",
+   "narration": "और तीसरा है Eastern sector, यानी Sikkim और Arunachal Pradesh, जो लगभग 1,346 km लंबा है। [pause] यहाँ line, McMahon Line के आसपास चलती है, जिसकी बात हम अभी करेंगे।",
+   "durationSec": 13.63,
+   "audio": "lac/S09.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "east"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 79.8,
+      "lat": 31.0,
+      "dist": 460,
+      "tilt": 47,
+      "heading": 20
+     },
+     {
+      "t": 4.0,
+      "lon": 93.0,
+      "lat": 28.2,
+      "dist": 900,
+      "tilt": 40,
+      "heading": 0
+     },
+     {
+      "t": 13.63,
+      "lon": 93.4,
+      "lat": 28.1,
+      "dist": 760,
+      "tilt": 44,
+      "heading": 8
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_sikkim",
+      "color": "#3BB273",
+      "width": 6,
+      "t0": 0.98,
+      "dur": 1.2
+     },
+     {
+      "kind": "line",
+      "ref": "lac_east",
+      "color": "#3BB273",
+      "width": 6,
+      "t0": 1.78,
+      "dur": 2.5
+     },
+     {
+      "kind": "label",
+      "at": [
+       94.0,
+       29.6
+      ],
+      "text": "EASTERN SECTOR",
+      "t0": 1.98,
+      "size": 40,
+      "tone": "good",
+      "sub": "Sikkim & Arunachal · ~1,346 km"
+     }
+    ]
+   },
+   "objective": "o1"
+  },
+  {
+   "id": "S10",
+   "narration": "Sikkim एक exception है। [pause] यहाँ की boundary 1890 के Anglo-Chinese Convention से तय है, जिसे China भी मानता है। [pause] फिर भी 2017 में Doklam में, जो India, Bhutan और China का tri-junction है, दोनों सेनाएँ 73 दिन तक आमने-सामने रहीं।",
+   "durationSec": 18.15,
+   "audio": "lac/S10.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "east",
+     "doklam"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 88.6,
+      "lat": 27.55,
+      "dist": 160,
+      "tilt": 48,
+      "heading": 0
+     },
+     {
+      "t": 9.89,
+      "lon": 88.8,
+      "lat": 27.45,
+      "dist": 110,
+      "tilt": 50,
+      "heading": 10
+     },
+     {
+      "t": 18.15,
+      "lon": 89.0,
+      "lat": 27.32,
+      "dist": 45,
+      "tilt": 58,
+      "heading": 30
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_sikkim",
+      "color": "#3BB273",
+      "width": 5,
+      "t0": 0.3
+     },
+     {
+      "kind": "label",
+      "at": [
+       88.45,
+       27.62
+      ],
+      "text": "SIKKIM",
+      "t0": 0.5,
+      "size": 32
+     },
+     {
+      "kind": "label",
+      "at": [
+       88.95,
+       27.62
+      ],
+      "text": "TIBET (CHINA)",
+      "t0": 0.8,
+      "size": 30,
+      "tone": "bad"
+     },
+     {
+      "kind": "label",
+      "at": [
+       89.35,
+       27.25
+      ],
+      "text": "BHUTAN",
+      "t0": 11.97,
+      "size": 32
+     },
+     {
+      "kind": "stamp",
+      "text": "1890",
+      "t0": 3.4,
+      "sub": "Anglo-Chinese Convention",
+      "out": 8.89,
+      "y": 0.2
+     },
+     {
+      "kind": "pin",
+      "at": [
+       89.0,
+       27.3
+      ],
+      "label": "Doklam",
+      "t0": 10.39,
+      "sub": "India–Bhutan–China tri-junction",
+      "tone": "bad"
+     },
+     {
+      "kind": "stamp",
+      "text": "73 days",
+      "t0": 15.27,
+      "sub": "Standoff, 2017",
+      "y": 0.62,
+      "tone": "bad"
+     }
+    ]
+   },
+   "objective": "o1"
+  },
+  {
+   "id": "S11",
+   "narration": "तो Prelims के लिए याद रखिए: Western sector Ladakh है, Middle sector Himachal और Uttarakhand हैं, और Eastern sector Sikkim और Arunachal हैं। [pause] सबसे लंबा Western है, और सबसे छोटा Middle।",
+   "durationSec": 13.837,
+   "audio": "lac/S11.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 85.0,
+      "lat": 30.5,
+      "dist": 2300,
+      "tilt": 30,
+      "heading": 0
+     },
+     {
+      "t": 13.836621,
+      "lon": 85.0,
+      "lat": 30.5,
+      "dist": 2100,
+      "tilt": 33,
+      "heading": 3
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "color": "#FF8A1F",
+      "width": 6,
+      "t0": -1
+     },
+     {
+      "kind": "line",
+      "ref": "lac_middle",
+      "color": "#F2C94C",
+      "width": 6,
+      "t0": -1
+     },
+     {
+      "kind": "line",
+      "ref": "lac_sikkim",
+      "color": "#3BB273",
+      "width": 6,
+      "t0": -1
+     },
+     {
+      "kind": "line",
+      "ref": "lac_east",
+      "color": "#3BB273",
+      "width": 6,
+      "t0": -1
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.0,
+       36.3
+      ],
+      "text": "WEST: LADAKH",
+      "t0": 2.16,
+      "size": 30,
+      "tone": "accent",
+      "sub": "Longest"
+     },
+     {
+      "kind": "label",
+      "at": [
+       80.6,
+       32.4
+      ],
+      "text": "MIDDLE: HP + UK",
+      "t0": 4.06,
+      "size": 30,
+      "tone": "warn",
+      "sub": "Shortest"
+     },
+     {
+      "kind": "label",
+      "at": [
+       93.0,
+       29.8
+      ],
+      "text": "EAST: SIKKIM + ARUNACHAL",
+      "t0": 6.84,
+      "size": 30,
+      "tone": "good"
+     }
+    ]
+   },
+   "objective": "o1",
+   "completes": [
+    "o1"
+   ],
+   "onScreen": "Prelims: West = Ladakh · Middle = HP & UK · East = Sikkim & Arunachal",
+   "sfx": "ping"
+  },
+  {
+   "id": "S12",
+   "narration": "अब Eastern sector की ओर चलते हैं। [pause] China पूरे Arunachal Pradesh को \"South Tibet\" कहता है। [pause] ये दावा आया कहाँ से?",
+   "durationSec": 9.001,
+   "audio": "lac/S12.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "east",
+     "tawang"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 92.8,
+      "lat": 26.7,
+      "dist": 260,
+      "tilt": 50,
+      "heading": 340
+     },
+     {
+      "t": 9.000839,
+      "lon": 91.866,
+      "lat": 27.587,
+      "dist": 45,
+      "tilt": 60,
+      "heading": 330
+     }
+    ],
+    "layers": [
+     {
+      "kind": "label",
+      "at": [
+       93.6,
+       27.9
+      ],
+      "text": "ARUNACHAL PRADESH",
+      "t0": 0.4,
+      "size": 36,
+      "sub": "India"
+     },
+     {
+      "kind": "stamp",
+      "text": "\"South Tibet\"?",
+      "t0": 5.01,
+      "sub": "China's claim; India rejects it",
+      "tone": "bad",
+      "y": 0.24
+     },
+     {
+      "kind": "pin",
+      "at": [
+       91.866,
+       27.587
+      ],
+      "label": "Tawang",
+      "t0": 7.85
+     }
+    ]
+   },
+   "objective": "o2"
+  },
+  {
+   "id": "S13",
+   "narration": "इसका जवाब 1914 के Simla Convention में है। [pause] Shimla में British India के Henry McMahon, Tibet के प्रतिनिधि Lonchen Shatra, और China के प्रतिनिधि Ivan Chen मिले थे।",
+   "durationSec": 12.43,
+   "audio": "lac/S13.wav",
+   "visual": {
+    "type": "points",
+    "heading": "Simla Convention, 1914",
+    "items": [
+     "British India: Henry McMahon",
+     "Tibet: Lonchen Shatra",
+     "China: Ivan Chen"
+    ]
+   },
+   "objective": "o2"
+  },
+  {
+   "id": "S14",
+   "narration": "वहाँ British India और Tibet के बीच एक line तय हुई, जिसे McMahon Line कहते हैं। [pause] ये लगभग 890 km लंबी है, और Bhutan के पूर्वी कोने से Myanmar के पास Isu Razi Pass तक जाती है।",
+   "durationSec": 14.67,
+   "audio": "lac/S14.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "east"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 94.3,
+      "lat": 28.1,
+      "dist": 820,
+      "tilt": 40,
+      "heading": 0
+     },
+     {
+      "t": 14.67,
+      "lon": 94.4,
+      "lat": 28.0,
+      "dist": 700,
+      "tilt": 44,
+      "heading": 5
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_east",
+      "color": "#FF8A1F",
+      "width": 6,
+      "t0": 4.26,
+      "dur": 8.14,
+      "label": "McMahon Line (1914)",
+      "labelAt": [
+       93.0,
+       28.55
+      ]
+     },
+     {
+      "kind": "pin",
+      "at": [
+       91.63,
+       27.85
+      ],
+      "label": "Bhutan's eastern edge",
+      "t0": 9.38,
+      "side": "left"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       97.32,
+       28.22
+      ],
+      "label": "Isu Razi Pass",
+      "t0": 12.4,
+      "side": "left"
+     },
+     {
+      "kind": "stamp",
+      "text": "~890 km",
+      "t0": 7.32,
+      "y": 0.68
+     }
+    ]
+   },
+   "objective": "o2"
+  },
+  {
+   "id": "S15",
+   "narration": "ये line ज़्यादातर Himalaya की सबसे ऊँची चोटियों, यानी watershed के साथ चलती है। [pause] Watershed वो ridge है, जिसके एक तरफ़ का पानी एक नदी में और दूसरी तरफ़ का पानी दूसरी नदी में जाता है।",
+   "durationSec": 13.549,
+   "audio": "lac/S15.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "east"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 93.0,
+      "lat": 28.05,
+      "dist": 160,
+      "tilt": 62,
+      "heading": 270
+     },
+     {
+      "t": 13.548798,
+      "lon": 93.0,
+      "lat": 28.05,
+      "dist": 130,
+      "tilt": 64,
+      "heading": 285
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_east",
+      "color": "#FF8A1F",
+      "width": 5,
+      "t0": -1
+     },
+     {
+      "kind": "label",
+      "at": [
+       93.0,
+       28.12
+      ],
+      "text": "WATERSHED: THE HIGHEST RIDGE",
+      "t0": 0.8,
+      "size": 30,
+      "tone": "accent"
+     },
+     {
+      "kind": "arrow",
+      "from": [
+       93.05,
+       28.15
+      ],
+      "to": [
+       93.1,
+       28.55
+      ],
+      "t0": 9.35,
+      "label": "to Tibet",
+      "tone": "bad"
+     },
+     {
+      "kind": "arrow",
+      "from": [
+       93.0,
+       28.0
+      ],
+      "to": [
+       92.95,
+       27.55
+      ],
+      "t0": 10.43,
+      "label": "to India",
+      "tone": "good"
+     }
+    ]
+   },
+   "objective": "o2"
+  },
+  {
+   "id": "S16",
+   "narration": "लेकिन China ने Simla Convention को कभी sign नहीं किया। [pause] China का तर्क है कि उस समय Tibet एक स्वतंत्र देश नहीं था, इसलिए वो कोई treaty कर ही नहीं सकता था। [pause] India का स्पष्ट मत है कि McMahon Line ही वैध सीमा है, और Arunachal Pradesh India का अभिन्न अंग है।",
+   "durationSec": 19.062,
+   "audio": "lac/S16.wav",
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "China's argument",
+     "tone": "muted",
+     "items": [
+      "Never signed the Simla Convention",
+      "Says Tibet could not sign a treaty"
+     ]
+    },
+    "right": {
+     "heading": "India's position",
+     "tone": "good",
+     "items": [
+      "The McMahon Line is the valid boundary",
+      "Arunachal Pradesh is an integral part of India"
+     ]
+    }
+   },
+   "objective": "o2"
+  },
+  {
+   "id": "S17",
+   "narration": "अपने दावे को दिखाने के लिए China, Arunachal की जगहों के अपने नाम की lists भी जारी करता रहा है। [pause] India हर बार इसे साफ़ शब्दों में reject करता है, और कहता है कि नए नाम रख देने से सच्चाई नहीं बदलती।",
+   "durationSec": 14.52,
+   "audio": "lac/S17.wav",
+   "visual": {
+    "type": "source",
+    "url": "https://www.outlookindia.com/national/mea-china-arunachal-pradesh-name-change",
+    "publisher": "Outlook India",
+    "title": "'Senseless Attempts', 'Invented Names': India Rejects China's Bid To Rename Places In Arunachal Pradesh",
+    "why": "MEA: renaming places does not alter the reality that Arunachal Pradesh is an integral part of India"
+   },
+   "objective": "o2"
+  },
+  {
+   "id": "S18",
+   "narration": "Mains के लिए एक point याद रखिए। [pause] Eastern sector में Tawang सबसे संवेदनशील है, क्योंकि वहाँ का monastery, Tibetan Buddhism का एक बड़ा केंद्र है। [pause] इसलिए ये विवाद सिर्फ़ ज़मीन का नहीं, पहचान और आस्था का भी है।",
+   "durationSec": 15.883,
+   "audio": "lac/S18.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "east",
+     "tawang"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 91.866,
+      "lat": 27.587,
+      "dist": 26,
+      "tilt": 62,
+      "heading": 0
+     },
+     {
+      "t": 15.883379,
+      "lon": 91.866,
+      "lat": 27.587,
+      "dist": 18,
+      "tilt": 64,
+      "heading": 140
+     }
+    ],
+    "layers": [
+     {
+      "kind": "pin",
+      "at": [
+       91.866,
+       27.587
+      ],
+      "label": "Tawang Monastery",
+      "t0": 0.6,
+      "sub": "A major centre of Tibetan Buddhism"
+     },
+     {
+      "kind": "stamp",
+      "text": "Land + Identity + Faith",
+      "t0": 13.14,
+      "y": 0.7,
+      "tone": "warn"
+     }
+    ],
+    "drift": 0
+   },
+   "objective": "o2",
+   "completes": [
+    "o2"
+   ],
+   "sfx": "ping"
+  },
+  {
+   "id": "S19",
+   "narration": "अब Western sector में चलते हैं, जहाँ सबसे बड़ा विवाद है। [pause] Aksai Chin, एक ठंडा और लगभग बंजर plateau, आख़िर इतना important क्यों है?",
+   "durationSec": 10.019,
+   "audio": "lac/S19.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 77.58,
+      "lat": 34.16,
+      "dist": 140,
+      "tilt": 55,
+      "heading": 30
+     },
+     {
+      "t": 10.019229,
+      "lon": 79.3,
+      "lat": 35.05,
+      "dist": 300,
+      "tilt": 50,
+      "heading": 40
+     }
+    ],
+    "layers": [
+     {
+      "kind": "pin",
+      "at": [
+       77.58,
+       34.16
+      ],
+      "label": "Leh",
+      "t0": 0.2
+     },
+     {
+      "kind": "label",
+      "at": [
+       79.5,
+       35.2
+      ],
+      "text": "AKSAI CHIN",
+      "t0": 4.26,
+      "size": 44,
+      "sub": "Cold, high plateau · ~5,000 m"
+     }
+    ]
+   },
+   "objective": "o3"
+  },
+  {
+   "id": "S20",
+   "narration": "British दौर में यहाँ के लिए दो अलग lines बनीं। [pause] 1865 की Johnson Line, Aksai Chin को Kashmir रियासत में दिखाती थी। [pause] लेकिन 1899 की Macartney-MacDonald Line, इसका ज़्यादातर हिस्सा China की तरफ़ छोड़ती थी।",
+   "durationSec": 15.61,
+   "audio": "lac/S20.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 79.1,
+      "lat": 35.0,
+      "dist": 520,
+      "tilt": 38,
+      "heading": 10
+     },
+     {
+      "t": 15.61,
+      "lon": 79.1,
+      "lat": 35.0,
+      "dist": 460,
+      "tilt": 42,
+      "heading": 18
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 3,
+      "t0": -1
+     },
+     {
+      "kind": "line",
+      "ref": "johnson",
+      "color": "#FF8A1F",
+      "width": 6,
+      "t0": 3.52,
+      "dur": 2.5,
+      "label": "Johnson Line, 1865 (approx.)",
+      "labelAt": [
+       78.4,
+       35.85
+      ]
+     },
+     {
+      "kind": "line",
+      "ref": "mm_line",
+      "color": "#5BC0EB",
+      "width": 6,
+      "dashed": true,
+      "t0": 9.18,
+      "dur": 2.5,
+      "label": "Macartney-MacDonald Line, 1899 (approx.)",
+      "labelAt": [
+       78.6,
+       35.05
+      ]
+     },
+     {
+      "kind": "label",
+      "at": [
+       79.4,
+       35.5
+      ],
+      "text": "AKSAI CHIN",
+      "t0": 0.5,
+      "size": 36
+     }
+    ]
+   },
+   "objective": "o3"
+  },
+  {
+   "id": "S21",
+   "narration": "Independence के बाद India ने Johnson Line को आधार माना। [pause] India के official map में आज भी पूरा Aksai Chin, Ladakh का हिस्सा है।",
+   "durationSec": 9.068,
+   "audio": "lac/S21.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.6,
+      "lat": 34.6,
+      "dist": 600,
+      "tilt": 35,
+      "heading": 10
+     },
+     {
+      "t": 9.068435,
+      "lon": 78.6,
+      "lat": 34.6,
+      "dist": 540,
+      "tilt": 38,
+      "heading": 15
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "johnson",
+      "color": "#FF8A1F",
+      "width": 4,
+      "t0": -1
+     },
+     {
+      "kind": "area",
+      "ref": "aksai",
+      "tone": "accent",
+      "opacity": 0.28,
+      "t0": 4.29,
+      "label": "AKSAI CHIN",
+      "labelAt": [
+       79.3,
+       35.2
+      ]
+     },
+     {
+      "kind": "label",
+      "at": [
+       77.4,
+       34.0
+      ],
+      "text": "LADAKH",
+      "t0": 0.4,
+      "size": 40
+     },
+     {
+      "kind": "stamp",
+      "text": "India's official map",
+      "t0": 4.29,
+      "sub": "All of Aksai Chin is part of Ladakh",
+      "y": 0.72,
+      "tone": "accent"
+     }
+    ]
+   },
+   "objective": "o3"
+  },
+  {
+   "id": "S22",
+   "narration": "अब सोचिए, 1950 के दशक में China ने चुपचाप Aksai Chin से होकर Xinjiang से Tibet तक एक सड़क बना ली, और India को इसका पूरा पता करीब 1957 में चला। [pause] यही सड़क आगे चलकर 1962 के युद्ध की एक बड़ी वजह बनी।",
+   "durationSec": 17.74,
+   "audio": "lac/S22.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 79.2,
+      "lat": 35.4,
+      "dist": 700,
+      "tilt": 35,
+      "heading": 0
+     },
+     {
+      "t": 17.74,
+      "lon": 79.2,
+      "lat": 35.3,
+      "dist": 620,
+      "tilt": 38,
+      "heading": 8
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "g219",
+      "color": "#E5383B",
+      "width": 6,
+      "t0": 7.28,
+      "dur": 3.5,
+      "label": "Xinjiang–Tibet road",
+      "labelAt": [
+       79.6,
+       36.0
+      ]
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.8,
+       37.4
+      ],
+      "text": "XINJIANG",
+      "t0": 5.36,
+      "size": 34,
+      "tone": "bad"
+     },
+     {
+      "kind": "label",
+      "at": [
+       80.9,
+       33.2
+      ],
+      "text": "TIBET",
+      "t0": 6.28,
+      "size": 34,
+      "tone": "bad"
+     },
+     {
+      "kind": "stamp",
+      "text": "1957",
+      "t0": 10.6,
+      "sub": "India finds out",
+      "y": 0.2,
+      "out": 14.100000000000001
+     },
+     {
+      "kind": "stamp",
+      "text": "1962",
+      "t0": 14.3,
+      "sub": "War",
+      "y": 0.2,
+      "tone": "bad"
+     }
+    ]
+   },
+   "objective": "o3"
+  },
+  {
+   "id": "S23",
+   "narration": "Government of India ने Parliament में बताया है कि China, Ladakh में लगभग 38,000 square km Indian territory पर अवैध कब्ज़ा किए हुए है। [pause] इसके अलावा 1963 में Pakistan ने PoK की Shaksgam Valley का लगभग 5,180 square km हिस्सा, China को सौंप दिया, जिसे India मान्यता नहीं देता।",
+   "durationSec": 23.32,
+   "audio": "lac/S23.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.6,
+      "lat": 35.2,
+      "dist": 650,
+      "tilt": 35,
+      "heading": 0
+     },
+     {
+      "t": 23.32,
+      "lon": 78.4,
+      "lat": 35.4,
+      "dist": 600,
+      "tilt": 38,
+      "heading": 6
+     }
+    ],
+    "layers": [
+     {
+      "kind": "area",
+      "ref": "aksai",
+      "tone": "bad",
+      "hatch": true,
+      "t0": 4.69,
+      "label": "Occupied by China · ~38,000 sq km",
+      "labelAt": [
+       79.3,
+       35.15
+      ]
+     },
+     {
+      "kind": "area",
+      "ref": "shaksgam",
+      "tone": "bad",
+      "hatch": true,
+      "t0": 14.1,
+      "label": "Shaksgam Valley · 5,180 sq km",
+      "labelAt": [
+       76.7,
+       36.05
+      ]
+     },
+     {
+      "kind": "label",
+      "at": [
+       76.7,
+       35.8
+      ],
+      "text": "ceded by Pakistan, 1963",
+      "t0": 14.7,
+      "size": 22,
+      "tone": "warn"
+     }
+    ]
+   },
+   "objective": "o3",
+   "onScreen": "Source: Government of India reply in Parliament"
+  },
+  {
+   "id": "S24",
+   "narration": "China के लिए Aksai Chin इसलिए ज़रूरी है, क्योंकि यही रास्ता Xinjiang को Tibet से जोड़ता है। [pause] और India के लिए ये Ladakh की सुरक्षा और Karakoram की तरफ़ की पहुँच का सवाल है।",
+   "durationSec": 11.98,
+   "audio": "lac/S24.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 79.4,
+      "lat": 34.6,
+      "dist": 1300,
+      "tilt": 30,
+      "heading": 0
+     },
+     {
+      "t": 11.98,
+      "lon": 79.4,
+      "lat": 34.6,
+      "dist": 1150,
+      "tilt": 33,
+      "heading": 5
+     }
+    ],
+    "layers": [
+     {
+      "kind": "area",
+      "ref": "aksai",
+      "tone": "bad",
+      "hatch": true,
+      "t0": -1
+     },
+     {
+      "kind": "arrow",
+      "from": [
+       79.0,
+       37.3
+      ],
+      "to": [
+       80.6,
+       32.6
+      ],
+      "t0": 3.93,
+      "tone": "bad",
+      "label": "Xinjiang → Tibet",
+      "dur": 1.5
+     },
+     {
+      "kind": "arrow",
+      "from": [
+       77.58,
+       34.16
+      ],
+      "to": [
+       77.82,
+       35.51
+      ],
+      "t0": 7.57,
+      "tone": "accent",
+      "label": "Karakoram",
+      "dur": 1.2
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.0,
+       33.6
+      ],
+      "text": "LADAKH",
+      "t0": 0.3,
+      "size": 34
+     },
+     {
+      "kind": "label",
+      "at": [
+       80.5,
+       37.8
+      ],
+      "text": "XINJIANG",
+      "t0": 0.3,
+      "size": 32,
+      "tone": "bad"
+     },
+     {
+      "kind": "label",
+      "at": [
+       83.5,
+       32.4
+      ],
+      "text": "TIBET",
+      "t0": 0.3,
+      "size": 32,
+      "tone": "bad"
+     }
+    ]
+   },
+   "objective": "o3"
+  },
+  {
+   "id": "S25",
+   "narration": "Exam के लिए एक और important point। [pause] \"Line of Actual Control\" शब्द पहली बार 1959 में China के Premier Zhou Enlai ने एक letter में इस्तेमाल किया। [pause] 1962 के युद्ध के बाद, दोनों सेनाएँ जहाँ रुकीं, वही मोटे तौर पर आज की LAC बन गई।",
+   "durationSec": 18.71,
+   "audio": "lac/S25.wav",
+   "visual": {
+    "type": "timeline",
+    "heading": "How the LAC was born",
+    "nodes": [
+     {
+      "date": "1914",
+      "label": "Simla Convention, McMahon Line"
+     },
+     {
+      "date": "1959",
+      "label": "Zhou Enlai's letter first uses 'Line of Actual Control'",
+      "tone": "warn"
+     },
+     {
+      "date": "1962",
+      "label": "War; where the armies stopped became the LAC",
+      "tone": "bad"
+     }
+    ]
+   },
+   "objective": "o3"
+  },
+  {
+   "id": "S26",
+   "narration": "फिर 1993 में दोनों देशों ने LAC पर peace और tranquillity बनाए रखने का agreement किया, और 1996 के agreement में तय हुआ कि LAC के 2 km के अंदर कोई भी पक्ष गोली नहीं चलाएगा। [pause] इसीलिए Galwan में लड़ाई हथियारों से नहीं, लाठियों और पत्थरों से हुई।",
+   "durationSec": 19.831,
+   "audio": "lac/S26.wav",
+   "visual": {
+    "type": "timeline",
+    "heading": "Keeping the peace",
+    "nodes": [
+     {
+      "date": "1993",
+      "label": "Peace and tranquillity along the LAC"
+     },
+     {
+      "date": "1996",
+      "label": "No firing within 2 km of the LAC",
+      "tone": "accent"
+     },
+     {
+      "date": "2020",
+      "label": "Galwan: fought with sticks and stones",
+      "tone": "bad"
+     }
+    ]
+   },
+   "objective": "o3",
+   "completes": [
+    "o3"
+   ],
+   "sfx": "ping"
+  },
+  {
+   "id": "S27",
+   "narration": "अब आते हैं 2020 पर। [pause] April-May 2020 में China ने eastern Ladakh में कई जगहों पर भारी संख्या में सैनिक LAC के पास ला खड़े किए। [pause] पहले भी ऐसे face-offs होते थे, लेकिन इस बार ये कई points पर एक साथ और लंबे समय के लिए था।",
+   "durationSec": 17.54,
+   "audio": "lac/S27.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh",
+     "eladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.7,
+      "lat": 34.0,
+      "dist": 520,
+      "tilt": 42,
+      "heading": 10
+     },
+     {
+      "t": 17.54,
+      "lon": 78.7,
+      "lat": 34.0,
+      "dist": 450,
+      "tilt": 45,
+      "heading": 18
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": -1
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.2,
+       34.2
+      ],
+      "text": "EASTERN LADAKH",
+      "t0": 0.3,
+      "size": 34
+     },
+     {
+      "kind": "stamp",
+      "text": "April–May 2020",
+      "t0": 2.45,
+      "y": 0.15,
+      "out": 9.129999999999999
+     },
+     {
+      "kind": "units",
+      "pts": [
+       [
+        78.265,
+        34.772000000000006
+       ],
+       [
+        78.72,
+        34.410000000000004
+       ],
+       [
+        78.92,
+        34.38
+       ],
+       [
+        78.9,
+        33.78
+       ],
+       [
+        78.92,
+        33.59
+       ],
+       [
+        78.11,
+        35.32
+       ],
+       [
+        79.51,
+        32.720000000000006
+       ]
+      ],
+      "t0": 7.63,
+      "stagger": 0.18,
+      "tone": "bad"
+     }
+    ]
+   },
+   "objective": "o4"
+  },
+  {
+   "id": "S28",
+   "narration": "इन जगहों को friction points कहा जाता है। [pause] ये हैं Galwan valley, Pangong Tso के north और south bank, Gogra और Hot Springs। [pause] इनके अलावा Depsang plains और Demchok में भी तनाव बना हुआ था।",
+   "durationSec": 13.743,
+   "audio": "lac/S28.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh",
+     "eladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.7,
+      "lat": 34.0,
+      "dist": 450,
+      "tilt": 45,
+      "heading": 18
+     },
+     {
+      "t": 13.742653,
+      "lon": 78.7,
+      "lat": 34.0,
+      "dist": 420,
+      "tilt": 47,
+      "heading": 22
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": -1
+     },
+     {
+      "kind": "pin",
+      "at": [
+       78.205,
+       34.752
+      ],
+      "label": "Galwan",
+      "t0": 3.74
+     },
+     {
+      "kind": "pin",
+      "at": [
+       78.84,
+       33.76
+      ],
+      "label": "Pangong North",
+      "t0": 5.66
+     },
+     {
+      "kind": "pin",
+      "at": [
+       78.86,
+       33.57
+      ],
+      "label": "Pangong South",
+      "t0": 6.24,
+      "side": "left"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       78.66,
+       34.39
+      ],
+      "label": "Gogra",
+      "t0": 7.24,
+      "side": "left"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       78.86,
+       34.36
+      ],
+      "label": "Hot Springs",
+      "t0": 7.94
+     },
+     {
+      "kind": "pin",
+      "at": [
+       78.05,
+       35.3
+      ],
+      "label": "Depsang",
+      "t0": 9.94,
+      "tone": "warn"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       79.45,
+       32.7
+      ],
+      "label": "Demchok",
+      "t0": 11.16,
+      "tone": "warn"
+     }
+    ]
+   },
+   "objective": "o4",
+   "onScreen": "Friction points"
+  },
+  {
+   "id": "S29",
+   "narration": "15 June 2020 की रात Galwan valley में हुई हिंसक झड़प में Colonel B. Santosh Babu समेत 20 Indian soldiers शहीद हुए। [pause] China ने बाद में अपने 4 सैनिकों की मौत मानी। [pause] ये 1975 के बाद LAC पर पहली बार था, जब किसी की जान गई।",
+   "durationSec": 17.86,
+   "audio": "lac/S29.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh",
+     "eladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.205,
+      "lat": 34.752,
+      "dist": 42,
+      "tilt": 55,
+      "heading": 100
+     },
+     {
+      "t": 17.86,
+      "lon": 78.205,
+      "lat": 34.752,
+      "dist": 34,
+      "tilt": 57,
+      "heading": 125
+     }
+    ],
+    "layers": [
+     {
+      "kind": "pin",
+      "at": [
+       78.205,
+       34.752
+      ],
+      "label": "Galwan · PP14",
+      "t0": 0.4,
+      "sub": "15 June 2020"
+     },
+     {
+      "kind": "stamp",
+      "text": "20",
+      "t0": 0.91,
+      "sub": "Col. B. Santosh Babu and 19 soldiers",
+      "out": 8.98,
+      "y": 0.08
+     },
+     {
+      "kind": "stamp",
+      "text": "Since 1975",
+      "t0": 12.71,
+      "sub": "First deaths on the LAC",
+      "y": 0.1,
+      "tone": "bad"
+     }
+    ],
+    "night": true,
+    "drift": 0.3,
+    "exag": 1.6
+   },
+   "objective": "o4",
+   "sfx": "hit"
+  },
+  {
+   "id": "S30",
+   "narration": "अब Pangong Tso को समझिए। [pause] ये लगभग 134 km लंबी झील है, जिसका लगभग एक तिहाई हिस्सा India के पास है। [pause] इसके north bank पर पहाड़ की उँगलियों जैसी ridges हैं, जिन्हें Finger 1 से Finger 8 कहा जाता है।",
+   "durationSec": 16.077,
+   "audio": "lac/S30.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh",
+     "eladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 79.1,
+      "lat": 33.7,
+      "dist": 110,
+      "tilt": 50,
+      "heading": 330
+     },
+     {
+      "t": 9.450000000000001,
+      "lon": 78.85,
+      "lat": 33.73,
+      "dist": 55,
+      "tilt": 55,
+      "heading": 0
+     },
+     {
+      "t": 16.077166,
+      "lon": 78.84,
+      "lat": 33.745,
+      "dist": 30,
+      "tilt": 58,
+      "heading": 10
+     }
+    ],
+    "layers": [
+     {
+      "kind": "label",
+      "at": [
+       79.2,
+       33.62
+      ],
+      "text": "PANGONG TSO",
+      "t0": 0.4,
+      "size": 40,
+      "sub": "~134 km long · about one-third with India"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.735,
+       33.755
+      ],
+      "text": "F1",
+      "t0": 13.18,
+      "size": 26,
+      "tone": "warn"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.763,
+       33.755
+      ],
+      "text": "F2",
+      "t0": 13.33,
+      "size": 26,
+      "tone": "warn"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.791,
+       33.755
+      ],
+      "text": "F3",
+      "t0": 13.479999999999999,
+      "size": 26,
+      "tone": "warn"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.819,
+       33.759
+      ],
+      "text": "F4",
+      "t0": 13.629999999999999,
+      "size": 26,
+      "tone": "warn"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.847,
+       33.759
+      ],
+      "text": "F5",
+      "t0": 13.78,
+      "size": 26,
+      "tone": "warn"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.875,
+       33.755
+      ],
+      "text": "F6",
+      "t0": 13.93,
+      "size": 26,
+      "tone": "warn"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.903,
+       33.755
+      ],
+      "text": "F7",
+      "t0": 14.08,
+      "size": 26,
+      "tone": "warn"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.931,
+       33.755
+      ],
+      "text": "F8",
+      "t0": 14.229999999999999,
+      "size": 26,
+      "tone": "warn"
+     }
+    ]
+   },
+   "objective": "o4"
+  },
+  {
+   "id": "S31",
+   "narration": "India का मानना है कि LAC, Finger 8 से गुज़रती है, जबकि China, Finger 4 तक अपना दावा करता है। [pause] 2020 में China की सेना Finger 4 तक आ गई और India को आगे patrolling करने से रोकने लगी।",
+   "durationSec": 13.63,
+   "audio": "lac/S31.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh",
+     "eladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.84,
+      "lat": 33.745,
+      "dist": 30,
+      "tilt": 58,
+      "heading": 10
+     },
+     {
+      "t": 13.63,
+      "lon": 78.84,
+      "lat": 33.745,
+      "dist": 26,
+      "tilt": 60,
+      "heading": 18
+     }
+    ],
+    "layers": [
+     {
+      "kind": "label",
+      "at": [
+       78.735,
+       33.755
+      ],
+      "text": "F1",
+      "t0": -1,
+      "size": 24,
+      "tone": "warn"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.763,
+       33.755
+      ],
+      "text": "F2",
+      "t0": -1,
+      "size": 24,
+      "tone": "warn"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.791,
+       33.755
+      ],
+      "text": "F3",
+      "t0": -1,
+      "size": 24,
+      "tone": "warn"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.819,
+       33.759
+      ],
+      "text": "F4",
+      "t0": -1,
+      "size": 24,
+      "tone": "warn"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.847,
+       33.759
+      ],
+      "text": "F5",
+      "t0": -1,
+      "size": 24,
+      "tone": "warn"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.875,
+       33.755
+      ],
+      "text": "F6",
+      "t0": -1,
+      "size": 24,
+      "tone": "warn"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.903,
+       33.755
+      ],
+      "text": "F7",
+      "t0": -1,
+      "size": 24,
+      "tone": "warn"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.931,
+       33.755
+      ],
+      "text": "F8",
+      "t0": -1,
+      "size": 24,
+      "tone": "warn"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       78.931,
+       33.755
+      ],
+      "label": "India: LAC at Finger 8",
+      "t0": 2.49,
+      "tone": "good"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       78.819,
+       33.759
+      ],
+      "label": "China claims up to Finger 4",
+      "t0": 5.09,
+      "tone": "bad",
+      "side": "left"
+     },
+     {
+      "kind": "units",
+      "pts": [
+       [
+        78.819,
+        33.759
+       ]
+      ],
+      "t0": 7.08,
+      "icon": "block",
+      "tone": "bad"
+     }
+    ]
+   },
+   "objective": "o4"
+  },
+  {
+   "id": "S32",
+   "narration": "फिर August 2020 के आख़िर में Indian Army ने एक smart move किया। [pause] उसने Pangong के south bank पर Kailash range की ऊँची चोटियों पर पहले पहुँचकर positions ले लीं, जिससे नीचे की Chinese positions साफ़ दिखने लगीं, और India को बातचीत में leverage मिल गया।",
+   "durationSec": 17.77,
+   "audio": "lac/S32.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh",
+     "eladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.86,
+      "lat": 33.6,
+      "dist": 45,
+      "tilt": 50,
+      "heading": 200
+     },
+     {
+      "t": 17.77,
+      "lon": 78.84,
+      "lat": 33.52,
+      "dist": 28,
+      "tilt": 62,
+      "heading": 220
+     }
+    ],
+    "layers": [
+     {
+      "kind": "label",
+      "at": [
+       78.84,
+       33.5
+      ],
+      "text": "KAILASH RANGE",
+      "t0": 7.3,
+      "size": 36,
+      "tone": "accent"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       78.8,
+       33.45
+      ],
+      "label": "Rezang La",
+      "t0": 8.74
+     },
+     {
+      "kind": "pin",
+      "at": [
+       78.87,
+       33.5
+      ],
+      "label": "Rechin La",
+      "t0": 9.24
+     },
+     {
+      "kind": "units",
+      "pts": [
+       [
+        78.8,
+        33.45
+       ],
+       [
+        78.87,
+        33.5
+       ]
+      ],
+      "t0": 10.26,
+      "stagger": 0.3
+     },
+     {
+      "kind": "arrow",
+      "from": [
+       78.87,
+       33.5
+      ],
+      "to": [
+       78.93,
+       33.56
+      ],
+      "t0": 13.38,
+      "label": "Clear view",
+      "tone": "accent"
+     },
+     {
+      "kind": "stamp",
+      "text": "Leverage",
+      "t0": 16.28,
+      "y": 0.2,
+      "tone": "good"
+     }
+    ]
+   },
+   "objective": "o4"
+  },
+  {
+   "id": "S33",
+   "narration": "अब सवाल ये था कि आमने-सामने खड़ी सेनाओं को पीछे कैसे हटाया जाए, ताकि फिर कोई Galwan जैसी घटना न हो? [pause] इसका जवाब था buffer zones।",
+   "durationSec": 10.49,
+   "audio": "lac/S33.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh",
+     "eladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.205,
+      "lat": 34.752,
+      "dist": 34,
+      "tilt": 56,
+      "heading": 90
+     },
+     {
+      "t": 10.49,
+      "lon": 78.205,
+      "lat": 34.752,
+      "dist": 30,
+      "tilt": 58,
+      "heading": 100
+     }
+    ],
+    "layers": [
+     {
+      "kind": "units",
+      "pts": [
+       [
+        78.19,
+        34.745
+       ],
+       [
+        78.195,
+        34.758
+       ],
+       [
+        78.19,
+        34.752
+       ]
+      ],
+      "t0": 0.3,
+      "stagger": 0.15
+     },
+     {
+      "kind": "units",
+      "pts": [
+       [
+        78.222,
+        34.745
+       ],
+       [
+        78.218,
+        34.758
+       ],
+       [
+        78.225,
+        34.752
+       ]
+      ],
+      "t0": 0.5,
+      "stagger": 0.15,
+      "tone": "bad"
+     },
+     {
+      "kind": "stamp",
+      "text": "?",
+      "t0": 7.0,
+      "out": 8.889999999999999
+     },
+     {
+      "kind": "stamp",
+      "text": "Buffer zones",
+      "t0": 9.19,
+      "tone": "warn"
+     }
+    ]
+   },
+   "objective": "o4"
+  },
+  {
+   "id": "S34",
+   "narration": "Buffer zone, या no-patrolling zone, वो इलाका है जहाँ से दोनों सेनाएँ पीछे हटती हैं, और तय समय तक कोई भी पक्ष वहाँ patrol नहीं करता। [pause] इसका मक़सद है दोनों सेनाओं के बीच दूरी बनाना, ताकि सीधा टकराव न हो।",
+   "durationSec": 15.19,
+   "audio": "lac/S34.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh",
+     "eladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.205,
+      "lat": 34.752,
+      "dist": 30,
+      "tilt": 58,
+      "heading": 100
+     },
+     {
+      "t": 15.19,
+      "lon": 78.205,
+      "lat": 34.752,
+      "dist": 27,
+      "tilt": 60,
+      "heading": 110
+     }
+    ],
+    "layers": [
+     {
+      "kind": "units",
+      "pts": [
+       [
+        78.18,
+        34.745
+       ],
+       [
+        78.185,
+        34.76
+       ]
+      ],
+      "t0": 0.2,
+      "stagger": 0.15
+     },
+     {
+      "kind": "units",
+      "pts": [
+       [
+        78.235,
+        34.745
+       ],
+       [
+        78.23,
+        34.76
+       ]
+      ],
+      "t0": 0.3,
+      "stagger": 0.15,
+      "tone": "bad"
+     },
+     {
+      "kind": "zone",
+      "at": [
+       78.205,
+       34.752
+      ],
+      "t0": 4.79,
+      "rx": 1.5,
+      "label": "No-patrolling zone"
+     },
+     {
+      "kind": "arrow",
+      "from": [
+       78.195,
+       34.752
+      ],
+      "to": [
+       78.17,
+       34.752
+      ],
+      "t0": 4.79,
+      "tone": "accent"
+     },
+     {
+      "kind": "arrow",
+      "from": [
+       78.215,
+       34.752
+      ],
+      "to": [
+       78.24,
+       34.752
+      ],
+      "t0": 4.79,
+      "tone": "bad"
+     }
+    ]
+   },
+   "objective": "o4"
+  },
+  {
+   "id": "S35",
+   "narration": "Galwan में July 2020 में लगभग 3 km का buffer zone बना, यानी हर तरफ़ करीब डेढ़ km। [pause] Pangong के north bank पर February 2021 में Finger 3 से Finger 8 के बीच, लगभग 8 km का no-patrolling इलाका बना।",
+   "durationSec": 16.31,
+   "audio": "lac/S35.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh",
+     "eladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.205,
+      "lat": 34.752,
+      "dist": 34,
+      "tilt": 56,
+      "heading": 100
+     },
+     {
+      "t": 6.88,
+      "lon": 78.205,
+      "lat": 34.752,
+      "dist": 30,
+      "tilt": 58,
+      "heading": 110
+     },
+     {
+      "t": 9.379999999999999,
+      "lon": 78.84,
+      "lat": 33.745,
+      "dist": 30,
+      "tilt": 58,
+      "heading": 10
+     },
+     {
+      "t": 16.31,
+      "lon": 78.84,
+      "lat": 33.745,
+      "dist": 27,
+      "tilt": 60,
+      "heading": 15
+     }
+    ],
+    "layers": [
+     {
+      "kind": "zone",
+      "at": [
+       78.205,
+       34.752
+      ],
+      "t0": 0.4,
+      "rx": 1.5,
+      "label": "Galwan · ~3 km"
+     },
+     {
+      "kind": "stamp",
+      "text": "July 2020",
+      "t0": 0.76,
+      "y": 0.15,
+      "out": 7.18
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.791,
+       33.755
+      ],
+      "text": "F3",
+      "t0": 7.18,
+      "size": 22,
+      "tone": "warn"
+     },
+     {
+      "kind": "label",
+      "at": [
+       78.931,
+       33.755
+      ],
+      "text": "F8",
+      "t0": 7.18,
+      "size": 22,
+      "tone": "warn"
+     },
+     {
+      "kind": "zone",
+      "at": [
+       78.86099999999999,
+       33.76
+      ],
+      "rx": 4.2,
+      "ry": 1.0,
+      "t0": 8.76,
+      "label": "Finger 3 to 8 · ~8 km"
+     },
+     {
+      "kind": "stamp",
+      "text": "Feb 2021",
+      "t0": 8.76,
+      "y": 0.15
+     }
+    ]
+   },
+   "objective": "o4"
+  },
+  {
+   "id": "S36",
+   "narration": "इसके बाद August 2021 में Gogra, यानी Patrolling Point 17A, और September 2022 में Hot Springs, यानी Patrolling Point 15 पर भी disengagement हुआ, और वहाँ भी buffer zones बने।",
+   "durationSec": 13.83,
+   "audio": "lac/S36.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh",
+     "eladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.76,
+      "lat": 34.37,
+      "dist": 55,
+      "tilt": 55,
+      "heading": 0
+     },
+     {
+      "t": 13.83,
+      "lon": 78.76,
+      "lat": 34.37,
+      "dist": 48,
+      "tilt": 58,
+      "heading": 10
+     }
+    ],
+    "layers": [
+     {
+      "kind": "zone",
+      "at": [
+       78.66,
+       34.39
+      ],
+      "t0": 2.43,
+      "rx": 1.5,
+      "label": "Gogra · PP17A"
+     },
+     {
+      "kind": "zone",
+      "at": [
+       78.86,
+       34.36
+      ],
+      "t0": 7.49,
+      "rx": 1.5,
+      "label": "Hot Springs · PP15"
+     },
+     {
+      "kind": "stamp",
+      "text": "Aug 2021",
+      "t0": 0.65,
+      "y": 0.12,
+      "out": 5.550000000000001
+     },
+     {
+      "kind": "stamp",
+      "text": "Sep 2022",
+      "t0": 5.65,
+      "y": 0.12
+     }
+    ]
+   },
+   "objective": "o4"
+  },
+  {
+   "id": "S37",
+   "narration": "लेकिन buffer zones पर सवाल भी उठे। [pause] Critics का कहना है कि इनमें से कई इलाके वो हैं, जहाँ पहले Indian Army patrol करती थी, और local चरवाहे अपने जानवर चराते थे। [pause] Government का जवाब है कि ये अस्थायी व्यवस्था है, जिसे हालात के हिसाब से दोबारा देखा जा सकता है।",
+   "durationSec": 17.99,
+   "audio": "lac/S37.wav",
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Critics",
+     "tone": "warn",
+     "items": [
+      "Many zones were areas the Indian Army used to patrol",
+      "Local herders grazed animals there"
+     ]
+    },
+    "right": {
+     "heading": "Government",
+     "tone": "neutral",
+     "items": [
+      "A temporary arrangement",
+      "Can be revisited as the situation demands"
+     ]
+    }
+   },
+   "objective": "o4",
+   "completes": [
+    "o4"
+   ],
+   "sfx": "ping"
+  },
+  {
+   "id": "S38",
+   "narration": "2024 तक दो सबसे मुश्किल points बचे थे, Depsang और Demchok। [pause] यहाँ क्या हुआ?",
+   "durationSec": 7.007,
+   "audio": "lac/S38.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.05,
+      "lat": 35.3,
+      "dist": 90,
+      "tilt": 50,
+      "heading": 0
+     },
+     {
+      "t": 4.14,
+      "lon": 78.05,
+      "lat": 35.3,
+      "dist": 80,
+      "tilt": 52,
+      "heading": 10
+     },
+     {
+      "t": 7.007166,
+      "lon": 79.45,
+      "lat": 32.7,
+      "dist": 90,
+      "tilt": 52,
+      "heading": 20
+     }
+    ],
+    "layers": [
+     {
+      "kind": "pin",
+      "at": [
+       78.05,
+       35.3
+      ],
+      "label": "Depsang Plains",
+      "t0": 3.66,
+      "tone": "warn"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       77.93,
+       35.38
+      ],
+      "label": "DBO",
+      "t0": 4.16,
+      "side": "left"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       79.45,
+       32.7
+      ],
+      "label": "Demchok",
+      "t0": 4.54,
+      "tone": "warn"
+     }
+    ]
+   },
+   "objective": "o5"
+  },
+  {
+   "id": "S39",
+   "narration": "21 October 2024 को India ने ऐलान किया कि दोनों देशों के बीच patrolling arrangements पर समझौता हो गया है। [pause] इसके तहत Depsang और Demchok में Indian Army की patrolling, और local लोगों की grazing, फिर से शुरू हुई। [pause] और दो दिन बाद Kazan में BRICS summit के दौरान PM Modi और President Xi Jinping की मुलाक़ात हुई।",
+   "durationSec": 21.59,
+   "audio": "lac/S39.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.7,
+      "lat": 34.0,
+      "dist": 600,
+      "tilt": 38,
+      "heading": 0
+     },
+     {
+      "t": 21.59,
+      "lon": 78.7,
+      "lat": 34.0,
+      "dist": 540,
+      "tilt": 42,
+      "heading": 8
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": -1
+     },
+     {
+      "kind": "stamp",
+      "text": "21 Oct 2024",
+      "t0": 0.01,
+      "sub": "Patrolling arrangement agreed",
+      "y": 0.12,
+      "out": 8.74
+     },
+     {
+      "kind": "pin",
+      "at": [
+       78.05,
+       35.3
+      ],
+      "label": "Depsang",
+      "t0": 8.94,
+      "tone": "good"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       79.45,
+       32.7
+      ],
+      "label": "Demchok",
+      "t0": 9.68,
+      "tone": "good"
+     },
+     {
+      "kind": "arrow",
+      "from": [
+       77.95,
+       35.25
+      ],
+      "to": [
+       78.15,
+       35.35
+      ],
+      "t0": 11.3,
+      "tone": "good",
+      "label": "Patrolling resumes"
+     },
+     {
+      "kind": "arrow",
+      "from": [
+       79.3,
+       32.75
+      ],
+      "to": [
+       79.48,
+       32.68
+      ],
+      "t0": 11.600000000000001,
+      "tone": "good"
+     },
+     {
+      "kind": "label",
+      "at": [
+       79.3,
+       32.5
+      ],
+      "text": "Grazing resumes",
+      "t0": 13.08,
+      "size": 24,
+      "tone": "good"
+     },
+     {
+      "kind": "stamp",
+      "text": "Kazan · BRICS",
+      "t0": 16.0,
+      "sub": "Modi–Xi meeting, 23 Oct 2024",
+      "y": 0.12
+     }
+    ]
+   },
+   "objective": "o5"
+  },
+  {
+   "id": "S40",
+   "narration": "ध्यान दीजिए, इस समझौते ने Galwan, Pangong या Gogra-Hot Springs के buffer zones को ख़त्म नहीं किया। [pause] वो no-patrolling zones अब भी बने हुए हैं।",
+   "durationSec": 9.81,
+   "audio": "lac/S40.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh",
+     "eladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.6,
+      "lat": 34.3,
+      "dist": 420,
+      "tilt": 45,
+      "heading": 15
+     },
+     {
+      "t": 9.81,
+      "lon": 78.6,
+      "lat": 34.3,
+      "dist": 380,
+      "tilt": 47,
+      "heading": 22
+     }
+    ],
+    "layers": [
+     {
+      "kind": "zone",
+      "at": [
+       78.205,
+       34.752
+      ],
+      "t0": 0.4,
+      "rx": 2.5,
+      "label": "Galwan"
+     },
+     {
+      "kind": "zone",
+      "at": [
+       78.66,
+       34.39
+      ],
+      "t0": 0.6,
+      "rx": 2.5
+     },
+     {
+      "kind": "zone",
+      "at": [
+       78.86,
+       34.36
+      ],
+      "t0": 0.8,
+      "rx": 2.5,
+      "label": "Gogra–Hot Springs"
+     },
+     {
+      "kind": "zone",
+      "at": [
+       78.84,
+       33.76
+      ],
+      "rx": 5,
+      "ry": 2,
+      "t0": 1.0,
+      "label": "Pangong"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       78.05,
+       35.3
+      ],
+      "label": "Depsang: patrols back",
+      "t0": 1.4,
+      "tone": "good"
+     },
+     {
+      "kind": "stamp",
+      "text": "Buffer zones remain",
+      "t0": 7.2,
+      "y": 0.12,
+      "tone": "warn"
+     }
+    ]
+   },
+   "objective": "o5"
+  },
+  {
+   "id": "S41",
+   "narration": "अब एक concept समझिए, जो Mains में बहुत काम आता है, और वो है तीन D's। [pause] पहला D है Disengagement, यानी आमने-सामने खड़ी सेनाओं को पीछे हटाना। [pause] दूसरा है De-escalation, यानी LAC के पास लाए गए अतिरिक्त सैनिकों और हथियारों को कम करना। [pause] और तीसरा है De-induction, यानी उन्हें उस इलाके से वापस बुला लेना।",
+   "durationSec": 23.81,
+   "audio": "lac/S41.wav",
+   "visual": {
+    "type": "flow",
+    "heading": "The 3 Ds",
+    "steps": [
+     {
+      "label": "Disengagement",
+      "sub": "Face-to-face troops step back",
+      "icon": "people"
+     },
+     {
+      "label": "De-escalation",
+      "sub": "Extra troops and weapons reduced",
+      "icon": "truck"
+     },
+     {
+      "label": "De-induction",
+      "sub": "Troops sent back from the area",
+      "icon": "home"
+     }
+    ]
+   },
+   "objective": "o5"
+  },
+  {
+   "id": "S42",
+   "narration": "Eastern Ladakh में पहला D, यानी disengagement, पूरा हो चुका है। [pause] लेकिन De-escalation और De-induction अभी बाक़ी हैं, और दोनों तरफ़ हज़ारों सैनिक अब भी तैनात हैं।",
+   "durationSec": 11.29,
+   "audio": "lac/S42.wav",
+   "visual": {
+    "type": "points",
+    "heading": "Eastern Ladakh today",
+    "items": [
+     "Disengagement: done",
+     "De-escalation: pending",
+     "De-induction: pending",
+     "Tens of thousands of troops still deployed on both sides"
+    ],
+    "highlight": [
+     "done",
+     "pending"
+    ]
+   },
+   "objective": "o5"
+  },
+  {
+   "id": "S43",
+   "narration": "इस बातचीत का सबसे बड़ा मंच है Special Representatives talks, जिसमें India की तरफ़ से NSA Ajit Doval और China की तरफ़ से Foreign Minister Wang Yi होते हैं। [pause] August 2025 में New Delhi में हुई 24th round में, boundary delimitation पर \"early harvest\" के लिए एक Expert Group बनाने पर सहमति हुई।",
+   "durationSec": 20.01,
+   "audio": "lac/S43.wav",
+   "visual": {
+    "type": "source",
+    "url": "https://www.globalsecurity.org/military/library/news/2025/08/mil-250819-india-mea01.htm",
+    "publisher": "Ministry of External Affairs (via GlobalSecurity.org)",
+    "date": "19 Aug 2025",
+    "title": "24th round of Special Representatives talks, New Delhi",
+    "why": "Expert Group on \"early harvest\" in boundary delimitation"
+   },
+   "objective": "o5"
+  },
+  {
+   "id": "S44",
+   "narration": "उसी round में Eastern और Middle sector के लिए भी General Level Mechanisms बनाने पर सहमति हुई, और Lipulekh, Shipki La और Nathu La से border trade दोबारा खोलने का फ़ैसला हुआ।",
+   "durationSec": 11.75,
+   "audio": "lac/S44.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 84.0,
+      "lat": 29.8,
+      "dist": 1700,
+      "tilt": 30,
+      "heading": 0
+     },
+     {
+      "t": 11.75,
+      "lon": 84.0,
+      "lat": 29.8,
+      "dist": 1500,
+      "tilt": 34,
+      "heading": 5
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": -1,
+      "dur": 3
+     },
+     {
+      "kind": "line",
+      "ref": "lac_middle",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": -1,
+      "dur": 3
+     },
+     {
+      "kind": "line",
+      "ref": "lac_sikkim",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": -1,
+      "dur": 3
+     },
+     {
+      "kind": "line",
+      "ref": "lac_east",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": -1,
+      "dur": 3
+     },
+     {
+      "kind": "pin",
+      "at": [
+       78.75,
+       31.82
+      ],
+      "label": "Shipki La",
+      "t0": 7.03
+     },
+     {
+      "kind": "pin",
+      "at": [
+       81.03,
+       30.23
+      ],
+      "label": "Lipulekh",
+      "t0": 6.21
+     },
+     {
+      "kind": "pin",
+      "at": [
+       88.83,
+       27.39
+      ],
+      "label": "Nathu La",
+      "t0": 8.03
+     },
+     {
+      "kind": "stamp",
+      "text": "Border trade to reopen",
+      "t0": 9.21,
+      "y": 0.12,
+      "tone": "good"
+     }
+    ]
+   },
+   "objective": "o5"
+  },
+  {
+   "id": "S45",
+   "narration": "फिर August 2026 में Beijing में हुई 25th round के बाद, दोनों देशों ने एक साझा eight-point outcome document जारी किया। [pause] इसमें तय हुआ कि boundary delimitation पर \"early and substantial harvest\" की बातचीत आगे बढ़ाई जाएगी, और Eastern और Middle sector में नई military hotlines भी शुरू होंगी।",
+   "durationSec": 19.62,
+   "audio": "lac/S45.wav",
+   "visual": {
+    "type": "source",
+    "url": "https://aninews.in/news/world/asia/expert-group-to-advance-discussions-on-early-and-substantial-harvest-of-india-china-boundary-delimitation-mea20260828224910/",
+    "publisher": "ANI",
+    "date": "28 Aug 2026",
+    "title": "Expert group to advance discussions on early and substantial harvest of India-China boundary delimitation: MEA",
+    "why": "25th round, Beijing: eight-point joint outcome"
+   },
+   "objective": "o5",
+   "completes": [
+    "o5"
+   ],
+   "sfx": "ping"
+  },
+  {
+   "id": "S46",
+   "narration": "तो क्या अब सब ठीक है? [pause] जवाब है, अभी पूरी तरह नहीं। [pause] जब तक LAC ज़मीन पर साफ़ तय नहीं होती, तब तक हर patrol के साथ टकराव का ख़तरा बना रहता है।",
+   "durationSec": 12.801,
+   "audio": "lac/S46.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 85.0,
+      "lat": 31.0,
+      "dist": 2200,
+      "tilt": 30,
+      "heading": 0
+     },
+     {
+      "t": 12.801088,
+      "lon": 85.0,
+      "lat": 31.0,
+      "dist": 2000,
+      "tilt": 33,
+      "heading": 4
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": -1,
+      "dur": 3,
+      "flicker": true
+     },
+     {
+      "kind": "line",
+      "ref": "lac_middle",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": -1,
+      "dur": 3,
+      "flicker": true
+     },
+     {
+      "kind": "line",
+      "ref": "lac_sikkim",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": -1,
+      "dur": 3,
+      "flicker": true
+     },
+     {
+      "kind": "line",
+      "ref": "lac_east",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": -1,
+      "dur": 3,
+      "flicker": true
+     },
+     {
+      "kind": "stamp",
+      "text": "Not yet",
+      "t0": 2.52,
+      "y": 0.15,
+      "tone": "warn"
+     }
+    ]
+   },
+   "objective": "o6"
+  },
+  {
+   "id": "S47",
+   "narration": "पहला उपाय है LAC का clarification, यानी दोनों देश कम से कम ये तो लिखकर तय करें कि उनकी नज़र में line कहाँ है। [pause] दूसरा उपाय है 3 D's को पूरा करना, ताकि सेनाओं के बीच भरोसा बने।",
+   "durationSec": 13.72,
+   "audio": "lac/S47.wav",
+   "visual": {
+    "type": "points",
+    "heading": "Way forward",
+    "items": [
+     "1. Clarify the LAC on paper",
+     "2. Complete the 3 Ds to build trust"
+    ]
+   },
+   "objective": "o6"
+  },
+  {
+   "id": "S48",
+   "narration": "तीसरा उपाय है border पर infrastructure, जैसे Arunachal की Sela Tunnel, जो Tawang तक हर मौसम में रास्ता खुला रखती है। [pause] और चौथा है Vibrant Villages Programme, जिससे सीमा के गाँवों में लोग बसे रहें और वहाँ विकास पहुँचे।",
+   "durationSec": 14.92,
+   "audio": "lac/S48.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "east",
+     "tawang"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 92.3,
+      "lat": 27.3,
+      "dist": 120,
+      "tilt": 52,
+      "heading": 330
+     },
+     {
+      "t": 14.92,
+      "lon": 92.0,
+      "lat": 27.5,
+      "dist": 80,
+      "tilt": 56,
+      "heading": 320
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "sela_road",
+      "color": "#FF8A1F",
+      "width": 6,
+      "t0": 3.33,
+      "dur": 2.5
+     },
+     {
+      "kind": "pin",
+      "at": [
+       92.1,
+       27.5
+      ],
+      "label": "Sela Tunnel",
+      "t0": 3.83
+     },
+     {
+      "kind": "pin",
+      "at": [
+       91.866,
+       27.587
+      ],
+      "label": "Tawang",
+      "t0": 4.89,
+      "side": "left"
+     },
+     {
+      "kind": "stamp",
+      "text": "Vibrant Villages Programme",
+      "t0": 9.07,
+      "sub": "Keeping border villages alive",
+      "y": 0.12,
+      "tone": "good"
+     }
+    ]
+   },
+   "objective": "o6"
+  },
+  {
+   "id": "S49",
+   "narration": "Mains answer में इन्हें short-term और long-term में बाँटिए। [pause] Short-term में आते हैं hotlines, patrolling protocols और 3 D's। [pause] Long-term में आते हैं boundary settlement, infrastructure और सीमा के लोगों का विकास।",
+   "durationSec": 14.27,
+   "audio": "lac/S49.wav",
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Short-term",
+     "tone": "accent",
+     "items": [
+      "Hotlines",
+      "Patrolling protocols",
+      "The 3 Ds"
+     ]
+    },
+    "right": {
+     "heading": "Long-term",
+     "tone": "good",
+     "items": [
+      "Boundary settlement",
+      "Infrastructure",
+      "Development of border people"
+     ]
+    }
+   },
+   "objective": "o6"
+  },
+  {
+   "id": "S50",
+   "narration": "तो आज हमने सीखा: LAC लगभग 3,488 km लंबी है, और इसके तीन sectors हैं Western, Middle और Eastern। [pause] Eastern sector में विवाद McMahon Line पर है, और Western sector में Aksai Chin पर।",
+   "durationSec": 15.91,
+   "audio": "lac/S50.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 85.0,
+      "lat": 30.8,
+      "dist": 2300,
+      "tilt": 30,
+      "heading": 0
+     },
+     {
+      "t": 15.91,
+      "lon": 85.0,
+      "lat": 30.8,
+      "dist": 2100,
+      "tilt": 33,
+      "heading": 4
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "color": "#FF8A1F",
+      "width": 6,
+      "t0": 7.82
+     },
+     {
+      "kind": "line",
+      "ref": "lac_middle",
+      "color": "#F2C94C",
+      "width": 6,
+      "t0": 8.6
+     },
+     {
+      "kind": "line",
+      "ref": "lac_sikkim",
+      "color": "#3BB273",
+      "width": 6,
+      "t0": 9.32
+     },
+     {
+      "kind": "line",
+      "ref": "lac_east",
+      "color": "#3BB273",
+      "width": 6,
+      "t0": 9.32
+     },
+     {
+      "kind": "stamp",
+      "text": "~3,488 km",
+      "t0": 2.8,
+      "y": 0.12,
+      "out": 13.02
+     },
+     {
+      "kind": "label",
+      "at": [
+       93.5,
+       29.5
+      ],
+      "text": "McMahon Line",
+      "t0": 11.82,
+      "size": 30,
+      "tone": "good"
+     },
+     {
+      "kind": "area",
+      "ref": "aksai",
+      "tone": "bad",
+      "hatch": true,
+      "t0": 14.36,
+      "label": "Aksai Chin",
+      "labelAt": [
+       79.3,
+       35.2
+      ]
+     }
+    ]
+   },
+   "objective": "o6"
+  },
+  {
+   "id": "S51",
+   "narration": "2020 के बाद दोनों देशों ने buffer zones बनाकर सेनाओं को अलग किया, और 2024 के समझौते से Depsang और Demchok में patrolling लौटी। [pause] लेकिन de-escalation और boundary settlement का रास्ता अभी लंबा है।",
+   "durationSec": 14.46,
+   "audio": "lac/S51.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh",
+     "eladakh"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 78.6,
+      "lat": 34.0,
+      "dist": 500,
+      "tilt": 42,
+      "heading": 10
+     },
+     {
+      "t": 14.46,
+      "lon": 78.6,
+      "lat": 34.0,
+      "dist": 450,
+      "tilt": 45,
+      "heading": 16
+     }
+    ],
+    "layers": [
+     {
+      "kind": "zone",
+      "at": [
+       78.205,
+       34.752
+      ],
+      "t0": 2.04,
+      "rx": 2.5
+     },
+     {
+      "kind": "zone",
+      "at": [
+       78.66,
+       34.39
+      ],
+      "t0": 2.24,
+      "rx": 2.5
+     },
+     {
+      "kind": "zone",
+      "at": [
+       78.86,
+       34.36
+      ],
+      "t0": 2.44,
+      "rx": 2.5
+     },
+     {
+      "kind": "zone",
+      "at": [
+       78.84,
+       33.76
+      ],
+      "rx": 5,
+      "ry": 2,
+      "t0": 2.64
+     },
+     {
+      "kind": "pin",
+      "at": [
+       78.05,
+       35.3
+      ],
+      "label": "Depsang",
+      "t0": 6.84,
+      "tone": "good"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       79.45,
+       32.7
+      ],
+      "label": "Demchok",
+      "t0": 7.62,
+      "tone": "good"
+     },
+     {
+      "kind": "stamp",
+      "text": "A long road ahead",
+      "t0": 12.17,
+      "y": 0.12,
+      "tone": "warn"
+     }
+    ]
+   },
+   "objective": "o6"
+  },
+  {
+   "id": "S52",
+   "narration": "अगली बार जब आप map पर India-China border देखें, तो याद रखिए, असली सवाल ये नहीं है कि line कहाँ है, असली सवाल ये है कि दोनों देश उसे कहाँ मानते हैं।",
+   "durationSec": 12.05,
+   "audio": "lac/S52.wav",
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "himalaya"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 85.0,
+      "lat": 31.0,
+      "dist": 1800,
+      "tilt": 30,
+      "heading": 0
+     },
+     {
+      "t": 6.6273003500000005,
+      "lon": 85.0,
+      "lat": 31.0,
+      "dist": 2600,
+      "tilt": 25,
+      "heading": 0
+     },
+     {
+      "t": 12.049637,
+      "lon": 82,
+      "lat": 24,
+      "dist": 16000,
+      "tilt": 0,
+      "heading": 0
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": -1,
+      "dur": 3,
+      "flicker": true
+     },
+     {
+      "kind": "line",
+      "ref": "lac_middle",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": -1,
+      "dur": 3,
+      "flicker": true
+     },
+     {
+      "kind": "line",
+      "ref": "lac_sikkim",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": -1,
+      "dur": 3,
+      "flicker": true
+     },
+     {
+      "kind": "line",
+      "ref": "lac_east",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": -1,
+      "dur": 3,
+      "flicker": true
+     }
+    ],
+    "globe": true,
+    "drift": 0
+   },
+   "objective": "o6",
+   "completes": [
+    "o6"
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "id": "short1",
+   "hook": "Why India and China can't even agree on the border's length",
+   "scenes": [
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11"
+   ]
+  },
+  {
+   "id": "short2",
+   "hook": "Why China calls Arunachal 'South Tibet'",
+   "scenes": [
+    "S12",
+    "S13",
+    "S14",
+    "S15",
+    "S16",
+    "S17"
+   ]
+  },
+  {
+   "id": "short3",
+   "hook": "China built a road on Indian land, and India found out years later",
+   "scenes": [
+    "S19",
+    "S20",
+    "S21",
+    "S22",
+    "S23",
+    "S24"
+   ]
+  },
+  {
+   "id": "short4",
+   "hook": "How do you stop two armies from clashing again?",
+   "scenes": [
+    "S33",
+    "S34",
+    "S35",
+    "S36",
+    "S37"
+   ]
+  },
+  {
+   "id": "short5",
+   "hook": "Disengagement is done. So why are troops still there?",
+   "scenes": [
+    "S41",
+    "S42"
+   ]
+  },
+  {
+   "id": "short6",
+   "hook": "What is the 'early harvest' India and China keep talking about?",
+   "scenes": [
+    "S43",
+    "S44",
+    "S45"
+   ]
+  }
+ ],
+ "thumbnail": {
+  "headline": "WHERE IS THE BORDER?",
+  "sub": "LAC Explained",
+  "scene": "S20"
+ }
+}
