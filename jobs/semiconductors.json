@@ -689,12 +689,12 @@
       },
       {
        "iso3": "CHN",
-       "tone": "neutral",
+       "tone": "muted",
        "delay": 25
       },
       {
        "iso3": "MYS",
-       "tone": "neutral",
+       "tone": "muted",
        "delay": 30
       },
       {
@@ -1122,7 +1122,7 @@
      "highlights": [
       {
        "iso3": "IND",
-       "tone": "neutral"
+       "tone": "muted"
       }
      ],
      "markers": [
@@ -1168,7 +1168,7 @@
      "highlights": [
       {
        "iso3": "IND",
-       "tone": "neutral"
+       "tone": "muted"
       }
      ],
      "markers": [
@@ -1233,28 +1233,10 @@
      "highlights": [
       {
        "iso3": "IND",
-       "tone": "neutral"
+       "tone": "muted"
       }
      ],
      "markers": [
-      {
-       "at": [
-        72.2,
-        22.25
-       ],
-       "label": "Dholera",
-       "tone": "muted",
-       "delay": 0
-      },
-      {
-       "at": [
-        72.38,
-        22.99
-       ],
-       "label": "Sanand",
-       "tone": "muted",
-       "delay": 0
-      },
       {
        "at": [
         92.2,
@@ -1302,21 +1284,12 @@
       },
       {
        "at": [
-        72.83,
-        21.17
+        72.2,
+        22.25
        ],
-       "label": "Surat: Suchi Semicon",
+       "label": "Gujarat: Crystal Matrix, Suchi",
        "tone": "accent",
        "delay": 330
-      },
-      {
-       "at": [
-        72.0,
-        22.0
-       ],
-       "label": "Dholera: Crystal Matrix",
-       "tone": "accent",
-       "delay": 360
       }
      ]
     }
