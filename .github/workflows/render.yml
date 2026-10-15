@@ -30,10 +30,12 @@ jobs:
   media:
     if: inputs.mode == 'media'
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 110
     steps:
       - uses: actions/checkout@v4
       - name: Fetch b-roll candidates
+        timeout-minutes: 90
+        continue-on-error: true
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
           python3 scripts/fetch_media.py jobs/${{ inputs.job_id }}.media.json

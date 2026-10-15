@@ -86,6 +86,8 @@ for item in spec["queries"]:
             if kind == "video":
                 if float(info.get("duration") or 0) < 3:
                     continue
+                if not [x for x in info.get("derivatives") or [] if 640 <= (x.get("width") or 0) <= 1920] and (info.get("size") or 0) > 150e6:
+                    continue  # no transcode and a huge original: too slow to fetch
                 d = [x for x in info.get("derivatives") or [] if 640 <= (x.get("width") or 0) <= 1920]
                 d.sort(key=lambda x: abs((x.get("width") or 0) - 1280))
                 src = d[0]["src"] if d else info.get("url")
@@ -114,4 +116,5 @@ for item in spec["queries"]:
         print(item["id"], "->", dest, "|", title, "|", lic)
     if got == 0:
         report.append({"id": item["id"], "found": 0})
+    json.dump(report, open(os.path.join(out, "report.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 json.dump(report, open(os.path.join(out, "report.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)

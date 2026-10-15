@@ -1,23 +1,124 @@
-{"queries": [
- {"id": "pangongv", "q": "Pangong", "kind": "video"},
- {"id": "ladakhv", "q": "Ladakh", "kind": "video"},
- {"id": "himalayav", "q": "Himalayas", "kind": "video", "n": 3},
- {"id": "tawangv", "q": "Arunachal", "kind": "video", "n": 3},
- {"id": "zhou", "q": "Zhou Enlai Nehru", "kind": "image"},
- {"id": "simlaconf", "q": "Simla Conference 1914 delegates", "kind": "image", "n": 3},
- {"id": "war1962", "q": "Sino-Indian War", "kind": "image"},
- {"id": "doklam", "q": "Doklam", "kind": "image", "n": 3},
- {"id": "nathula", "q": "Nathu La", "kind": "image"},
- {"id": "shipkila", "q": "Shipki La", "kind": "image", "n": 2},
- {"id": "lipulekh", "q": "Lipulekh", "kind": "image", "n": 2},
- {"id": "sela", "q": "Sela Tunnel", "kind": "image"},
- {"id": "selapass", "q": "Sela Pass", "kind": "image", "n": 3},
- {"id": "kazan", "q": "Modi Xi Kazan", "kind": "image"},
- {"id": "modixi", "q": "Narendra Modi Xi Jinping", "kind": "image"},
- {"id": "doval", "q": "Ajit Doval Wang Yi", "kind": "image", "n": 3},
- {"id": "santosh", "q": "Santosh Babu", "kind": "image", "n": 3},
- {"id": "chushul", "q": "Chushul", "kind": "image", "n": 3},
- {"id": "galwanr", "q": "Galwan", "kind": "image", "n": 4},
- {"id": "itbp", "q": "Indo-Tibetan Border Police", "kind": "image", "n": 3},
- {"id": "vibrant", "q": "Arunachal Pradesh village", "kind": "image", "n": 3}
-]}
+{
+ "queries": [
+  {
+   "id": "zhou",
+   "q": "Zhou Enlai Nehru",
+   "kind": "image"
+  },
+  {
+   "id": "simlaconf",
+   "q": "Simla Conference 1914 delegates",
+   "kind": "image",
+   "n": 3
+  },
+  {
+   "id": "war1962",
+   "q": "Sino-Indian War",
+   "kind": "image"
+  },
+  {
+   "id": "doklam",
+   "q": "Doklam",
+   "kind": "image",
+   "n": 3
+  },
+  {
+   "id": "nathula",
+   "q": "Nathu La",
+   "kind": "image"
+  },
+  {
+   "id": "shipkila",
+   "q": "Shipki La",
+   "kind": "image",
+   "n": 2
+  },
+  {
+   "id": "lipulekh",
+   "q": "Lipulekh",
+   "kind": "image",
+   "n": 2
+  },
+  {
+   "id": "sela",
+   "q": "Sela Tunnel",
+   "kind": "image"
+  },
+  {
+   "id": "selapass",
+   "q": "Sela Pass",
+   "kind": "image",
+   "n": 3
+  },
+  {
+   "id": "kazan",
+   "q": "Modi Xi Kazan",
+   "kind": "image"
+  },
+  {
+   "id": "modixi",
+   "q": "Narendra Modi Xi Jinping",
+   "kind": "image"
+  },
+  {
+   "id": "doval",
+   "q": "Ajit Doval Wang Yi",
+   "kind": "image",
+   "n": 3
+  },
+  {
+   "id": "santosh",
+   "q": "Santosh Babu",
+   "kind": "image",
+   "n": 3
+  },
+  {
+   "id": "chushul",
+   "q": "Chushul",
+   "kind": "image",
+   "n": 3
+  },
+  {
+   "id": "galwanr",
+   "q": "Galwan",
+   "kind": "image",
+   "n": 4
+  },
+  {
+   "id": "itbp",
+   "q": "Indo-Tibetan Border Police",
+   "kind": "image",
+   "n": 3
+  },
+  {
+   "id": "vibrant",
+   "q": "Arunachal Pradesh village",
+   "kind": "image",
+   "n": 3
+  },
+  {
+   "id": "pangongv",
+   "q": "Pangong",
+   "kind": "video",
+   "n": 2
+  },
+  {
+   "id": "ladakhv",
+   "q": "Ladakh",
+   "kind": "video",
+   "n": 2
+  },
+  {
+   "id": "himalayav",
+   "q": "Himalayas",
+   "kind": "video",
+   "n": 2
+  },
+  {
+   "id": "tawangv",
+   "q": "Arunachal",
+   "kind": "video",
+   "n": 2
+  }
+ ]
+}
