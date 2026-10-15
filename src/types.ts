@@ -24,7 +24,7 @@ export type Visual =
   | {type: 'compare'; left: {heading: string; items: string[]; tone?: Tone}; right: {heading: string; items: string[]; tone?: Tone}}
   | {type: 'formula'; heading?: string; lines: {text: string; note?: string; final?: boolean}[]}
   | {type: 'news'; headline: string; outlet: string; date: string}
-  | {type: 'image'; src: string; credit?: string; caption?: string}
+  | {type: 'image'; src: string; credit?: string; caption?: string; fit?: 'cover' | 'contain'; focus?: [number, number]}
   | {type: 'map'; map: MapSpec}
   | {type: 'hub'; center: {label: string; icon?: IconName}; spokes: {label: string; icon?: IconName}[]}
   | ({type: 'body'} & BodySpec)

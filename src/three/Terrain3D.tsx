@@ -2,7 +2,7 @@ import React, {useEffect, useLayoutEffect, useMemo, useState} from 'react';
 import {ThreeCanvas} from '@remotion/three';
 import {useThree} from '@react-three/fiber';
 import * as THREE from 'three';
-import {continueRender, delayRender, Easing, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {continueRender, delayRender, Easing, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {colors, fonts, toneColor} from '../theme';
 import type {LonLat, Tone} from '../types';
 
@@ -25,7 +25,9 @@ export type TerrainLayer =
   | (Base & {kind: 'label'; at: LonLat; text: string; size?: number; sub?: string})
   | (Base & {kind: 'units'; pts: LonLat[]; stagger?: number; icon?: 'soldier' | 'block'})
   | (Base & {kind: 'arrow'; from: LonLat; to: LonLat; label?: string; dur?: number})
-  | (Base & {kind: 'stamp'; text: string; sub?: string; y?: number});
+  | (Base & {kind: 'stamp'; text: string; sub?: string; y?: number})
+  // a real photograph of the place, in a card beside the map, with a leader line to its pin
+  | (Base & {kind: 'photo'; src: string; credit?: string; caption?: string; at?: LonLat; side?: 'left' | 'right'; w?: number});
 
 export type TerrainSpec = {
   packs: string[];
@@ -37,6 +39,7 @@ export type TerrainSpec = {
   night?: boolean;
   globe?: boolean;
   drift?: number; // slow orbit, degrees per second
+  credit?: string; // data credit line (imagery, elevation, borders)
 };
 
 type Meta = {west: number; east: number; south: number; north: number; hw: number; hh: number; minH: number; maxH: number};
@@ -597,6 +600,43 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
           ) : null}
         </g>,
       );
+    } else if (L.kind === 'photo') {
+      const e = spring({frame: f - (L.t0 ?? 0) * fps, fps, config: {damping: 14}});
+      const right = (L.side ?? 'right') === 'right';
+      const cw = (L.w ?? 0.44) * W;
+      const ch = cw * 0.68;
+      const cx = right ? W - cw - 70 * u : 50 * u;
+      const cy = Hh * 0.16;
+      const age = Math.max(0, t - (L.t0 ?? 0));
+      if (L.at) {
+        const [x, y, ok] = proj(L.at[0], L.at[1]);
+        if (ok)
+          els.push(
+            <line key={i} x1={x} y1={y} x2={right ? cx : cx + cw} y2={cy + ch * 0.5} stroke="#FFFFFF" strokeWidth={2.5 * u} strokeDasharray={`${8 * u} ${6 * u}`} opacity={o * Math.min(1, e)} />,
+          );
+      }
+      stamps.push(
+        <div
+          key={i}
+          style={{
+            position: 'absolute',
+            left: cx,
+            top: cy,
+            width: cw,
+            opacity: o * Math.min(1, e * 1.4),
+            transform: `translateY(${(1 - Math.min(1, e)) * 40 * u}px) scale(${0.92 + 0.08 * Math.min(1, e)})`,
+            transformOrigin: right ? 'right center' : 'left center',
+          }}
+        >
+          <div style={{width: cw, height: ch, borderRadius: 14 * u, overflow: 'hidden', border: `${4 * u}px solid #FFFFFF`, boxShadow: '0 18px 50px rgba(0,0,0,0.55)', background: '#0B1726'}}>
+            <Img src={staticFile(L.src)} style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${1.04 + age * 0.012}) translateX(${(right ? -1 : 1) * age * 0.25}%)`}} />
+          </div>
+          {L.caption ? (
+            <div style={{marginTop: 10 * u, fontFamily: fonts.display, fontWeight: 700, fontSize: 28 * u, color: '#FFFFFF', textShadow: '0 2px 10px rgba(0,0,0,0.8)'}}>{L.caption}</div>
+          ) : null}
+          {L.credit ? <div style={{marginTop: 4 * u, fontFamily: fonts.body, fontSize: 15 * u, color: 'rgba(255,255,255,0.8)', textShadow: '0 1px 6px rgba(0,0,0,0.9)'}}>{L.credit}</div> : null}
+        </div>,
+      );
     } else if (L.kind === 'stamp') {
       const e = spring({frame: f - (L.t0 ?? 0) * fps, fps, config: {damping: 9, mass: 0.8}});
       const sc = 1.6 - 0.6 * Math.min(1, e);
@@ -687,7 +727,7 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
       <div style={{position: 'absolute', inset: 0, boxShadow: `inset 0 0 ${160 * u}px rgba(0,0,0,0.45)`, pointerEvents: 'none'}} />
       <div style={{position: 'absolute', right: 0, top: 0, bottom: 0, width: 60 * u, background: 'linear-gradient(to right, rgba(11,23,38,0), rgba(11,23,38,0.9))'}} />
       <div style={{position: 'absolute', left: 18 * u, bottom: 14 * u, fontFamily: fonts.body, fontSize: 15 * u, color: 'rgba(255,255,255,0.75)', letterSpacing: 0.5}}>
-        {spec.globe && globeO > 0.5 ? 'Natural Earth' : 'Imagery: Copernicus Sentinel-2 / Natural Earth · Elevation: Terrarium (SRTM et al.) · Borders: Survey of India outline'}
+        {spec.globe && globeO > 0.5 ? 'NASA Blue Marble' : spec.credit || 'Imagery: Copernicus Sentinel-2 / Natural Earth · Elevation: Terrarium (SRTM et al.) · Borders: Survey of India outline'}
         {'   ·   '}
         {c.dist > 3500 ? `Eye alt ${Math.round(c.dist).toLocaleString('en-IN')} km` : `Eye alt ${eye >= 10000 ? Math.round(eye / 1000).toLocaleString('en-IN') + ' km' : Math.round(eye).toLocaleString('en-IN') + ' m'}`}
       </div>
