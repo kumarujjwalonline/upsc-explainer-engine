@@ -6,6 +6,7 @@ import type {MoleculeSpec} from './three/Molecule3D';
 import type {SourceSpec} from './visuals/SourceCard';
 import type {FootageSpec} from './visuals/Footage';
 import type {TerrainSpec} from './three/Terrain3D';
+import type {HeatLabSpec} from './visuals/HeatLab';
 
 export type Format = '16:9' | '9:16';
 export type LonLat = [number, number];
@@ -30,8 +31,9 @@ export type Visual =
   | ({type: 'body'} & BodySpec)
   | ({type: 'molecule'} & MoleculeSpec)
   | ({type: 'source'} & SourceSpec)
-  | ({type: 'footage'} & FootageSpec)
-  | ({type: 'terrain'} & TerrainSpec);
+  | ({type: 'footage'; fallback?: Visual} & FootageSpec)
+  | ({type: 'terrain'} & TerrainSpec)
+  | ({type: 'heatlab'} & HeatLabSpec);
 
 export type IconName =
   | 'ship' | 'truck' | 'train' | 'plane' | 'person' | 'people' | 'robot' | 'code' | 'chat'
@@ -72,6 +74,8 @@ export type Job = {
   scenes: Scene[];
   shorts?: {id: string; hook: string; scenes: string[]}[];
   thumbnail?: {headline: string; sub?: string; scene?: string};
+  // timeline bars at the foot of the screen for stretches that walk through events
+  timebars?: {nodes: {date: string; label: string; scene: string; at?: number}[]; scenes: string[]}[];
 };
 
 export type RenderProps = {job: Job; format: Format; sceneIds?: string[]; hook?: string};

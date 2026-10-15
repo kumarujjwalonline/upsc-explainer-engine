@@ -4,7 +4,7 @@ import {colors, fonts} from '../theme';
 import {useBox, useUnit} from './Box';
 
 // Short English on-screen line at the foot of the canvas region.
-export const Caption: React.FC<{text: string}> = ({text}) => {
+export const Caption: React.FC<{text: string; lift?: number}> = ({text, lift = 0}) => {
   const b = useBox();
   const u = useUnit();
   const f = useCurrentFrame();
@@ -19,7 +19,7 @@ export const Caption: React.FC<{text: string}> = ({text}) => {
         position: 'absolute',
         left: b.x,
         width: b.w,
-        top: b.y + b.h - 92 * u,
+        top: b.y + b.h - 92 * u - lift * u,
         display: 'flex',
         justifyContent: 'center',
         opacity: o,

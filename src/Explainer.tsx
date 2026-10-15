@@ -7,6 +7,7 @@ import {SceneVisual} from './visuals/SceneVisual';
 import {BoxContext} from './components/Box';
 import {Caption} from './components/Caption';
 import {Backdrop} from './components/Backdrop';
+import {TimeBar} from './components/TimeBar';
 
 export const sceneFrames = (s: Scene) => Math.max(15, Math.round((s.durationSec || 4) * FPS));
 
@@ -31,6 +32,24 @@ export const Explainer: React.FC<RenderProps> = ({job, format, sceneIds, hook}) 
     return {s, from, dur};
   });
 
+  const start: Record<string, number> = {};
+  seqs.forEach(({s, from}) => (start[s.id] = from));
+  const bars = (job.timebars || [])
+    .map((b) => {
+      const ids = b.scenes.filter((id) => id in start);
+      if (!ids.length) return null;
+      const last = seqs.find((q) => q.s.id === ids[ids.length - 1])!;
+      return {
+        scenes: ids,
+        from: Math.min(...ids.map((id) => start[id])),
+        to: last.from + last.dur,
+        nodes: b.nodes.map((nd) => ({date: nd.date, label: nd.label, frame: nd.scene in start ? start[nd.scene] + Math.round((nd.at || 0) * FPS) : Number.MAX_SAFE_INTEGER})),
+      };
+    })
+    .filter(Boolean) as {scenes: string[]; from: number; to: number; nodes: {date: string; label: string; frame: number}[]}[];
+  const inBar = (id: string) => bars.some((b) => b.scenes.includes(id));
+  const unit = Math.min(L.canvas.w / 1390, L.canvas.h / 940) * (L.canvas.w < L.canvas.h ? 1.5 : 1);
+
   return (
     <AbsoluteFill style={{backgroundColor: colors.bg, fontFamily: fonts.body, color: colors.text}}>
       <Backdrop />
@@ -38,7 +57,7 @@ export const Explainer: React.FC<RenderProps> = ({job, format, sceneIds, hook}) 
         <Sequence key={s.id} from={from} durationInFrames={dur} name={s.id}>
           <BoxContext.Provider value={L.canvas}>
             <SceneVisual scene={s} format={format} />
-            {s.onScreen ? <Caption text={s.onScreen} /> : null}
+            {s.onScreen ? <Caption text={s.onScreen} lift={inBar(s.id) ? 112 : 0} /> : null}
           </BoxContext.Provider>
           {s.audio ? <Audio src={staticFile(s.audio)} /> : null}
           {s.sfx ? <Audio src={staticFile(`sfx/${s.sfx}.wav`)} volume={0.55} /> : null}
@@ -52,6 +71,9 @@ export const Explainer: React.FC<RenderProps> = ({job, format, sceneIds, hook}) 
             durationInFrames={dur}
           />
         </Sequence>
+      ))}
+      {bars.map((b, i) => (
+        <TimeBar key={i} nodes={b.nodes} from={b.from} to={b.to} box={L.canvas} u={unit} />
       ))}
       {hook ? <HookBanner text={hook} /> : null}
     </AbsoluteFill>

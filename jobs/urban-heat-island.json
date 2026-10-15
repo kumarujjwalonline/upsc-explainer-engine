@@ -1,0 +1,2071 @@
+{
+ "id": "urban-heat-island",
+ "title": "Why 35°C Can Kill You: Wet Bulb Temperature, Heatwaves & Urban Heat Islands | UPSC",
+ "format": "16:9",
+ "tracker": {
+  "title": "Lesson progress",
+  "objectives": [
+   {
+    "id": "o1",
+    "label": "What is UHI"
+   },
+   {
+    "id": "o2",
+    "label": "Causes of UHI"
+   },
+   {
+    "id": "o3",
+    "label": "Heatwave: IMD criteria"
+   },
+   {
+    "id": "o4",
+    "label": "Wet bulb temperature"
+   },
+   {
+    "id": "o5",
+    "label": "Heat Action Plans"
+   },
+   {
+    "id": "o6",
+    "label": "Way forward & recap"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "id": "S00",
+   "narration": "[serious] May 2010 में Ahmedabad में गर्मी ने एक ही महीने में करीब 1,344 ज़्यादा जानें लीं। [pause] और गर्मी तब और जानलेवा हो जाती है, जब सूरज ढलने के बाद भी शहर ठंडा नहीं होता। [pause] तो सवाल ये है, रात में भी हमारे शहर ठंडे क्यों नहीं होते?",
+   "durationSec": 18.52,
+   "audio": "jobs/urban-heat-island/S00.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "india",
+     "gujarat",
+     "ahmedabad"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 76,
+      "lat": 22.5,
+      "dist": 1900,
+      "tilt": 20,
+      "heading": 0
+     },
+     {
+      "t": 3.2,
+      "lon": 72.9,
+      "lat": 23.0,
+      "dist": 420,
+      "tilt": 32,
+      "heading": 5
+     },
+     {
+      "t": 7.0,
+      "lon": 72.58,
+      "lat": 23.03,
+      "dist": 48,
+      "tilt": 50,
+      "heading": 15
+     },
+     {
+      "t": 17.77,
+      "lon": 72.58,
+      "lat": 23.03,
+      "dist": 30,
+      "tilt": 58,
+      "heading": 30
+     }
+    ],
+    "layers": [
+     {
+      "kind": "pin",
+      "at": [
+       72.58,
+       23.03
+      ],
+      "label": "Ahmedabad",
+      "sub": "Gujarat",
+      "t0": 2.6,
+      "out": 7.2
+     },
+     {
+      "kind": "counter",
+      "to": 1344,
+      "from": 0,
+      "dur": 2.6,
+      "t0": 4.03,
+      "prefix": "~",
+      "label": "extra deaths · May 2010",
+      "x": 0.05,
+      "y": 0.08
+     },
+     {
+      "kind": "heat",
+      "at": [
+       72.58,
+       23.03
+      ],
+      "rx": 16,
+      "ry": 13,
+      "t0": 9.82,
+      "grow": 2.0
+     },
+     {
+      "kind": "clock",
+      "from": 19,
+      "to": 24,
+      "dur": 3.5,
+      "t0": 9.82,
+      "x": 0.86,
+      "y": 0.07,
+      "label": "Midnight"
+     },
+     {
+      "kind": "label",
+      "at": [
+       72.47,
+       22.93
+      ],
+      "text": "still hot",
+      "tone": "accent",
+      "t0": 13.14,
+      "size": 34
+     }
+    ],
+    "credit": "Imagery: Copernicus Sentinel-2 (2024) · Relief: Terrarium elevation (SRTM et al.) · Borders: Survey of India outline · Heat glow: illustrative",
+    "night": true,
+    "drift": 0.4
+   },
+   "onScreen": "Ahmedabad, May 2010: ~1,344 extra deaths in one month",
+   "sfx": "hit"
+  },
+  {
+   "id": "S01",
+   "narration": "[curious] सोचिए, एक शहर में पारा 45 degree है और हवा बिल्कुल सूखी है। [pause] दूसरे शहर में पारा सिर्फ़ 35 degree है, लेकिन हवा नमी से भरी है। [pause] ज़्यादा ख़तरनाक कौन सा है? [pause] जवाब है, 35 वाला। [pause] क्योंकि वहाँ पसीना ठीक से सूख नहीं पाता, और शरीर ख़ुद को ठंडा नहीं कर पाता।",
+   "durationSec": 20.09,
+   "audio": "jobs/urban-heat-island/S01.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "heatlab",
+    "mode": "dryhumid"
+   },
+   "onScreen": "45°C dry vs 35°C humid: which is deadlier?",
+   "sfx": "tick"
+  },
+  {
+   "id": "S02",
+   "narration": "[serious] और ये ख़तरा हमारे शहरों में और बढ़ जाता है, क्योंकि वहाँ concrete, traffic और AC मिलकर पूरे शहर को एक heat island बना देते हैं।",
+   "durationSec": 9.43,
+   "audio": "jobs/urban-heat-island/S02.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "sasia",
+     "india",
+     "delhi"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 70,
+      "lat": 18,
+      "dist": 9000,
+      "tilt": 0,
+      "heading": 0
+     },
+     {
+      "t": 3.0,
+      "lon": 77.5,
+      "lat": 27.5,
+      "dist": 1400,
+      "tilt": 25,
+      "heading": 0
+     },
+     {
+      "t": 6.2,
+      "lon": 77.2,
+      "lat": 28.62,
+      "dist": 60,
+      "tilt": 50,
+      "heading": 10
+     },
+     {
+      "t": 8.68,
+      "lon": 77.2,
+      "lat": 28.62,
+      "dist": 42,
+      "tilt": 56,
+      "heading": 20
+     }
+    ],
+    "layers": [
+     {
+      "kind": "pin",
+      "at": [
+       77.21,
+       28.61
+      ],
+      "label": "Delhi",
+      "t0": 2.6,
+      "out": 6.0
+     },
+     {
+      "kind": "heat",
+      "at": [
+       77.21,
+       28.61
+      ],
+      "rx": 24,
+      "ry": 22,
+      "t0": 5.6,
+      "grow": 2.2,
+      "label": "Heat island"
+     }
+    ],
+    "credit": "Imagery: Copernicus Sentinel-2 (2024) · Relief: Terrarium elevation (SRTM et al.) · Borders: Survey of India outline · Heat glow: illustrative",
+    "night": true,
+    "globe": true,
+    "drift": 0.3
+   },
+   "onScreen": "URBAN HEAT ISLAND",
+   "sfx": "whoosh"
+  },
+  {
+   "id": "S03",
+   "narration": "[confident] आज के lesson में हम चार चीज़ें समझेंगे: [pause] Urban Heat Island क्या है और क्यों बनता है, heatwave कब declare होती है, wet bulb temperature असल में क्या है, और Heat Action Plans हमें कैसे बचाते हैं।",
+   "durationSec": 13.15,
+   "audio": "jobs/urban-heat-island/S03.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "points",
+    "heading": "Today's four questions",
+    "items": [
+     "What is an Urban Heat Island, and why does it form?",
+     "When is a heatwave declared?",
+     "What is wet bulb temperature, really?",
+     "How do Heat Action Plans save lives?"
+    ],
+    "highlight": [
+     "Urban Heat Island",
+     "heatwave",
+     "wet bulb",
+     "Heat Action Plans"
+    ]
+   },
+   "sfx": "pop"
+  },
+  {
+   "id": "S04",
+   "narration": "[explaining] Urban Heat Island, यानी UHI, वो स्थिति है जब कोई शहर अपने आसपास के rural इलाकों से ज़्यादा गर्म रहता है।",
+   "durationSec": 9.29,
+   "audio": "jobs/urban-heat-island/S04.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "heatlab",
+    "mode": "profile"
+   },
+   "onScreen": "UHI = city warmer than its surroundings"
+  },
+  {
+   "id": "S05",
+   "narration": "[measured] US Environmental Protection Agency के अनुसार, दिन में शहर आसपास से लगभग 0.5 से 4 degree Celsius ज़्यादा गर्म हो सकते हैं, और रात में लगभग 1 से 3 degree।",
+   "durationSec": 12.49,
+   "audio": "jobs/urban-heat-island/S05.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "heatlab",
+    "mode": "gapbars"
+   },
+   "onScreen": "Day: ~0.5–4°C warmer · Night: ~1–3°C warmer",
+   "sfx": "tick"
+  },
+  {
+   "id": "S06",
+   "narration": "[curious] अब सवाल ये है, जब सूरज ढल जाता है, तब भी शहर ठंडा क्यों नहीं होता?",
+   "durationSec": 5.45,
+   "audio": "jobs/urban-heat-island/S06.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "footage",
+    "query": "city skyline night India",
+    "caption": "After sunset, the city stays hot",
+    "fallback": {
+     "type": "heatlab",
+     "mode": "daynight",
+     "variant": "sunset"
+    }
+   },
+   "sfx": "whoosh"
+  },
+  {
+   "id": "S07",
+   "narration": "[explaining] क्योंकि दिन भर सड़कें, छतें और दीवारें सूरज की गर्मी को store करती हैं, और रात में धीरे-धीरे उसी heat को वापस छोड़ती हैं। [pause] इसीलिए UHI का असर रात में ज़्यादा महसूस होता है, और शरीर को recover करने का मौका नहीं मिलता।",
+   "durationSec": 16.6,
+   "audio": "jobs/urban-heat-island/S07.mp3",
+   "objective": "o1",
+   "completes": [
+    "o1"
+   ],
+   "visual": {
+    "type": "heatlab",
+    "mode": "daynight",
+    "variant": "cycle"
+   },
+   "onScreen": "Day: absorb · Night: release"
+  },
+  {
+   "id": "S08",
+   "narration": "[curious] तो शहर को heat island बनाता कौन है? [pause] पाँच बड़े कारण हैं।",
+   "durationSec": 4.96,
+   "audio": "jobs/urban-heat-island/S08.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "question",
+    "text": "What turns a city into a heat island? Five big causes.",
+    "highlight": [
+     "Five big causes"
+    ]
+   },
+   "sfx": "pop"
+  },
+  {
+   "id": "S09",
+   "narration": "[explaining] पहला कारण है albedo, यानी कोई surface सूरज की कितनी रोशनी वापस reflect करती है। [pause] नया dark asphalt सिर्फ़ 5 से 10 percent रोशनी लौटाता है, और बाकी गर्मी सोख लेता है।",
+   "durationSec": 13.15,
+   "audio": "jobs/urban-heat-island/S09.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "heatlab",
+    "mode": "albedo"
+   },
+   "onScreen": "Albedo: asphalt 0.05–0.10 · white concrete 0.70–0.80"
+  },
+  {
+   "id": "S10",
+   "narration": "[explaining] दूसरा कारण है हरियाली की कमी। [pause] पेड़-पौधे अपनी पत्तियों से पानी evaporate करते हैं, इसे evapotranspiration कहते हैं, और ये process हवा को natural तरीके से ठंडा करता है। [pause] जब ज़मीन concrete से ढक जाती है, तो ये natural cooler बंद हो जाता है।",
+   "durationSec": 17.25,
+   "audio": "jobs/urban-heat-island/S10.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "heatlab",
+    "mode": "evapo"
+   },
+   "onScreen": "Evapotranspiration = nature's cooler"
+  },
+  {
+   "id": "S11",
+   "narration": "[explaining] तीसरा कारण है urban canyon। [pause] ऊँची इमारतों के बीच की पतली गलियाँ एक घाटी जैसी बन जाती हैं, जहाँ गर्मी दीवारों के बीच बार-बार टकराकर फँस जाती है, और हवा भी कम चलती है।",
+   "durationSec": 12.82,
+   "audio": "jobs/urban-heat-island/S11.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "heatlab",
+    "mode": "canyon"
+   },
+   "onScreen": "Urban canyon traps heat"
+  },
+  {
+   "id": "S12",
+   "narration": "[explaining] चौथा कारण है waste heat, यानी गाड़ियों, factories और AC से निकलने वाली गर्मी। [pause] यहाँ एक vicious cycle बनता है। [pause] जितनी ज़्यादा गर्मी होती है, उतने ज़्यादा AC चलते हैं, और उतनी ही ज़्यादा गर्मी बाहर निकलती है।",
+   "durationSec": 14.66,
+   "audio": "jobs/urban-heat-island/S12.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "heatlab",
+    "mode": "waste"
+   },
+   "onScreen": "Anthropogenic (waste) heat"
+  },
+  {
+   "id": "S13",
+   "narration": "[explaining] और पाँचवाँ कारण है pollution। [pause] शहर के ऊपर धुएँ और dust की एक परत बन जाती है, और studies बताती हैं कि ये haze रात में गर्मी को बाहर निकलने से रोककर UHI को और बढ़ा सकती है।",
+   "durationSec": 13.58,
+   "audio": "jobs/urban-heat-island/S13.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "heatlab",
+    "mode": "haze"
+   },
+   "onScreen": "Haze traps night-time heat"
+  },
+  {
+   "id": "S14",
+   "narration": "[emphatic] तो याद रखिए, पाँच कारण हैं: कम albedo, कम हरियाली, urban canyon, waste heat और pollution। [pause] ये पाँचों मिलकर शहर को एक heat trap बना देते हैं।",
+   "durationSec": 11.31,
+   "audio": "jobs/urban-heat-island/S14.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "hub",
+    "center": {
+     "label": "City = heat trap",
+     "icon": "bolt"
+    },
+    "spokes": [
+     {
+      "label": "Low albedo"
+     },
+     {
+      "label": "Less greenery"
+     },
+     {
+      "label": "Urban canyon"
+     },
+     {
+      "label": "Waste heat"
+     },
+     {
+      "label": "Pollution haze"
+     }
+    ]
+   },
+   "sfx": "ping"
+  },
+  {
+   "id": "S15",
+   "narration": "[thoughtful] Mains के लिए एक important point: [pause] UHI सिर्फ़ temperature की बात नहीं है। [pause] इससे बिजली और पानी की demand बढ़ती है, और सबसे ज़्यादा असर पड़ता है slums में रहने वालों और बाहर काम करने वाले लोगों पर।",
+   "durationSec": 13.05,
+   "audio": "jobs/urban-heat-island/S15.mp3",
+   "objective": "o2",
+   "completes": [
+    "o2"
+   ],
+   "visual": {
+    "type": "footage",
+    "query": "construction workers India",
+    "caption": "Outdoor workers face the most heat",
+    "fallback": {
+     "type": "points",
+     "heading": "UHI impacts (Mains)",
+     "items": [
+      "Higher demand for electricity",
+      "More pressure on water",
+      "Slum dwellers hit hardest",
+      "Outdoor workers at most risk"
+     ],
+     "highlight": [
+      "electricity",
+      "water",
+      "Slum dwellers",
+      "Outdoor workers"
+     ]
+    }
+   },
+   "onScreen": "Power · water · urban poor · outdoor workers"
+  },
+  {
+   "id": "S16",
+   "narration": "[curious] अब बात करते हैं heatwave की। [pause] आखिर कितनी गर्मी को officially heatwave कहा जाता है?",
+   "durationSec": 6.34,
+   "audio": "jobs/urban-heat-island/S16.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "sasia",
+     "india"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 77.2,
+      "lat": 28.6,
+      "dist": 260,
+      "tilt": 45,
+      "heading": 0
+     },
+     {
+      "t": 5.09,
+      "lon": 80.5,
+      "lat": 21.5,
+      "dist": 2700,
+      "tilt": 38,
+      "heading": 0
+     }
+    ],
+    "layers": [
+     {
+      "kind": "label",
+      "at": [
+       81,
+       30.6
+      ],
+      "text": "HIMALAYA",
+      "t0": 2.8,
+      "size": 30
+     },
+     {
+      "kind": "label",
+      "at": [
+       82,
+       26.0
+      ],
+      "text": "INDO-GANGETIC PLAIN",
+      "t0": 3.4,
+      "size": 26
+     },
+     {
+      "kind": "label",
+      "at": [
+       77.3,
+       17.5
+      ],
+      "text": "DECCAN PLATEAU",
+      "t0": 4.0,
+      "size": 26
+     }
+    ],
+    "credit": "Relief: Terrarium elevation (SRTM et al.) · Borders: Survey of India outline · Heat glow: illustrative"
+   },
+   "sfx": "whoosh"
+  },
+  {
+   "id": "S17",
+   "narration": "[explaining] India Meteorological Department, यानी IMD, के अनुसार पहली शर्त है: [pause] plains में maximum temperature कम से कम 40 degree, coastal इलाकों में 37 degree, और hilly regions में 30 degree होना चाहिए।",
+   "durationSec": 13.65,
+   "audio": "jobs/urban-heat-island/S17.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "sasia",
+     "india"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 80.5,
+      "lat": 22.5,
+      "dist": 2800,
+      "tilt": 36,
+      "heading": 0
+     },
+     {
+      "t": 12.9,
+      "lon": 80.5,
+      "lat": 22.8,
+      "dist": 2750,
+      "tilt": 36,
+      "heading": 0
+     }
+    ],
+    "layers": [
+     {
+      "kind": "heat",
+      "at": [
+       80.5,
+       26.2
+      ],
+      "rx": 650,
+      "ry": 260,
+      "t0": 4.59,
+      "label": "Plains ≥ 40°C"
+     },
+     {
+      "kind": "line",
+      "pts": [
+       [
+        70.0,
+        22.3
+       ],
+       [
+        72.6,
+        21.0
+       ],
+       [
+        72.85,
+        19.0
+       ],
+       [
+        73.7,
+        16.0
+       ],
+       [
+        74.8,
+        12.9
+       ],
+       [
+        76.2,
+        10.0
+       ],
+       [
+        77.5,
+        8.1
+       ],
+       [
+        78.2,
+        8.9
+       ],
+       [
+        79.8,
+        10.3
+       ],
+       [
+        80.3,
+        13.1
+       ],
+       [
+        80.1,
+        15.9
+       ],
+       [
+        82.2,
+        16.6
+       ],
+       [
+        83.3,
+        17.7
+       ],
+       [
+        85.8,
+        19.8
+       ],
+       [
+        86.9,
+        21.3
+       ],
+       [
+        88.2,
+        21.8
+       ]
+      ],
+      "color": "#F2C94C",
+      "width": 6,
+      "t0": 8.04,
+      "dur": 1.8,
+      "label": "Coast ≥ 37°C",
+      "labelAt": [
+       73.0,
+       16.5
+      ]
+     },
+     {
+      "kind": "heat",
+      "at": [
+       78.6,
+       31.0
+      ],
+      "rx": 360,
+      "ry": 120,
+      "t0": 10.27,
+      "color": "#F2C94C",
+      "label": "Hills ≥ 30°C"
+     }
+    ],
+    "credit": "Relief: Terrarium elevation (SRTM et al.) · Borders: Survey of India outline · Heat glow: illustrative",
+    "drift": 0.15
+   },
+   "onScreen": "Plains ≥40°C · Coast ≥37°C · Hills ≥30°C"
+  },
+  {
+   "id": "S18",
+   "narration": "[measured] इसके बाद देखा जाता है कि temperature normal से कितना ऊपर है। [pause] Normal से 4.5 से 6.4 degree ज़्यादा हो, तो heatwave। [pause] 6.4 degree से भी ज़्यादा हो, तो severe heatwave।",
+   "durationSec": 12.92,
+   "audio": "jobs/urban-heat-island/S18.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "heatlab",
+    "mode": "thermo",
+    "thermo": {
+     "heading": "How far above normal?",
+     "min": -1,
+     "max": 8.5,
+     "from": 0,
+     "to": 7.6,
+     "unit": "dep",
+     "marks": [
+      {
+       "v": 0,
+       "label": "Normal",
+       "tone": "muted"
+      },
+      {
+       "v": 4.5,
+       "label": "+4.5°C"
+      },
+      {
+       "v": 6.4,
+       "label": "+6.4°C",
+       "tone": "bad"
+      }
+     ],
+     "bands": [
+      {
+       "from": 4.5,
+       "to": 6.4,
+       "label": "Heatwave",
+       "tone": "warn"
+      },
+      {
+       "from": 6.4,
+       "to": 8.5,
+       "label": "Severe heatwave",
+       "tone": "bad"
+      }
+     ]
+    }
+   },
+   "onScreen": "+4.5 to +6.4°C → Heatwave · above +6.4°C → Severe"
+  },
+  {
+   "id": "S19",
+   "narration": "[measured] और normal चाहे जो भी हो, actual temperature 45 degree या उससे ऊपर पहुँचे तो heatwave, और 47 degree या उससे ऊपर पहुँचे तो severe heatwave।",
+   "durationSec": 10.55,
+   "audio": "jobs/urban-heat-island/S19.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "heatlab",
+    "mode": "thermo",
+    "thermo": {
+     "heading": "Whatever the normal is",
+     "min": 38,
+     "max": 50,
+     "from": 39,
+     "to": 48.5,
+     "marks": [
+      {
+       "v": 45,
+       "label": "45°C"
+      },
+      {
+       "v": 47,
+       "label": "47°C",
+       "tone": "bad"
+      }
+     ],
+     "bands": [
+      {
+       "from": 45,
+       "to": 47,
+       "label": "Heatwave",
+       "tone": "warn"
+      },
+      {
+       "from": 47,
+       "to": 50,
+       "label": "Severe heatwave",
+       "tone": "bad"
+      }
+     ]
+    }
+   },
+   "onScreen": "Actual ≥45°C → Heatwave · ≥47°C → Severe"
+  },
+  {
+   "id": "S20",
+   "narration": "[explaining] लेकिन एक station पर एक दिन की गर्मी काफ़ी नहीं है। [pause] ये शर्तें किसी meteorological sub-division के कम से कम 2 stations पर, लगातार 2 दिन पूरी होनी चाहिए, और heatwave दूसरे दिन declare होती है।",
+   "durationSec": 13.31,
+   "audio": "jobs/urban-heat-island/S20.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "sasia",
+     "india"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 80.5,
+      "lat": 21.5,
+      "dist": 2600,
+      "tilt": 38,
+      "heading": 0
+     },
+     {
+      "t": 3.5,
+      "lon": 79.0,
+      "lat": 26.9,
+      "dist": 620,
+      "tilt": 45,
+      "heading": 0
+     },
+     {
+      "t": 12.56,
+      "lon": 79.0,
+      "lat": 26.9,
+      "dist": 560,
+      "tilt": 48,
+      "heading": 8
+     }
+    ],
+    "layers": [
+     {
+      "kind": "heat",
+      "at": [
+       79.0,
+       27.0
+      ],
+      "rx": 170,
+      "ry": 120,
+      "t0": 3.0,
+      "color": "#F2C94C",
+      "label": "One sub-division"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       78.2,
+       27.5
+      ],
+      "label": "Station 1",
+      "t0": 7.07,
+      "side": "left"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       79.8,
+       26.6
+      ],
+      "label": "Station 2",
+      "t0": 7.470000000000001,
+      "side": "right"
+     },
+     {
+      "kind": "stamp",
+      "text": "DAY 1",
+      "t0": 8.06,
+      "out": 9.56,
+      "tone": "warn",
+      "y": 0.12
+     },
+     {
+      "kind": "stamp",
+      "text": "DAY 2",
+      "t0": 9.860000000000001,
+      "out": 10.64,
+      "tone": "accent",
+      "y": 0.12
+     },
+     {
+      "kind": "stamp",
+      "text": "HEATWAVE DECLARED",
+      "sub": "on day 2",
+      "t0": 10.84,
+      "tone": "bad",
+      "y": 0.12
+     }
+    ],
+    "credit": "Relief: Terrarium elevation (SRTM et al.) · Borders: Survey of India outline · Heat glow: illustrative · Stations: illustrative"
+   },
+   "onScreen": "≥2 stations · 2 consecutive days · declared on day 2"
+  },
+  {
+   "id": "S21",
+   "narration": "[confident] Prelims के लिए ये numbers याद रखिए। [pause] Plains, coast और hills के thresholds हैं 40, 37 और 30 degree। [pause] Normal से departure की limits हैं 4.5 और 6.4 degree। [pause] और actual temperature की limits हैं 45 और 47 degree।",
+   "durationSec": 16.66,
+   "audio": "jobs/urban-heat-island/S21.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "formula",
+    "heading": "IMD heatwave numbers (Prelims)",
+    "lines": [
+     {
+      "text": "Thresholds: plains 40 · coast 37 · hills 30 (°C)",
+      "note": "maximum temperature"
+     },
+     {
+      "text": "Departure: +4.5 to +6.4 → heatwave · more than +6.4 → severe",
+      "note": "above normal"
+     },
+     {
+      "text": "Actual: 45 or more → heatwave · 47 or more → severe",
+      "final": true
+     }
+    ]
+   },
+   "sfx": "ping",
+   "compact": true
+  },
+  {
+   "id": "S22",
+   "narration": "[serious] लेकिन यहाँ एक बड़ी कमी है। [pause] ये criteria सिर्फ़ temperature देखते हैं, humidity नहीं। [pause] और यहीं से कहानी का सबसे ख़तरनाक हिस्सा शुरू होता है।",
+   "durationSec": 11.13,
+   "audio": "jobs/urban-heat-island/S22.mp3",
+   "objective": "o3",
+   "completes": [
+    "o3"
+   ],
+   "visual": {
+    "type": "question",
+    "text": "These criteria look at temperature, not humidity.",
+    "highlight": [
+     "not humidity"
+    ]
+   },
+   "onScreen": "What about humidity?",
+   "sfx": "hit"
+  },
+  {
+   "id": "S23",
+   "narration": "[curious] क्या आपने कभी गौर किया है कि Delhi की 42 degree की सूखी गर्मी और Mumbai की 34 degree की उमस भरी गर्मी, दोनों अलग तरह से थकाती हैं?",
+   "durationSec": 10.06,
+   "audio": "jobs/urban-heat-island/S23.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "sasia",
+     "india",
+     "delhi"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 77.2,
+      "lat": 28.6,
+      "dist": 420,
+      "tilt": 42,
+      "heading": 0
+     },
+     {
+      "t": 1.2,
+      "lon": 77.0,
+      "lat": 28.0,
+      "dist": 700,
+      "tilt": 40,
+      "heading": 0
+     },
+     {
+      "t": 8.71,
+      "lon": 73.4,
+      "lat": 19.6,
+      "dist": 700,
+      "tilt": 40,
+      "heading": 0
+     }
+    ],
+    "layers": [
+     {
+      "kind": "pin",
+      "at": [
+       77.21,
+       28.61
+      ],
+      "label": "Delhi",
+      "sub": "Dry heat, e.g. 42°C",
+      "t0": 0.4
+     },
+     {
+      "kind": "arrow",
+      "from": [
+       77.21,
+       28.61
+      ],
+      "to": [
+       72.88,
+       19.07
+      ],
+      "t0": 1.4,
+      "dur": 4.5,
+      "color": "#F2C94C"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       72.88,
+       19.07
+      ],
+      "label": "Mumbai",
+      "sub": "Humid heat, e.g. 34°C",
+      "t0": 4.66
+     }
+    ],
+    "credit": "Relief: Terrarium elevation (SRTM et al.) · Borders: Survey of India outline · Heat glow: illustrative · Temperatures: illustrative"
+   },
+   "sfx": "whoosh"
+  },
+  {
+   "id": "S24",
+   "narration": "[explaining] हमारा शरीर पसीने से ठंडा होता है। [pause] पसीना skin पर evaporate होता है, और अपने साथ गर्मी ले जाता है। [pause] लेकिन जब हवा पहले से नमी से भरी हो, तो पसीना evaporate ही नहीं हो पाता।",
+   "durationSec": 12.04,
+   "audio": "jobs/urban-heat-island/S24.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "heatlab",
+    "mode": "sweat"
+   },
+   "onScreen": "Sweat cools only if it evaporates"
+  },
+  {
+   "id": "S25",
+   "narration": "[explaining] यहीं आता है wet bulb temperature। [pause] अगर thermometer के bulb पर गीला कपड़ा लपेटकर उस पर हवा चलाएँ, तो पानी evaporate होकर bulb को ठंडा करेगा। [pause] वो जितना ठंडा हो पाता है, वही wet bulb temperature है।",
+   "durationSec": 14.17,
+   "audio": "jobs/urban-heat-island/S25.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "heatlab",
+    "mode": "wetbulb"
+   },
+   "onScreen": "Wet bulb = lowest temperature reachable by evaporation"
+  },
+  {
+   "id": "S26",
+   "narration": "[explaining] सूखी हवा में evaporation तेज़ होता है, इसलिए wet bulb, असली temperature से काफ़ी नीचे रहता है। [pause] लेकिन 100 percent humidity पर evaporation रुक जाता है, और wet bulb, असली temperature के बराबर हो जाता है।",
+   "durationSec": 13.85,
+   "audio": "jobs/urban-heat-island/S26.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "heatlab",
+    "mode": "wetgap"
+   },
+   "onScreen": "Dry air: big gap · 100% humidity: no gap"
+  },
+  {
+   "id": "S27",
+   "narration": "[emphatic] अब सबसे important बात। [pause] हमारी skin का temperature लगभग 35 degree रहता है। [pause] अगर wet bulb भी 35 तक पहुँच जाए, तो शरीर से गर्मी बाहर निकलना ही बंद हो जाता है।",
+   "durationSec": 11.68,
+   "audio": "jobs/urban-heat-island/S27.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "heatlab",
+    "mode": "body"
+   },
+   "onScreen": "Skin ≈ 35°C · Wet bulb 35°C → no cooling",
+   "sfx": "hit"
+  },
+  {
+   "id": "S28",
+   "narration": "[serious] 2010 में Sherwood और Huber की PNAS study ने इसी 35 degree wet bulb को इंसान की theoretical survival limit बताया। [pause] इस हालत में करीब 6 घंटे रहना, छाँव में बैठे healthy इंसान के लिए भी जानलेवा हो सकता है।",
+   "durationSec": 15.22,
+   "audio": "jobs/urban-heat-island/S28.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://www.pnas.org/doi/10.1073/pnas.0913352107",
+    "publisher": "PNAS (Proceedings of the National Academy of Sciences)",
+    "date": "May 2010",
+    "title": "An adaptability limit to climate change due to heat stress",
+    "why": "35°C wet bulb as the theoretical limit for human survival",
+    "authors": "Steven C. Sherwood, Matthew Huber"
+   },
+   "onScreen": "35°C wet bulb · ~6 hours · theoretical limit"
+  },
+  {
+   "id": "S29",
+   "narration": "[measured] लेकिन 2022 में Penn State University की एक study ने, जो Journal of Applied Physiology में छपी, असली लोगों पर test करके पाया [pause] कि गर्म और उमस भरे माहौल में critical limit लगभग 30 से 31 degree wet bulb है। [pause] यानी ख़तरा पहले की सोच से कहीं पहले शुरू होता है।",
+   "durationSec": 18.85,
+   "audio": "jobs/urban-heat-island/S29.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "stat",
+    "value": 31,
+    "from": 35,
+    "prefix": "~",
+    "suffix": "°C",
+    "label": "critical wet bulb limit measured in real people",
+    "source": "Vecellio et al., Journal of Applied Physiology, 2022 (Penn State)"
+   },
+   "onScreen": "Real-world limit: ~30–31°C wet bulb",
+   "sfx": "tick",
+   "compact": true
+  },
+  {
+   "id": "S30",
+   "narration": "[serious] और ये सिर्फ़ theory नहीं है। [pause] Columbia University के researchers की 2020 की study में Persian Gulf के कुछ शहरों में, थोड़े समय के लिए, 35 degree wet bulb से ऊपर की readings दर्ज हुईं। [pause] Study ने Indian subcontinent को भी ऐसी extreme humid heat का hotspot बताया।",
+   "durationSec": 17.76,
+   "audio": "jobs/urban-heat-island/S30.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "sasia",
+     "india"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 62,
+      "lat": 18,
+      "dist": 9000,
+      "tilt": 0,
+      "heading": 0
+     },
+     {
+      "t": 4.0,
+      "lon": 52.2,
+      "lat": 25.6,
+      "dist": 1500,
+      "tilt": 32,
+      "heading": 0
+     },
+     {
+      "t": 12.19,
+      "lon": 52.5,
+      "lat": 25.4,
+      "dist": 1350,
+      "tilt": 34,
+      "heading": 0
+     },
+     {
+      "t": 17.01,
+      "lon": 77.5,
+      "lat": 22.0,
+      "dist": 3100,
+      "tilt": 34,
+      "heading": 0
+     }
+    ],
+    "layers": [
+     {
+      "kind": "pin",
+      "at": [
+       50.1,
+       26.3
+      ],
+      "label": "Dhahran",
+      "t0": 4.2,
+      "side": "left",
+      "tone": "bad"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       51.53,
+       25.29
+      ],
+      "label": "Doha",
+      "t0": 4.8,
+      "side": "left",
+      "tone": "bad"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       55.94,
+       25.79
+      ],
+      "label": "Ras Al Khaimah",
+      "t0": 5.4,
+      "side": "right",
+      "tone": "bad"
+     },
+     {
+      "kind": "heat",
+      "at": [
+       52.5,
+       25.8
+      ],
+      "rx": 380,
+      "ry": 200,
+      "t0": 6.0
+     },
+     {
+      "kind": "heat",
+      "at": [
+       81.0,
+       26.0
+      ],
+      "rx": 700,
+      "ry": 260,
+      "t0": 12.69
+     },
+     {
+      "kind": "heat",
+      "at": [
+       68.5,
+       25.0
+      ],
+      "rx": 300,
+      "ry": 220,
+      "t0": 12.99
+     },
+     {
+      "kind": "line",
+      "pts": [
+       [
+        70.0,
+        22.3
+       ],
+       [
+        72.6,
+        21.0
+       ],
+       [
+        72.85,
+        19.0
+       ],
+       [
+        73.7,
+        16.0
+       ],
+       [
+        74.8,
+        12.9
+       ],
+       [
+        76.2,
+        10.0
+       ],
+       [
+        77.5,
+        8.1
+       ],
+       [
+        78.2,
+        8.9
+       ],
+       [
+        79.8,
+        10.3
+       ],
+       [
+        80.3,
+        13.1
+       ],
+       [
+        80.1,
+        15.9
+       ],
+       [
+        82.2,
+        16.6
+       ],
+       [
+        83.3,
+        17.7
+       ],
+       [
+        85.8,
+        19.8
+       ],
+       [
+        86.9,
+        21.3
+       ],
+       [
+        88.2,
+        21.8
+       ]
+      ],
+      "color": "#FF8A1F",
+      "width": 6,
+      "t0": 13.19,
+      "dur": 2.0
+     }
+    ],
+    "credit": "Relief: Terrarium elevation (SRTM et al.) · Borders: Survey of India outline · Data: Raymond et al., Science Advances 2020 · Glow: illustrative",
+    "globe": true,
+    "drift": 0.1
+   },
+   "onScreen": "Persian Gulf: brief readings above 35°C wet bulb",
+   "sfx": "whoosh"
+  },
+  {
+   "id": "S31",
+   "narration": "[thoughtful] इसीलिए Mumbai और Chennai जैसे humid coastal शहर कम temperature पर भी ज़्यादा ख़तरनाक हो सकते हैं, और जब वहाँ UHI भी जुड़ जाए, तो ये ख़तरा और बढ़ जाता है।",
+   "durationSec": 10.78,
+   "audio": "jobs/urban-heat-island/S31.mp3",
+   "objective": "o4",
+   "completes": [
+    "o4"
+   ],
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "sasia",
+     "india"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 76.5,
+      "lat": 17.5,
+      "dist": 2000,
+      "tilt": 38,
+      "heading": 0
+     },
+     {
+      "t": 10.027,
+      "lon": 76.5,
+      "lat": 16.5,
+      "dist": 1800,
+      "tilt": 40,
+      "heading": 0
+     }
+    ],
+    "layers": [
+     {
+      "kind": "pin",
+      "at": [
+       72.88,
+       19.07
+      ],
+      "label": "Mumbai",
+      "t0": 0.46,
+      "side": "left"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       80.27,
+       13.08
+      ],
+      "label": "Chennai",
+      "t0": 1.11,
+      "side": "right"
+     },
+     {
+      "kind": "heat",
+      "at": [
+       72.88,
+       19.07
+      ],
+      "rx": 70,
+      "t0": 7.14,
+      "label": "humid + UHI"
+     },
+     {
+      "kind": "heat",
+      "at": [
+       80.27,
+       13.08
+      ],
+      "rx": 70,
+      "t0": 7.4399999999999995,
+      "label": "humid + UHI"
+     }
+    ],
+    "credit": "Relief: Terrarium elevation (SRTM et al.) · Borders: Survey of India outline · Heat glow: illustrative",
+    "drift": 0.1
+   }
+  },
+  {
+   "id": "S32",
+   "narration": "[curious] तो इस ख़तरे से बचें कैसे? [pause] इसका एक जवाब Ahmedabad से आया।",
+   "durationSec": 5.55,
+   "audio": "jobs/urban-heat-island/S32.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "india",
+     "gujarat",
+     "ahmedabad"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 77,
+      "lat": 22,
+      "dist": 2300,
+      "tilt": 34,
+      "heading": 0
+     },
+     {
+      "t": 2.0,
+      "lon": 72.8,
+      "lat": 23.0,
+      "dist": 320,
+      "tilt": 40,
+      "heading": 0
+     },
+     {
+      "t": 4.8,
+      "lon": 72.58,
+      "lat": 23.04,
+      "dist": 34,
+      "tilt": 56,
+      "heading": 20
+     }
+    ],
+    "layers": [
+     {
+      "kind": "pin",
+      "at": [
+       72.58,
+       23.03
+      ],
+      "label": "Ahmedabad",
+      "sub": "Gujarat",
+      "t0": 1.2,
+      "out": 3.6
+     },
+     {
+      "kind": "label",
+      "at": [
+       72.574,
+       23.075
+      ],
+      "text": "Sabarmati river",
+      "t0": 3.4,
+      "size": 26,
+      "color": "#9CC8F0"
+     }
+    ],
+    "credit": "Imagery: Copernicus Sentinel-2 (2024) · Relief: Terrarium elevation (SRTM et al.) · Borders: Survey of India outline",
+    "drift": 0.6
+   },
+   "sfx": "whoosh"
+  },
+  {
+   "id": "S33",
+   "narration": "[serious] May 2010 में Ahmedabad में भीषण heatwave आई थी। [pause] एक study के अनुसार, उस अकेले महीने में सामान्य से लगभग 1,344 ज़्यादा मौतें हुईं, यानी करीब 43 percent ज़्यादा।",
+   "durationSec": 14.09,
+   "audio": "jobs/urban-heat-island/S33.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "stat",
+    "value": 1344,
+    "prefix": "~",
+    "label": "excess deaths in Ahmedabad in May 2010 (+43%)",
+    "source": "Azhar et al., PLoS ONE 2014; Hess et al. 2018"
+   },
+   "onScreen": "May 2010: ~1,344 excess deaths (+43%)",
+   "sfx": "ping",
+   "compact": true
+  },
+  {
+   "id": "S34",
+   "narration": "[explaining] इसके बाद Ahmedabad Municipal Corporation ने public health experts के साथ मिलकर 2013 में Heat Action Plan शुरू किया, जिसे South Asia का पहला Heat Action Plan माना जाता है।",
+   "durationSec": 12.07,
+   "audio": "jobs/urban-heat-island/S34.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "flow",
+    "heading": "South Asia's first Heat Action Plan",
+    "steps": [
+     {
+      "label": "Ahmedabad Municipal Corporation",
+      "icon": "home"
+     },
+     {
+      "label": "+ public health experts",
+      "icon": "people"
+     },
+     {
+      "label": "Heat Action Plan, 2013",
+      "sub": "first in South Asia",
+      "icon": "check"
+     }
+    ]
+   },
+   "onScreen": "2013: Ahmedabad HAP — first in South Asia"
+  },
+  {
+   "id": "S35",
+   "narration": "[explaining] Heat Action Plan, यानी HAP, के चार मुख्य हिस्से होते हैं। [pause] पहला है public awareness, ताकि लोग जानें कि गर्मी में क्या करें और क्या न करें। [pause] दूसरा है early warning system, जिसमें colour-coded alerts और departments के बीच coordination शामिल है।",
+   "durationSec": 17.25,
+   "audio": "jobs/urban-heat-island/S35.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "flow",
+    "heading": "Heat Action Plan: pillars 1 and 2",
+    "steps": [
+     {
+      "label": "1. Public awareness",
+      "sub": "what to do, what not to do",
+      "icon": "people"
+     },
+     {
+      "label": "2. Early warning",
+      "sub": "colour-coded alerts, departments coordinate",
+      "icon": "bolt"
+     }
+    ]
+   },
+   "onScreen": "1 Awareness · 2 Early warning + coordination"
+  },
+  {
+   "id": "S36",
+   "narration": "[explaining] तीसरा है doctors और health workers की training, ताकि heatstroke के मरीज़ों का तुरंत इलाज हो। [pause] और चौथा है heat exposure कम करना, जैसे पीने का पानी, ठंडी जगहें और काम के घंटों में बदलाव।",
+   "durationSec": 13.35,
+   "audio": "jobs/urban-heat-island/S36.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "flow",
+    "heading": "Heat Action Plan: all four pillars",
+    "steps": [
+     {
+      "label": "1. Awareness",
+      "icon": "people"
+     },
+     {
+      "label": "2. Early warning",
+      "icon": "bolt"
+     },
+     {
+      "label": "3. Health capacity",
+      "sub": "train doctors and health workers",
+      "icon": "check"
+     },
+     {
+      "label": "4. Reduce exposure",
+      "sub": "water, cool spaces, work hours",
+      "icon": "home"
+     }
+    ]
+   },
+   "onScreen": "3 Health capacity · 4 Reduce exposure"
+  },
+  {
+   "id": "S37",
+   "narration": "[measured] क्या इसका असर हुआ? [pause] हाँ, 2018 की एक evaluation study के अनुमान के मुताबिक़, plan लागू होने के बाद हर साल औसतन लगभग 1,190 मौतें टलीं।",
+   "durationSec": 12.75,
+   "audio": "jobs/urban-heat-island/S37.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "stat",
+    "value": 1190,
+    "prefix": "~",
+    "label": "deaths avoided each year after the plan (estimate)",
+    "source": "Hess et al., Journal of Environmental and Public Health, 2018"
+   },
+   "onScreen": "~1,190 deaths avoided per year",
+   "sfx": "ping",
+   "compact": true
+  },
+  {
+   "id": "S38",
+   "narration": "[explaining] इसी model पर National Disaster Management Authority, यानी NDMA, ने 2016 में heatwave action plan बनाने की guidelines जारी कीं, और आज कई राज्य, ज़िले और शहर अपने HAP बना चुके हैं।",
+   "durationSec": 14.34,
+   "audio": "jobs/urban-heat-island/S38.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "sasia",
+     "india"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 79.5,
+      "lat": 22,
+      "dist": 2700,
+      "tilt": 34,
+      "heading": 0
+     },
+     {
+      "t": 13.594,
+      "lon": 79.5,
+      "lat": 21.5,
+      "dist": 2600,
+      "tilt": 36,
+      "heading": 0
+     }
+    ],
+    "layers": [
+     {
+      "kind": "pin",
+      "at": [
+       72.58,
+       23.03
+      ],
+      "label": "Ahmedabad",
+      "sub": "first, 2013",
+      "t0": 0.6,
+      "side": "left"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       79.09,
+       21.15
+      ],
+      "label": "Nagpur",
+      "t0": 10.39,
+      "side": "left"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       85.82,
+       20.3
+      ],
+      "label": "Odisha",
+      "t0": 10.790000000000001,
+      "side": "right"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       78.47,
+       17.39
+      ],
+      "label": "Telangana",
+      "t0": 11.190000000000001,
+      "side": "right"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       80.65,
+       16.51
+      ],
+      "label": "Andhra Pradesh",
+      "t0": 11.59,
+      "side": "right"
+     },
+     {
+      "kind": "pin",
+      "at": [
+       77.21,
+       28.61
+      ],
+      "label": "Delhi",
+      "t0": 11.99,
+      "side": "left"
+     }
+    ],
+    "credit": "Relief: Terrarium elevation (SRTM et al.) · Borders: Survey of India outline · Pins: examples of Heat Action Plans",
+    "drift": 0.1
+   },
+   "onScreen": "NDMA heatwave guidelines (2016, revised later)"
+  },
+  {
+   "id": "S39",
+   "narration": "[thoughtful] लेकिन क्या ये plans काफ़ी हैं? [pause] 2023 में Centre for Policy Research ने 18 राज्यों के 37 Heat Action Plans की जाँच की।",
+   "durationSec": 10.06,
+   "audio": "jobs/urban-heat-island/S39.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "stat",
+    "value": 37,
+    "suffix": " plans",
+    "label": "Heat Action Plans reviewed across 18 states",
+    "source": "Centre for Policy Research, March 2023"
+   },
+   "onScreen": "CPR 2023: 37 HAPs · 18 states",
+   "compact": true
+  },
+  {
+   "id": "S40",
+   "narration": "[measured] नतीजे चौंकाने वाले थे। [pause] 37 में से सिर्फ़ 2 plans ने proper vulnerability assessment किया। [pause] सिर्फ़ 11 ने funding के source की बात की। [pause] और किसी भी plan ने अपना legal आधार नहीं बताया।",
+   "durationSec": 13.56,
+   "audio": "jobs/urban-heat-island/S40.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "points",
+    "heading": "What the CPR review found (out of 37 plans)",
+    "items": [
+     "Proper vulnerability assessment: only 2",
+     "Talked about where the money comes from: only 11",
+     "Stated their legal basis: 0"
+    ],
+    "highlight": [
+     "only 2",
+     "only 11",
+     "0"
+    ]
+   },
+   "onScreen": "Vulnerability 2/37 · Funding 11/37 · Legal basis 0/37",
+   "sfx": "hit"
+  },
+  {
+   "id": "S41",
+   "narration": "[explaining] एक और कमी: [pause] 37 में से सिर्फ़ 10 plans ने local temperature thresholds तय किए, बाकी IMD के national thresholds पर ही चलते हैं। [pause] और जैसा हमने देखा, सिर्फ़ temperature वाले thresholds humid heat को पकड़ नहीं पाते।",
+   "durationSec": 14.23,
+   "audio": "jobs/urban-heat-island/S41.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "stat",
+    "value": 10,
+    "suffix": " of 37",
+    "label": "plans set local temperature thresholds",
+    "source": "Centre for Policy Research, March 2023"
+   },
+   "onScreen": "Local thresholds: 10/37",
+   "compact": true
+  },
+  {
+   "id": "S42",
+   "narration": "[explaining] Policy में एक और gap है। [pause] Heatwave, Disaster Management Act के तहत centrally notified disasters की list में शामिल नहीं है। [pause] इसलिए राज्य इसे state-specific disaster declare करके, अपने SDRF के 10 percent तक के हिस्से से relief देते हैं, जैसे Telangana ने किया।",
+   "durationSec": 17.21,
+   "audio": "jobs/urban-heat-island/S42.mp3",
+   "objective": "o5",
+   "completes": [
+    "o5"
+   ],
+   "visual": {
+    "type": "flow",
+    "heading": "The policy gap",
+    "steps": [
+     {
+      "label": "DM Act: notified disasters",
+      "icon": "doc"
+     },
+     {
+      "label": "Heatwave not on the list",
+      "icon": "cross"
+     },
+     {
+      "label": "State declares it state-specific",
+      "sub": "e.g. Telangana",
+      "icon": "check"
+     },
+     {
+      "label": "Relief from up to 10% of SDRF",
+      "icon": "money"
+     }
+    ]
+   },
+   "onScreen": "Not a notified disaster · states use up to 10% of SDRF"
+  },
+  {
+   "id": "S43",
+   "narration": "[confident] तो आगे का रास्ता क्या है? [pause] Solutions शहर के design में ही छिपे हैं।",
+   "durationSec": 4.74,
+   "audio": "jobs/urban-heat-island/S43.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "footage",
+    "query": "aerial view Indian city",
+    "caption": "The fix is in how we build cities",
+    "fallback": {
+     "type": "heatlab",
+     "mode": "redesign",
+     "variant": "intro"
+    }
+   },
+   "sfx": "pop"
+  },
+  {
+   "id": "S44",
+   "narration": "[explaining] पहला उपाय है cool roofs। [pause] इसमें छत पर सफ़ेद या reflective coating लगाई जाती है, जो धूप को वापस भेज देती है। [pause] Telangana की Cool Roof Policy 2023 से 2028 का लक्ष्य 300 square kilometre cool roofs है, और ऐसी छतें घर के अंदर का temperature लगभग 2 से 4 degree तक कम कर सकती हैं।",
+   "durationSec": 20.55,
+   "audio": "jobs/urban-heat-island/S44.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "heatlab",
+    "mode": "redesign",
+    "variant": "roofs"
+   },
+   "onScreen": "Cool roofs · Telangana target: 300 sq km by 2028"
+  },
+  {
+   "id": "S45",
+   "narration": "[explaining] दूसरा उपाय है urban forests, parks और water bodies को बचाना और बढ़ाना, ताकि evapotranspiration से शहर फिर से ठंडा हो सके। [pause] तीसरा उपाय है buildings और गलियों की ऐसी planning करना, जिसमें हवा आ-जा सके।",
+   "durationSec": 14.91,
+   "audio": "jobs/urban-heat-island/S45.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "heatlab",
+    "mode": "redesign",
+    "variant": "green"
+   }
+  },
+  {
+   "id": "S46",
+   "narration": "[explaining] चौथा, heat alerts में humidity और wet bulb को भी शामिल किया जाए। [pause] और पाँचवाँ, outdoor workers के काम के घंटे बदले जाएँ, और उन्हें पीने का पानी और ठंडी जगहें मिलें।",
+   "durationSec": 11.62,
+   "audio": "jobs/urban-heat-island/S46.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "footage",
+    "query": "street vendor India",
+    "caption": "Outdoor workers: shifted hours, water, shade",
+    "fallback": {
+     "type": "points",
+     "heading": "Way forward",
+     "items": [
+      "4. Add humidity and wet bulb to heat alerts",
+      "5. Outdoor workers: shifted hours, drinking water, cool shelters"
+     ],
+     "highlight": [
+      "humidity and wet bulb",
+      "Outdoor workers"
+     ]
+    }
+   }
+  },
+  {
+   "id": "S47",
+   "narration": "[thoughtful] Mains answer लिखते समय इन्हें short-term और long-term में बाँटिए। [pause] Short-term में आते हैं alerts, पानी और health system। [pause] Long-term में आते हैं cool roofs, हरियाली और heat-resilient city planning।",
+   "durationSec": 12.44,
+   "audio": "jobs/urban-heat-island/S47.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Short-term",
+     "items": [
+      "Heat alerts",
+      "Drinking water",
+      "Health system ready"
+     ],
+     "tone": "warn"
+    },
+    "right": {
+     "heading": "Long-term",
+     "items": [
+      "Cool roofs",
+      "Greenery and water bodies",
+      "Heat-resilient city planning"
+     ],
+     "tone": "good"
+    }
+   },
+   "onScreen": "Short-term vs long-term measures"
+  },
+  {
+   "id": "S48",
+   "narration": "[calm] तो आज हमने सीखा: [pause] शहर heat island बनते हैं कम albedo, कम हरियाली, urban canyon, waste heat और pollution से। [pause] और IMD heatwave declare करता है 40, 37 और 30 degree के thresholds से।",
+   "durationSec": 14.44,
+   "audio": "jobs/urban-heat-island/S48.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "points",
+    "heading": "Recap",
+    "items": [
+     "UHI causes: low albedo, less greenery, urban canyon, waste heat, pollution",
+     "IMD thresholds: plains 40, coast 37, hills 30 (°C)"
+    ],
+    "highlight": [
+     "UHI causes",
+     "40, coast 37, hills 30"
+    ]
+   }
+  },
+  {
+   "id": "S49",
+   "narration": "[calm] Wet bulb temperature बताता है कि शरीर पसीने से ख़ुद को ठंडा कर पाएगा या नहीं, और असली ख़तरा 35 से पहले, लगभग 31 के आसपास ही शुरू हो जाता है। [pause] Heat Action Plans जानें बचाते हैं, बशर्ते वो local, funded और legally मज़बूत हों।",
+   "durationSec": 17.02,
+   "audio": "jobs/urban-heat-island/S49.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "points",
+    "heading": "Recap",
+    "items": [
+     "Wet bulb: can sweat still cool the body?",
+     "Real danger starts near 31°C wet bulb, before 35",
+     "HAPs save lives when local, funded and legally backed"
+    ],
+    "highlight": [
+     "31°C",
+     "local, funded and legally backed"
+    ]
+   }
+  },
+  {
+   "id": "S50",
+   "narration": "[confident] अगली बार जब आप 35 degree सुनें, तो एक सवाल ज़रूर पूछिए: [pause] humidity कितनी है?",
+   "durationSec": 6.12,
+   "audio": "jobs/urban-heat-island/S50.mp3",
+   "objective": "o6",
+   "completes": [
+    "o6"
+   ],
+   "visual": {
+    "type": "terrain",
+    "packs": [
+     "sasia",
+     "india",
+     "ahmedabad"
+    ],
+    "cam": [
+     {
+      "t": 0,
+      "lon": 72.58,
+      "lat": 23.03,
+      "dist": 40,
+      "tilt": 55,
+      "heading": 20
+     },
+     {
+      "t": 5.371,
+      "lon": 74,
+      "lat": 21,
+      "dist": 9000,
+      "tilt": 0,
+      "heading": 0
+     }
+    ],
+    "layers": [
+     {
+      "kind": "heat",
+      "at": [
+       72.58,
+       23.03
+      ],
+      "rx": 16,
+      "t0": -1
+     }
+    ],
+    "credit": "Imagery: Copernicus Sentinel-2 (2024) · Relief: Terrarium elevation (SRTM et al.) · Borders: Survey of India outline · Heat glow: illustrative",
+    "globe": true,
+    "night": true,
+    "drift": 0.2
+   },
+   "onScreen": "35°C… but what's the humidity?",
+   "sfx": "hit"
+  }
+ ],
+ "shorts": [
+  {
+   "id": "short-1",
+   "hook": "Why doesn't your city cool down at night?",
+   "scenes": [
+    "S04",
+    "S05",
+    "S06",
+    "S07"
+   ]
+  },
+  {
+   "id": "short-2",
+   "hook": "5 reasons your city is a heat trap",
+   "scenes": [
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14"
+   ]
+  },
+  {
+   "id": "short-3",
+   "hook": "40, 37, 30: the heatwave numbers",
+   "scenes": [
+    "S16",
+    "S17",
+    "S18",
+    "S19",
+    "S20",
+    "S21"
+   ]
+  },
+  {
+   "id": "short-4",
+   "hook": "35°C can kill. Here's why.",
+   "scenes": [
+    "S24",
+    "S25",
+    "S26",
+    "S27",
+    "S28",
+    "S29"
+   ]
+  },
+  {
+   "id": "short-5",
+   "hook": "One city's plan against killer heat",
+   "scenes": [
+    "S32",
+    "S33",
+    "S34",
+    "S35",
+    "S36",
+    "S37"
+   ]
+  },
+  {
+   "id": "short-6",
+   "hook": "Can white roofs cool a city?",
+   "scenes": [
+    "S43",
+    "S44",
+    "S45",
+    "S46"
+   ]
+  }
+ ],
+ "timebars": [
+  {
+   "scenes": [
+    "S33",
+    "S34",
+    "S35",
+    "S36",
+    "S37",
+    "S38",
+    "S39",
+    "S40",
+    "S41",
+    "S42"
+   ],
+   "nodes": [
+    {
+     "date": "May 2010",
+     "label": "Heatwave",
+     "scene": "S33"
+    },
+    {
+     "date": "2013",
+     "label": "HAP pilot",
+     "scene": "S34",
+     "at": 5.66
+    },
+    {
+     "date": "2014",
+     "label": "Full roll-out",
+     "scene": "S35"
+    },
+    {
+     "date": "2016",
+     "label": "NDMA guidelines",
+     "scene": "S38",
+     "at": 5.12
+    },
+    {
+     "date": "2023",
+     "label": "CPR review",
+     "scene": "S39",
+     "at": 2.55
+    },
+    {
+     "date": "Today",
+     "label": "Policy gap",
+     "scene": "S42",
+     "at": 1.66
+    }
+   ]
+  }
+ ],
+ "thumbnail": {
+  "headline": "35°C CAN KILL?",
+  "sub": "Wet Bulb Explained",
+  "scene": "S00"
+ }
+}

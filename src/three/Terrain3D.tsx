@@ -25,7 +25,10 @@ export type TerrainLayer =
   | (Base & {kind: 'label'; at: LonLat; text: string; size?: number; sub?: string})
   | (Base & {kind: 'units'; pts: LonLat[]; stagger?: number; icon?: 'soldier' | 'block'})
   | (Base & {kind: 'arrow'; from: LonLat; to: LonLat; label?: string; dur?: number})
-  | (Base & {kind: 'stamp'; text: string; sub?: string; y?: number});
+  | (Base & {kind: 'stamp'; text: string; sub?: string; y?: number})
+  | (Base & {kind: 'heat'; at: LonLat; rx: number; ry?: number; label?: string; grow?: number})
+  | (Base & {kind: 'counter'; to: number; from?: number; dur?: number; prefix?: string; suffix?: string; label?: string; x?: number; y?: number})
+  | (Base & {kind: 'clock'; from: number; to: number; dur?: number; x?: number; y?: number; label?: string});
 
 export type TerrainSpec = {
   packs: string[];
@@ -37,6 +40,7 @@ export type TerrainSpec = {
   night?: boolean;
   globe?: boolean;
   drift?: number; // slow orbit, degrees per second
+  credit?: string; // data credit line override
 };
 
 type Meta = {west: number; east: number; south: number; north: number; hw: number; hh: number; minH: number; maxH: number};
@@ -203,7 +207,7 @@ const featherMap = (() => {
     const img = g.createImageData(n, n);
     for (let y = 0; y < n; y++)
       for (let x = 0; x < n; x++) {
-        const e = Math.min(x, y, n - 1 - x, n - 1 - y) / (n * 0.06);
+        const e = Math.min(x, y, n - 1 - x, n - 1 - y) / (n * 0.14);
         const v = Math.round(255 * Math.min(1, e * e * (3 - 2 * Math.min(1, e))));
         const i = (y * n + x) * 4;
         img.data[i] = img.data[i + 1] = img.data[i + 2] = v;
@@ -597,6 +601,73 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
           ) : null}
         </g>,
       );
+    } else if (L.kind === 'heat') {
+      // heat dome / glow: a soft radial glow on the ground, rx/ry in km
+      const ry = L.ry ?? L.rx;
+      const grow = interpolate(t, [L.t0 ?? 0, (L.t0 ?? 0) + (L.grow ?? 1.2)], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
+      const ring: LonLat[] = [];
+      for (let k = 0; k <= 48; k++) {
+        const a = (k / 48) * Math.PI * 2;
+        ring.push([L.at[0] + (Math.cos(a) * L.rx * (0.4 + 0.6 * grow)) / (KX * fr.cos0), L.at[1] + (Math.sin(a) * ry * (0.4 + 0.6 * grow)) / KY]);
+      }
+      const d = pathOf(ring).d;
+      const gid = `heat${i}`;
+      const pulse = 0.85 + 0.15 * Math.sin(t * 3 + i);
+      const p = proj(L.at[0], L.at[1]);
+      els.push(
+        <g key={i} opacity={o * grow}>
+          <defs>
+            <radialGradient id={gid}>
+              <stop offset="0%" stopColor={colors.red} stopOpacity={0.75 * pulse} />
+              <stop offset="45%" stopColor={L.color || colors.orange} stopOpacity={0.5 * pulse} />
+              <stop offset="100%" stopColor={L.color || colors.orange} stopOpacity={0} />
+            </radialGradient>
+          </defs>
+          <path d={d} fill={`url(#${gid})`} style={{mixBlendMode: 'screen'}} />
+          {L.label ? (
+            <text x={p[0]} y={p[1] - 20 * u} textAnchor="middle" style={textStyle(30 * u, '#FFFFFF')}>
+              {L.label}
+            </text>
+          ) : null}
+        </g>,
+      );
+    } else if (L.kind === 'counter') {
+      const dur = L.dur ?? 2;
+      const k = interpolate(t, [L.t0 ?? 0, (L.t0 ?? 0) + dur], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
+      const val = Math.round((L.from ?? 0) + (L.to - (L.from ?? 0)) * k);
+      stamps.push(
+        <div key={i} style={{position: 'absolute', left: (L.x ?? 0.06) * W, top: (L.y ?? 0.1) * Hh, opacity: o, fontFamily: fonts.display, color: '#FFFFFF', background: 'rgba(11,23,38,0.72)', border: `2px solid ${colors.red}`, borderRadius: 14 * u, padding: `${12 * u}px ${24 * u}px`}}>
+          <div style={{fontSize: 92 * u, fontWeight: 800, lineHeight: 1, color: colors.red, fontVariantNumeric: 'tabular-nums'}}>
+            {L.prefix || ''}
+            {val.toLocaleString('en-IN')}
+            {L.suffix || ''}
+          </div>
+          {L.label ? <div style={{fontSize: 28 * u, fontWeight: 700, marginTop: 6 * u}}>{L.label}</div> : null}
+        </div>,
+      );
+    } else if (L.kind === 'clock') {
+      const dur = L.dur ?? 2.5;
+      const k = interpolate(t, [L.t0 ?? 0, (L.t0 ?? 0) + dur], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.quad)});
+      const hrs = L.from + (L.to - L.from) * k;
+      const R = 70 * u;
+      const ha = ((hrs % 12) / 12) * Math.PI * 2 - Math.PI / 2;
+      const ma = ((hrs % 1) * Math.PI * 2) - Math.PI / 2;
+      const hh = Math.floor(hrs) % 24;
+      const lab = hh === 0 ? '12 AM' : hh < 12 ? `${hh} AM` : hh === 12 ? '12 PM' : `${hh - 12} PM`;
+      stamps.push(
+        <div key={i} style={{position: 'absolute', left: (L.x ?? 0.8) * W - R, top: (L.y ?? 0.1) * Hh, opacity: o, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+          <svg width={2 * R + 8} height={2 * R + 8}>
+            <circle cx={R + 4} cy={R + 4} r={R} fill="rgba(11,23,38,0.75)" stroke="#FFFFFF" strokeWidth={4 * u} />
+            {Array.from({length: 12}, (_, q) => {
+              const a = (q / 12) * Math.PI * 2;
+              return <line key={q} x1={R + 4 + Math.cos(a) * R * 0.82} y1={R + 4 + Math.sin(a) * R * 0.82} x2={R + 4 + Math.cos(a) * R * 0.94} y2={R + 4 + Math.sin(a) * R * 0.94} stroke="#FFFFFF" strokeWidth={3 * u} />;
+            })}
+            <line x1={R + 4} y1={R + 4} x2={R + 4 + Math.cos(ha) * R * 0.5} y2={R + 4 + Math.sin(ha) * R * 0.5} stroke="#FFFFFF" strokeWidth={7 * u} strokeLinecap="round" />
+            <line x1={R + 4} y1={R + 4} x2={R + 4 + Math.cos(ma) * R * 0.78} y2={R + 4 + Math.sin(ma) * R * 0.78} stroke={colors.orange} strokeWidth={4 * u} strokeLinecap="round" />
+          </svg>
+          <div style={{fontFamily: fonts.display, fontWeight: 800, fontSize: 32 * u, color: '#FFFFFF', marginTop: 6 * u, textShadow: '0 2px 10px rgba(0,0,0,0.8)'}}>{L.label && k > 0.98 ? L.label : lab}</div>
+        </div>,
+      );
     } else if (L.kind === 'stamp') {
       const e = spring({frame: f - (L.t0 ?? 0) * fps, fps, config: {damping: 9, mass: 0.8}});
       const sc = 1.6 - 0.6 * Math.min(1, e);
@@ -687,7 +758,7 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
       <div style={{position: 'absolute', inset: 0, boxShadow: `inset 0 0 ${160 * u}px rgba(0,0,0,0.45)`, pointerEvents: 'none'}} />
       <div style={{position: 'absolute', right: 0, top: 0, bottom: 0, width: 60 * u, background: 'linear-gradient(to right, rgba(11,23,38,0), rgba(11,23,38,0.9))'}} />
       <div style={{position: 'absolute', left: 18 * u, bottom: 14 * u, fontFamily: fonts.body, fontSize: 15 * u, color: 'rgba(255,255,255,0.75)', letterSpacing: 0.5}}>
-        {spec.globe && globeO > 0.5 ? 'Natural Earth' : 'Imagery: Copernicus Sentinel-2 / Natural Earth · Elevation: Terrarium (SRTM et al.) · Borders: Survey of India outline'}
+        {spec.credit ? spec.credit : spec.globe && globeO > 0.5 ? 'Natural Earth' : 'Imagery: Copernicus Sentinel-2 / Natural Earth · Elevation: Terrarium (SRTM et al.) · Borders: Survey of India outline'}
         {'   ·   '}
         {c.dist > 3500 ? `Eye alt ${Math.round(c.dist).toLocaleString('en-IN')} km` : `Eye alt ${eye >= 10000 ? Math.round(eye / 1000).toLocaleString('en-IN') + ' km' : Math.round(eye).toLocaleString('en-IN') + ' m'}`}
       </div>
