@@ -1826,19 +1826,19 @@
      },
      {
       "t": 8.17,
-      "lon": 80.1,
-      "lat": 29.6,
-      "dist": 1900,
-      "tilt": 12,
+      "lon": 80.6,
+      "lat": 28.6,
+      "dist": 2350,
+      "tilt": 4,
       "heading": 0
      },
      {
       "t": 13.35,
-      "lon": 80.1,
-      "lat": 29.6,
-      "dist": 1800,
-      "tilt": 14,
-      "heading": 2
+      "lon": 80.6,
+      "lat": 28.6,
+      "dist": 2250,
+      "tilt": 6,
+      "heading": 0
      }
     ],
     "layers": [
@@ -1851,7 +1851,8 @@
       "label": "1 Rajagriha",
       "t0": 4.47,
       "tone": "good",
-      "sub": "Ajatashatru"
+      "sub": "Ajatashatru",
+      "out": 6.17
      },
      {
       "kind": "pin",
@@ -1862,7 +1863,8 @@
       "label": "2 Vaishali",
       "t0": 5.29,
       "tone": "good",
-      "sub": "Kalashoka"
+      "sub": "Kalashoka",
+      "out": 6.17
      },
      {
       "kind": "pin",
@@ -1874,7 +1876,19 @@
       "t0": 6.04,
       "tone": "good",
       "sub": "Ashoka",
-      "side": "left"
+      "side": "left",
+      "out": 6.17
+     },
+     {
+      "kind": "pin",
+      "at": [
+       85.14,
+       25.61
+      ],
+      "label": "1 · 2 · 3",
+      "t0": 6.57,
+      "tone": "good",
+      "sub": "Bihar"
      },
      {
       "kind": "pin",
@@ -4124,8 +4138,8 @@
   ],
   "images": {
    "mahabodhi": [
-    "Mahabodhi Temple Bodh Gaya",
-    "Mahabodhi temple"
+    "Mahabodhi Temple main tower Bodh Gaya",
+    "Mahabodhi Temple Bodh Gaya"
    ],
    "manuscript": [
     "palm leaf manuscript Buddhist Pali",

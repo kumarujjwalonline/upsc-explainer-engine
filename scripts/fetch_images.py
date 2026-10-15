@@ -3,7 +3,7 @@
 A job lists the photos it needs under "assets": {"images": {"<key>": ["File:Exact name.jpg" | "search words", ...]}}.
 Candidates are tried in order; only free licences that allow commercial use are accepted
 (public domain, CC0, CC BY, CC BY-SA), at least 1200 px wide. Each photo is saved as
-public/jobs/<id>/img/<key>.jpg (max 2400 px wide) and its author and licence go into
+public/jobs/<id>/img/<key>.jpg (1920 px wide) and its author and licence go into
 public/jobs/<id>/img/credits.json, which the job's on-screen credit lines are built from.
 usage: python scripts/fetch_images.py jobs/<id>.json [--force]
 """
@@ -24,13 +24,13 @@ OK = re.compile(r"^(public domain|pd|cc0|cc[- ]by(-sa)?( \d\.\d)?( [a-z]+)?|cc[-
 
 
 def get(url):
-    for i in range(4):
+    for i in range(5):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
                 return r.read()
         except Exception as e:  # noqa: BLE001
             err = e
-            time.sleep(2 * (i + 1))
+            time.sleep(5 * (i + 1))
     raise RuntimeError(f"{url}: {err}")
 
 
@@ -39,7 +39,8 @@ def api(**q):
     return json.loads(get(API + "?" + urllib.parse.urlencode(q)))
 
 
-INFO = dict(prop="imageinfo", iiprop="url|size|extmetadata|mime", iiurlwidth=2400)
+# 1920 is one of the standard thumbnail widths Commons serves from cache (others get rate-limited)
+INFO = dict(prop="imageinfo", iiprop="url|size|extmetadata|mime", iiurlwidth=1920)
 
 
 def pages(cand):
@@ -89,12 +90,17 @@ def main():
         if not got:
             print(f"{key}: no free photo found for {cands}")
             continue
-        im = Image.open(io.BytesIO(get(got["url"]))).convert("RGB")
+        try:
+            im = Image.open(io.BytesIO(get(got["url"]))).convert("RGB")
+        except Exception as e:  # noqa: BLE001
+            print(f"{key}: download failed: {e}")
+            time.sleep(10)
+            continue
         im.save(os.path.join(d, key + ".jpg"), quality=88)
         got["size"] = im.size
         credits[key] = got
         print(f"{key}: {got['file']} ({got['license']}, {im.size[0]}x{im.size[1]})")
-        time.sleep(0.5)
+        time.sleep(2)
     json.dump(credits, open(cp, "w"), indent=1, ensure_ascii=False)
 
 
