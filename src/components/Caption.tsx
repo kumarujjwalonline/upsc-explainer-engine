@@ -3,12 +3,13 @@ import {useCurrentFrame, useVideoConfig, interpolate} from 'remotion';
 import {colors, fonts} from '../theme';
 import {useBox, useUnit} from './Box';
 
-// Short English on-screen line at the foot of the canvas region.
-export const Caption: React.FC<{text: string}> = ({text}) => {
+// Short English on-screen line at the foot of the canvas region. With a timeline bar at the bottom
+// (`above` = the bar's top edge) it is anchored by its bottom edge, so a wrapped line grows upwards.
+export const Caption: React.FC<{text: string; above?: number}> = ({text, above}) => {
   const b = useBox();
   const u = useUnit();
   const f = useCurrentFrame();
-  const {durationInFrames} = useVideoConfig();
+  const {durationInFrames, height} = useVideoConfig();
   const o = interpolate(f, [6, 16, durationInFrames - 8, durationInFrames], [0, 1, 1, 0], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
@@ -19,7 +20,7 @@ export const Caption: React.FC<{text: string}> = ({text}) => {
         position: 'absolute',
         left: b.x,
         width: b.w,
-        top: b.y + b.h - 92 * u,
+        ...(above === undefined ? {top: b.y + b.h - 92 * u} : {bottom: height - Math.min(b.y + b.h - 31 * u, above - 14)}),
         display: 'flex',
         justifyContent: 'center',
         opacity: o,

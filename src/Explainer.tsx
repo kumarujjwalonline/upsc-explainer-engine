@@ -1,5 +1,5 @@
 import React, {useMemo} from 'react';
-import {AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame, interpolate} from 'remotion';
+import {AbsoluteFill, Audio, Easing, Sequence, staticFile, useCurrentFrame, useVideoConfig, interpolate} from 'remotion';
 import {colors, fonts, FPS, layout} from './theme';
 import type {Job, RenderProps, Scene} from './types';
 import {Tracker, trackerStates} from './components/Tracker';
@@ -7,6 +7,10 @@ import {SceneVisual} from './visuals/SceneVisual';
 import {BoxContext} from './components/Box';
 import {Caption} from './components/Caption';
 import {Backdrop} from './components/Backdrop';
+import {BrollLayer, brollFrames} from './visuals/Broll';
+import {Montage} from './visuals/Montage';
+import {TimeBar, timeBarTop} from './components/TimeBar';
+import {Intro} from './visuals/Intro';
 
 export const sceneFrames = (s: Scene) => Math.max(15, Math.round((s.durationSec || 4) * FPS));
 
@@ -34,25 +38,42 @@ export const Explainer: React.FC<RenderProps> = ({job, format, sceneIds, hook}) 
   return (
     <AbsoluteFill style={{backgroundColor: colors.bg, fontFamily: fonts.body, color: colors.text}}>
       <Backdrop />
-      {seqs.map(({s, from, dur}) => (
-        <Sequence key={s.id} from={from} durationInFrames={dur} name={s.id}>
-          <BoxContext.Provider value={L.canvas}>
-            <SceneVisual scene={s} format={format} />
-            {s.onScreen ? <Caption text={s.onScreen} /> : null}
-          </BoxContext.Provider>
-          {s.audio ? <Audio src={staticFile(s.audio)} /> : null}
-          {s.sfx ? <Audio src={staticFile(`sfx/${s.sfx}.wav`)} volume={0.55} /> : null}
-          <Tracker
-            title={job.tracker.title}
-            objectives={job.tracker.objectives}
-            state={states[s.id]}
-            box={L.tracker}
-            format={format}
-            compact={!!s.compact}
-            durationInFrames={dur}
-          />
-        </Sequence>
-      ))}
+      {seqs.map(({s, from, dur}) => {
+        const bf = brollFrames(s.broll, FPS, dur);
+        const montage = s.visual.type === 'montage' ? s.visual : null;
+        const intro = s.visual.type === 'intro' ? s.visual : null;
+        return (
+          <Sequence key={s.id} from={from} durationInFrames={dur} name={s.id}>
+            <Sequence from={bf} durationInFrames={dur - bf} name={`${s.id} graphic`}>
+              <SceneMotion origin={`${L.canvas.x + L.canvas.w / 2}px ${L.canvas.y + L.canvas.h / 2}px`}>
+                <BoxContext.Provider value={L.canvas}>
+                  <SceneVisual scene={s} format={format} />
+                  {s.onScreen && !montage && !intro ? <Caption text={s.onScreen} above={s.timebar ? timeBarTop(format) : undefined} /> : null}
+                </BoxContext.Provider>
+              </SceneMotion>
+            </Sequence>
+            {s.audio ? <Audio src={staticFile(s.audio)} /> : null}
+            {s.sfx ? <Audio src={staticFile(`sfx/${s.sfx}.wav`)} volume={0.55} /> : null}
+            <Tracker
+              title={job.tracker.title}
+              objectives={job.tracker.objectives}
+              state={states[s.id]}
+              box={L.tracker}
+              format={format}
+              compact={!!s.compact}
+              durationInFrames={dur}
+            />
+            {s.timebar && !montage ? (
+              <Sequence from={bf} durationInFrames={dur - bf} name={`${s.id} timeline`}>
+                <TimeBar {...s.timebar} format={format} />
+              </Sequence>
+            ) : null}
+            {bf && s.broll ? <BrollLayer b={s.broll} frames={bf} /> : null}
+            {montage ? <Montage {...montage} /> : null}
+            {intro ? <Intro {...intro} /> : null}
+          </Sequence>
+        );
+      })}
       {hook ? <HookBanner text={hook} /> : null}
     </AbsoluteFill>
   );
@@ -82,6 +103,19 @@ const HookBanner: React.FC<{text: string}> = ({text}) => {
       >
         {text}
       </div>
+    </AbsoluteFill>
+  );
+};
+
+// Every scene's graphic eases in (slight zoom and fade) and then drifts slowly, so no frame sits still.
+const SceneMotion: React.FC<{origin: string; children: React.ReactNode}> = ({origin, children}) => {
+  const f = useCurrentFrame();
+  const {durationInFrames} = useVideoConfig();
+  const enter = interpolate(f, [0, 9], [0, 1], {extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
+  const drift = interpolate(f, [0, durationInFrames], [0, 0.02], {extrapolateRight: 'clamp'});
+  return (
+    <AbsoluteFill style={{opacity: enter, transform: `scale(${0.965 + 0.035 * enter + drift})`, transformOrigin: origin}}>
+      {children}
     </AbsoluteFill>
   );
 };

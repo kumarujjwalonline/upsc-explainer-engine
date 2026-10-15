@@ -33,6 +33,40 @@ BUTTONS = ["Accept all", "Accept All Cookies", "Accept", "I agree", "I Accept", 
 done = {}
 report = []
 
+# Pop-ups, ads, cookie bars, sticky headers and video players removed before the capture.
+CLEAN_JS = """
+() => {
+  const kill = (el) => { try { el.remove(); } catch (e) {} };
+  document.querySelectorAll('iframe, ins, video, dialog, [role=dialog], [aria-modal=true], aside').forEach(kill);
+  const adRe = /(^|[-_ ])(ad|ads|advert|advertisement|banner|popup|pop-up|modal|overlay|subscribe|newsletter|cookie|consent|gdpr|paywall|promo|sticky|taboola|outbrain|notification|interstitial)([-_ ]|$)/i;
+  document.querySelectorAll('div, section, header, footer, nav, span').forEach((el) => {
+    const cs = getComputedStyle(el);
+    const id = (el.id || '') + ' ' + (typeof el.className === 'string' ? el.className : '');
+    const r = el.getBoundingClientRect();
+    if (cs.position === 'fixed' || cs.position === 'sticky') { kill(el); return; }
+    if (adRe.test(id) && !el.querySelector('h1')) kill(el);
+    else if (parseInt(cs.zIndex || '0', 10) > 999 && r.width > 200 && !el.querySelector('h1')) kill(el);
+  });
+  for (const el of [document.documentElement, document.body]) { el.style.overflow = 'visible'; el.style.filter = 'none'; }
+  window.scrollTo(0, 0);
+}
+"""
+
+# The headline (h1, else the biggest heading) and what follows it, up to ~620 px tall.
+HEADLINE_JS = """
+() => {
+  let h = [...document.querySelectorAll('h1')].find((e) => e.innerText.trim().length > 15 && e.getBoundingClientRect().height > 0);
+  if (!h) h = [...document.querySelectorAll('h2, [class*=title], [class*=headline]')].filter((e) => e.innerText.trim().length > 15 && e.getBoundingClientRect().height > 0).sort((a, b) => parseFloat(getComputedStyle(b).fontSize) - parseFloat(getComputedStyle(a).fontSize))[0];
+  if (!h) return null;
+  let c = h;
+  while (c.parentElement && c.parentElement.getBoundingClientRect().width < 900 && c.parentElement !== document.body) c = c.parentElement;
+  const r = h.getBoundingClientRect(), cr = c.getBoundingClientRect();
+  const x = Math.max(0, Math.min(r.left, cr.left) - 24), w = Math.min(document.documentElement.clientWidth - x, Math.max(cr.width, r.width) + 48);
+  const y = Math.max(0, r.top + window.scrollY - 28);
+  return {x, y, width: w, height: Math.min(620, Math.max(360, r.height + 420))};
+}
+"""
+
 
 def pubmed_url(title):
     """The PubMed record of a study, found by its title (free NCBI E-utilities, no key)."""
@@ -58,7 +92,31 @@ def wayback_url(url):
         return None
 
 
+def capture_pdf(url, sid):
+    """A PDF (press releases, fact sheets): the top of its first page, rendered with poppler."""
+    import subprocess
+    import tempfile
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/129.0 Safari/537.36"})
+        data = urllib.request.urlopen(req, timeout=60).read()
+        if not data.startswith(b"%PDF"):
+            return {"shot_error": "not a PDF"}
+        with tempfile.TemporaryDirectory() as t:
+            open(os.path.join(t, "doc.pdf"), "wb").write(data)
+            subprocess.run(["pdftoppm", "-png", "-r", "130", "-f", "1", "-l", "1", os.path.join(t, "doc.pdf"), os.path.join(t, "p")], check=True, timeout=120)
+            first = sorted(f for f in os.listdir(t) if f.endswith(".png"))[0]
+            img = Image.open(os.path.join(t, first)).convert("RGB")
+        img = img.crop((0, 0, img.width, int(img.height * 0.42)))
+        shot = os.path.join(out_dir, f"{sid}.png")
+        img.save(shot, optimize=True)
+        return {"shot": f"jobs/{job['id']}/sources/{sid}.png", "shotRatio": round(img.height / img.width, 3), "capturedUrl": url, "clipped": True}
+    except Exception as e:  # noqa: BLE001
+        return {"shot_error": f"pdf: {str(e)[:150]}"}
+
+
 def capture(ctx, url, sid):
+    if urllib.parse.urlparse(url).path.lower().endswith(".pdf"):
+        return capture_pdf(url, sid)
     page = ctx.new_page()
     try:
         resp = page.goto(url, wait_until="domcontentloaded", timeout=45000)
@@ -77,14 +135,17 @@ def capture(ctx, url, sid):
         if status >= 400 or not body.strip() or hit:
             why = hit or ("empty page" if not body.strip() else "")
             return {"shot_error": f"page not capturable (status {status}{', ' + why if why else ''})"}
-        full = os.path.join(out_dir, f"{sid}-full.png")
-        page.screenshot(path=full, full_page=True)
-        img = Image.open(full)
-        img = img.crop((0, 0, img.width, min(img.height, 2400)))
+        page.evaluate(CLEAN_JS)
+        page.wait_for_timeout(600)
+        box = page.evaluate(HEADLINE_JS)
         shot = os.path.join(out_dir, f"{sid}.png")
-        img.save(shot, optimize=True)
-        os.remove(full)
-        return {"shot": f"jobs/{job['id']}/sources/{sid}.png", "shotRatio": round(img.height / img.width, 3), "capturedUrl": url}
+        if box:
+            # just the news itself: headline, byline and the start of the story
+            page.screenshot(path=shot, clip=box)
+        else:
+            page.screenshot(path=shot)
+        img = Image.open(shot)
+        return {"shot": f"jobs/{job['id']}/sources/{sid}.png", "shotRatio": round(img.height / img.width, 3), "capturedUrl": url, "clipped": bool(box)}
     except Exception as e:  # noqa: BLE001
         return {"shot_error": str(e)[:160]}
     finally:
@@ -93,7 +154,7 @@ def capture(ctx, url, sid):
 
 with sync_playwright() as p:
     browser = p.chromium.launch(args=["--disable-blink-features=AutomationControlled"])
-    ctx = browser.new_context(viewport={"width": 1280, "height": 900}, locale="en-IN",
+    ctx = browser.new_context(viewport={"width": 1280, "height": 1400}, locale="en-IN",
                               user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36")
     ctx.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
     for s in scenes:
