@@ -72,7 +72,7 @@ export type Job = {
   tracker: {title?: string; objectives: Objective[]};
   scenes: Scene[];
   shorts?: {id: string; hook: string; scenes: string[]}[];
-  thumbnail?: {headline: string; sub?: string; scene?: string};
+  thumbnail?: {headline: string; sub?: string; scene?: string; images?: string[]};
   eras?: Record<string, {date: string; label: string}[]>; // timelines shown at the foot while events are explained
 };
 
