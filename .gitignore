@@ -4,3 +4,8 @@ public/jobs
 .DS_Store
 .voice-cache
 __pycache__
+public/lac/
+public/terrain/*/
+public/terrain/globe.jpg
+public/sfx/
+package-lock.json

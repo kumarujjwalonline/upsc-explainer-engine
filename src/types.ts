@@ -5,6 +5,7 @@ import type {BodySpec} from './three/Body3D';
 import type {MoleculeSpec} from './three/Molecule3D';
 import type {SourceSpec} from './visuals/SourceCard';
 import type {FootageSpec} from './visuals/Footage';
+import type {TerrainSpec} from './three/Terrain3D';
 
 export type Format = '16:9' | '9:16';
 export type LonLat = [number, number];
@@ -29,7 +30,8 @@ export type Visual =
   | ({type: 'body'} & BodySpec)
   | ({type: 'molecule'} & MoleculeSpec)
   | ({type: 'source'} & SourceSpec)
-  | ({type: 'footage'} & FootageSpec);
+  | ({type: 'footage'} & FootageSpec)
+  | ({type: 'terrain'} & TerrainSpec);
 
 export type IconName =
   | 'ship' | 'truck' | 'train' | 'plane' | 'person' | 'people' | 'robot' | 'code' | 'chat'

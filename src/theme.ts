@@ -1,5 +1,4 @@
-import {loadFont} from '@remotion/google-fonts/Inter';
-import {loadFont as loadDisplay} from '@remotion/google-fonts/Poppins';
+import {staticFile} from 'remotion';
 import type {Format, Tone} from './types';
 
 // Production rules: deep navy ground, white primary text, orange/yellow emphasis,
@@ -23,9 +22,22 @@ export const colors = {
 export const toneColor = (t: Tone = 'accent') =>
   ({neutral: colors.text, accent: colors.orange, warn: colors.yellow, good: colors.green, bad: colors.red, muted: colors.muted}[t]);
 
-const inter = loadFont('normal', {weights: ['400', '500', '600', '700', '800'], subsets: ['latin']});
-const poppins = loadDisplay('normal', {weights: ['600', '700', '800'], subsets: ['latin']});
-export const fonts = {body: inter.fontFamily, display: poppins.fontFamily};
+// Fonts are bundled in public/fonts (Inter variable + Poppins 600/700/800, Google Fonts, OFL) so
+// renders never depend on reaching fonts.gstatic.com.
+const FACES: [string, string, string][] = [
+  ['Inter', 'inter.woff2', '100 900'],
+  ['Poppins', 'poppins-600.woff2', '600'],
+  ['Poppins', 'poppins-700.woff2', '700'],
+  ['Poppins', 'poppins-800.woff2', '800'],
+];
+if (typeof document !== 'undefined' && typeof FontFace !== 'undefined') {
+  const css = FACES.map(([fam, file, weight]) => `@font-face{font-family:'${fam}';src:url('${staticFile('fonts/' + file)}') format('woff2');font-weight:${weight};font-display:block}`).join('');
+  const el = document.createElement('style');
+  el.textContent = css;
+  document.head.appendChild(el);
+  FACES.forEach(([fam, , weight]) => document.fonts.load(`${weight.split(' ')[0]} 20px '${fam}'`));
+}
+export const fonts = {body: 'Inter, system-ui, sans-serif', display: 'Poppins, Inter, sans-serif'};
 
 export const FPS = 30;
 export const size = (f: Format) => (f === '9:16' ? {width: 1080, height: 1920} : {width: 1920, height: 1080});
