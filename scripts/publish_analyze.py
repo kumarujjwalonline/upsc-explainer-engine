@@ -11,7 +11,7 @@ video, out = sys.argv[1], sys.argv[2]
 os.makedirs(out, exist_ok=True)
 
 dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", video]).decode().strip())
-w, h = map(int, subprocess.check_output(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0:s=x", video]).decode().strip().split("x"))
+w, h = map(int, subprocess.check_output(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0:s=x", video]).decode().strip().split("x")[:2])
 
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", video, "-vn", "-ac", "1", "-ar", "16000", f"{out}/audio.wav"], check=True)
 from faster_whisper import WhisperModel
