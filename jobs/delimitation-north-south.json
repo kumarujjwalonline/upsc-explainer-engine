@@ -42,8 +42,8 @@
  "scenes": [
   {
    "id": "T00",
-   "narration": "सोचिए, 1971 में भारत की आबादी लगभग 55 करोड़ थी, और आज 140 करोड़ से भी ज़्यादा है। Bill के पक्ष में 298 votes पड़े और विरोध में 230। लेकिन Constitutional Amendment के लिए, vote करने वाले सदस्यों का two-thirds बहुमत चाहिए, इसलिए ये Bill गिर गया। अब सबसे बड़ा सवाल, ये freeze खुलेगा कब?",
-   "durationSec": 26.33,
+   "narration": "सोचिए, 1971 में भारत की आबादी लगभग 55 करोड़ थी, और आज 140 करोड़ से भी ज़्यादा है। फिर भी Lok Sabha में राज्यों की seats आज भी 1971 की census के हिसाब से ही बँटी हुई हैं।",
+   "durationSec": 16.25,
    "audio": "jobs/delimitation-north-south/T00.mp3",
    "objective": "o1",
    "completes": [],
@@ -78,56 +78,29 @@
       "media": {
        "title": "File:View of Lok Sabha chamber in the New Parliament building, New Delhi.jpg"
       },
-      "label": "17 April 2026 · Lok Sabha vote"
+      "label": "Lok Sabha seats today"
      },
      {
-      "at": 10.1,
+      "at": 10.6,
       "kind": "big",
-      "value": "298",
-      "label": "votes for",
-      "tone": "good"
-     },
-     {
-      "at": 13.1,
-      "kind": "big",
-      "value": "230",
-      "label": "votes against",
-      "tone": "bad"
-     },
-     {
-      "at": 14.4,
-      "kind": "media",
-      "media": {
-       "title": "File:Sansad Bhavan, Delhi, BNK.jpg"
-      },
-      "label": "An amendment needs two-thirds"
-     },
-     {
-      "at": 17.9,
-      "kind": "big",
-      "value": "2/3",
-      "label": "majority not reached",
+      "value": "543",
+      "label": "seats, frozen since 1971",
       "tone": "warn"
      },
      {
-      "at": 19.6,
-      "kind": "title",
-      "label": "So the Bill |FAILED",
-      "tone": "bad",
-      "sfx": "hit"
-     },
-     {
-      "at": 22.0,
+      "at": 12.6,
       "kind": "media",
       "media": {
        "title": "File:Parliament of India in New Delhi 04.jpg"
       },
-      "label": "543 seats, frozen since 1971"
+      "label": "Still split by the 1971 census"
      },
      {
-      "at": 23.7,
+      "at": 14.3,
       "kind": "title",
-      "label": "When will the |freeze end?"
+      "label": "Seats still on |1971 census",
+      "tone": "bad",
+      "sfx": "hit"
      }
     ]
    }
