@@ -232,5 +232,31 @@
    1920,
    1280
   ]
+ },
+ "mahabodhi": {
+  "file": "File:Mahabodhi Temple, Bodh Gaya, Bihar, India.jpg",
+  "query": "Mahabodhi Temple Bodh Gaya Bihar exterior",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Mahabodhi_Temple%2C_Bodh_Gaya%2C_Bihar%2C_India.jpg/1920px-Mahabodhi_Temple%2C_Bodh_Gaya%2C_Bihar%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Mahabodhi_Temple,_Bodh_Gaya,_Bihar,_India.jpg",
+  "author": "Shubhrojit Misra",
+  "license": "CC BY-SA 4.0",
+  "credit": "Shubhrojit Misra · CC BY-SA 4.0 · Wikimedia Commons",
+  "size": [
+   1920,
+   1077
+  ]
+ },
+ "saptaparni": {
+  "file": "File:Rajgir 17 Vulture peak - Gridhakuta (31181689926).jpg",
+  "query": "Gridhakuta hill Rajgir",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Rajgir_17_Vulture_peak_-_Gridhakuta_%2831181689926%29.jpg/1920px-Rajgir_17_Vulture_peak_-_Gridhakuta_%2831181689926%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Rajgir_17_Vulture_peak_-_Gridhakuta_(31181689926).jpg",
+  "author": "juggadery",
+  "license": "CC BY-SA 2.0",
+  "credit": "juggadery · CC BY-SA 2.0 · Wikimedia Commons",
+  "size": [
+   1920,
+   2561
+  ]
  }
 }
