@@ -12,7 +12,10 @@ import io
 import json
 import os
 import re
+import subprocess
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -20,11 +23,18 @@ from PIL import Image, ImageDraw, ImageFont
 
 UA = {"User-Agent": "upsc-explainer-engine/1.0 (github.com/kumarujjwalonline/upsc-explainer-engine)"}
 COMMONS = "https://commons.wikimedia.org/w/api.php"
-BAD = re.compile(r"(logo|diagram|chart|graph|slides?|lecture|screencast|police|gun|war|military|attack|crash|accident|protest|riot|dead|death|kill|blood|surgery|election|campaign|svg)", re.I)
+BAD = re.compile(r"(bomb|army|disposal|logo|diagram|chart|graph|slides?|lecture|screencast|police|gun|war|military|attack|crash|accident|protest|riot|dead|death|kill|blood|surgery|election|campaign|svg)", re.I)
 
 
 def get_json(url):
-    return json.load(urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=40))
+    for attempt in range(4):  # Commons rate-limits bursts (HTTP 429): back off and retry
+        try:
+            time.sleep(1.2)
+            return json.load(urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=40))
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or attempt == 3:
+                raise
+            time.sleep(10 * (attempt + 1))
 
 
 def strip_html(s):
@@ -77,6 +87,7 @@ def sheet(key, cands):
     for i, c in enumerate(cands):
         x, y = (i % cols) * tw, (i // cols) * (th + 34)
         try:
+            time.sleep(0.5)
             raw = urllib.request.urlopen(urllib.request.Request(c["thumb"], headers=UA), timeout=40).read()
             t = Image.open(io.BytesIO(raw)).convert("RGB")
             t.thumbnail((tw - 8, th - 8))
@@ -112,3 +123,19 @@ for entry in spec.get("broll", []):
     print(entry["key"], len(cands), "candidates")
     allc += cands
 json.dump(allc, open(os.path.join("out", "broll-candidates.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
+
+# "inspect": whole videos to pick moments from: one frame every few seconds, with timestamps.
+for k, title in enumerate(spec.get("inspect", [])):
+    params = {"action": "query", "format": "json", "titles": title, "prop": "videoinfo", "viprop": "url|size|derivatives"}
+    page = next(iter(get_json(COMMONS + "?" + urllib.parse.urlencode(params))["query"]["pages"].values()))
+    info = page["videoinfo"][0]
+    derivs = sorted((d for d in info.get("derivatives") or [] if 400 <= (d.get("width") or 0) <= 900), key=lambda d: d.get("width") or 0)
+    url = derivs[0]["src"] if derivs else info["url"]
+    raw = os.path.join("out", f"inspect-{k}.src")
+    open(raw, "wb").write(urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=300).read())
+    step = max(3, int(float(info.get("duration") or 60) // 60))
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf",
+                    f"fps=1/{step},scale=384:-2,drawtext=text='%{{pts\\:hms}}':x=6:y=6:fontsize=22:fontcolor=white:box=1:boxcolor=black@0.6,tile=6x10",
+                    "-frames:v", "1", "-q:v", "4", os.path.join("out", f"broll-inspect-{k}.jpg")], check=False)
+    print("inspect", title, "every", step, "s")
