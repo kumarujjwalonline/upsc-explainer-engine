@@ -1,0 +1,157 @@
+{
+ "S14": [
+  {
+   "src": "lac/broll/S14-mcmahonmap-3.jpg",
+   "t0": 0.0,
+   "t1": 4.16,
+   "credit": "Map: Simla Accord 1914 / Wikimedia Commons (Public domain)",
+   "caption": "The 1914 McMahon Line map, signed in Delhi",
+   "tag": "ORIGINAL MAP",
+   "focus": [
+    0.84,
+    0.45
+   ],
+   "zoom": [
+    1.0,
+    1.35
+   ]
+  }
+ ],
+ "S18": [
+  {
+   "src": "lac/broll/S18-tawang-3.jpg",
+   "t0": 3.59,
+   "t1": 10.1,
+   "credit": "Photo: Chandrasen31 / Wikimedia Commons (CC BY-SA 4.0)",
+   "caption": "Tawang Monastery, Arunachal Pradesh"
+  }
+ ],
+ "S19": [
+  {
+   "src": "lac/broll/S19-aksai-3.jpg",
+   "t0": 5.08,
+   "t1": 9.34,
+   "credit": "Photo: Earth Science and Remote Sensing Unit, NASA Johnson Space Center / Wikimedia Commons (Public domain)",
+   "caption": "Aksai Chin seen from the ISS",
+   "tag": "REAL PHOTO"
+  }
+ ],
+ "S21": [
+  {
+   "src": "lac/broll/S21-aksai-2.jpg",
+   "t0": 3.99,
+   "t1": 8.87,
+   "credit": "Map: Survey of India / Wikimedia Commons (Public domain)",
+   "caption": "Survey of India political map, 1954",
+   "tag": "ORIGINAL MAP",
+   "focus": [
+    0.44,
+    0.14
+   ],
+   "zoom": [
+    1.2,
+    2.2
+   ]
+  }
+ ],
+ "S22": [
+  {
+   "src": "lac/broll/S22-g219-2.jpg",
+   "t0": 7.08,
+   "t1": 10.3,
+   "credit": "Photo: Nickckb20 / Wikimedia Commons (Copyrighted free use)",
+   "caption": "Along the Tibet–Xinjiang highway, Western Kunlun"
+  }
+ ],
+ "S30": [
+  {
+   "src": "lac/broll/S30-pangongv-2.mp4",
+   "t0": 0.0,
+   "t1": 5.81,
+   "credit": "Video: Tseringangchuk502 / Wikimedia Commons (CC BY-SA 4.0)",
+   "caption": "Pangong Tso: about 134 km long",
+   "video": true
+  }
+ ],
+ "S25": [
+  {
+   "src": "lac/broll/S25-zhou-2.jpg",
+   "t0": 7.27,
+   "t1": 10.89,
+   "credit": "Photo: Anefo / Wikimedia Commons (CC0)",
+   "caption": "Zhou Enlai with Jawaharlal Nehru in New Delhi",
+   "focus": [
+    0.5,
+    0.35
+   ]
+  }
+ ],
+ "S29": [
+  {
+   "src": "lac/broll/S29-santosh-1.jpg",
+   "t0": 4.27,
+   "t1": 8.88,
+   "credit": "Photo: Ashokdhakane / Wikimedia Commons (CC BY-SA 4.0)",
+   "caption": "Mahavir Chakra for Col. B. Santosh Babu (posthumous)",
+   "focus": [
+    0.5,
+    0.4
+   ]
+  }
+ ],
+ "S39": [
+  {
+   "src": "lac/broll/S39-kazan-1.jpg",
+   "t0": 15.6,
+   "t1": 21.39,
+   "credit": "Photo: Prime Minister's Office / Wikimedia Commons (GODL-India)",
+   "caption": "PM Modi and President Xi in Kazan, 23 Oct 2024",
+   "focus": [
+    0.5,
+    0.82
+   ],
+   "zoom": [
+    1.0,
+    1.08
+   ]
+  }
+ ],
+ "S44": [
+  {
+   "src": "lac/broll/S44-nathula-1.jpg",
+   "t0": 7.73,
+   "t1": 11.55,
+   "credit": "Photo: Ambuj Saxena / Wikimedia Commons (Public domain)",
+   "caption": "Nathu La pass, Sikkim"
+  }
+ ],
+ "S46": [
+  {
+   "src": "lac/broll/S46-nathula-3.jpg",
+   "t0": 5.52,
+   "t1": 12.6,
+   "credit": "Photo: shankar s / Wikimedia Commons (CC BY 2.0)",
+   "caption": "A road sign near Nathu La, Sikkim",
+   "focus": [
+    0.4,
+    0.45
+   ]
+  }
+ ],
+ "S48": [
+  {
+   "src": "lac/broll/S48-sela-1.jpg",
+   "t0": 3.53,
+   "t1": 7.77,
+   "credit": "Photo: Ministry of Defence / Wikimedia Commons (GODL-India)",
+   "caption": "Sela Tunnel, Arunachal Pradesh"
+  },
+  {
+   "src": "lac/broll/S48-vibrant-2.jpg",
+   "t0": 8.67,
+   "t1": 14.72,
+   "credit": "Photo: Anilakeo / Wikimedia Commons (CC BY-SA 4.0)",
+   "caption": "A border village near Tawang, Arunachal Pradesh"
+  }
+ ]
+}

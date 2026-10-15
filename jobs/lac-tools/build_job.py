@@ -305,7 +305,7 @@ V[s] = dict(visual=T(ELAD, [cam(0, P['galwan'], 42, 55, 100), cam(dur(s), P['gal
 s = 'S30'
 V[s] = dict(visual=T(ELAD, [cam(0, [79.1, 33.7], 110, 50, 330), cam(W(s, 'North') - 0.2, [78.85, 33.73], 55, 55, 0), cam(dur(s), [78.84, 33.745], 30, 58, 10)], [
     label([79.2, 33.62], 'PANGONG TSO', 0.4, size=40),
-    counter(134, W(s, '134') - 0.3, 'Length of the lake', 'km', dur=1.2, pos='tr'),
+    counter(134, W(s, 'जिसका'), 'Length of the lake', 'km', dur=1.2, pos='tr'),
     {'kind': 'bars', 'title': 'Who holds the lake', 't0': W(s, 'तिहाई') - 0.3, 'stagger': 0.6, 'pos': 'tr', 'items': [
         {'label': 'India', 'value': 1, 'text': 'about 1/3', 'color': '#3BB273'}, {'label': 'China', 'value': 2, 'text': 'about 2/3', 'color': '#E5383B'}]},
     *[label(FING[i], f'F{i}', W(s, 'Finger') + 0.15 * i, size=26, tone='warn') for i in range(1, 9)],

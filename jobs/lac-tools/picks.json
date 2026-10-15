@@ -1,0 +1,149 @@
+[
+ {
+  "scene": "S14",
+  "file": "mcmahonmap-3.jpg",
+  "t0": 0.0,
+  "t1": "McMahon",
+  "d1": -0.1,
+  "caption": "The 1914 McMahon Line map, signed in Delhi",
+  "tag": "ORIGINAL MAP",
+  "focus": [
+   0.84,
+   0.45
+  ],
+  "zoom": [
+   1.0,
+   1.35
+  ]
+ },
+ {
+  "scene": "S18",
+  "file": "tawang-3.jpg",
+  "t0": "Tawang",
+  "t1": "इसलिए",
+  "d1": -0.2,
+  "caption": "Tawang Monastery, Arunachal Pradesh"
+ },
+ {
+  "scene": "S19",
+  "file": "aksai-3.jpg",
+  "t0": "ठंडा",
+  "d0": -0.4,
+  "t1": "क्यों",
+  "d1": 0.4,
+  "caption": "Aksai Chin seen from the ISS",
+  "tag": "REAL PHOTO"
+ },
+ {
+  "scene": "S21",
+  "file": "aksai-2.jpg",
+  "t0": "official",
+  "d0": -0.3,
+  "t1": "end",
+  "caption": "Survey of India political map, 1954",
+  "tag": "ORIGINAL MAP",
+  "focus": [
+   0.44,
+   0.14
+  ],
+  "zoom": [
+   1.2,
+   2.2
+  ]
+ },
+ {
+  "scene": "S22",
+  "file": "g219-2.jpg",
+  "t0": "सड़क",
+  "d0": -0.2,
+  "t1": "1957",
+  "d1": -0.3,
+  "caption": "Along the Tibet–Xinjiang highway, Western Kunlun"
+ },
+ {
+  "scene": "S30",
+  "file": "pangongv-2.mp4",
+  "t0": 0.0,
+  "t1": "जिसका",
+  "d1": -0.1,
+  "caption": "Pangong Tso: about 134 km long"
+ },
+ {
+  "scene": "S25",
+  "file": "zhou-2.jpg",
+  "t0": "Premier",
+  "d0": -0.3,
+  "t1": "1962",
+  "d1": -0.3,
+  "caption": "Zhou Enlai with Jawaharlal Nehru in New Delhi",
+  "focus": [
+   0.5,
+   0.35
+  ]
+ },
+ {
+  "scene": "S29",
+  "file": "santosh-1.jpg",
+  "t0": "Colonel",
+  "d0": -0.2,
+  "t1": "China",
+  "d1": -0.3,
+  "caption": "Mahavir Chakra for Col. B. Santosh Babu (posthumous)",
+  "focus": [
+   0.5,
+   0.4
+  ]
+ },
+ {
+  "scene": "S39",
+  "file": "kazan-1.jpg",
+  "t0": "Kazan",
+  "d0": -0.4,
+  "t1": "end",
+  "caption": "PM Modi and President Xi in Kazan, 23 Oct 2024",
+  "focus": [
+   0.5,
+   0.82
+  ],
+  "zoom": [
+   1.0,
+   1.08
+  ]
+ },
+ {
+  "scene": "S44",
+  "file": "nathula-1.jpg",
+  "t0": "Nathu",
+  "d0": -0.3,
+  "t1": "end",
+  "caption": "Nathu La pass, Sikkim"
+ },
+ {
+  "scene": "S46",
+  "file": "nathula-3.jpg",
+  "t0": "जब",
+  "t1": "end",
+  "caption": "A road sign near Nathu La, Sikkim",
+  "focus": [
+   0.4,
+   0.45
+  ]
+ },
+ {
+  "scene": "S48",
+  "file": "sela-1.jpg",
+  "t0": "सेला",
+  "d0": -0.3,
+  "t1": "और",
+  "d1": -0.2,
+  "caption": "Sela Tunnel, Arunachal Pradesh"
+ },
+ {
+  "scene": "S48",
+  "file": "vibrant-2.jpg",
+  "t0": "Vibrant",
+  "d0": -0.4,
+  "t1": "end",
+  "caption": "A border village near Tawang, Arunachal Pradesh"
+ }
+]
