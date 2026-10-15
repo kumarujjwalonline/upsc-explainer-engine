@@ -13,7 +13,11 @@ on:
         required: true
         default: full
         type: choice
-        options: [sample, full, voiced, preview, transcribe, assets, parallel]
+        options: [sample, full, voiced, preview, transcribe, assets, parallel, publish]
+      from_run:
+        description: "publish only: id of an earlier parallel run whose slices to join"
+        required: false
+        default: ""
       callback_url:
         description: "n8n webhook to call when done (optional)"
         required: false
@@ -21,6 +25,7 @@ on:
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: render-${{ inputs.job_id }}
@@ -234,7 +239,7 @@ jobs:
           import json
           j = json.load(open('jobs/${{ inputs.job_id }}.json'))
           n = 12
-          t = [f'part {i} {n}' for i in range(n)] + ['audio', 'thumb'] + [f"short {s['id']}" for s in j.get('shorts', [])]
+          t = [f'part {i} {n}' for i in range(n)] + ['thumb'] + [f"short {s['id']}" for s in j.get('shorts', [])]
           print('tasks=' + json.dumps(t))
           PY
 
@@ -280,7 +285,7 @@ jobs:
           retention-days: 5
 
   publish:
-    if: inputs.mode == 'parallel'
+    if: always() && (inputs.mode == 'publish' || (inputs.mode == 'parallel' && needs.slice.result == 'success'))
     needs: slice
     runs-on: ubuntu-latest
     env:
@@ -291,10 +296,15 @@ jobs:
         with:
           path: parts
           merge-multiple: true
+          run-id: ${{ inputs.from_run || github.run_id }}
+          github-token: ${{ github.token }}
       - name: Join the slices
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
-          mkdir -p out && cd parts
+          # The sound track comes straight from the scene clips (seconds, not a full Remotion pass).
+          bash scripts/sfx.sh public/sfx
+          mkdir -p out && python3 scripts/audio_track.py parts/job.final.json parts/${{ inputs.job_id }}-long.aac
+          cd parts
           ls -la
           for f in $(ls seg-*.mp4 | sort); do echo "file '$PWD/$f'"; done > list.txt
           ffmpeg -v error -f concat -safe 0 -i list.txt -i ${{ inputs.job_id }}-long.aac -map 0:v -map 1:a -c copy -bsf:a aac_adtstoasc -movflags +faststart ../out/${{ inputs.job_id }}-long.mp4
