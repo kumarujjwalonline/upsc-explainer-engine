@@ -13,12 +13,14 @@ os.makedirs(out, exist_ok=True)
 dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", video]).decode().strip())
 w, h = map(int, subprocess.check_output(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0:s=x", video]).decode().strip().split("x")[:2])
 
-subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", video, "-vn", "-ac", "1", "-ar", "16000", f"{out}/audio.wav"], check=True)
+# 16 kHz mono float samples straight from ffmpeg: newer PyAV releases break faster-whisper's own decoder.
+import numpy as np
+pcm = subprocess.check_output(["ffmpeg", "-v", "error", "-i", video, "-vn", "-ac", "1", "-ar", "16000", "-f", "f32le", "-"])
+audio = np.frombuffer(pcm, dtype=np.float32)
 from faster_whisper import WhisperModel
 model = WhisperModel(os.environ.get("WHISPER", "large-v3-turbo"), device="cpu", compute_type="int8")
-segs, _ = model.transcribe(f"{out}/audio.wav", language=os.environ.get("LANG_HINT", "hi"), vad_filter=True, beam_size=1)
+segs, _ = model.transcribe(audio, language=os.environ.get("LANG_HINT", "hi"), vad_filter=True, beam_size=1)
 segments = [{"start": round(s.start, 2), "end": round(s.end, 2), "text": s.text.strip()} for s in segs]
-os.remove(f"{out}/audio.wav")
 
 # 12 frames spread over the video (skipping the first and last 3%), numbered for Claude.
 n, cols = 12, 4
