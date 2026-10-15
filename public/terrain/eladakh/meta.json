@@ -1,0 +1,13 @@
+{
+ "west": 77.6,
+ "east": 79.8,
+ "south": 33.0,
+ "north": 35.6,
+ "hw": 1024,
+ "hh": 1210,
+ "minH": 3096.2,
+ "maxH": 7595.2,
+ "tw": 3466,
+ "th": 4096,
+ "source": "Elevation: AWS Terrain Tiles (Terrarium; SRTM/GMTED/ETOPO1 etc.), z11. Imagery: contains modified Copernicus Sentinel-2 L2A data (ESA; bands B04/B03/B02, 40m overview), 15 scenes, dates 20241015, 20241119, 20251126"
+}

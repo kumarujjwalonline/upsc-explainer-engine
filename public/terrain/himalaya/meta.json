@@ -1,0 +1,13 @@
+{
+ "west": 70.0,
+ "east": 98.0,
+ "south": 22.0,
+ "north": 40.0,
+ "hw": 1024,
+ "hh": 658,
+ "minH": -33.1,
+ "maxH": 7806.1,
+ "tw": 4096,
+ "th": 2633,
+ "source": "Elevation: AWS Terrain Tiles (Terrarium; SRTM/GMTED/ETOPO1), z8; ocean clamped to -50 m. Imagery: Natural Earth I with Shaded Relief, Water and Drainages (NE1_HR_LC_SR_W, public domain), upsampled, multiplied by a 35% NW hillshade from the Terrarium DEM."
+}
