@@ -9,6 +9,7 @@ import {Caption} from './components/Caption';
 import {Backdrop} from './components/Backdrop';
 import {BrollLayer, brollFrames} from './visuals/Broll';
 import {Montage} from './visuals/Montage';
+import {TimeBar, timeBarTop} from './components/TimeBar';
 
 export const sceneFrames = (s: Scene) => Math.max(15, Math.round((s.durationSec || 4) * FPS));
 
@@ -45,7 +46,7 @@ export const Explainer: React.FC<RenderProps> = ({job, format, sceneIds, hook}) 
               <SceneMotion origin={`${L.canvas.x + L.canvas.w / 2}px ${L.canvas.y + L.canvas.h / 2}px`}>
                 <BoxContext.Provider value={L.canvas}>
                   <SceneVisual scene={s} format={format} />
-                  {s.onScreen && !montage ? <Caption text={s.onScreen} /> : null}
+                  {s.onScreen && !montage ? <Caption text={s.onScreen} above={s.timebar ? timeBarTop(format) : undefined} /> : null}
                 </BoxContext.Provider>
               </SceneMotion>
             </Sequence>
@@ -60,6 +61,11 @@ export const Explainer: React.FC<RenderProps> = ({job, format, sceneIds, hook}) 
               compact={!!s.compact}
               durationInFrames={dur}
             />
+            {s.timebar && !montage ? (
+              <Sequence from={bf} durationInFrames={dur - bf} name={`${s.id} timeline`}>
+                <TimeBar {...s.timebar} format={format} />
+              </Sequence>
+            ) : null}
             {bf && s.broll ? <BrollLayer b={s.broll} frames={bf} /> : null}
             {montage ? <Montage {...montage} /> : null}
           </Sequence>

@@ -7,6 +7,7 @@ import type {SourceSpec} from './visuals/SourceCard';
 import type {FootageSpec} from './visuals/Footage';
 import type {BrollSpec} from './visuals/Broll';
 import type {MontageSpec} from './visuals/Montage';
+import type {TimeBarSpec} from './components/TimeBar';
 
 export type Format = '16:9' | '9:16';
 export type LonLat = [number, number];
@@ -64,6 +65,7 @@ export type Scene = {
   compact?: boolean; // compact tracker for heavy numerical scenes
   visual: Visual;
   broll?: BrollSpec; // full-frame real footage or photo before the graphic
+  timebar?: TimeBarSpec; // bottom timeline while a series of events is explained
 };
 
 export type Job = {

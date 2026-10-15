@@ -41,6 +41,72 @@
  },
  "scenes": [
   {
+   "id": "T00",
+   "narration": "Bill के पक्ष में 298 votes पड़े और विरोध में 230। इसलिए ये Bill गिर गया। ये freeze खुलेगा कब?",
+   "durationSec": 10.03,
+   "audio": "jobs/delimitation-north-south/T00.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "montage",
+    "cuts": [
+     {
+      "at": 0.0,
+      "kind": "media",
+      "media": {
+       "title": "File:View of Lok Sabha chamber in the New Parliament building, New Delhi.jpg"
+      },
+      "label": "17 April 2026 · Lok Sabha"
+     },
+     {
+      "at": 1.4,
+      "kind": "big",
+      "value": "298",
+      "label": "votes for",
+      "tone": "good",
+      "sfx": "hit"
+     },
+     {
+      "at": 3.9,
+      "kind": "big",
+      "value": "230",
+      "label": "against",
+      "tone": "bad",
+      "sfx": "hit"
+     },
+     {
+      "at": 5.4,
+      "kind": "title",
+      "label": "The Bill |FAILED",
+      "tone": "bad",
+      "sfx": "hit"
+     },
+     {
+      "at": 6.5,
+      "kind": "media",
+      "media": {
+       "title": "File:A Video clip of When Rolls-Royce Goes Holi Mode in Howrah.webm"
+      },
+      "label": "140 crore people"
+     },
+     {
+      "at": 7.5,
+      "kind": "media",
+      "media": {
+       "title": "File:Sansad Bhavan, Delhi, BNK.jpg"
+      },
+      "label": "543 seats, frozen since 1971"
+     },
+     {
+      "at": 8.6,
+      "kind": "title",
+      "label": "When will the |freeze end?",
+      "sfx": "whoosh"
+     }
+    ]
+   }
+  },
+  {
    "id": "S00",
    "narration": "[curious] सरकार ने महिलाओं को one-third seats देने वाला कानून April 2026 में लागू कर दिया, लेकिन आज तक वो एक भी seat पर लागू नहीं हुआ। [pause] क्योंकि उसकी चाबी एक ऐसे ताले में बंद है जिसका नाम है delimitation, और उस ताले पर North और South आमने-सामने खड़े हैं।",
    "durationSec": 18.92,
@@ -86,7 +152,12 @@
    },
    "onScreen": "1971: ~55 crore people · Today: 140+ crore · Seats still based on 1971",
    "sfx": "tick",
-   "compact": true
+   "compact": true,
+   "broll": {
+    "title": "File:A video clip of Rolls-Royce Holi in Kolkata 2026 packed with devotional energy color and street celebration.webm",
+    "sec": 3.5,
+    "from": 2
+   }
   },
   {
    "id": "S02",
@@ -157,7 +228,11 @@
     "title": "Delimitation & the North-South Debate",
     "subtitle": "Freeze till 2026 · Population vs representation · Census link"
    },
-   "sfx": "pop"
+   "sfx": "pop",
+   "broll": {
+    "title": "File:Parliament of India in New Delhi 04.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S04",
@@ -184,7 +259,11 @@
      "tone": "good"
     }
    },
-   "onScreen": "Delimitation = fixing seats + boundaries of constituencies"
+   "onScreen": "Delimitation = fixing seats + boundaries of constituencies",
+   "broll": {
+    "title": "File:India Gate, New Delhi from West.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S05",
@@ -246,7 +325,11 @@
      }
     ]
    },
-   "onScreen": "Delimitation Commission: retired SC judge + CEC + State Election Commissioner"
+   "onScreen": "Delimitation Commission: retired SC judge + CEC + State Election Commissioner",
+   "broll": {
+    "title": "File:New Delhi government block 03-2016 img3.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S07",
@@ -318,7 +401,40 @@
      "after 1971"
     ]
    },
-   "sfx": "whoosh"
+   "sfx": "whoosh",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "1971",
+      "label": "Census base"
+     },
+     {
+      "date": "1976",
+      "label": "42nd Amdt"
+     },
+     {
+      "date": "2001",
+      "label": "84th Amdt"
+     },
+     {
+      "date": "2003",
+      "label": "87th Amdt"
+     },
+     {
+      "date": "2008",
+      "label": "New boundaries"
+     },
+     {
+      "date": "after 2026",
+      "label": "Freeze ends"
+     }
+    ],
+    "at": 0
+   },
+   "broll": {
+    "title": "File:SansadBhavan.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S10",
@@ -348,7 +464,41 @@
      }
     ]
    },
-   "onScreen": "42nd Amendment (1976): freeze to protect family planning"
+   "onScreen": "42nd Amendment (1976): freeze to protect family planning",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "1971",
+      "label": "Census base"
+     },
+     {
+      "date": "1976",
+      "label": "42nd Amdt"
+     },
+     {
+      "date": "2001",
+      "label": "84th Amdt"
+     },
+     {
+      "date": "2003",
+      "label": "87th Amdt"
+     },
+     {
+      "date": "2008",
+      "label": "New boundaries"
+     },
+     {
+      "date": "after 2026",
+      "label": "Freeze ends"
+     }
+    ],
+    "at": 1,
+    "from": 0
+   },
+   "broll": {
+    "title": "File:India - Varanasi street rickshaws - 1690.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S11",
@@ -376,7 +526,37 @@
      }
     ]
    },
-   "onScreen": "Seat allocation frozen on Census 1971 → till first census after 2000"
+   "onScreen": "Seat allocation frozen on Census 1971 → till first census after 2000",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "1971",
+      "label": "Census base"
+     },
+     {
+      "date": "1976",
+      "label": "42nd Amdt"
+     },
+     {
+      "date": "2001",
+      "label": "84th Amdt"
+     },
+     {
+      "date": "2003",
+      "label": "87th Amdt"
+     },
+     {
+      "date": "2008",
+      "label": "New boundaries"
+     },
+     {
+      "date": "after 2026",
+      "label": "Freeze ends"
+     }
+    ],
+    "at": 1,
+    "from": 1
+   }
   },
   {
    "id": "S12",
@@ -408,7 +588,37 @@
      }
     ]
    },
-   "onScreen": "84th (2001): freeze till first census after 2026 · 87th (2003): boundaries on Census 2001"
+   "onScreen": "84th (2001): freeze till first census after 2026 · 87th (2003): boundaries on Census 2001",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "1971",
+      "label": "Census base"
+     },
+     {
+      "date": "1976",
+      "label": "42nd Amdt"
+     },
+     {
+      "date": "2001",
+      "label": "84th Amdt"
+     },
+     {
+      "date": "2003",
+      "label": "87th Amdt"
+     },
+     {
+      "date": "2008",
+      "label": "New boundaries"
+     },
+     {
+      "date": "after 2026",
+      "label": "Freeze ends"
+     }
+    ],
+    "at": 2,
+    "from": 1
+   }
   },
   {
    "id": "S13",
@@ -435,7 +645,37 @@
     }
    },
    "onScreen": "Seats per state → 1971 · Boundaries within states → 2001",
-   "sfx": "ping"
+   "sfx": "ping",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "1971",
+      "label": "Census base"
+     },
+     {
+      "date": "1976",
+      "label": "42nd Amdt"
+     },
+     {
+      "date": "2001",
+      "label": "84th Amdt"
+     },
+     {
+      "date": "2003",
+      "label": "87th Amdt"
+     },
+     {
+      "date": "2008",
+      "label": "New boundaries"
+     },
+     {
+      "date": "after 2026",
+      "label": "Freeze ends"
+     }
+    ],
+    "at": 4,
+    "from": 2
+   }
   },
   {
    "id": "S14",
@@ -463,7 +703,37 @@
     ]
    },
    "onScreen": "Lok Sabha today: 543 · Art. 81 cap: 530 (States) + 20 (UTs) = 550",
-   "compact": true
+   "compact": true,
+   "timebar": {
+    "nodes": [
+     {
+      "date": "1971",
+      "label": "Census base"
+     },
+     {
+      "date": "1976",
+      "label": "42nd Amdt"
+     },
+     {
+      "date": "2001",
+      "label": "84th Amdt"
+     },
+     {
+      "date": "2003",
+      "label": "87th Amdt"
+     },
+     {
+      "date": "2008",
+      "label": "New boundaries"
+     },
+     {
+      "date": "after 2026",
+      "label": "Freeze ends"
+     }
+    ],
+    "at": 4,
+    "from": 4
+   }
   },
   {
    "id": "S15",
@@ -480,7 +750,11 @@
     ]
    },
    "onScreen": "Is your vote equal to mine?",
-   "sfx": "whoosh"
+   "sfx": "whoosh",
+   "broll": {
+    "title": "File:The Polling official administering indelible ink at the finger of a voter who came first time to exercising his franchise at a polling booth in DAV Sr. Sec. School, Lakkar Bazar, Shimla.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S16",
@@ -508,7 +782,11 @@
      }
     ]
    },
-   "onScreen": "One person, one vote, one value"
+   "onScreen": "One person, one vote, one value",
+   "broll": {
+    "title": "File:Queues of Indian voters - Flickr - Al Jazeera English.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S17",
@@ -528,7 +806,11 @@
    },
    "onScreen": "People per MP: ~7 lakh (1951) → ~25 lakh (today)",
    "sfx": "ping",
-   "compact": true
+   "compact": true,
+   "broll": {
+    "title": "File:Inside view of Lok Sabha chamber in New Parliament building.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S18",
@@ -681,7 +963,11 @@
      }
     }
    },
-   "onScreen": "People per MP (Census 2011): UP ~25 lakh · Kerala ~17 lakh"
+   "onScreen": "People per MP (Census 2011): UP ~25 lakh · Kerala ~17 lakh",
+   "broll": {
+    "title": "File:Bara Imambara, Lucknow 2.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S21",
@@ -857,7 +1143,11 @@
     }
    },
    "onScreen": "Seats up or down: the South's share falls either way",
-   "sfx": "hit"
+   "sfx": "hit",
+   "broll": {
+    "title": "File:Chennai - bird's-eye view.ogv",
+    "sec": 3.5
+   }
   },
   {
    "id": "S26",
@@ -884,7 +1174,12 @@
      }
     ]
    },
-   "onScreen": "Argument 1: don't penalise success in population control"
+   "onScreen": "Argument 1: don't penalise success in population control",
+   "broll": {
+    "title": "File:A boat sailing in Alappuzha canal, Alappuzha, Kerala.webm",
+    "sec": 3,
+    "from": 2
+   }
   },
   {
    "id": "S27",
@@ -1070,7 +1365,11 @@
     ]
    },
    "onScreen": "15th FC: Population 2011 (15%) + Demographic performance (12.5%)",
-   "compact": true
+   "compact": true,
+   "broll": {
+    "title": "File:Marina beach, Chennai aerial view.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S30",
@@ -1152,7 +1451,11 @@
      ]
     }
    },
-   "onScreen": "North's argument: one person, one vote, one value"
+   "onScreen": "North's argument: one person, one vote, one value",
+   "broll": {
+    "title": "File:Bara Imambara, Lucknow 3.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S32",
@@ -1178,7 +1481,11 @@
      "tone": "accent"
     }
    },
-   "onScreen": "Equality of votes ⚖ Federal balance"
+   "onScreen": "Equality of votes ⚖ Federal balance",
+   "broll": {
+    "title": "File:Crowd in Canning Street in Kolkata, West Bengal, India, photo taken on December 31, 2023.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S33",
@@ -1246,7 +1553,44 @@
     ]
    },
    "onScreen": "16 April 2026: three Bills in the Lok Sabha",
-   "sfx": "pop"
+   "sfx": "pop",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 0
+   },
+   "broll": {
+    "title": "File:New Parliament Building.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S36",
@@ -1263,7 +1607,45 @@
     "source": "LiveLaw, 17 Apr 2026"
    },
    "onScreen": "131st Amendment Bill: cap 550 → 850 (815 States + 35 UTs)",
-   "compact": true
+   "compact": true,
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 0,
+    "from": 0
+   },
+   "broll": {
+    "title": "File:Inside view of Lok Sabha chamber in New Parliament building (2).jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S37",
@@ -1290,7 +1672,41 @@
      "tone": "bad"
     }
    },
-   "onScreen": "Remove \"first census after 2026\" · New delimitation on Census 2011"
+   "onScreen": "Remove \"first census after 2026\" · New delimitation on Census 2011",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 0,
+    "from": 0
+   }
   },
   {
    "id": "S38",
@@ -1307,7 +1723,41 @@
     "title": "Lok Sabha rejects Constitution (131st Amendment) Bill, 2026",
     "why": "The government linked the Bill to women’s reservation"
    },
-   "onScreen": "Govt's case: don't delay women's reservation"
+   "onScreen": "Govt's case: don't delay women's reservation",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 0,
+    "from": 0
+   }
   },
   {
    "id": "S39",
@@ -1324,7 +1774,41 @@
     "title": "Amit Shah's intervention on the three Bills",
     "why": "The 50 percent model and the South’s share"
    },
-   "onScreen": "\"50% model\": TN 39 → 59 · Kerala 20 → 30 · South 129 → 195 · share 23.76% → 23.87%"
+   "onScreen": "\"50% model\": TN 39 → 59 · Kerala 20 → 30 · South 129 → 195 · share 23.76% → 23.87%",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 0,
+    "from": 0
+   }
   },
   {
    "id": "S40",
@@ -1351,7 +1835,41 @@
     }
    },
    "onScreen": "17 April 2026: 298 for · 230 against · two-thirds of 528 = 352 needed → defeated",
-   "sfx": "hit"
+   "sfx": "hit",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 1,
+    "from": 0
+   }
   },
   {
    "id": "S41",
@@ -1368,7 +1886,45 @@
     ]
    },
    "onScreen": "Delimitation Bill + UT Bill withdrawn · Why did the opposition say no?",
-   "sfx": "whoosh"
+   "sfx": "whoosh",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 1,
+    "from": 1
+   },
+   "broll": {
+    "title": "File:Sansad Bhavan, Delhi, BNK.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S42",
@@ -1385,7 +1941,41 @@
     "title": "Delimitation After Defeat",
     "why": "The 50 percent formula was not written into the Bill"
    },
-   "onScreen": "Objection 1: the 50% formula was not in the Bill"
+   "onScreen": "Objection 1: the 50% formula was not in the Bill",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 1,
+    "from": 1
+   }
   },
   {
    "id": "S43",
@@ -1402,7 +1992,41 @@
     "title": "Kanimozhi calls delimitation the greatest assault on the federal structure",
     "why": "The DMK’s objection in the Lok Sabha"
    },
-   "onScreen": "Objection 2: why Census 2011 when Census 2027 is under way?"
+   "onScreen": "Objection 2: why Census 2011 when Census 2027 is under way?",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 1,
+    "from": 1
+   }
   },
   {
    "id": "S44",
@@ -1419,7 +2043,41 @@
     "title": "The Delimitation Bill, 2026",
     "why": "Congress: women’s reservation on the current 543 seats"
    },
-   "onScreen": "Objection 3: give women's reservation on today's 543 seats"
+   "onScreen": "Objection 3: give women's reservation on today's 543 seats",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 1,
+    "from": 1
+   }
   },
   {
    "id": "S45",
@@ -1518,7 +2176,45 @@
      }
     }
    },
-   "onScreen": "Other objections: who appoints the Commission · voice of the Northeast · OBC representation"
+   "onScreen": "Other objections: who appoints the Commission · voice of the Northeast · OBC representation",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 1,
+    "from": 1
+   },
+   "broll": {
+    "title": "File:Supreme Court of India 01.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S46",
@@ -1535,7 +2231,41 @@
     "title": "Monsoon Session: delimitation shelved as focus shifts to 2027 polls",
     "why": "The revised Bill was not brought in the Monsoon Session"
    },
-   "onScreen": "July 2026: revised Bill floated · Monsoon Session: held back"
+   "onScreen": "July 2026: revised Bill floated · Monsoon Session: held back",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 3,
+    "from": 1
+   }
   },
   {
    "id": "S47",
@@ -1566,7 +2296,41 @@
     ]
    },
    "onScreen": "Article 368: special majority → consensus is unavoidable",
-   "sfx": "ping"
+   "sfx": "ping",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 3,
+    "from": 3
+   }
   },
   {
    "id": "S48",
@@ -1582,7 +2346,46 @@
      "freeze end"
     ]
    },
-   "sfx": "whoosh"
+   "sfx": "whoosh",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 3,
+    "from": 3
+   },
+   "broll": {
+    "title": "File:View of Rashtrapati bhavan.webm",
+    "sec": 3,
+    "from": 3
+   }
   },
   {
    "id": "S49",
@@ -1612,7 +2415,41 @@
      }
     ]
    },
-   "onScreen": "\"First census taken after the year 2026\""
+   "onScreen": "\"First census taken after the year 2026\"",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 3,
+    "from": 3
+   }
   },
   {
    "id": "S50",
@@ -1629,7 +2466,41 @@
     "title": "Centre issues notification for the 16th Census",
     "why": "Reference dates: 1 March 2027, and 1 October 2026 for snow-bound areas"
    },
-   "onScreen": "Census 2027 · Reference date: 1 March 2027 (snow-bound areas: 1 Oct 2026)"
+   "onScreen": "Census 2027 · Reference date: 1 March 2027 (snow-bound areas: 1 Oct 2026)",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 5,
+    "from": 3
+   }
   },
   {
    "id": "S51",
@@ -1659,7 +2530,45 @@
     ]
    },
    "onScreen": "Census 2027 = the first census after 2026 → freeze ends",
-   "sfx": "ping"
+   "sfx": "ping",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 5,
+    "from": 5
+   },
+   "broll": {
+    "title": "File:Prime Minister of Bharat, Shri Narendra Damodardas Modi fills out the self-enumeration for Census 2027.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S52",
@@ -1674,7 +2583,45 @@
     "label": "last time every caste was counted · Census 2027 counts them again"
    },
    "onScreen": "First caste enumeration since 1931",
-   "compact": true
+   "compact": true,
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 5,
+    "from": 5
+   },
+   "broll": {
+    "title": "File:The Union Home Minister, Shri P. Chidambaram at the unveiling function of the mascot of the census enumerator, in New Delhi on February 02, 2011.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S53",
@@ -1703,7 +2650,45 @@
      }
     ]
    },
-   "onScreen": "106th Amendment (2023): 1/3 seats for women · notified 16 Apr 2026 · starts after delimitation (Art. 334A)"
+   "onScreen": "106th Amendment (2023): 1/3 seats for women · notified 16 Apr 2026 · starts after delimitation (Art. 334A)",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 5,
+    "from": 5
+   },
+   "broll": {
+    "title": "File:India - Sights & Culture - 001 - crowd shopping (342043908).jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S54",
@@ -1729,7 +2714,41 @@
      "tone": "good"
     }
    },
-   "onScreen": "Reserved today: SC 84 · ST 47 (Arts. 330, 332)"
+   "onScreen": "Reserved today: SC 84 · ST 47 (Arts. 330, 332)",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 5,
+    "from": 5
+   }
   },
   {
    "id": "S55",
@@ -1766,7 +2785,41 @@
      }
     ]
    },
-   "onScreen": "Census data → Delimitation Act → Commission → Hearings → Orders"
+   "onScreen": "Census data → Delimitation Act → Commission → Hearings → Orders",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 6,
+    "from": 5
+   }
   },
   {
    "id": "S56",
@@ -1798,7 +2851,11 @@
     "source": "PIB, New India Samachar (June 2023)"
    },
    "onScreen": "Option 1: expand the House (new chamber seats 888) · needs a written guarantee of each state's share",
-   "compact": true
+   "compact": true,
+   "broll": {
+    "title": "File:Parliament of India in New Delhi 03.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S58",
@@ -1854,7 +2911,11 @@
     }
    },
    "onScreen": "Option 2: fixed total, reallocated (USA: 435 since 1911)",
-   "sfx": "whoosh"
+   "sfx": "whoosh",
+   "broll": {
+    "title": "File:Capitol at Dusk 2.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S59",
@@ -1879,7 +2940,11 @@
      "4. Strengthen the Rajya Sabha"
     ]
    },
-   "onScreen": "Option 3: extend the freeze · Option 4: stronger Rajya Sabha / federal bodies"
+   "onScreen": "Option 3: extend the freeze · Option 4: stronger Rajya Sabha / federal bodies",
+   "broll": {
+    "title": "File:India Gate - Delhi (37282946605).jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S60",
