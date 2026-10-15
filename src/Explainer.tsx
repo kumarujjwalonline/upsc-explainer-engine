@@ -9,6 +9,7 @@ import {Caption} from './components/Caption';
 import {Backdrop} from './components/Backdrop';
 import {Broll} from './components/Broll';
 import {EventTimeline} from './components/EventTimeline';
+import {ShortBeats} from './components/ShortBeats';
 
 export const sceneFrames = (s: Scene) => Math.max(15, Math.round((s.durationSec || 4) * FPS));
 
@@ -18,7 +19,8 @@ const pickScenes = (job: Job, ids?: string[]) =>
 export const totalFrames = (p: RenderProps) =>
   pickScenes(p.job, p.sceneIds).reduce((a, s) => a + sceneFrames(s), 0) + (p.hook ? 0 : 0);
 
-export const Explainer: React.FC<RenderProps> = ({job, format, sceneIds, hook}) => {
+export const Explainer: React.FC<RenderProps> = ({job, format, sceneIds, hook, shortId}) => {
+  const beats = shortId ? (job.shorts || []).find((x) => x.id === shortId)?.beats || [] : [];
   const scenes = pickScenes(job, sceneIds);
   const L = layout(format);
   // Tracker states are computed over the whole video so a Short shows the same
@@ -93,6 +95,7 @@ export const Explainer: React.FC<RenderProps> = ({job, format, sceneIds, hook}) 
         </Sequence>
       ))}
       {bars}
+      {beats.length ? <ShortBeats beats={beats} /> : null}
       {hook ? <HookBanner text={hook} /> : null}
     </AbsoluteFill>
   );

@@ -11,6 +11,17 @@ fs.mkdirSync(outDir, {recursive: true});
 const browserExecutable = process.env.REMOTION_CHROME || (fs.existsSync('/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell') ? '/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell' : null);
 const serveUrl = await bundle({entryPoint: path.resolve('src/index.ts'), publicDir: path.resolve('public')});
 for (const item of list.split(',')) {
+  if (item.includes('@')) {
+    // short1@12.5 renders 12.5 s into that Short, with its hook and beats
+    const [sid, ss] = item.split('@');
+    const sh = job.shorts.find((x) => x.id === sid);
+    const inputProps = {job, format: '9:16', sceneIds: sh.scenes, hook: sh.hook, shortId: sh.id};
+    const composition = await selectComposition({serveUrl, id: 'Explainer', inputProps, chromiumOptions: {gl: 'swangle'}, browserExecutable});
+    const frame = Math.min(composition.durationInFrames - 1, Math.round(parseFloat(ss) * 30));
+    await renderStill({composition, serveUrl, output: `${outDir}/${sid}_${ss}.png`, inputProps, frame, chromiumOptions: {gl: 'swangle'}, browserExecutable, timeoutInMilliseconds: 240000});
+    console.log(sid, ss);
+    continue;
+  }
   const [rawId, sec] = item.split(':');
   const whole = rawId.endsWith('+');
   const id = rawId.replace('+', '');

@@ -9,11 +9,11 @@ on:
         description: "Job file name in jobs/ (without .json)"
         required: true
       mode:
-        description: "sample = 30 s voice check, full = video + Shorts + thumbnail, preview = no voice, half-size layout check, media = b-roll candidates from Wikimedia Commons (jobs/<job_id>.media.json), chunked = render a voiced job (clips already in public/) split across many runners"
+        description: "sample = 30 s voice check, full = video + Shorts + thumbnail, preview = no voice, half-size layout check, media = b-roll candidates from Wikimedia Commons (jobs/<job_id>.media.json), chunked = render a voiced job (clips already in public/) split across many runners, shorts = the same but only the Shorts"
         required: true
         default: full
         type: choice
-        options: [sample, full, preview, media, chunked]
+        options: [sample, full, preview, media, chunked, shorts]
       callback_url:
         description: "n8n webhook to call when done (optional)"
         required: false
@@ -49,7 +49,7 @@ jobs:
   # chunked: the long video is cut into 12 slices and each Short into 2, rendered in parallel
   # (3D terrain renders at ~1.4 s a frame, so one runner would need 9+ hours), then joined.
   plan:
-    if: inputs.mode == 'chunked'
+    if: inputs.mode == 'chunked' || inputs.mode == 'shorts'
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.m.outputs.matrix }}
@@ -57,7 +57,7 @@ jobs:
       - uses: actions/checkout@v4
       - id: m
         run: |
-          echo "matrix=$(node -e "const j=require('./jobs/${{ inputs.job_id }}.json');const n={long:12};for(const s of j.shorts||[])n[s.id]=2;console.log(JSON.stringify({include:Object.entries(n).flatMap(([t,c])=>[...Array(c).keys()].map(k=>({target:t,k,n:c})))}))")" >> "$GITHUB_OUTPUT"
+          echo "matrix=$(node -e "const j=require('./jobs/${{ inputs.job_id }}.json');const n='${{ inputs.mode }}'==='shorts'?{}:{long:12};for(const s of j.shorts||[])n[s.id]='${{ inputs.mode }}'==='shorts'?3:2;console.log(JSON.stringify({include:Object.entries(n).flatMap(([t,c])=>[...Array(c).keys()].map(k=>({target:t,k,n:c})))}))")" >> "$GITHUB_OUTPUT"
 
   chunk:
     needs: plan
@@ -110,16 +110,17 @@ jobs:
       - name: Join slices and add sound
         run: bash scripts/merge_chunks.sh jobs/${{ inputs.job_id }}.json
       - name: Thumbnail
+        if: inputs.mode == 'chunked'
         run: node scripts/render.mjs jobs/${{ inputs.job_id }}.json thumb
       - name: Publish
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           cd out
-          gh release create "render-${{ inputs.job_id }}-${{ github.run_number }}" --title "${{ inputs.job_id }} (chunked)" --notes "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" --prerelease *.mp4 *.png
+          gh release create "render-${{ inputs.job_id }}-${{ github.run_number }}" --title "${{ inputs.job_id }} (chunked)" --notes "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" --prerelease *.mp4 $(ls *.png 2>/dev/null)
 
   render:
-    if: inputs.mode != 'media' && inputs.mode != 'chunked'
+    if: inputs.mode != 'media' && inputs.mode != 'chunked' && inputs.mode != 'shorts'
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:

@@ -74,9 +74,9 @@ export type Job = {
   format?: Format;
   tracker: {title?: string; objectives: Objective[]};
   scenes: Scene[];
-  shorts?: {id: string; hook: string; scenes: string[]}[];
+  shorts?: {id: string; hook: string; scenes: string[]; beats?: import('./components/ShortBeats').Beat[]}[];
   thumbnail?: {headline: string; sub?: string; scene?: string};
   timelines?: TimelineSpec[];
 };
 
-export type RenderProps = {job: Job; format: Format; sceneIds?: string[]; hook?: string};
+export type RenderProps = {job: Job; format: Format; sceneIds?: string[]; hook?: string; shortId?: string};

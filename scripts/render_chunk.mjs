@@ -13,7 +13,7 @@ const k = Number(kS);
 const n = Number(nS);
 const job = JSON.parse(fs.readFileSync(jobPath, 'utf8'));
 const short = (job.shorts || []).find((s) => s.id === target);
-const inputProps = target === 'long' ? {job, format: '16:9'} : {job, format: '9:16', sceneIds: short.scenes, hook: short.hook};
+const inputProps = target === 'long' ? {job, format: '16:9'} : {job, format: '9:16', sceneIds: short.scenes, hook: short.hook, shortId: short.id};
 fs.mkdirSync('out/chunks', {recursive: true});
 const browserExecutable = process.env.REMOTION_CHROME || null;
 const serveUrl = await bundle({entryPoint: path.resolve('src/index.ts'), publicDir: path.resolve('public')});

@@ -49,7 +49,7 @@ const video = async (name, inputProps, scale = 1) => {
 if (what === 'all' || what === 'long') await video(`${job.id}-long`, {job, format: '16:9'});
 if (what === 'preview') await video(`${job.id}-preview`, {job, format: '16:9'}, 0.5);
 if (what === 'all' || what === 'shorts' || what === 'preview')
-  for (const s of job.shorts || []) await video(`${job.id}-${s.id}`, {job, format: '9:16', sceneIds: s.scenes, hook: s.hook}, what === 'preview' ? 0.5 : 1);
+  for (const s of job.shorts || []) await video(`${job.id}-${s.id}`, {job, format: '9:16', sceneIds: s.scenes, hook: s.hook, shortId: s.id}, what === 'preview' ? 0.5 : 1);
 if (what === 'all' || what === 'thumb' || what === 'preview') {
   const composition = await selectComposition({serveUrl, id: 'Thumbnail', inputProps: {job}, browserExecutable});
   await renderStill({composition, serveUrl, output: `out/${job.id}-thumbnail.png`, inputProps: {job}, chromiumOptions: {gl: 'swangle'}, browserExecutable});

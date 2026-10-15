@@ -4148,6 +4148,351 @@
     "S09",
     "S10",
     "S11"
+   ],
+   "beats": [
+    {
+     "kind": "icon",
+     "icon": "question",
+     "text": "A basic question",
+     "tone": "orange",
+     "t0": 0.65,
+     "t1": 2.69
+    },
+    {
+     "kind": "word",
+     "text": "LAC",
+     "tone": "red",
+     "t0": 4.56,
+     "t1": 5.91
+    },
+    {
+     "kind": "icon",
+     "icon": "question",
+     "text": "What's the difference?",
+     "tone": "orange",
+     "t0": 5.96,
+     "t1": 7.22
+    },
+    {
+     "kind": "icon",
+     "icon": "check",
+     "text": "International Border",
+     "sub": "Agreed by both, marked on the ground",
+     "tone": "green",
+     "t0": 7.27,
+     "t1": 10.07
+    },
+    {
+     "kind": "photo",
+     "src": "lac/shorts/itbp-1.jpg",
+     "caption": "The ITBP guards India's border with China",
+     "credit": "Photo: John Hill / Wikimedia Commons (CC BY-SA 4.0)",
+     "t0": 11.79,
+     "t1": 14.99
+    },
+    {
+     "kind": "flag",
+     "flag": "PK",
+     "text": "Line of Control",
+     "sub": "With Pakistan",
+     "t0": 13.02,
+     "t1": 15.82
+    },
+    {
+     "kind": "stat",
+     "value": 1972,
+     "label": "Simla Agreement",
+     "tone": "orange",
+     "decimals": 0,
+     "t0": 16.24,
+     "t1": 18.99
+    },
+    {
+     "kind": "icon",
+     "icon": "doc",
+     "text": "Set on a signed map",
+     "tone": "orange",
+     "t0": 19.04,
+     "t1": 21.7
+    },
+    {
+     "kind": "flag",
+     "flag": "CN",
+     "text": "LAC",
+     "sub": "With China",
+     "t0": 21.75,
+     "t1": 24.55
+    },
+    {
+     "kind": "photo",
+     "src": "lac/shorts/itbp-3.jpg",
+     "caption": "Indo-Tibetan Border Police guard of honour",
+     "credit": "Photo: Ministry of Home Affairs / Wikimedia Commons (GODL-India)",
+     "t0": 25.89,
+     "t1": 29.09
+    },
+    {
+     "kind": "icon",
+     "icon": "soldier",
+     "text": "Where each army actually is",
+     "tone": "orange",
+     "t0": 26.87,
+     "t1": 28.78
+    },
+    {
+     "kind": "icon",
+     "icon": "cross",
+     "text": "No agreed map",
+     "tone": "red",
+     "t0": 28.83,
+     "t1": 31.63
+    },
+    {
+     "kind": "flag",
+     "flag": "IN",
+     "text": "3,488 km",
+     "sub": "India's count",
+     "t0": 31.92,
+     "t1": 34.72
+    },
+    {
+     "kind": "flag",
+     "flag": "CN",
+     "text": "~2,000 km",
+     "sub": "China's count",
+     "t0": 37.68,
+     "t1": 40.48
+    },
+    {
+     "kind": "vs",
+     "a": "3,488 km",
+     "la": "India",
+     "fa": "IN",
+     "b": "~2,000 km",
+     "lb": "China",
+     "fb": "CN",
+     "t0": 41.41,
+     "t1": 43.58
+    },
+    {
+     "kind": "icon",
+     "icon": "cross",
+     "text": "Not even the length is agreed",
+     "tone": "red",
+     "t0": 43.63,
+     "t1": 46.26
+    },
+    {
+     "kind": "stat",
+     "value": 3,
+     "label": "Sectors",
+     "tone": "orange",
+     "decimals": 0,
+     "t0": 46.31,
+     "t1": 49.11
+    },
+    {
+     "kind": "word",
+     "text": "WESTERN",
+     "sub": "Ladakh",
+     "tone": "orange",
+     "t0": 49.45,
+     "t1": 52.2
+    },
+    {
+     "kind": "photo",
+     "src": "lac/shorts/pangong-1.jpg",
+     "caption": "Pangong Tso, Ladakh",
+     "credit": "Photo: KennyOMG / Wikimedia Commons (CC BY-SA 4.0)",
+     "t0": 50.73,
+     "t1": 53.93
+    },
+    {
+     "kind": "stat",
+     "value": 1597,
+     "label": "Western sector",
+     "unit": "km",
+     "tone": "orange",
+     "decimals": 0,
+     "t0": 52.25,
+     "t1": 55.05
+    },
+    {
+     "kind": "icon",
+     "icon": "alert",
+     "text": "Most disputed",
+     "tone": "red",
+     "t0": 56.47,
+     "t1": 58.79
+    },
+    {
+     "kind": "word",
+     "text": "MIDDLE",
+     "sub": "Himachal + Uttarakhand",
+     "tone": "yellow",
+     "t0": 58.84,
+     "t1": 61.64
+    },
+    {
+     "kind": "photo",
+     "src": "lac/shorts/shipkila-1.jpg",
+     "caption": "Shipki La, Himachal Pradesh",
+     "credit": "Photo: Rakeshk9548 / Wikimedia Commons (CC BY-SA 4.0)",
+     "t0": 61.08,
+     "t1": 64.28
+    },
+    {
+     "kind": "stat",
+     "value": 545,
+     "label": "Middle sector",
+     "unit": "km",
+     "tone": "yellow",
+     "decimals": 0,
+     "t0": 62.82,
+     "t1": 65.62
+    },
+    {
+     "kind": "icon",
+     "icon": "check",
+     "text": "Least disputed",
+     "tone": "green",
+     "t0": 66.23,
+     "t1": 69.03
+    },
+    {
+     "kind": "icon",
+     "icon": "handshake",
+     "text": "Maps exchanged",
+     "sub": "The only sector",
+     "tone": "green",
+     "t0": 71.11,
+     "t1": 72.92
+    },
+    {
+     "kind": "word",
+     "text": "EASTERN",
+     "sub": "Sikkim + Arunachal",
+     "tone": "orange",
+     "t0": 72.97,
+     "t1": 75.77
+    },
+    {
+     "kind": "photo",
+     "src": "lac/shorts/tawang-1.jpg",
+     "caption": "Tawang, Arunachal Pradesh",
+     "credit": "Photo: Vikramjit Kakati / Wikimedia Commons (CC BY-SA 4.0)",
+     "t0": 75.85,
+     "t1": 79.05
+    },
+    {
+     "kind": "stat",
+     "value": 1346,
+     "label": "Eastern sector",
+     "unit": "km",
+     "tone": "orange",
+     "decimals": 0,
+     "t0": 77.77,
+     "t1": 80.57
+    },
+    {
+     "kind": "word",
+     "text": "McMAHON LINE",
+     "tone": "yellow",
+     "t0": 82.09,
+     "t1": 84.89
+    },
+    {
+     "kind": "icon",
+     "icon": "star",
+     "text": "Sikkim is the exception",
+     "tone": "yellow",
+     "t0": 86.5,
+     "t1": 89.3
+    },
+    {
+     "kind": "stat",
+     "value": 1890,
+     "label": "Anglo-Chinese Convention",
+     "tone": "orange",
+     "decimals": 0,
+     "t0": 89.8,
+     "t1": 92.6
+    },
+    {
+     "kind": "flag",
+     "flag": "CN",
+     "text": "China accepts it too",
+     "t0": 93.42,
+     "t1": 95.76
+    },
+    {
+     "kind": "word",
+     "text": "2017 · DOKLAM",
+     "tone": "red",
+     "t0": 95.81,
+     "t1": 98.32
+    },
+    {
+     "kind": "flag",
+     "flag": "BT",
+     "text": "India · Bhutan · China",
+     "sub": "Tri-junction",
+     "t0": 98.37,
+     "t1": 101.17
+    },
+    {
+     "kind": "stat",
+     "value": 73,
+     "label": "Days face to face",
+     "tone": "red",
+     "decimals": 0,
+     "t0": 101.67,
+     "t1": 104.47
+    },
+    {
+     "kind": "word",
+     "text": "PRELIMS TIP",
+     "tone": "yellow",
+     "t0": 104.67,
+     "t1": 106.64
+    },
+    {
+     "kind": "word",
+     "text": "WESTERN = LADAKH",
+     "tone": "white",
+     "t0": 106.69,
+     "t1": 108.54
+    },
+    {
+     "kind": "word",
+     "text": "MIDDLE = HP + UK",
+     "tone": "white",
+     "t0": 108.59,
+     "t1": 111.32
+    },
+    {
+     "kind": "word",
+     "text": "EASTERN = SIKKIM + ARUNACHAL",
+     "tone": "white",
+     "t0": 111.37,
+     "t1": 114.17
+    },
+    {
+     "kind": "icon",
+     "icon": "check",
+     "text": "Longest: Western",
+     "tone": "green",
+     "t0": 114.96,
+     "t1": 116.73
+    },
+    {
+     "kind": "icon",
+     "icon": "check",
+     "text": "Shortest: Middle",
+     "tone": "green",
+     "t0": 116.78,
+     "t1": 118.32
+    }
    ]
   },
   {
@@ -4160,6 +4505,231 @@
     "S15",
     "S16",
     "S17"
+   ],
+   "beats": [
+    {
+     "kind": "photo",
+     "src": "lac/shorts/tawang-2.jpg",
+     "caption": "Tawang Monastery, Arunachal Pradesh",
+     "credit": "Photo: J P Dutt / Wikimedia Commons (CC BY-SA 4.0)",
+     "t0": 0.44,
+     "t1": 3.64
+    },
+    {
+     "kind": "word",
+     "text": "ARUNACHAL PRADESH",
+     "tone": "orange",
+     "t0": 3.67,
+     "t1": 4.96
+    },
+    {
+     "kind": "word",
+     "text": "'SOUTH TIBET'?",
+     "sub": "China's claim",
+     "tone": "red",
+     "t0": 5.01,
+     "t1": 7.14
+    },
+    {
+     "kind": "icon",
+     "icon": "question",
+     "text": "Where did this come from?",
+     "tone": "orange",
+     "t0": 7.19,
+     "t1": 9.96
+    },
+    {
+     "kind": "stat",
+     "value": 1914,
+     "label": "Simla Convention",
+     "tone": "orange",
+     "decimals": 0,
+     "t0": 10.01,
+     "t1": 12.81
+    },
+    {
+     "kind": "photo",
+     "src": "lac/shorts/simla-3.jpg",
+     "caption": "Frontier map from the Simla talks",
+     "credit": "Photo: Hugh Richardson / Wikimedia Commons (Public domain)",
+     "tag": "ORIGINAL MAP",
+     "t0": 13.23,
+     "t1": 16.43
+    },
+    {
+     "kind": "flag",
+     "flag": "GB",
+     "text": "Henry McMahon",
+     "sub": "British India",
+     "t0": 14.69,
+     "t1": 16.9
+    },
+    {
+     "kind": "flag",
+     "flag": "TB",
+     "text": "Lonchen Shatra",
+     "sub": "Tibet",
+     "t0": 16.95,
+     "t1": 19.52
+    },
+    {
+     "kind": "flag",
+     "flag": "CN",
+     "text": "Ivan Chen",
+     "sub": "China",
+     "t0": 19.57,
+     "t1": 22.37
+    },
+    {
+     "kind": "word",
+     "text": "McMAHON LINE",
+     "tone": "yellow",
+     "t0": 25.69,
+     "t1": 28.49
+    },
+    {
+     "kind": "stat",
+     "value": 890,
+     "label": "Long",
+     "unit": "km",
+     "tone": "orange",
+     "decimals": 0,
+     "t0": 28.75,
+     "t1": 30.76
+    },
+    {
+     "kind": "flag",
+     "flag": "BT",
+     "text": "From Bhutan...",
+     "t0": 30.81,
+     "t1": 33.61
+    },
+    {
+     "kind": "icon",
+     "icon": "pin",
+     "text": "...to Isu Razi Pass",
+     "sub": "Near Myanmar",
+     "tone": "orange",
+     "t0": 33.83,
+     "t1": 36.63
+    },
+    {
+     "kind": "icon",
+     "icon": "mountain",
+     "text": "Along the highest peaks",
+     "tone": "orange",
+     "t0": 38.69,
+     "t1": 41.49
+    },
+    {
+     "kind": "photo",
+     "src": "lac/shorts/selapass-1.jpg",
+     "caption": "Sela Pass, Arunachal Pradesh",
+     "credit": "Photo: Dhurba Jyoti Baruah / Wikimedia Commons (CC BY-SA 4.0)",
+     "t0": 40.25,
+     "t1": 43.45
+    },
+    {
+     "kind": "icon",
+     "icon": "water",
+     "text": "Water splits at the ridge",
+     "tone": "orange",
+     "t0": 43.45,
+     "t1": 46.25
+    },
+    {
+     "kind": "icon",
+     "icon": "water",
+     "text": "Two sides, two rivers",
+     "tone": "yellow",
+     "t0": 46.53,
+     "t1": 49.33
+    },
+    {
+     "kind": "flag",
+     "flag": "CN",
+     "text": "Never signed",
+     "t0": 49.97,
+     "t1": 52.32
+    },
+    {
+     "kind": "icon",
+     "icon": "cross",
+     "text": "Not signed by China",
+     "tone": "red",
+     "t0": 52.37,
+     "t1": 55.17
+    },
+    {
+     "kind": "flag",
+     "flag": "TB",
+     "text": "Tibet 'not independent'",
+     "sub": "China's argument",
+     "t0": 55.77,
+     "t1": 58.57
+    },
+    {
+     "kind": "icon",
+     "icon": "doc",
+     "text": "'So no treaty'",
+     "sub": "China's view",
+     "tone": "orange",
+     "t0": 58.99,
+     "t1": 61.14
+    },
+    {
+     "kind": "flag",
+     "flag": "IN",
+     "text": "McMahon Line is the border",
+     "t0": 61.19,
+     "t1": 63.99
+    },
+    {
+     "kind": "photo",
+     "src": "lac/shorts/tawang-3.jpg",
+     "caption": "Tawang, Arunachal Pradesh",
+     "credit": "Photo: Chandrasen31 / Wikimedia Commons (CC BY-SA 4.0)",
+     "t0": 65.33,
+     "t1": 68.53
+    },
+    {
+     "kind": "word",
+     "text": "ARUNACHAL = INDIA",
+     "tone": "green",
+     "t0": 67.07,
+     "t1": 69.87
+    },
+    {
+     "kind": "photo",
+     "src": "lac/shorts/vibrant-1.jpg",
+     "caption": "Geku village, Arunachal Pradesh",
+     "credit": "Photo: Gurtej Chauhan / Wikimedia Commons (CC BY-SA 4.0)",
+     "t0": 71.11,
+     "t1": 74.31
+    },
+    {
+     "kind": "icon",
+     "icon": "doc",
+     "text": "China's 'new names' lists",
+     "tone": "orange",
+     "t0": 72.77,
+     "t1": 75.57
+    },
+    {
+     "kind": "icon",
+     "icon": "cross",
+     "text": "India rejects them",
+     "tone": "red",
+     "t0": 77.97,
+     "t1": 80.08
+    },
+    {
+     "kind": "word",
+     "text": "NAMES DON'T CHANGE FACTS",
+     "tone": "green",
+     "t0": 80.13,
+     "t1": 82.93
+    }
    ]
   },
   {
@@ -4172,6 +4742,215 @@
     "S22",
     "S23",
     "S24"
+   ],
+   "beats": [
+    {
+     "kind": "word",
+     "text": "WESTERN SECTOR",
+     "tone": "orange",
+     "t0": 0.33,
+     "t1": 2.88
+    },
+    {
+     "kind": "icon",
+     "icon": "alert",
+     "text": "The biggest dispute",
+     "tone": "red",
+     "t0": 2.93,
+     "t1": 4.21
+    },
+    {
+     "kind": "word",
+     "text": "AKSAI CHIN",
+     "tone": "yellow",
+     "t0": 4.26,
+     "t1": 7.03
+    },
+    {
+     "kind": "icon",
+     "icon": "mountain",
+     "text": "Cold, barren plateau",
+     "tone": "orange",
+     "t0": 7.08,
+     "t1": 8.43
+    },
+    {
+     "kind": "icon",
+     "icon": "question",
+     "text": "Why does it matter?",
+     "tone": "orange",
+     "t0": 8.48,
+     "t1": 10.06
+    },
+    {
+     "kind": "flag",
+     "flag": "GB",
+     "text": "Two British lines",
+     "t0": 10.11,
+     "t1": 12.91
+    },
+    {
+     "kind": "stat",
+     "value": 1865,
+     "label": "Johnson Line",
+     "tone": "orange",
+     "decimals": 0,
+     "t0": 13.55,
+     "t1": 16.35
+    },
+    {
+     "kind": "icon",
+     "icon": "check",
+     "text": "Aksai Chin in Kashmir",
+     "tone": "green",
+     "t0": 16.67,
+     "t1": 19.16
+    },
+    {
+     "kind": "stat",
+     "value": 1899,
+     "label": "Macartney-MacDonald Line",
+     "tone": "yellow",
+     "decimals": 0,
+     "t0": 19.21,
+     "t1": 22.01
+    },
+    {
+     "kind": "flag",
+     "flag": "CN",
+     "text": "Most of it to China",
+     "t0": 23.61,
+     "t1": 25.61
+    },
+    {
+     "kind": "flag",
+     "flag": "IN",
+     "text": "India chose the Johnson Line",
+     "t0": 25.66,
+     "t1": 28.46
+    },
+    {
+     "kind": "word",
+     "text": "AKSAI CHIN = LADAKH",
+     "sub": "India's official map",
+     "tone": "green",
+     "t0": 32.88,
+     "t1": 35.63
+    },
+    {
+     "kind": "word",
+     "text": "1950s",
+     "tone": "white",
+     "t0": 35.68,
+     "t1": 38.48
+    },
+    {
+     "kind": "icon",
+     "icon": "road",
+     "text": "China builds a road",
+     "tone": "orange",
+     "t0": 41.98,
+     "t1": 44.78
+    },
+    {
+     "kind": "stat",
+     "value": 1957,
+     "label": "India finds out",
+     "tone": "red",
+     "decimals": 0,
+     "t0": 45.3,
+     "t1": 48.1
+    },
+    {
+     "kind": "word",
+     "text": "→ 1962 WAR",
+     "tone": "red",
+     "t0": 49.0,
+     "t1": 51.8
+    },
+    {
+     "kind": "icon",
+     "icon": "doc",
+     "text": "Govt of India in Parliament",
+     "tone": "orange",
+     "t0": 52.48,
+     "t1": 55.28
+    },
+    {
+     "kind": "stat",
+     "value": 38000,
+     "label": "Occupied by China",
+     "unit": "sq km",
+     "tone": "red",
+     "decimals": 0,
+     "t0": 57.12,
+     "t1": 59.92
+    },
+    {
+     "kind": "icon",
+     "icon": "alert",
+     "text": "Illegal occupation",
+     "tone": "red",
+     "t0": 60.36,
+     "t1": 63.16
+    },
+    {
+     "kind": "stat",
+     "value": 1963,
+     "label": "Shaksgam Valley",
+     "tone": "orange",
+     "decimals": 0,
+     "t0": 63.41,
+     "t1": 66.21
+    },
+    {
+     "kind": "stat",
+     "value": 5180,
+     "label": "Ceded by Pakistan to China",
+     "unit": "sq km",
+     "tone": "orange",
+     "decimals": 0,
+     "t0": 68.61,
+     "t1": 71.41
+    },
+    {
+     "kind": "icon",
+     "icon": "cross",
+     "text": "India doesn't recognise it",
+     "tone": "red",
+     "t0": 74.07,
+     "t1": 76.87
+    },
+    {
+     "kind": "flag",
+     "flag": "CN",
+     "text": "Links Xinjiang to Tibet",
+     "t0": 79.7,
+     "t1": 82.09
+    },
+    {
+     "kind": "photo",
+     "src": "lac/shorts/aksai-3.jpg",
+     "caption": "Aksai Chin from the ISS",
+     "credit": "Photo: Earth Science and Remote Sensing Unit, NASA Johnson Space Center / Wikimedia Commons (Public domain)",
+     "t0": 80.56,
+     "t1": 83.76
+    },
+    {
+     "kind": "flag",
+     "flag": "IN",
+     "text": "Ladakh's security",
+     "t0": 82.14,
+     "t1": 84.91
+    },
+    {
+     "kind": "icon",
+     "icon": "mountain",
+     "text": "Access to the Karakoram",
+     "tone": "orange",
+     "t0": 84.96,
+     "t1": 87.68
+    }
    ]
   },
   {
@@ -4183,6 +4962,198 @@
     "S35",
     "S36",
     "S37"
+   ],
+   "beats": [
+    {
+     "kind": "icon",
+     "icon": "soldier",
+     "text": "How to pull armies back?",
+     "tone": "orange",
+     "t0": 3.18,
+     "t1": 5.98
+    },
+    {
+     "kind": "photo",
+     "src": "lac/shorts/galwan-2.jpg",
+     "caption": "Galwan valley, the 2020 clash site",
+     "credit": "Photo: NASA World Wind / DiplomatTesterMan / Wikimedia Commons (Public domain)",
+     "tag": "SATELLITE VIEW",
+     "t0": 5.64,
+     "t1": 8.84
+    },
+    {
+     "kind": "word",
+     "text": "BUFFER ZONES",
+     "tone": "yellow",
+     "t0": 9.19,
+     "t1": 11.86
+    },
+    {
+     "kind": "word",
+     "text": "NO-PATROLLING ZONE",
+     "tone": "orange",
+     "t0": 11.91,
+     "t1": 14.71
+    },
+    {
+     "kind": "icon",
+     "icon": "shield",
+     "text": "Both sides pull back",
+     "tone": "orange",
+     "t0": 15.29,
+     "t1": 18.09
+    },
+    {
+     "kind": "icon",
+     "icon": "cross",
+     "text": "Nobody patrols",
+     "tone": "red",
+     "t0": 18.53,
+     "t1": 20.45
+    },
+    {
+     "kind": "icon",
+     "icon": "eye",
+     "text": "The goal",
+     "tone": "orange",
+     "t0": 20.5,
+     "t1": 23.3
+    },
+    {
+     "kind": "icon",
+     "icon": "check",
+     "text": "Distance, so no clash",
+     "tone": "green",
+     "t0": 24.1,
+     "t1": 25.71
+    },
+    {
+     "kind": "word",
+     "text": "GALWAN",
+     "sub": "July 2020",
+     "tone": "orange",
+     "t0": 25.76,
+     "t1": 28.56
+    },
+    {
+     "kind": "stat",
+     "value": 1.5,
+     "label": "Each side",
+     "unit": "km",
+     "tone": "yellow",
+     "decimals": 1,
+     "t0": 31.56,
+     "t1": 34.36
+    },
+    {
+     "kind": "photo",
+     "src": "lac/shorts/pangong-2.jpg",
+     "caption": "Pangong Tso, eastern Ladakh",
+     "credit": "Photo: Stanzin1945 / Wikimedia Commons (CC BY-SA 4.0)",
+     "t0": 32.88,
+     "t1": 36.08
+    },
+    {
+     "kind": "stat",
+     "value": 3,
+     "label": "Buffer zone",
+     "unit": "km",
+     "tone": "orange",
+     "decimals": 0,
+     "t0": 36.78,
+     "t1": 39.13
+    },
+    {
+     "kind": "stat",
+     "value": 8,
+     "label": "No-patrolling stretch",
+     "unit": "km",
+     "tone": "orange",
+     "decimals": 0,
+     "t0": 39.18,
+     "t1": 41.98
+    },
+    {
+     "kind": "word",
+     "text": "GOGRA · PP-17A",
+     "sub": "August 2021",
+     "tone": "orange",
+     "t0": 43.17,
+     "t1": 45.97
+    },
+    {
+     "kind": "word",
+     "text": "HOT SPRINGS · PP-15",
+     "sub": "September 2022",
+     "tone": "yellow",
+     "t0": 48.31,
+     "t1": 51.11
+    },
+    {
+     "kind": "icon",
+     "icon": "check",
+     "text": "Disengaged",
+     "tone": "green",
+     "t0": 52.41,
+     "t1": 55.21
+    },
+    {
+     "kind": "photo",
+     "src": "lac/shorts/pangong-3.jpg",
+     "caption": "Eastern Ladakh",
+     "credit": "Photo: Fulvio Spada from Torino, Italy / Wikimedia Commons (CC BY-SA 2.0)",
+     "t0": 54.35,
+     "t1": 57.55
+    },
+    {
+     "kind": "icon",
+     "icon": "question",
+     "text": "But questions were raised",
+     "tone": "orange",
+     "t0": 57.01,
+     "t1": 58.41
+    },
+    {
+     "kind": "icon",
+     "icon": "alert",
+     "text": "Critics' view",
+     "tone": "red",
+     "t0": 58.46,
+     "t1": 61.26
+    },
+    {
+     "kind": "flag",
+     "flag": "IN",
+     "text": "Areas India used to patrol",
+     "t0": 62.66,
+     "t1": 64.61
+    },
+    {
+     "kind": "icon",
+     "icon": "cross",
+     "text": "Grazing lands lost",
+     "sub": "Local herders",
+     "tone": "red",
+     "t0": 64.66,
+     "t1": 67.24
+    },
+    {
+     "kind": "icon",
+     "icon": "doc",
+     "text": "Government's answer",
+     "tone": "orange",
+     "t0": 67.29,
+     "t1": 68.82
+    },
+    {
+     "kind": "icon",
+     "icon": "clock",
+     "text": "Temporary",
+     "sub": "Can be reviewed",
+     "tone": "green",
+     "t0": 68.87,
+     "t1": 71.67
+    }
    ]
   },
   {
@@ -4191,6 +5162,98 @@
    "scenes": [
     "S41",
     "S42"
+   ],
+   "beats": [
+    {
+     "kind": "word",
+     "text": "MAINS CONCEPT",
+     "tone": "yellow",
+     "t0": 1.56,
+     "t1": 4.03
+    },
+    {
+     "kind": "word",
+     "text": "THE 3 D's",
+     "tone": "white",
+     "t0": 4.08,
+     "t1": 6.57
+    },
+    {
+     "kind": "word",
+     "text": "1 · DISENGAGEMENT",
+     "tone": "orange",
+     "t0": 6.62,
+     "t1": 8.25
+    },
+    {
+     "kind": "icon",
+     "icon": "soldier",
+     "text": "Pull back face-offs",
+     "tone": "orange",
+     "t0": 8.3,
+     "t1": 11.1
+    },
+    {
+     "kind": "word",
+     "text": "2 · DE-ESCALATION",
+     "tone": "yellow",
+     "t0": 12.34,
+     "t1": 15.14
+    },
+    {
+     "kind": "icon",
+     "icon": "shield",
+     "text": "Cut extra troops and weapons",
+     "tone": "orange",
+     "t0": 15.42,
+     "t1": 18.22
+    },
+    {
+     "kind": "word",
+     "text": "3 · DE-INDUCTION",
+     "tone": "red",
+     "t0": 19.48,
+     "t1": 22.23
+    },
+    {
+     "kind": "icon",
+     "icon": "trade",
+     "text": "Send them back home",
+     "tone": "orange",
+     "t0": 22.28,
+     "t1": 25.08
+    },
+    {
+     "kind": "photo",
+     "src": "lac/shorts/pangong-1.jpg",
+     "caption": "Eastern Ladakh",
+     "credit": "Photo: KennyOMG / Wikimedia Commons (CC BY-SA 4.0)",
+     "t0": 23.84,
+     "t1": 27.04
+    },
+    {
+     "kind": "icon",
+     "icon": "check",
+     "text": "Disengagement: done",
+     "tone": "green",
+     "t0": 25.9,
+     "t1": 28.7
+    },
+    {
+     "kind": "icon",
+     "icon": "cross",
+     "text": "De-escalation, de-induction: pending",
+     "tone": "red",
+     "t0": 30.75,
+     "t1": 32.48
+    },
+    {
+     "kind": "word",
+     "text": "THOUSANDS OF TROOPS STILL THERE",
+     "tone": "red",
+     "t0": 32.53,
+     "t1": 35.05
+    }
    ]
   },
   {
@@ -4200,6 +5263,111 @@
     "S43",
     "S44",
     "S45"
+   ],
+   "beats": [
+    {
+     "kind": "word",
+     "text": "SPECIAL REPRESENTATIVES",
+     "tone": "yellow",
+     "t0": 2.24,
+     "t1": 5.04
+    },
+    {
+     "kind": "flag",
+     "flag": "IN",
+     "text": "Ajit Doval",
+     "sub": "NSA",
+     "t0": 6.2,
+     "t1": 8.75
+    },
+    {
+     "kind": "flag",
+     "flag": "CN",
+     "text": "Wang Yi",
+     "sub": "Foreign Minister",
+     "t0": 8.8,
+     "t1": 10.91
+    },
+    {
+     "kind": "word",
+     "text": "24TH ROUND",
+     "sub": "Aug 2025 · New Delhi",
+     "tone": "white",
+     "t0": 10.96,
+     "t1": 13.76
+    },
+    {
+     "kind": "word",
+     "text": "'EARLY HARVEST'",
+     "tone": "yellow",
+     "t0": 15.92,
+     "t1": 17.37
+    },
+    {
+     "kind": "icon",
+     "icon": "doc",
+     "text": "Expert Group set up",
+     "tone": "orange",
+     "t0": 17.42,
+     "t1": 20.22
+    },
+    {
+     "kind": "icon",
+     "icon": "shield",
+     "text": "General Level Mechanisms",
+     "sub": "Eastern + Middle sector",
+     "tone": "orange",
+     "t0": 21.03,
+     "t1": 23.83
+    },
+    {
+     "kind": "icon",
+     "icon": "trade",
+     "text": "Border trade reopens",
+     "tone": "orange",
+     "t0": 26.21,
+     "t1": 29.01
+    },
+    {
+     "kind": "word",
+     "text": "25TH ROUND",
+     "sub": "Aug 2026 · Beijing",
+     "tone": "white",
+     "t0": 32.38,
+     "t1": 35.18
+    },
+    {
+     "kind": "photo",
+     "src": "lac/shorts/modixi-3.jpg",
+     "caption": "PM Modi and President Xi, 2025",
+     "credit": "Photo: Prime Minister's Office / Wikimedia Commons (GODL-India)",
+     "t0": 33.54,
+     "t1": 36.74
+    },
+    {
+     "kind": "stat",
+     "value": 8,
+     "label": "Point joint document",
+     "tone": "orange",
+     "decimals": 0,
+     "t0": 37.52,
+     "t1": 40.32
+    },
+    {
+     "kind": "word",
+     "text": "'EARLY AND SUBSTANTIAL HARVEST'",
+     "tone": "yellow",
+     "t0": 43.48,
+     "t1": 46.28
+    },
+    {
+     "kind": "icon",
+     "icon": "phone",
+     "text": "New military hotlines",
+     "tone": "green",
+     "t0": 49.28,
+     "t1": 51.32
+    }
    ]
   }
  ],
