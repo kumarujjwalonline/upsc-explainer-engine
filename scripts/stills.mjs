@@ -1,5 +1,6 @@
 // Quick layout check: renders still frames of chosen scenes.
 // usage: node scripts/stills.mjs job.json outdir S01:2.5,S30:8 [9:16]
+//   S22+:15 renders 15 s into S22 within the whole video (so cross-scene overlays like timeline bars show)
 import fs from 'node:fs';
 import path from 'node:path';
 import {bundle} from '@remotion/bundler';
@@ -10,10 +11,17 @@ fs.mkdirSync(outDir, {recursive: true});
 const browserExecutable = process.env.REMOTION_CHROME || (fs.existsSync('/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell') ? '/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell' : null);
 const serveUrl = await bundle({entryPoint: path.resolve('src/index.ts'), publicDir: path.resolve('public')});
 for (const item of list.split(',')) {
-  const [id, sec] = item.split(':');
-  const inputProps = {job, format, sceneIds: [id]};
+  const [rawId, sec] = item.split(':');
+  const whole = rawId.endsWith('+');
+  const id = rawId.replace('+', '');
+  const inputProps = whole ? {job, format} : {job, format, sceneIds: [id]};
   const composition = await selectComposition({serveUrl, id: 'Explainer', inputProps, chromiumOptions: {gl: 'swangle'}, browserExecutable});
-  const frame = Math.min(composition.durationInFrames - 1, Math.round(parseFloat(sec) * 30));
+  let off = 0;
+  if (whole) for (const s of job.scenes) {
+    if (s.id === id) break;
+    off += Math.max(15, Math.round((s.durationSec || 4) * 30));
+  }
+  const frame = Math.min(composition.durationInFrames - 1, off + Math.round(parseFloat(sec) * 30));
   const t0 = Date.now();
   await renderStill({composition, serveUrl, output: `${outDir}/${id}_${sec}.png`, inputProps, frame, chromiumOptions: {gl: 'swangle'}, browserExecutable, timeoutInMilliseconds: 240000});
   console.log(id, sec, ((Date.now() - t0) / 1000).toFixed(1) + 's');

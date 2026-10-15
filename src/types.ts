@@ -62,7 +62,11 @@ export type Scene = {
   sfx?: Sfx;
   compact?: boolean; // compact tracker for heavy numerical scenes
   visual: Visual;
+  broll?: import('./components/Broll').BrollSpec[]; // real photos / footage cut in over the scene (rules 19, 30)
 };
+
+// Rule 29: a timeline bar along the bottom while a series of events is explained.
+export type TimelineSpec = {title?: string; from: string; to: string; events: {date: string; label: string; scene: string; sec: number; also?: {scene: string; sec: number}[]}[]};
 
 export type Job = {
   id: string;
@@ -72,6 +76,7 @@ export type Job = {
   scenes: Scene[];
   shorts?: {id: string; hook: string; scenes: string[]}[];
   thumbnail?: {headline: string; sub?: string; scene?: string};
+  timelines?: TimelineSpec[];
 };
 
 export type RenderProps = {job: Job; format: Format; sceneIds?: string[]; hook?: string};

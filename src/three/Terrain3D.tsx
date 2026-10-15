@@ -25,7 +25,15 @@ export type TerrainLayer =
   | (Base & {kind: 'label'; at: LonLat; text: string; size?: number; sub?: string})
   | (Base & {kind: 'units'; pts: LonLat[]; stagger?: number; icon?: 'soldier' | 'block'})
   | (Base & {kind: 'arrow'; from: LonLat; to: LonLat; label?: string; dur?: number})
-  | (Base & {kind: 'stamp'; text: string; sub?: string; y?: number});
+  | (Base & {kind: 'stamp'; text: string; sub?: string; y?: number})
+  // Rule 30: numbers as motion graphics. 'measure' traces lines with a moving head while a
+  // counter runs up to the length; 'counter' and 'bars' are HUD panels in a corner of the frame.
+  | (Base & {kind: 'measure'; refs?: string[]; pts?: LonLat[]; value: number; unit?: string; label?: string; dur?: number; pos?: HudPos; width?: number; hud?: boolean})
+  | (Base & {kind: 'counter'; value: number; from?: number; unit?: string; label?: string; dur?: number; pos?: HudPos; decimals?: number})
+  | (Base & {kind: 'bars'; title?: string; items: {label: string; value: number; color?: string; text?: string}[]; unit?: string; stagger?: number; pos?: HudPos});
+
+type HudPos = 'tl' | 'tr' | 'bl' | 'br';
+const fmtNum = (v: number, d = 0) => v.toLocaleString('en-US', {minimumFractionDigits: d, maximumFractionDigits: d});
 
 export type TerrainSpec = {
   packs: string[];
@@ -354,6 +362,8 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
 
   // Globe ↔ terrain cross-fade by altitude.
   const terrainO = spec.globe ? interpolate(c.dist, [2700, 4200], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 1;
+  // Finer packs fade out on wide views, where their edge would show against the coarse pack.
+  const fineO = interpolate(c.dist, [550, 950], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const globeO = spec.globe ? interpolate(c.dist, [2500, 3900], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 0;
   const night = !!spec.night;
   const tint = night ? new THREE.Color(0.42, 0.5, 0.72) : new THREE.Color(1, 1, 1);
@@ -420,6 +430,7 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
 
   const els: React.ReactNode[] = [];
   const stamps: React.ReactNode[] = [];
+  const hud: {pos: HudPos; o: number; node: React.ReactNode}[] = [];
   layers.forEach((L, i) => {
     const o = vis(L);
     if (o <= 0.001) return;
@@ -597,6 +608,71 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
           ) : null}
         </g>,
       );
+    } else if (L.kind === 'measure') {
+      const lines = L.pts ? [L.pts] : (L.refs || []).map((r) => ((ref(r) as LonLat[]) || []).slice()).filter((x) => x.length > 1);
+      const lens = lines.map((pts) => pts.slice(1).reduce((a, p, k) => a + Math.hypot((p[0] - pts[k][0]) * fr.cos0, p[1] - pts[k][1]), 0));
+      const total = lens.reduce((a, b) => a + b, 0) || 1;
+      const dur = L.dur ?? 4;
+      const frac = interpolate(t, [L.t0 ?? 0, (L.t0 ?? 0) + dur], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic)});
+      const C = col(L);
+      const w = (L.width ?? 6) * u;
+      let acc = 0;
+      let head = null as null | [number, number, boolean];
+      lines.forEach((pts, k) => {
+        const local = Math.max(0, Math.min(1, (frac * total - acc) / lens[k]));
+        acc += lens[k];
+        if (local <= 0) return;
+        const r = pathOf(pts, local);
+        if (local < 1 || k === lines.length - 1) head = r.head;
+        els.push(
+          <g key={`${i}-${k}`} opacity={o}>
+            <path d={r.d} fill="none" stroke={C} strokeOpacity={0.3} strokeWidth={w * 3.4} strokeLinecap="round" strokeLinejoin="round" />
+            <path d={r.d} fill="none" stroke={C} strokeWidth={w} strokeLinecap="round" strokeLinejoin="round" />
+          </g>,
+        );
+      });
+      if (head && frac < 1) {
+        const [hx, hy] = head as [number, number, boolean];
+        const pulse = 0.5 + 0.5 * Math.sin(f * 0.5);
+        els.push(
+          <g key={`${i}-h`} opacity={o}>
+            <circle cx={hx} cy={hy} r={(16 + 10 * pulse) * u} fill={C} fillOpacity={0.25} />
+            <circle cx={hx} cy={hy} r={9 * u} fill="#FFFFFF" stroke={C} strokeWidth={4 * u} />
+          </g>,
+        );
+      }
+      if (L.hud !== false) hud.push({pos: L.pos || 'tl', o, node: <HudCounter key={i} u={u} color={C} value={L.value * frac} unit={L.unit} label={L.label} />});
+    } else if (L.kind === 'counter') {
+      const C = col(L);
+      const e = interpolate(t, [L.t0 ?? 0, (L.t0 ?? 0) + (L.dur ?? 1.6)], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
+      const v = (L.from ?? 0) + (L.value - (L.from ?? 0)) * e;
+      hud.push({pos: L.pos || 'tl', o, node: <HudCounter key={i} u={u} color={C} value={v} unit={L.unit} label={L.label} decimals={L.decimals} />});
+    } else if (L.kind === 'bars') {
+      const max = Math.max(...L.items.map((x) => x.value));
+      hud.push({
+        pos: L.pos || 'tl',
+        o,
+        node: (
+          <div key={i} style={{background: 'rgba(11,23,38,0.84)', border: `2px solid ${colors.border}`, borderRadius: 14 * u, padding: `${16 * u}px ${22 * u}px`, width: 520 * u, display: 'flex', flexDirection: 'column', gap: 12 * u}}>
+            {L.title ? <div style={{fontFamily: fonts.display, fontWeight: 700, fontSize: 24 * u, letterSpacing: 1.5 * u, color: colors.sub, textTransform: 'uppercase'}}>{L.title}</div> : null}
+            {L.items.map((it, k) => {
+              const e = interpolate(t, [(L.t0 ?? 0) + k * (L.stagger ?? 0.8), (L.t0 ?? 0) + k * (L.stagger ?? 0.8) + 1.2], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
+              const bc = it.color || toneColor(k === 0 ? 'accent' : 'warn');
+              return (
+                <div key={k} style={{display: 'flex', flexDirection: 'column', gap: 5 * u, opacity: Math.min(1, e * 3)}}>
+                  <div style={{display: 'flex', justifyContent: 'space-between', fontFamily: fonts.display, fontWeight: 700, fontSize: 25 * u, color: '#FFFFFF'}}>
+                    <span>{it.label}</span>
+                    <span style={{color: bc}}>{it.text ?? `${fmtNum(it.value * e)}${L.unit ? ' ' + L.unit : ''}`}</span>
+                  </div>
+                  <div style={{height: 16 * u, borderRadius: 8 * u, background: 'rgba(255,255,255,0.08)'}}>
+                    <div style={{height: '100%', width: `${(100 * it.value * e) / max}%`, borderRadius: 8 * u, background: bc}} />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        ),
+      });
     } else if (L.kind === 'stamp') {
       const e = spring({frame: f - (L.t0 ?? 0) * fps, fps, config: {damping: 9, mass: 0.8}});
       const sc = 1.6 - 0.6 * Math.min(1, e);
@@ -659,14 +735,15 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
         ) : null}
         {terrainO > 0.001
           ? data.packs.map((p, k) =>
-              geoms[k] ? (
+              geoms[k] && (k === 0 || fineO > 0.01) ? (
               <mesh key={p.name} geometry={geoms[k]!} position={[0, k * 0.004 * Math.max(1, c.dist / 50), 0]} renderOrder={k}>
                 <meshBasicMaterial
                   map={p.tex}
                   color={tint}
                   transparent={k > 0 || terrainO < 1}
-                  opacity={terrainO}
+                  opacity={terrainO * (k > 0 ? fineO : 1)}
                   alphaMap={k > 0 ? featherMap() : null}
+                  depthWrite={k === 0 || fineO > 0.5}
                   polygonOffset={k > 0}
                   polygonOffsetFactor={-2 * k}
                   polygonOffsetUnits={-4 * k}
@@ -683,6 +760,24 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
         {els}
       </svg>
       {stamps}
+      {(['tl', 'tr', 'bl', 'br'] as HudPos[]).map((p) => {
+        const items = hud.filter((h) => h.pos === p);
+        if (!items.length) return null;
+        const st: React.CSSProperties = {position: 'absolute', display: 'flex', flexDirection: 'column', gap: 14 * u, alignItems: p[1] === 'l' ? 'flex-start' : 'flex-end'};
+        if (p[0] === 't') st.top = 40 * u;
+        else st.bottom = 150 * u;
+        if (p[1] === 'l') st.left = 40 * u;
+        else st.right = 80 * u;
+        return (
+          <div key={p} style={st}>
+            {items.map((h, k) => (
+              <div key={k} style={{opacity: h.o, transform: `translateY(${(1 - h.o) * 20}px)`}}>
+                {h.node}
+              </div>
+            ))}
+          </div>
+        );
+      })}
       {/* vignette + right-edge blend into the tracker gutter */}
       <div style={{position: 'absolute', inset: 0, boxShadow: `inset 0 0 ${160 * u}px rgba(0,0,0,0.45)`, pointerEvents: 'none'}} />
       <div style={{position: 'absolute', right: 0, top: 0, bottom: 0, width: 60 * u, background: 'linear-gradient(to right, rgba(11,23,38,0), rgba(11,23,38,0.9))'}} />
@@ -694,3 +789,13 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
     </div>
   );
 };
+
+const HudCounter: React.FC<{u: number; color: string; value: number; unit?: string; label?: string; decimals?: number}> = ({u, color, value, unit, label, decimals}) => (
+  <div style={{background: 'rgba(11,23,38,0.84)', borderLeft: `${8 * u}px solid ${color}`, borderRadius: 12 * u, padding: `${12 * u}px ${24 * u}px ${14 * u}px`, display: 'flex', flexDirection: 'column'}}>
+    <div style={{fontFamily: fonts.display, fontWeight: 800, fontSize: 64 * u, lineHeight: 1.05, color: '#FFFFFF', fontVariantNumeric: 'tabular-nums'}}>
+      {fmtNum(value, decimals ?? 0)}
+      {unit ? <span style={{fontSize: 34 * u, color, marginLeft: 10 * u}}>{unit}</span> : null}
+    </div>
+    {label ? <div style={{fontFamily: fonts.display, fontWeight: 700, fontSize: 22 * u, letterSpacing: 1.5 * u, color: colors.sub, textTransform: 'uppercase', marginTop: 2 * u}}>{label}</div> : null}
+  </div>
+);

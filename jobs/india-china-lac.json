@@ -173,7 +173,7 @@
       "heading": 110
      },
      {
-      "t": 10.239999999999998,
+      "t": 5.66,
       "lon": 78.205,
       "lat": 34.752,
       "dist": 48,
@@ -181,7 +181,7 @@
       "heading": 130
      },
      {
-      "t": 14.04,
+      "t": 8.46,
       "lon": 84.5,
       "lat": 31.0,
       "dist": 2900,
@@ -199,7 +199,7 @@
       "label": "Galwan Valley",
       "t0": 2.4,
       "sub": "June 2020",
-      "out": 10.54
+      "out": 5.5600000000000005
      },
      {
       "kind": "stamp",
@@ -207,44 +207,23 @@
       "t0": 1.42,
       "tone": "accent",
       "sub": "Indian soldiers martyred",
-      "out": 10.34,
-      "y": 0.3
+      "out": 5.46,
+      "y": 0.12
      },
      {
-      "kind": "line",
-      "ref": "lac_west",
-      "dashed": true,
-      "color": "#F2C94C",
-      "width": 4,
-      "t0": 11.34,
-      "dur": 3.5
-     },
-     {
-      "kind": "line",
-      "ref": "lac_middle",
-      "dashed": true,
-      "color": "#F2C94C",
-      "width": 4,
-      "t0": 11.34,
-      "dur": 3.5
-     },
-     {
-      "kind": "line",
-      "ref": "lac_sikkim",
-      "dashed": true,
-      "color": "#F2C94C",
-      "width": 4,
-      "t0": 11.34,
-      "dur": 3.5
-     },
-     {
-      "kind": "line",
-      "ref": "lac_east",
-      "dashed": true,
-      "color": "#F2C94C",
-      "width": 4,
-      "t0": 11.34,
-      "dur": 3.5
+      "kind": "measure",
+      "refs": [
+       "lac_west",
+       "lac_middle",
+       "lac_sikkim",
+       "lac_east"
+      ],
+      "value": 3488,
+      "unit": "km",
+      "t0": 7.76,
+      "dur": 4.6,
+      "label": "Length of the LAC (India)",
+      "color": "#F2C94C"
      },
      {
       "kind": "label",
@@ -255,8 +234,7 @@
       "text": "LINE OF ACTUAL CONTROL",
       "t0": 12.7,
       "size": 36,
-      "tone": "warn",
-      "sub": "~3,488 km"
+      "tone": "warn"
      }
     ],
     "night": false,
@@ -422,52 +400,45 @@
     ],
     "layers": [
      {
-      "kind": "line",
-      "ref": "lac_west",
-      "color": "#FF8A1F",
-      "width": 5,
-      "t0": 0.5,
-      "dur": 3
+      "kind": "measure",
+      "refs": [
+       "lac_west",
+       "lac_middle",
+       "lac_sikkim",
+       "lac_east"
+      ],
+      "value": 3488,
+      "unit": "km",
+      "t0": 0.3,
+      "dur": 3.9,
+      "hud": false,
+      "color": "#FF8A1F"
      },
      {
-      "kind": "line",
-      "ref": "lac_middle",
-      "color": "#FF8A1F",
-      "width": 5,
-      "t0": 0.5,
-      "dur": 3
-     },
-     {
-      "kind": "line",
-      "ref": "lac_sikkim",
-      "color": "#FF8A1F",
-      "width": 5,
-      "t0": 0.5,
-      "dur": 3
-     },
-     {
-      "kind": "line",
-      "ref": "lac_east",
-      "color": "#FF8A1F",
-      "width": 5,
-      "t0": 0.5,
-      "dur": 3
-     },
-     {
-      "kind": "stamp",
-      "text": "3,488 km",
+      "kind": "bars",
+      "title": "Length of the LAC",
       "t0": 2.14,
-      "sub": "India's count",
-      "y": 0.18,
-      "tone": "accent"
+      "stagger": 5.24,
+      "unit": "km",
+      "items": [
+       {
+        "label": "India's count",
+        "value": 3488,
+        "color": "#FF8A1F"
+       },
+       {
+        "label": "China's count",
+        "value": 2000,
+        "color": "#E5383B"
+       }
+      ]
      },
      {
       "kind": "stamp",
-      "text": "~2,000 km",
-      "t0": 7.38,
-      "sub": "China's count",
-      "y": 0.5,
-      "tone": "bad"
+      "text": "Not even the length is agreed",
+      "t0": 11.13,
+      "y": 0.72,
+      "tone": "warn"
      }
     ]
    },
@@ -512,12 +483,16 @@
     ],
     "layers": [
      {
-      "kind": "line",
-      "ref": "lac_west",
-      "color": "#FF8A1F",
-      "width": 6,
+      "kind": "measure",
+      "refs": [
+       "lac_west"
+      ],
+      "value": 1597,
+      "unit": "km",
       "t0": 4.25,
-      "dur": 2.5
+      "dur": 4.74,
+      "label": "Western sector",
+      "color": "#FF8A1F"
      },
      {
       "kind": "label",
@@ -529,7 +504,7 @@
       "t0": 5.25,
       "size": 40,
       "tone": "accent",
-      "sub": "Ladakh · ~1,597 km"
+      "sub": "Ladakh"
      },
      {
       "kind": "pin",
@@ -589,12 +564,16 @@
       "t0": -1
      },
      {
-      "kind": "line",
-      "ref": "lac_middle",
-      "color": "#F2C94C",
-      "width": 6,
+      "kind": "measure",
+      "refs": [
+       "lac_middle"
+      ],
+      "value": 545,
+      "unit": "km",
       "t0": 0.74,
-      "dur": 2.5
+      "dur": 5.08,
+      "label": "Middle sector",
+      "color": "#F2C94C"
      },
      {
       "kind": "label",
@@ -606,7 +585,7 @@
       "t0": 1.74,
       "size": 40,
       "tone": "warn",
-      "sub": "Himachal & Uttarakhand · ~545 km"
+      "sub": "Himachal & Uttarakhand"
      },
      {
       "kind": "pin",
@@ -669,20 +648,17 @@
     ],
     "layers": [
      {
-      "kind": "line",
-      "ref": "lac_sikkim",
-      "color": "#3BB273",
-      "width": 6,
+      "kind": "measure",
+      "refs": [
+       "lac_sikkim",
+       "lac_east"
+      ],
+      "value": 1346,
+      "unit": "km",
       "t0": 0.98,
-      "dur": 1.2
-     },
-     {
-      "kind": "line",
-      "ref": "lac_east",
-      "color": "#3BB273",
-      "width": 6,
-      "t0": 1.78,
-      "dur": 2.5
+      "dur": 5.9399999999999995,
+      "label": "Eastern sector",
+      "color": "#3BB273"
      },
      {
       "kind": "label",
@@ -694,7 +670,7 @@
       "t0": 1.98,
       "size": 40,
       "tone": "good",
-      "sub": "Sikkim & Arunachal · ~1,346 km"
+      "sub": "Sikkim & Arunachal"
      }
     ]
    },
@@ -797,12 +773,14 @@
       "tone": "bad"
      },
      {
-      "kind": "stamp",
-      "text": "73 days",
-      "t0": 15.27,
-      "sub": "Standoff, 2017",
-      "y": 0.62,
-      "tone": "bad"
+      "kind": "counter",
+      "value": 73,
+      "t0": 14.969999999999999,
+      "label": "Doklam standoff, 2017",
+      "unit": "days",
+      "color": "#E5383B",
+      "dur": 1.2,
+      "pos": "tr"
      }
     ]
    },
@@ -899,6 +877,30 @@
       "t0": 6.84,
       "size": 30,
       "tone": "good"
+     },
+     {
+      "kind": "bars",
+      "title": "Sector lengths",
+      "t0": 9.99,
+      "stagger": 0.5,
+      "unit": "km",
+      "items": [
+       {
+        "label": "Western",
+        "value": 1597,
+        "color": "#FF8A1F"
+       },
+       {
+        "label": "Eastern",
+        "value": 1346,
+        "color": "#3BB273"
+       },
+       {
+        "label": "Middle",
+        "value": 545,
+        "color": "#F2C94C"
+       }
+      ]
      }
     ]
    },
@@ -1019,17 +1021,27 @@
     ],
     "layers": [
      {
-      "kind": "line",
-      "ref": "lac_east",
-      "color": "#FF8A1F",
-      "width": 6,
+      "kind": "measure",
+      "refs": [
+       "lac_east"
+      ],
+      "value": 890,
+      "unit": "km",
       "t0": 4.26,
       "dur": 8.14,
-      "label": "McMahon Line (1914)",
-      "labelAt": [
+      "label": "McMahon Line, 1914",
+      "color": "#FF8A1F"
+     },
+     {
+      "kind": "label",
+      "at": [
        93.0,
-       28.55
-      ]
+       28.75
+      ],
+      "text": "McMahon Line (1914)",
+      "t0": 12.4,
+      "size": 30,
+      "tone": "accent"
      },
      {
       "kind": "pin",
@@ -1050,12 +1062,6 @@
       "label": "Isu Razi Pass",
       "t0": 12.4,
       "side": "left"
-     },
-     {
-      "kind": "stamp",
-      "text": "~890 km",
-      "t0": 7.32,
-      "y": 0.68
      }
     ]
    },
@@ -1512,7 +1518,7 @@
       "text": "1957",
       "t0": 10.6,
       "sub": "India finds out",
-      "y": 0.2,
+      "y": 0.6,
       "out": 14.100000000000001
      },
      {
@@ -1520,7 +1526,7 @@
       "text": "1962",
       "t0": 14.3,
       "sub": "War",
-      "y": 0.2,
+      "y": 0.6,
       "tone": "bad"
      }
     ]
@@ -1563,7 +1569,7 @@
       "tone": "bad",
       "hatch": true,
       "t0": 4.69,
-      "label": "Occupied by China · ~38,000 sq km",
+      "label": "Aksai Chin",
       "labelAt": [
        79.3,
        35.15
@@ -1575,11 +1581,31 @@
       "tone": "bad",
       "hatch": true,
       "t0": 14.1,
-      "label": "Shaksgam Valley · 5,180 sq km",
+      "label": "Shaksgam Valley",
       "labelAt": [
        76.7,
        36.05
       ]
+     },
+     {
+      "kind": "counter",
+      "value": 38000,
+      "t0": 4.390000000000001,
+      "label": "Occupied by China",
+      "unit": "sq km",
+      "color": "#E5383B",
+      "dur": 1.4,
+      "pos": "tr"
+     },
+     {
+      "kind": "counter",
+      "value": 5180,
+      "t0": 15.879999999999999,
+      "label": "Shaksgam, ceded by Pakistan",
+      "unit": "sq km",
+      "color": "#E5383B",
+      "dur": 1.4,
+      "pos": "tr"
      },
      {
       "kind": "label",
@@ -1705,21 +1731,90 @@
    "durationSec": 18.71,
    "audio": "lac/S25.wav",
    "visual": {
-    "type": "timeline",
-    "heading": "How the LAC was born",
-    "nodes": [
+    "type": "terrain",
+    "packs": [
+     "himalaya"
+    ],
+    "cam": [
      {
-      "date": "1914",
-      "label": "Simla Convention, McMahon Line"
+      "t": 0,
+      "lon": 84.5,
+      "lat": 31.0,
+      "dist": 2900,
+      "tilt": 8,
+      "heading": 0
      },
      {
-      "date": "1959",
-      "label": "Zhou Enlai's letter first uses 'Line of Actual Control'",
+      "t": 18.71,
+      "lon": 84.5,
+      "lat": 31.0,
+      "dist": 2650,
+      "tilt": 12,
+      "heading": 4
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": 2.59,
+      "dur": 2.5
+     },
+     {
+      "kind": "line",
+      "ref": "lac_middle",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": 2.59,
+      "dur": 2.5
+     },
+     {
+      "kind": "line",
+      "ref": "lac_sikkim",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": 2.59,
+      "dur": 2.5
+     },
+     {
+      "kind": "line",
+      "ref": "lac_east",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 4,
+      "t0": 2.59,
+      "dur": 2.5
+     },
+     {
+      "kind": "label",
+      "at": [
+       84.0,
+       33.2
+      ],
+      "text": "LINE OF ACTUAL CONTROL",
+      "t0": 2.79,
+      "size": 36,
       "tone": "warn"
      },
      {
-      "date": "1962",
-      "label": "War; where the armies stopped became the LAC",
+      "kind": "stamp",
+      "text": "1959",
+      "t0": 5.65,
+      "sub": "Zhou Enlai's letter first uses the term",
+      "y": 0.6,
+      "out": 10.99
+     },
+     {
+      "kind": "stamp",
+      "text": "1962",
+      "t0": 11.19,
+      "sub": "Where the armies stopped became the LAC",
+      "y": 0.6,
       "tone": "bad"
      }
     ]
@@ -1732,24 +1827,86 @@
    "durationSec": 19.831,
    "audio": "lac/S26.wav",
    "visual": {
-    "type": "timeline",
-    "heading": "Keeping the peace",
-    "nodes": [
+    "type": "terrain",
+    "packs": [
+     "himalaya",
+     "ladakh",
+     "eladakh"
+    ],
+    "cam": [
      {
-      "date": "1993",
-      "label": "Peace and tranquillity along the LAC"
+      "t": 0,
+      "lon": 78.205,
+      "lat": 34.752,
+      "dist": 60,
+      "tilt": 50,
+      "heading": 90
      },
      {
-      "date": "1996",
-      "label": "No firing within 2 km of the LAC",
-      "tone": "accent"
+      "t": 19.831088,
+      "lon": 78.205,
+      "lat": 34.752,
+      "dist": 48,
+      "tilt": 55,
+      "heading": 110
+     }
+    ],
+    "layers": [
+     {
+      "kind": "line",
+      "ref": "lac_west",
+      "dashed": true,
+      "color": "#F2C94C",
+      "width": 5,
+      "t0": 0.2,
+      "dur": 1.2
      },
      {
-      "date": "2020",
-      "label": "Galwan: fought with sticks and stones",
+      "kind": "stamp",
+      "text": "1993",
+      "t0": 0.16,
+      "sub": "Agreement on peace and tranquillity",
+      "y": 0.1,
+      "out": 6.58
+     },
+     {
+      "kind": "stamp",
+      "text": "1996",
+      "t0": 6.78,
+      "sub": "No firing within 2 km of the LAC",
+      "y": 0.1,
+      "out": 14.370000000000001
+     },
+     {
+      "kind": "zone",
+      "at": [
+       78.205,
+       34.752
+      ],
+      "t0": 10.5,
+      "rx": 2.0,
+      "label": "2 km: no firing"
+     },
+     {
+      "kind": "counter",
+      "value": 2,
+      "t0": 10.3,
+      "label": "No-firing distance from the LAC",
+      "unit": "km",
+      "dur": 0.6,
+      "pos": "bl",
+      "out": 14.370000000000001
+     },
+     {
+      "kind": "stamp",
+      "text": "Sticks and stones",
+      "t0": 17.169999999999998,
+      "sub": "Galwan, 2020",
+      "y": 0.1,
       "tone": "bad"
      }
-    ]
+    ],
+    "exag": 1.6
    },
    "objective": "o3",
    "completes": [
@@ -2015,6 +2172,15 @@
      },
      {
       "kind": "stamp",
+      "text": "4",
+      "t0": 10.66,
+      "sub": "Deaths China admitted",
+      "out": 12.510000000000002,
+      "y": 0.08,
+      "tone": "bad"
+     },
+     {
+      "kind": "stamp",
       "text": "Since 1975",
       "t0": 12.71,
       "sub": "First deaths on the LAC",
@@ -2076,8 +2242,37 @@
       ],
       "text": "PANGONG TSO",
       "t0": 0.4,
-      "size": 40,
-      "sub": "~134 km long · about one-third with India"
+      "size": 40
+     },
+     {
+      "kind": "counter",
+      "value": 134,
+      "t0": 2.73,
+      "label": "Length of the lake",
+      "unit": "km",
+      "dur": 1.2,
+      "pos": "tr"
+     },
+     {
+      "kind": "bars",
+      "title": "Who holds the lake",
+      "t0": 6.59,
+      "stagger": 0.6,
+      "pos": "tr",
+      "items": [
+       {
+        "label": "India",
+        "value": 1,
+        "text": "about 1/3",
+        "color": "#3BB273"
+       },
+       {
+        "label": "China",
+        "value": 2,
+        "text": "about 2/3",
+        "color": "#E5383B"
+       }
+      ]
      },
      {
       "kind": "label",
@@ -2670,7 +2865,26 @@
       ],
       "t0": 0.4,
       "rx": 1.5,
-      "label": "Galwan · ~3 km"
+      "label": "Galwan buffer zone"
+     },
+     {
+      "kind": "counter",
+      "value": 3,
+      "t0": 2.42,
+      "label": "Galwan buffer zone",
+      "unit": "km",
+      "dur": 0.8,
+      "pos": "tr",
+      "out": 6.9799999999999995
+     },
+     {
+      "kind": "counter",
+      "value": 8,
+      "t0": 13.18,
+      "label": "Pangong north bank, Finger 3 to 8",
+      "unit": "km",
+      "dur": 0.8,
+      "pos": "tr"
      },
      {
       "kind": "stamp",
@@ -3536,10 +3750,21 @@
       "t0": 9.32
      },
      {
-      "kind": "stamp",
-      "text": "~3,488 km",
-      "t0": 2.8,
-      "y": 0.12,
+      "kind": "measure",
+      "refs": [
+       "lac_west",
+       "lac_middle",
+       "lac_sikkim",
+       "lac_east"
+      ],
+      "value": 3488,
+      "unit": "km",
+      "t0": 1.44,
+      "dur": 3.4,
+      "label": "Length of the LAC",
+      "hud": true,
+      "color": "#FFFFFF",
+      "width": 3,
       "out": 13.02
      },
      {
@@ -3827,5 +4052,141 @@
   "headline": "WHERE IS THE BORDER?",
   "sub": "LAC Explained",
   "scene": "S20"
- }
+ },
+ "timelines": [
+  {
+   "title": "Key dates",
+   "from": "S13",
+   "to": "S26",
+   "events": [
+    {
+     "date": "1865",
+     "label": "Johnson Line",
+     "scene": "S20",
+     "sec": 3.52
+    },
+    {
+     "date": "1899",
+     "label": "Macartney-MacDonald Line",
+     "scene": "S20",
+     "sec": 9.18
+    },
+    {
+     "date": "1914",
+     "label": "Simla Convention",
+     "scene": "S13",
+     "sec": 1.01
+    },
+    {
+     "date": "1957",
+     "label": "China road found",
+     "scene": "S22",
+     "sec": 10.6
+    },
+    {
+     "date": "1959",
+     "label": "'LAC' first used",
+     "scene": "S25",
+     "sec": 5.65
+    },
+    {
+     "date": "1962",
+     "label": "War",
+     "scene": "S22",
+     "sec": 14.3,
+     "also": [
+      {
+       "scene": "S25",
+       "sec": 11.19
+      }
+     ]
+    },
+    {
+     "date": "1963",
+     "label": "Shaksgam ceded",
+     "scene": "S23",
+     "sec": 10.98
+    },
+    {
+     "date": "1993",
+     "label": "Peace agreement",
+     "scene": "S26",
+     "sec": 0.16
+    },
+    {
+     "date": "1996",
+     "label": "No-firing pact",
+     "scene": "S26",
+     "sec": 6.78
+    }
+   ]
+  },
+  {
+   "title": "2020 to today",
+   "from": "S27",
+   "to": "S45",
+   "events": [
+    {
+     "date": "Apr 2020",
+     "label": "Troop build-up",
+     "scene": "S27",
+     "sec": 2.45
+    },
+    {
+     "date": "Jun 2020",
+     "label": "Galwan clash",
+     "scene": "S29",
+     "sec": 0.05
+    },
+    {
+     "date": "Jul 2020",
+     "label": "Galwan buffer",
+     "scene": "S35",
+     "sec": 0.76
+    },
+    {
+     "date": "Aug 2020",
+     "label": "Kailash Range",
+     "scene": "S32",
+     "sec": 0.3
+    },
+    {
+     "date": "Feb 2021",
+     "label": "Pangong pull-back",
+     "scene": "S35",
+     "sec": 8.76
+    },
+    {
+     "date": "Aug 2021",
+     "label": "Gogra",
+     "scene": "S36",
+     "sec": 0.65
+    },
+    {
+     "date": "Sep 2022",
+     "label": "Hot Springs",
+     "scene": "S36",
+     "sec": 5.65
+    },
+    {
+     "date": "Oct 2024",
+     "label": "Depsang, Demchok deal",
+     "scene": "S39",
+     "sec": 0.49
+    },
+    {
+     "date": "Aug 2025",
+     "label": "SR talks, 24th round",
+     "scene": "S43",
+     "sec": 10.54
+    },
+    {
+     "date": "Aug 2026",
+     "label": "SR talks, 25th round",
+     "scene": "S45",
+     "sec": 0.27
+    }
+   ]
+  }
+ ]
 }

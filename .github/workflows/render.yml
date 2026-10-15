@@ -9,11 +9,11 @@ on:
         description: "Job file name in jobs/ (without .json)"
         required: true
       mode:
-        description: "sample = 30 s voice check, full = video + Shorts + thumbnail, preview = no voice, half-size layout check, media = b-roll candidates from Wikimedia Commons (jobs/<job_id>.media.json)"
+        description: "sample = 30 s voice check, full = video + Shorts + thumbnail, preview = no voice, half-size layout check, media = b-roll candidates from Wikimedia Commons (jobs/<job_id>.media.json), chunked = render a voiced job (clips already in public/) split across many runners"
         required: true
         default: full
         type: choice
-        options: [sample, full, preview, media]
+        options: [sample, full, preview, media, chunked]
       callback_url:
         description: "n8n webhook to call when done (optional)"
         required: false
@@ -44,8 +44,80 @@ jobs:
           cd out && zip -qr media.zip media
           gh release create "media-${{ inputs.job_id }}-${{ github.run_number }}" --title "${{ inputs.job_id }} b-roll candidates" --notes "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" --prerelease media.zip media/report.json
 
+  # chunked: the long video is cut into 12 slices and each Short into 2, rendered in parallel
+  # (3D terrain renders at ~1.4 s a frame, so one runner would need 9+ hours), then joined.
+  plan:
+    if: inputs.mode == 'chunked'
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: m
+        run: |
+          echo "matrix=$(node -e "const j=require('./jobs/${{ inputs.job_id }}.json');const n={long:12};for(const s of j.shorts||[])n[s.id]=2;console.log(JSON.stringify({include:Object.entries(n).flatMap(([t,c])=>[...Array(c).keys()].map(k=>({target:t,k,n:c})))}))")" >> "$GITHUB_OUTPUT"
+
+  chunk:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package.json
+      - name: Install
+        run: |
+          npm install --no-audit --no-fund
+          npx remotion browser ensure
+      - name: Render slice
+        run: node scripts/render_chunk.mjs jobs/${{ inputs.job_id }}.json ${{ matrix.target }} ${{ matrix.k }} ${{ matrix.n }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chunk-${{ matrix.target }}-${{ matrix.k }}
+          path: out/chunks/*.mp4
+          retention-days: 3
+
+  merge:
+    needs: chunk
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package.json
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          npm install --no-audit --no-fund
+          npx remotion browser ensure
+          bash scripts/sfx.sh public/sfx
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: chunk-*
+          path: out/chunks
+          merge-multiple: true
+      - name: Join slices and add sound
+        run: bash scripts/merge_chunks.sh jobs/${{ inputs.job_id }}.json
+      - name: Thumbnail
+        run: node scripts/render.mjs jobs/${{ inputs.job_id }}.json thumb
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd out
+          gh release create "render-${{ inputs.job_id }}-${{ github.run_number }}" --title "${{ inputs.job_id }} (chunked)" --notes "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" --prerelease *.mp4 *.png
+
   render:
-    if: inputs.mode != 'media'
+    if: inputs.mode != 'media' && inputs.mode != 'chunked'
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:
