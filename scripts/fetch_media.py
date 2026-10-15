@@ -12,6 +12,8 @@ import os
 import re
 import subprocess
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -24,9 +26,20 @@ os.makedirs(out, exist_ok=True)
 report = []
 
 
+def fetch(url, timeout=60):
+    """GET with polite pacing and backoff on 429 (Commons rate-limits bursts from CI runners)."""
+    for wait in (0, 10, 30, 60, 120):
+        time.sleep(wait + 1.5)
+        try:
+            return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout).read()
+        except urllib.error.HTTPError as e:
+            if e.code != 429:
+                raise
+    raise RuntimeError("rate limited")
+
+
 def get(params):
-    req = urllib.request.Request(API + "?" + urllib.parse.urlencode({"format": "json", **params}), headers=UA)
-    return json.load(urllib.request.urlopen(req, timeout=40))
+    return json.loads(fetch(API + "?" + urllib.parse.urlencode({"format": "json", **params})))
 
 
 def clean(s):
@@ -66,7 +79,7 @@ for item in spec["queries"]:
         if not lic or "fair use" in lic.lower() or "non-free" in lic.lower() or GORE.search(title + " " + desc):
             continue
         w, h = info.get("width") or 0, info.get("height") or 0
-        if not item.get("file") and (w < 900 or h > w * 1.25):
+        if not item.get("file") and (w < (640 if kind == 'video' else 900) or h > w * 1.25):
             continue
         dest = os.path.join(out, f"{item['id']}-{got + 1}.{'mp4' if kind == 'video' else 'jpg'}")
         try:
@@ -77,16 +90,16 @@ for item in spec["queries"]:
                 d.sort(key=lambda x: abs((x.get("width") or 0) - 1280))
                 src = d[0]["src"] if d else info.get("url")
                 raw = dest + ".src"
-                with urllib.request.urlopen(urllib.request.Request(src, headers=UA), timeout=180) as r, open(raw, "wb") as f:
-                    f.write(r.read())
+                with open(raw, "wb") as f:
+                    f.write(fetch(src, 180))
                 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-t", "14", "-an", "-vf", "scale=1280:-2,fps=30",
                                 "-c:v", "libx264", "-preset", "veryfast", "-crf", "24", "-pix_fmt", "yuv420p", dest], check=True, timeout=300)
                 os.remove(raw)
             else:
                 src = info.get("thumburl") or info.get("url")
                 raw = dest + ".src"
-                with urllib.request.urlopen(urllib.request.Request(src, headers=UA), timeout=120) as r, open(raw, "wb") as f:
-                    f.write(r.read())
+                with open(raw, "wb") as f:
+                    f.write(fetch(src, 120))
                 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", "scale='min(1920,iw)':-2", "-q:v", "3", dest],
                                check=True, timeout=120)
                 os.remove(raw)
