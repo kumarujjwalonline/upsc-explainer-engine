@@ -1,0 +1,13 @@
+{
+  "inspect": ["File:How ST designs and manufactures semiconductor devices.webm"],
+  "broll": [
+    {"key": "die", "queries": ["integrated circuit die", "microprocessor die", "microchip macro"]},
+    {"key": "lithography", "queries": ["EUV lithography", "photolithography", "ASML"]},
+    {"key": "packaging", "queries": ["semiconductor packaging", "wire bonding", "chip packaging"]},
+    {"key": "circuitboard", "queries": ["smartphone motherboard", "printed circuit board"]},
+    {"key": "carfactory", "queries": ["car assembly line", "automobile factory"]},
+    {"key": "taiwan", "queries": ["TSMC", "Hsinchu Science Park", "Taipei skyline"]},
+    {"key": "india", "queries": ["Gandhinagar", "Dholera", "Indian engineers"]},
+    {"key": "datacenter", "queries": ["data center servers"]}
+  ]
+}

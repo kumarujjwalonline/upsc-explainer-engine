@@ -5,6 +5,8 @@ import type {BodySpec} from './three/Body3D';
 import type {MoleculeSpec} from './three/Molecule3D';
 import type {SourceSpec} from './visuals/SourceCard';
 import type {FootageSpec} from './visuals/Footage';
+import type {BrollSpec} from './visuals/Broll';
+import type {MontageSpec} from './visuals/Montage';
 
 export type Format = '16:9' | '9:16';
 export type LonLat = [number, number];
@@ -29,7 +31,8 @@ export type Visual =
   | ({type: 'body'} & BodySpec)
   | ({type: 'molecule'} & MoleculeSpec)
   | ({type: 'source'} & SourceSpec)
-  | ({type: 'footage'} & FootageSpec);
+  | ({type: 'footage'} & FootageSpec)
+  | ({type: 'montage'} & MontageSpec);
 
 export type IconName =
   | 'ship' | 'truck' | 'train' | 'plane' | 'person' | 'people' | 'robot' | 'code' | 'chat'
@@ -60,6 +63,7 @@ export type Scene = {
   sfx?: Sfx;
   compact?: boolean; // compact tracker for heavy numerical scenes
   visual: Visual;
+  broll?: BrollSpec; // full-frame real footage or photo before the graphic
 };
 
 export type Job = {
@@ -69,6 +73,8 @@ export type Job = {
   tracker: {title?: string; objectives: Objective[]};
   scenes: Scene[];
   shorts?: {id: string; hook: string; scenes: string[]}[];
+  // bottom timeline bars over stretches that narrate dated events (see components/TimelineBar)
+  timelines?: {title?: string; scenes: string[]; points: {date: string; label: string; scene: string; sec?: number}[]}[];
   thumbnail?: {headline: string; sub?: string; scene?: string};
 };
 

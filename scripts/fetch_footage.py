@@ -13,6 +13,8 @@ import os
 import re
 import subprocess
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -34,7 +36,13 @@ def relevant(query, text):
 path = sys.argv[1] if len(sys.argv) > 1 else "out/job.final.json"
 job = json.load(open(path, encoding="utf-8"))
 scenes = [s for s in job["scenes"] if (s.get("visual") or {}).get("type") == "footage"]
-if not scenes:
+# picked b-roll, named by Commons file title: scene "broll" and montage cuts with "media"
+picked = [(s["id"], s["broll"]) for s in job["scenes"] if (s.get("broll") or {}).get("title")]
+for s in job["scenes"]:
+    v = s.get("visual") or {}
+    if v.get("type") == "montage":
+        picked += [(f"{s['id']}-cut{i}", c["media"]) for i, c in enumerate(v.get("cuts", [])) if (c.get("media") or {}).get("title")]
+if not scenes and not picked:
     print("No footage scenes")
     sys.exit(0)
 out_dir = os.path.join("public", "jobs", job["id"], "footage")
@@ -46,9 +54,20 @@ used = set()
 report = []
 
 
+def fetch(url, headers=None, timeout=40):
+    """GET with a pause before each call and backoff on HTTP 429 (Commons rate-limits bursts)."""
+    for attempt in range(5):
+        try:
+            time.sleep(1.5)
+            return urllib.request.urlopen(urllib.request.Request(url, headers={**UA, **(headers or {})}), timeout=timeout).read()
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or attempt == 4:
+                raise
+            time.sleep(15 * (attempt + 1))
+
+
 def get_json(url, headers=None):
-    req = urllib.request.Request(url, headers={**UA, **(headers or {})})
-    return json.load(urllib.request.urlopen(req, timeout=40))
+    return json.loads(fetch(url, headers))
 
 
 def strip_html(s):
@@ -144,6 +163,54 @@ for s in scenes:
     v["credit"] = pick["credit"]
     print(s["id"], "->", v["src"], "|", pick["credit"])
     report.append({"scene": s["id"], "query": query, "found": True, "credit": pick["credit"], "page": pick["page"]})
+
+
+def commons_file(title):
+    """Download URL, kind and credit of one Commons file, by its exact title."""
+    params = {"action": "query", "format": "json", "titles": title, "prop": "videoinfo",
+              "viprop": "url|size|mime|extmetadata|derivatives", "viurlwidth": 1920}
+    p = next(iter((get_json(COMMONS + "?" + urllib.parse.urlencode(params)).get("query") or {}).get("pages", {}).values()))
+    info = (p.get("videoinfo") or [{}])[0]
+    mime = info.get("mime") or ""
+    meta = info.get("extmetadata") or {}
+    lic = strip_html((meta.get("LicenseShortName") or {}).get("value")) or "free licence"
+    artist = strip_html((meta.get("Artist") or {}).get("value"))[:60] or "Wikimedia Commons"
+    kind = "video" if mime.startswith("video") or mime in ("application/ogg",) else "photo"
+    # photos come from the standard 1920 px thumbnail: Commons throttles original-file downloads
+    url = info.get("thumburl") or info.get("url") if kind == "photo" else info.get("url")
+    if kind == "video":
+        derivs = [d for d in info.get("derivatives") or [] if 1280 <= (d.get("width") or 0) <= 1920 and "webm" in (d.get("type") or "") + (d.get("src") or "")]
+        derivs.sort(key=lambda d: -(d.get("width") or 0))
+        url = derivs[0]["src"] if derivs else url
+    return {"url": url, "kind": kind, "duration": float(info.get("duration") or 0),
+            "credit": f"{'Video' if kind == 'video' else 'Photo'}: {artist} / Wikimedia Commons ({lic})"}
+
+
+for key, b in picked:
+    try:
+        meta = commons_file(b["title"])
+        raw = os.path.join(tmp_dir, f"{key}.src")
+        with open(raw, "wb") as f:
+            f.write(fetch(meta["url"], timeout=180))
+        if meta["kind"] == "video":
+            dest = os.path.join(out_dir, f"{key}.mp4")
+            need = float(b.get("sec", 3)) + 1.5 if not key.count("-cut") else 4.0
+            start = ["-ss", str(b.get("from", 0))] if b.get("from") else []
+            loop = ["-stream_loop", "-1"] if meta["duration"] and meta["duration"] - float(b.get("from", 0)) < need else []
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *loop, *start, "-i", raw, "-t", f"{need:.2f}", "-an",
+                            "-vf", "scale=1920:-2,fps=30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "21",
+                            "-pix_fmt", "yuv420p", dest], check=True, timeout=300)
+        else:
+            dest = os.path.join(out_dir, f"{key}.jpg")
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", "scale='min(2400,iw)':-2", "-q:v", "3", dest], check=True, timeout=120)
+        b["src"] = dest.replace(os.path.join("public", ""), "", 1)
+        b["kind"] = meta["kind"]
+        b.setdefault("credit", meta["credit"])
+        print(key, "->", b["src"], "|", b["credit"])
+        report.append({"scene": key, "title": b["title"], "found": True, "credit": b["credit"]})
+    except Exception as e:  # noqa: BLE001
+        print(key, "b-roll failed", b.get("title"), e)
+        report.append({"scene": key, "title": b.get("title"), "found": False, "error": str(e)[:200]})
 
 json.dump(job, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 json.dump(report, open(os.path.join("out", "footage-report.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)

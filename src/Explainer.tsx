@@ -1,5 +1,5 @@
 import React, {useMemo} from 'react';
-import {AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame, interpolate} from 'remotion';
+import {AbsoluteFill, Audio, Easing, Sequence, staticFile, useCurrentFrame, useVideoConfig, interpolate} from 'remotion';
 import {colors, fonts, FPS, layout} from './theme';
 import type {Job, RenderProps, Scene} from './types';
 import {Tracker, trackerStates} from './components/Tracker';
@@ -7,6 +7,9 @@ import {SceneVisual} from './visuals/SceneVisual';
 import {BoxContext} from './components/Box';
 import {Caption} from './components/Caption';
 import {Backdrop} from './components/Backdrop';
+import {BrollLayer, brollFrames} from './visuals/Broll';
+import {Montage} from './visuals/Montage';
+import {TimelineBar} from './components/TimelineBar';
 
 export const sceneFrames = (s: Scene) => Math.max(15, Math.round((s.durationSec || 4) * FPS));
 
@@ -31,28 +34,61 @@ export const Explainer: React.FC<RenderProps> = ({job, format, sceneIds, hook}) 
     return {s, from, dur};
   });
 
+  // scenes under a bottom timeline give up the strip it needs, so captions sit above it
+  const tlScenes = new Set((job.timelines || []).flatMap((t) => t.scenes));
+  const tlBox = {...L.canvas, h: L.canvas.h - 70};
+
   return (
     <AbsoluteFill style={{backgroundColor: colors.bg, fontFamily: fonts.body, color: colors.text}}>
       <Backdrop />
-      {seqs.map(({s, from, dur}) => (
-        <Sequence key={s.id} from={from} durationInFrames={dur} name={s.id}>
-          <BoxContext.Provider value={L.canvas}>
-            <SceneVisual scene={s} format={format} />
-            {s.onScreen ? <Caption text={s.onScreen} /> : null}
-          </BoxContext.Provider>
-          {s.audio ? <Audio src={staticFile(s.audio)} /> : null}
-          {s.sfx ? <Audio src={staticFile(`sfx/${s.sfx}.wav`)} volume={0.55} /> : null}
-          <Tracker
-            title={job.tracker.title}
-            objectives={job.tracker.objectives}
-            state={states[s.id]}
-            box={L.tracker}
-            format={format}
-            compact={!!s.compact}
-            durationInFrames={dur}
-          />
-        </Sequence>
-      ))}
+      {seqs.map(({s, from, dur}) => {
+        const bf = brollFrames(s.broll, FPS, dur);
+        const montage = s.visual.type === 'montage' ? s.visual : null;
+        return (
+          <Sequence key={s.id} from={from} durationInFrames={dur} name={s.id}>
+            <Sequence from={bf} durationInFrames={dur - bf} name={`${s.id} graphic`}>
+              <SceneMotion origin={`${L.canvas.x + L.canvas.w / 2}px ${L.canvas.y + L.canvas.h / 2}px`}>
+                <BoxContext.Provider value={tlScenes.has(s.id) ? tlBox : L.canvas}>
+                  <SceneVisual scene={s} format={format} />
+                  {s.onScreen && !montage ? <Caption text={s.onScreen} /> : null}
+                </BoxContext.Provider>
+              </SceneMotion>
+            </Sequence>
+            {s.audio ? <Audio src={staticFile(s.audio)} /> : null}
+            {s.sfx ? <Audio src={staticFile(`sfx/${s.sfx}.wav`)} volume={0.55} /> : null}
+            <Tracker
+              title={job.tracker.title}
+              objectives={job.tracker.objectives}
+              state={states[s.id]}
+              box={L.tracker}
+              format={format}
+              compact={!!s.compact}
+              durationInFrames={dur}
+            />
+            {bf && s.broll ? <BrollLayer b={s.broll} frames={bf} /> : null}
+            {montage ? <Montage {...montage} /> : null}
+          </Sequence>
+        );
+      })}
+      {(job.timelines || []).map((t, k) => {
+        const inRange = seqs.filter(({s}) => t.scenes.includes(s.id));
+        if (!inRange.length) return null;
+        const start = inRange[0].from;
+        const end = inRange[inRange.length - 1].from + inRange[inRange.length - 1].dur;
+        const order = job.scenes.map((s) => s.id);
+        const firstIdx = order.indexOf(inRange[0].s.id);
+        const points = t.points.map((p) => {
+          const q = seqs.find(({s}) => s.id === p.scene);
+          // a point narrated in a scene this render leaves out counts as already covered or still to come
+          const at = q ? q.from - start + Math.round((p.sec || 0) * FPS) : order.indexOf(p.scene) < firstIdx ? -1 : 1e9;
+          return {date: p.date, label: p.label, at};
+        });
+        return (
+          <Sequence key={`tl${k}`} from={start} durationInFrames={end - start} name={`timeline ${k}`}>
+            <TimelineBar points={points} format={format} />
+          </Sequence>
+        );
+      })}
       {hook ? <HookBanner text={hook} /> : null}
     </AbsoluteFill>
   );
@@ -82,6 +118,19 @@ const HookBanner: React.FC<{text: string}> = ({text}) => {
       >
         {text}
       </div>
+    </AbsoluteFill>
+  );
+};
+
+// Every scene's graphic eases in (slight zoom and fade) and then drifts slowly, so no frame sits still.
+const SceneMotion: React.FC<{origin: string; children: React.ReactNode}> = ({origin, children}) => {
+  const f = useCurrentFrame();
+  const {durationInFrames} = useVideoConfig();
+  const enter = interpolate(f, [0, 9], [0, 1], {extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
+  const drift = interpolate(f, [0, durationInFrames], [0, 0.02], {extrapolateRight: 'clamp'});
+  return (
+    <AbsoluteFill style={{opacity: enter, transform: `scale(${0.965 + 0.035 * enter + drift})`, transformOrigin: origin}}>
+      {children}
     </AbsoluteFill>
   );
 };
