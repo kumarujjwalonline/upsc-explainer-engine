@@ -9,6 +9,7 @@ import {Caption} from './components/Caption';
 import {Backdrop} from './components/Backdrop';
 import {BrollLayer, brollFrames} from './visuals/Broll';
 import {Montage} from './visuals/Montage';
+import {TimelineBar} from './components/TimelineBar';
 
 export const sceneFrames = (s: Scene) => Math.max(15, Math.round((s.durationSec || 4) * FPS));
 
@@ -33,6 +34,10 @@ export const Explainer: React.FC<RenderProps> = ({job, format, sceneIds, hook}) 
     return {s, from, dur};
   });
 
+  // scenes under a bottom timeline give up the strip it needs, so captions sit above it
+  const tlScenes = new Set((job.timelines || []).flatMap((t) => t.scenes));
+  const tlBox = {...L.canvas, h: L.canvas.h - 70};
+
   return (
     <AbsoluteFill style={{backgroundColor: colors.bg, fontFamily: fonts.body, color: colors.text}}>
       <Backdrop />
@@ -43,7 +48,7 @@ export const Explainer: React.FC<RenderProps> = ({job, format, sceneIds, hook}) 
           <Sequence key={s.id} from={from} durationInFrames={dur} name={s.id}>
             <Sequence from={bf} durationInFrames={dur - bf} name={`${s.id} graphic`}>
               <SceneMotion origin={`${L.canvas.x + L.canvas.w / 2}px ${L.canvas.y + L.canvas.h / 2}px`}>
-                <BoxContext.Provider value={L.canvas}>
+                <BoxContext.Provider value={tlScenes.has(s.id) ? tlBox : L.canvas}>
                   <SceneVisual scene={s} format={format} />
                   {s.onScreen && !montage ? <Caption text={s.onScreen} /> : null}
                 </BoxContext.Provider>
@@ -62,6 +67,25 @@ export const Explainer: React.FC<RenderProps> = ({job, format, sceneIds, hook}) 
             />
             {bf && s.broll ? <BrollLayer b={s.broll} frames={bf} /> : null}
             {montage ? <Montage {...montage} /> : null}
+          </Sequence>
+        );
+      })}
+      {(job.timelines || []).map((t, k) => {
+        const inRange = seqs.filter(({s}) => t.scenes.includes(s.id));
+        if (!inRange.length) return null;
+        const start = inRange[0].from;
+        const end = inRange[inRange.length - 1].from + inRange[inRange.length - 1].dur;
+        const order = job.scenes.map((s) => s.id);
+        const firstIdx = order.indexOf(inRange[0].s.id);
+        const points = t.points.map((p) => {
+          const q = seqs.find(({s}) => s.id === p.scene);
+          // a point narrated in a scene this render leaves out counts as already covered or still to come
+          const at = q ? q.from - start + Math.round((p.sec || 0) * FPS) : order.indexOf(p.scene) < firstIdx ? -1 : 1e9;
+          return {date: p.date, label: p.label, at};
+        });
+        return (
+          <Sequence key={`tl${k}`} from={start} durationInFrames={end - start} name={`timeline ${k}`}>
+            <TimelineBar points={points} format={format} />
           </Sequence>
         );
       })}

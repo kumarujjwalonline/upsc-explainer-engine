@@ -40,26 +40,60 @@
    "objective": "o1",
    "completes": [],
    "visual": {
-    "type": "compare",
-    "left": {
-     "heading": "Chip design engineers",
-     "items": [
-      "~20% of the world",
-      "are in India"
-     ],
-     "tone": "good"
-    },
-    "right": {
-     "heading": "Commercial chip fabs",
-     "items": [
-      "0 running in India",
-      "first one: under construction"
-     ],
-     "tone": "bad"
-    }
+    "type": "montage",
+    "cuts": [
+     {
+      "at": 0,
+      "kind": "media",
+      "media": {
+       "title": "File:Semiconductor clean room.jpg"
+      }
+     },
+     {
+      "at": 0.9,
+      "kind": "big",
+      "value": "20%",
+      "label": "of the world's chip design engineers",
+      "tone": "good"
+     },
+     {
+      "at": 2.7,
+      "kind": "title",
+      "label": "…are in |INDIA",
+      "tone": "good"
+     },
+     {
+      "at": 3.9,
+      "kind": "media",
+      "media": {
+       "title": "File:5C2A5953R - 49913961083 – Silicon Wafer 20200519.jpg"
+      },
+      "label": "Yet…"
+     },
+     {
+      "at": 5.5,
+      "kind": "big",
+      "value": "0",
+      "label": "commercial chip fabs running",
+      "tone": "bad"
+     },
+     {
+      "at": 7.1,
+      "kind": "media",
+      "media": {
+       "title": "File:CNE cleanroom 1.jpg"
+      }
+     },
+     {
+      "at": 7.9,
+      "kind": "title",
+      "label": "Why|?",
+      "tone": "accent",
+      "sfx": "hit"
+     }
+    ]
    },
-   "onScreen": "20% of the world's chip designers… 0 commercial fabs. Why?",
-   "sfx": "hit"
+   "onScreen": "20% of the world's chip designers… 0 commercial fabs. Why?"
   },
   {
    "id": "S01",
@@ -77,7 +111,12 @@
     "why": "Shows how a chip shortage stopped car production"
    },
    "onScreen": "Sept 2021: Maruti cuts output ~60% (chip shortage)",
-   "sfx": "tick"
+   "sfx": "tick",
+   "broll": {
+    "title": "File:002 Production line - car assembly line in General Motors Manufacturing Poland - Gliwice, Poland.jpg",
+    "caption": "2021: car lines stop for want of chips",
+    "sec": 3
+   }
   },
   {
    "id": "S02",
@@ -93,7 +132,12 @@
      "smaller than your fingernail"
     ]
    },
-   "sfx": "whoosh"
+   "sfx": "whoosh",
+   "broll": {
+    "title": "File:Placa móvil.JPG",
+    "caption": "The chips inside your phone",
+    "sec": 3
+   }
   },
   {
    "id": "S03",
@@ -174,7 +218,12 @@
     ]
    },
    "onScreen": "Silicon + doping = controllable current",
-   "compact": true
+   "compact": true,
+   "broll": {
+    "title": "File:Silicon wafer researcher.jpg",
+    "caption": "Silicon wafer",
+    "sec": 3
+   }
   },
   {
    "id": "S06",
@@ -203,7 +252,12 @@
     }
    },
    "onScreen": "Transistor = tiny switch · ON = 1 · OFF = 0",
-   "sfx": "tick"
+   "sfx": "tick",
+   "broll": {
+    "title": "File:AMD3101E.jpg",
+    "caption": "A chip die under the microscope",
+    "sec": 3
+   }
   },
   {
    "id": "S07",
@@ -221,7 +275,12 @@
    },
    "onScreen": "Chip = integrated circuit",
    "sfx": "ping",
-   "compact": true
+   "compact": true,
+   "broll": {
+    "title": "File:07R01.jpg",
+    "caption": "Integrated circuit",
+    "sec": 3
+   }
   },
   {
    "id": "S08",
@@ -256,7 +315,12 @@
     "title": "Just How Small Is \"Nano\"?",
     "why": "Gives the width of a human hair in nanometres"
    },
-   "onScreen": "1 nm = 10⁻⁹ m · Human hair ≈ 80,000–100,000 nm"
+   "onScreen": "1 nm = 10⁻⁹ m · Human hair ≈ 80,000–100,000 nm",
+   "broll": {
+    "title": "File:IMaGe 31072R – Silicon Wafer 20120926.jpg",
+    "caption": "Billions of transistors on one wafer",
+    "sec": 3
+   }
   },
   {
    "id": "S10",
@@ -306,6 +370,11 @@
      "faster",
      "less power"
     ]
+   },
+   "broll": {
+    "title": "File:BalticServers data center.jpg",
+    "caption": "Faster chips, less power",
+    "sec": 3
    }
   },
   {
@@ -410,7 +479,12 @@
      "tone": "good"
     }
    },
-   "onScreen": "TSMC 2 nm: volume production Q4 2025 · Tata Dholera fab: 28–110 nm"
+   "onScreen": "TSMC 2 nm: volume production Q4 2025 · Tata Dholera fab: 28–110 nm",
+   "broll": {
+    "title": "File:TSMC Fab 18 May 2025.jpg",
+    "caption": "TSMC Fab 18, Tainan (Taiwan)",
+    "sec": 3
+   }
   },
   {
    "id": "S16",
@@ -501,7 +575,12 @@
      }
     ]
    },
-   "onScreen": "Fab / foundry · wafer · photolithography"
+   "onScreen": "Fab / foundry · wafer · photolithography",
+   "broll": {
+    "title": "File:Semiconductor clean room.jpg",
+    "caption": "Inside a fab: the cleanroom",
+    "sec": 3.5
+   }
   },
   {
    "id": "S19",
@@ -519,7 +598,12 @@
     "why": "Investment, partner and capacity of the Dholera fab"
    },
    "onScreen": "Tata Dholera fab ≈ ₹91,000 crore",
-   "sfx": "ping"
+   "sfx": "ping",
+   "broll": {
+    "title": "File:Clean room.jpg",
+    "caption": "Photolithography room",
+    "sec": 3
+   }
   },
   {
    "id": "S20",
@@ -550,7 +634,12 @@
      }
     ]
    },
-   "onScreen": "ATMP = Assembly · Testing · Marking · Packaging"
+   "onScreen": "ATMP = Assembly · Testing · Marking · Packaging",
+   "broll": {
+    "title": "File:Variations of the DIP package.jpg",
+    "caption": "Packaged chips",
+    "sec": 3
+   }
   },
   {
    "id": "S21",
@@ -578,7 +667,11 @@
      "tone": "good"
     }
    },
-   "onScreen": "ATMP = the process · OSAT = ATMP as an outsourced service"
+   "onScreen": "ATMP = the process · OSAT = ATMP as an outsourced service",
+   "broll": {
+    "title": "File:SB80486DX2-50.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S22",
@@ -887,7 +980,12 @@
     }
    },
    "onScreen": "2019: ~92% of <10 nm logic capacity in Taiwan",
-   "sfx": "hit"
+   "sfx": "hit",
+   "broll": {
+    "title": "File:TSMC Fab 6 front May 2025.jpg",
+    "caption": "TSMC, Taiwan",
+    "sec": 3
+   }
   },
   {
    "id": "S28",
@@ -921,7 +1019,11 @@
      }
     ]
    },
-   "onScreen": "One region → global risk · chips = national security"
+   "onScreen": "One region → global risk · chips = national security",
+   "broll": {
+    "title": "File:TSMC Global R＆D Center at night.jpg",
+    "sec": 3
+   }
   },
   {
    "id": "S29",
@@ -1072,7 +1174,11 @@
     ]
    },
    "onScreen": "Up to 50% fiscal support · DLI scheme for chip design",
-   "sfx": "ping"
+   "sfx": "ping",
+   "broll": {
+    "title": "File:AMIS.JPG",
+    "sec": 3
+   }
   },
   {
    "id": "S32",
@@ -1474,6 +1580,11 @@
      "power",
      "abroad"
     ]
+   },
+   "broll": {
+    "title": "File:ASML air freight containers in Tainan May 2025 2.jpg",
+    "caption": "Chip-making machines arrive from abroad",
+    "sec": 3
    }
   },
   {
@@ -1494,6 +1605,11 @@
      "experienced fab engineers",
      "huge scale"
     ]
+   },
+   "broll": {
+    "title": "File:ASML headquarters Veldhoven.jpg",
+    "caption": "ASML, Netherlands",
+    "sec": 3
    }
   },
   {
@@ -1651,6 +1767,64 @@
     "S40",
     "S41",
     "S42"
+   ]
+  }
+ ],
+ "timelines": [
+  {
+   "title": "India's chip journey",
+   "scenes": [
+    "S30",
+    "S31",
+    "S32",
+    "S33",
+    "S34",
+    "S35",
+    "S36",
+    "S37",
+    "S38",
+    "S39",
+    "S40",
+    "S41",
+    "S42"
+   ],
+   "points": [
+    {
+     "date": "Dec 2021",
+     "label": "ISM approved, ₹76,000 crore",
+     "scene": "S30",
+     "sec": 4
+    },
+    {
+     "date": "Sept 2025",
+     "label": "Vikram 3201 shown",
+     "scene": "S38",
+     "sec": 13
+    },
+    {
+     "date": "Feb 2026",
+     "label": "Micron Sanand opens",
+     "scene": "S36",
+     "sec": 4
+    },
+    {
+     "date": "May 2026",
+     "label": "Crystal Matrix, Suchi approved",
+     "scene": "S35",
+     "sec": 14
+    },
+    {
+     "date": "July 2026",
+     "label": "ISM 2.0 approved",
+     "scene": "S40",
+     "sec": 5
+    },
+    {
+     "date": "Sept 2026",
+     "label": "5 packaging plants in production",
+     "scene": "S37",
+     "sec": 2
+    }
    ]
   }
  ],

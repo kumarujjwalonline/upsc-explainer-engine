@@ -73,6 +73,8 @@ export type Job = {
   tracker: {title?: string; objectives: Objective[]};
   scenes: Scene[];
   shorts?: {id: string; hook: string; scenes: string[]}[];
+  // bottom timeline bars over stretches that narrate dated events (see components/TimelineBar)
+  timelines?: {title?: string; scenes: string[]; points: {date: string; label: string; scene: string; sec?: number}[]}[];
   thumbnail?: {headline: string; sub?: string; scene?: string};
 };
 
