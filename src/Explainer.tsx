@@ -7,6 +7,7 @@ import {SceneVisual} from './visuals/SceneVisual';
 import {BoxContext} from './components/Box';
 import {Caption} from './components/Caption';
 import {Backdrop} from './components/Backdrop';
+import {EraBar} from './components/EraBar';
 
 export const sceneFrames = (s: Scene) => Math.max(15, Math.round((s.durationSec || 4) * FPS));
 
@@ -34,12 +35,20 @@ export const Explainer: React.FC<RenderProps> = ({job, format, sceneIds, hook}) 
   return (
     <AbsoluteFill style={{backgroundColor: colors.bg, fontFamily: fonts.body, color: colors.text}}>
       <Backdrop />
-      {seqs.map(({s, from, dur}) => (
+      {seqs.map(({s, from, dur}, k) => (
         <Sequence key={s.id} from={from} durationInFrames={dur} name={s.id}>
           <BoxContext.Provider value={L.canvas}>
             <SceneVisual scene={s} format={format} />
             {s.onScreen ? <Caption text={s.onScreen} /> : null}
           </BoxContext.Provider>
+          {s.era && job.eras?.[s.era.set] ? (
+            <EraBar
+              periods={job.eras[s.era.set]}
+              state={s.era}
+              format={format}
+              visited={seqs.slice(0, k).flatMap((q) => (q.s.era && q.s.era.set === s.era!.set ? q.s.era.steps.map((x) => x[1]) : []))}
+            />
+          ) : null}
           {s.audio ? <Audio src={staticFile(s.audio)} /> : null}
           {s.sfx ? <Audio src={staticFile(`sfx/${s.sfx}.wav`)} volume={0.55} /> : null}
           <Tracker

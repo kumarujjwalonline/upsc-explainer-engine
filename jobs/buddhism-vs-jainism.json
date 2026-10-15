@@ -259,7 +259,7 @@
      ]
     }
    },
-   "onScreen": "Spread across Asia… vanished from home · Never left home… never vanished",
+   "onScreen": "Spread across Asia · vanished from home",
    "sfx": "hit"
   },
   {
@@ -356,7 +356,7 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "Census 2011: ~84 lakh Buddhists (~0.7%) · ~45 lakh Jains (~0.4%)",
+   "onScreen": "Census 2011: Buddhists ~0.7% · Jains ~0.4%",
    "sfx": "tick"
   },
   {
@@ -514,11 +514,11 @@
      {
       "kind": "zone",
       "at": [
-       85.4,
-       25.0
+       85.7,
+       24.55
       ],
       "rx": 120,
-      "ry": 80,
+      "ry": 70,
       "label": "Magadha",
       "t0": 3.92
      },
@@ -569,7 +569,16 @@
     "drift": 0.3
    },
    "onScreen": "6th century BCE · Gangetic plain",
-   "sfx": "whoosh"
+   "sfx": "whoosh",
+   "era": {
+    "set": "buddha",
+    "steps": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
   },
   {
    "id": "S05",
@@ -579,27 +588,20 @@
    "objective": "o1",
    "completes": [],
    "visual": {
-    "type": "flow",
-    "heading": "The Shramana tradition",
-    "steps": [
-     {
-      "label": "Leave home",
-      "sub": "renounce family life",
-      "icon": "home"
-     },
-     {
-      "label": "Tapas & meditation",
-      "sub": "seek the truth",
-      "icon": "brain"
-     },
-     {
-      "label": "Buddha & Mahavira",
-      "sub": "both came from it",
-      "icon": "people"
-     }
-    ]
+    "type": "footage",
+    "query": "Buddhist monks walking",
+    "caption": "Renunciant seekers: the Shramana way"
    },
-   "onScreen": "Shramana tradition = renunciant seekers"
+   "onScreen": "Shramana tradition = renunciant seekers",
+   "era": {
+    "set": "buddha",
+    "steps": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
   },
   {
    "id": "S06",
@@ -745,7 +747,28 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "Buddha: Lumbini → Bodh Gaya → Sarnath → Kushinagar (traditional dates 563–483 BCE)"
+   "onScreen": "Buddha: Lumbini → Bodh Gaya → Sarnath → Kushinagar",
+   "era": {
+    "set": "buddha",
+    "steps": [
+     [
+      0,
+      0
+     ],
+     [
+      4.58,
+      1
+     ],
+     [
+      5.8,
+      2
+     ],
+     [
+      11.5,
+      3
+     ]
+    ]
+   }
   },
   {
    "id": "S07",
@@ -848,7 +871,7 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "Mahavira: 24th Tirthankara · Kundagrama (Vaishali) → Pavapuri · 23rd: Parshvanatha · 1st: Rishabhanatha"
+   "onScreen": "Mahavira: 24th Tirthankara · Kundagrama → Pavapuri"
   },
   {
    "id": "S08",
@@ -897,7 +920,7 @@
      "No creator God at the centre"
     ]
    },
-   "onScreen": "Common: reject Vedic authority · oppose animal sacrifice · karma & rebirth · no creator God"
+   "onScreen": "What both share"
   },
   {
    "id": "S10",
@@ -979,7 +1002,7 @@
     "title": "Thinkers, Beliefs and Buildings",
     "why": "the entire world is animated: even stones, rocks and water have life"
    },
-   "onScreen": "Jainism: jiva (soul) in everything, even stones and water"
+   "onScreen": "Jainism: a soul (jiva) even in stones and water"
   },
   {
    "id": "S13",
@@ -1009,7 +1032,7 @@
      }
     ]
    },
-   "onScreen": "Buddhism: anatta (no permanent self) · anicca (impermanence) · dukkha (suffering)"
+   "onScreen": "Buddhism: anatta · anicca · dukkha"
   },
   {
    "id": "S14",
@@ -1088,7 +1111,7 @@
      "Brahmacharya"
     ]
    },
-   "onScreen": "Jainism: Triratna = Right Faith · Right Knowledge · Right Conduct → 5 vows"
+   "onScreen": "Jainism: Triratna + 5 vows"
   },
   {
    "id": "S17",
@@ -1110,7 +1133,7 @@
      }
     ]
    },
-   "onScreen": "4 vows: Parshvanatha · 5th (Brahmacharya): added by Mahavira",
+   "onScreen": "5th vow (Brahmacharya): added by Mahavira",
    "sfx": "ping",
    "compact": true
   },
@@ -1168,7 +1191,7 @@
      }
     ]
    },
-   "onScreen": "Anekantavada (many-sidedness) · Syadvada (conditional statements)"
+   "onScreen": "Anekantavada · Syadvada"
   },
   {
    "id": "S20",
@@ -1213,11 +1236,20 @@
    "objective": "o3",
    "completes": [],
    "visual": {
-    "type": "image",
-    "src": "jobs/buddhism-vs-jainism/img/manuscript.jpg",
-    "fit": "cover"
+    "type": "footage",
+    "query": "Buddhist monks chanting",
+    "caption": "Teachings kept alive by recitation"
    },
-   "onScreen": "Councils = to preserve the teachings"
+   "onScreen": "Councils = to preserve the teachings",
+   "era": {
+    "set": "bcouncils",
+    "steps": [
+     [
+      0,
+      -1
+     ]
+    ]
+   }
   },
   {
    "id": "S22",
@@ -1304,8 +1336,17 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "1st: c. 483 BCE · Rajagriha · Ajatashatru · Mahakassapa",
-   "sfx": "whoosh"
+   "onScreen": "1st Council: Rajagriha · c. 483 BCE",
+   "sfx": "whoosh",
+   "era": {
+    "set": "bcouncils",
+    "steps": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
   },
   {
    "id": "S23",
@@ -1333,7 +1374,16 @@
      "tone": "accent"
     }
    },
-   "onScreen": "Ananda → Sutta Pitaka · Upali → Vinaya Pitaka"
+   "onScreen": "Ananda → Sutta Pitaka · Upali → Vinaya Pitaka",
+   "era": {
+    "set": "bcouncils",
+    "steps": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
   },
   {
    "id": "S24",
@@ -1475,7 +1525,16 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "2nd: c. 383 BCE · Vaishali · Kalashoka · Sabakami → Sthaviravadins vs Mahasanghikas"
+   "onScreen": "2nd Council: Vaishali · c. 383 BCE · first split",
+   "era": {
+    "set": "bcouncils",
+    "steps": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
   },
   {
    "id": "S25",
@@ -1594,7 +1653,16 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "3rd: c. 250 BCE · Pataliputra · Ashoka · Moggaliputta Tissa → Abhidhamma Pitaka + missions"
+   "onScreen": "3rd Council: Pataliputra · c. 250 BCE · Ashoka",
+   "era": {
+    "set": "bcouncils",
+    "steps": [
+     [
+      0,
+      2
+     ]
+    ]
+   }
   },
   {
    "id": "S26",
@@ -1624,8 +1692,17 @@
      }
     ]
    },
-   "onScreen": "Tripitaka: Sutta (teachings) · Vinaya (rules) · Abhidhamma (philosophy)",
-   "sfx": "ping"
+   "onScreen": "Tripitaka: Sutta · Vinaya · Abhidhamma",
+   "sfx": "ping",
+   "era": {
+    "set": "bcouncils",
+    "steps": [
+     [
+      0,
+      2
+     ]
+    ]
+   }
   },
   {
    "id": "S27",
@@ -1702,8 +1779,17 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "4th: 1st century CE · Kashmir · Kanishka · Vasumitra (Ashvaghosha deputy) → Hinayana / Mahayana",
-   "sfx": "whoosh"
+   "onScreen": "4th Council: Kashmir · Kanishka · 1st c. CE",
+   "sfx": "whoosh",
+   "era": {
+    "set": "bcouncils",
+    "steps": [
+     [
+      0,
+      3
+     ]
+    ]
+   }
   },
   {
    "id": "S28",
@@ -1724,19 +1810,35 @@
     "cam": [
      {
       "t": 0,
-      "lon": 80.5,
-      "lat": 29.0,
-      "dist": 1700,
-      "tilt": 22,
+      "lon": 85.3,
+      "lat": 25.55,
+      "dist": 260,
+      "tilt": 38,
+      "heading": 0
+     },
+     {
+      "t": 5.97,
+      "lon": 85.3,
+      "lat": 25.55,
+      "dist": 240,
+      "tilt": 40,
+      "heading": 4
+     },
+     {
+      "t": 8.17,
+      "lon": 80.1,
+      "lat": 29.6,
+      "dist": 1900,
+      "tilt": 12,
       "heading": 0
      },
      {
       "t": 13.35,
-      "lon": 80.5,
-      "lat": 28.8,
-      "dist": 1550,
-      "tilt": 26,
-      "heading": 4
+      "lon": 80.1,
+      "lat": 29.6,
+      "dist": 1800,
+      "tilt": 14,
+      "heading": 2
      }
     ],
     "layers": [
@@ -1760,8 +1862,7 @@
       "label": "2 Vaishali",
       "t0": 5.29,
       "tone": "good",
-      "sub": "Kalashoka",
-      "side": "left"
+      "sub": "Kalashoka"
      },
      {
       "kind": "pin",
@@ -1772,7 +1873,8 @@
       "label": "3 Pataliputra",
       "t0": 6.04,
       "tone": "good",
-      "sub": "Ashoka"
+      "sub": "Ashoka",
+      "side": "left"
      },
      {
       "kind": "pin",
@@ -1789,8 +1891,29 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "Places: Rajagriha → Vaishali → Pataliputra → Kashmir · Kings: Ajatashatru → Kalashoka → Ashoka → Kanishka",
-   "sfx": "ping"
+   "onScreen": "Rajagriha → Vaishali → Pataliputra → Kashmir",
+   "sfx": "ping",
+   "era": {
+    "set": "bcouncils",
+    "steps": [
+     [
+      0,
+      0
+     ],
+     [
+      5.29,
+      1
+     ],
+     [
+      6.04,
+      2
+     ],
+     [
+      7.17,
+      3
+     ]
+    ]
+   }
   },
   {
    "id": "S29",
@@ -1806,7 +1929,16 @@
      "split"
     ]
    },
-   "onScreen": "Jainism: only 2 councils, and they link to the split"
+   "onScreen": "Jainism: only 2 councils, and they link to the split",
+   "era": {
+    "set": "jcouncils",
+    "steps": [
+     [
+      0,
+      -1
+     ]
+    ]
+   }
   },
   {
    "id": "S30",
@@ -1900,8 +2032,17 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "~12-year famine · Bhadrabahu → Shravanabelagola (Karnataka)",
-   "sfx": "whoosh"
+   "onScreen": "12-year famine · Bhadrabahu goes south",
+   "sfx": "whoosh",
+   "era": {
+    "set": "jcouncils",
+    "steps": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
   },
   {
    "id": "S31",
@@ -1966,7 +2107,16 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "1st Jain Council: c. 300 BCE · Pataliputra · Sthulabhadra → 12 Angas"
+   "onScreen": "1st Jain Council: Pataliputra · c. 300 BCE",
+   "era": {
+    "set": "jcouncils",
+    "steps": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
   },
   {
    "id": "S32",
@@ -1994,8 +2144,17 @@
      "tone": "accent"
     }
    },
-   "onScreen": "The seed of the split: South (sky-clad) vs North (white-clad)",
-   "sfx": "hit"
+   "onScreen": "The seed of the split",
+   "sfx": "hit",
+   "era": {
+    "set": "jcouncils",
+    "steps": [
+     [
+      0,
+      2
+     ]
+    ]
+   }
   },
   {
    "id": "S33",
@@ -2070,8 +2229,17 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "2nd Jain Council: Vallabhi (Gujarat) · c. 5th–6th century CE · Devardhi Kshamashramana → canon written down",
-   "sfx": "whoosh"
+   "onScreen": "2nd Jain Council: Vallabhi · canon written down",
+   "sfx": "whoosh",
+   "era": {
+    "set": "jcouncils",
+    "steps": [
+     [
+      0,
+      3
+     ]
+    ]
+   }
   },
   {
    "id": "S34",
@@ -2100,8 +2268,17 @@
      "tone": "bad"
     }
    },
-   "onScreen": "Vallabhi canon: accepted by Shvetambaras · not by Digambaras",
-   "sfx": "ping"
+   "onScreen": "Vallabhi canon: Shvetambaras yes · Digambaras no",
+   "sfx": "ping",
+   "era": {
+    "set": "jcouncils",
+    "steps": [
+     [
+      0,
+      3
+     ]
+    ]
+   }
   },
   {
    "id": "S35",
@@ -2118,7 +2295,16 @@
      "god"
     ]
    },
-   "onScreen": "Buddhist sects: a split in rules, and in how to see the Buddha"
+   "onScreen": "Buddhist sects",
+   "era": {
+    "set": "sects",
+    "steps": [
+     [
+      0,
+      -1
+     ]
+    ]
+   }
   },
   {
    "id": "S36",
@@ -2182,7 +2368,16 @@
      ]
     }
    },
-   "onScreen": "Hinayana / Theravada: Buddha = teacher · arhat ideal · Pali · Sri Lanka, Myanmar, Thailand"
+   "onScreen": "Hinayana / Theravada: Buddha as teacher",
+   "era": {
+    "set": "sects",
+    "steps": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
   },
   {
    "id": "S37",
@@ -2241,7 +2436,16 @@
      ]
     }
    },
-   "onScreen": "Mahayana: Buddha worshipped (images) · Bodhisattva ideal · Sanskrit · China, Korea, Japan"
+   "onScreen": "Mahayana: images · bodhisattva · Sanskrit",
+   "era": {
+    "set": "sects",
+    "steps": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
   },
   {
    "id": "S38",
@@ -2259,7 +2463,16 @@
     "why": "\"Hinayana\" or \"lesser vehicle\" was a name given by the followers of Mahayana"
    },
    "onScreen": "\"Hinayana\" = a label given by Mahayanists",
-   "sfx": "hit"
+   "sfx": "hit",
+   "era": {
+    "set": "sects",
+    "steps": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
   },
   {
    "id": "S39",
@@ -2343,8 +2556,17 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "Vajrayana: mantra & tantra · Pala era (Bihar–Bengal) → Tibet",
-   "sfx": "whoosh"
+   "onScreen": "Vajrayana: Pala Bihar–Bengal → Tibet",
+   "sfx": "whoosh",
+   "era": {
+    "set": "sects",
+    "steps": [
+     [
+      0,
+      2
+     ]
+    ]
+   }
   },
   {
    "id": "S40",
@@ -2399,7 +2621,7 @@
      "tone": "accent"
     }
    },
-   "onScreen": "Women & moksha: Digambara ✗ · Shvetambara ✓ · Mallinatha (19th): female for Shvetambaras"
+   "onScreen": "Women & moksha"
   },
   {
    "id": "S42",
@@ -2429,7 +2651,7 @@
      "tone": "accent"
     }
    },
-   "onScreen": "Mahavira married? Shvetambara: yes · Digambara: no · Sub-sects: Sthanakvasi, Terapanthi (no idol worship)",
+   "onScreen": "Mahavira married? · Sthanakvasi, Terapanthi",
    "sfx": "ping"
   },
   {
@@ -2467,7 +2689,16 @@
      0.5
     ]
    },
-   "onScreen": "Stupa (relics) · Chaitya (prayer hall) · Vihara (monastery)"
+   "onScreen": "Stupa · Chaitya · Vihara",
+   "era": {
+    "set": "art",
+    "steps": [
+     [
+      0,
+      -1
+     ]
+    ]
+   }
   },
   {
    "id": "S45",
@@ -2535,8 +2766,17 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "Sanchi: Ashokan origin · 4 toranas · UNESCO World Heritage",
-   "sfx": "whoosh"
+   "onScreen": "Sanchi: Ashokan origin · 4 toranas",
+   "sfx": "whoosh",
+   "era": {
+    "set": "art",
+    "steps": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
   },
   {
    "id": "S46",
@@ -2554,7 +2794,16 @@
      0.35
     ]
    },
-   "onScreen": "Early Buddhist art: no human Buddha"
+   "onScreen": "Early Buddhist art: no human Buddha",
+   "era": {
+    "set": "art",
+    "steps": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
   },
   {
    "id": "S47",
@@ -2573,8 +2822,17 @@
      "Stupa → mahaparinirvana"
     ]
    },
-   "onScreen": "Empty seat = meditation · Tree = enlightenment · Wheel = first sermon · Stupa = mahaparinirvana",
-   "sfx": "ping"
+   "onScreen": "The Buddha shown through symbols",
+   "sfx": "ping",
+   "era": {
+    "set": "art",
+    "steps": [
+     [
+      0,
+      0
+     ]
+    ]
+   }
   },
   {
    "id": "S48",
@@ -2656,7 +2914,16 @@
     "drift": 0.3
    },
    "onScreen": "Kushan era: Mahayana + Buddha images",
-   "sfx": "hit"
+   "sfx": "hit",
+   "era": {
+    "set": "art",
+    "steps": [
+     [
+      0,
+      2
+     ]
+    ]
+   }
   },
   {
    "id": "S49",
@@ -2674,7 +2941,16 @@
      0.3
     ]
    },
-   "onScreen": "Gandhara: Greco-Roman influence · grey schist · wavy hair, heavy drapery · mostly Buddhist"
+   "onScreen": "Gandhara: Greco-Roman · grey schist",
+   "era": {
+    "set": "art",
+    "steps": [
+     [
+      0,
+      2
+     ]
+    ]
+   }
   },
   {
    "id": "S50",
@@ -2754,8 +3030,17 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "Mathura: indigenous · red sandstone · Buddhist + Jain + Hindu",
-   "sfx": "ping"
+   "onScreen": "Mathura: red sandstone · three faiths",
+   "sfx": "ping",
+   "era": {
+    "set": "art",
+    "steps": [
+     [
+      0,
+      2
+     ]
+    ]
+   }
   },
   {
    "id": "S51",
@@ -2845,7 +3130,16 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "Amaravati: narrative reliefs · Ajanta: Buddhist murals (UNESCO)"
+   "onScreen": "Amaravati reliefs · Ajanta murals",
+   "era": {
+    "set": "art",
+    "steps": [
+     [
+      0,
+      3
+     ]
+    ]
+   }
   },
   {
    "id": "S52",
@@ -2924,8 +3218,17 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "Udayagiri–Khandagiri (Odisha): Jain caves · Kharavela · Hathigumpha inscription",
-   "sfx": "whoosh"
+   "onScreen": "Udayagiri–Khandagiri: Jain caves · Kharavela",
+   "sfx": "whoosh",
+   "era": {
+    "set": "art",
+    "steps": [
+     [
+      0,
+      1
+     ]
+    ]
+   }
   },
   {
    "id": "S53",
@@ -2955,7 +3258,16 @@
      }
     ]
    },
-   "onScreen": "Ellora: 1–12 Buddhist · 13–29 Hindu · 30–34 Jain"
+   "onScreen": "Ellora: 1–12 Buddhist · 13–29 Hindu · 30–34 Jain",
+   "era": {
+    "set": "art",
+    "steps": [
+     [
+      0,
+      4
+     ]
+    ]
+   }
   },
   {
    "id": "S54",
@@ -3040,8 +3352,17 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "Gomateshwara: 57 ft monolith · c. 983 CE · Chavundaraya (Western Ganga) · Mahamastakabhisheka every 12 years",
-   "sfx": "whoosh"
+   "onScreen": "Gomateshwara: 57 ft monolith · c. 983 CE",
+   "sfx": "whoosh",
+   "era": {
+    "set": "art",
+    "steps": [
+     [
+      0,
+      5
+     ]
+    ]
+   }
   },
   {
    "id": "S55",
@@ -3136,8 +3457,17 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "Dilwara (Mount Abu): white marble · Vimal Vasahi (Vimal Shah, 11th c.) · Luna Vasahi (Vastupal–Tejpal, 1230)",
-   "sfx": "whoosh"
+   "onScreen": "Dilwara temples, Mount Abu: white marble",
+   "sfx": "whoosh",
+   "era": {
+    "set": "art",
+    "steps": [
+     [
+      0,
+      6
+     ]
+    ]
+   }
   },
   {
    "id": "S56",
@@ -3157,7 +3487,7 @@
      "Mahavira → lion"
     ]
    },
-   "onScreen": "Lanchhana: Rishabhanatha = bull · Parshvanatha = snake hood · Mahavira = lion",
+   "onScreen": "Lanchhana: bull · snake hood · lion",
    "sfx": "ping"
   },
   {
@@ -3168,25 +3498,11 @@
    "objective": "o7",
    "completes": [],
    "visual": {
-    "type": "compare",
-    "left": {
-     "heading": "Jainism",
-     "items": [
-      "soul in every being",
-      "strict ahimsa"
-     ],
-     "tone": "warn"
-    },
-    "right": {
-     "heading": "Buddhism",
-     "items": [
-      "anatta",
-      "Middle Path"
-     ],
-     "tone": "good"
-    }
+    "type": "footage",
+    "query": "Mahabodhi Temple Bodh Gaya",
+    "caption": "Bodh Gaya"
    },
-   "onScreen": "Recap: both Shramana · Jainism: soul + strict ahimsa · Buddhism: anatta + Middle Path"
+   "onScreen": "Recap"
   },
   {
    "id": "S58",
@@ -3302,7 +3618,7 @@
      "Mathura school: Buddhist + Jain + Hindu"
     ]
    },
-   "onScreen": "Trap 1: Mahavira ≠ founder · Trap 2: Brahmacharya = Mahavira · Trap 3: Mathura = all three faiths",
+   "onScreen": "3 Prelims traps",
    "sfx": "hit"
   },
   {
@@ -3446,7 +3762,7 @@
     "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
     "drift": 0.3
    },
-   "onScreen": "Why Buddhism declined: less royal patronage · monastery-centred · Nalanda, Vikramashila destroyed c. 12th c. · Jainism: merchant support"
+   "onScreen": "Why Buddhism declined in India"
   },
   {
    "id": "S61",
@@ -3585,6 +3901,106 @@
   "headline": "BUDDHA vs MAHAVIRA",
   "sub": "Councils · Sects · Art",
   "scene": "S08"
+ },
+ "eras": {
+  "buddha": [
+   {
+    "date": "6th c. BCE",
+    "label": "cities, trade, Shramanas"
+   },
+   {
+    "date": "563 BCE",
+    "label": "Buddha born · Lumbini"
+   },
+   {
+    "date": "c. 528 BCE",
+    "label": "Bodh Gaya · Sarnath"
+   },
+   {
+    "date": "483 BCE",
+    "label": "Kushinagar"
+   }
+  ],
+  "bcouncils": [
+   {
+    "date": "c. 483 BCE",
+    "label": "1st · Rajagriha"
+   },
+   {
+    "date": "c. 383 BCE",
+    "label": "2nd · Vaishali"
+   },
+   {
+    "date": "c. 250 BCE",
+    "label": "3rd · Pataliputra"
+   },
+   {
+    "date": "1st c. CE",
+    "label": "4th · Kashmir"
+   }
+  ],
+  "jcouncils": [
+   {
+    "date": "c. 300 BCE",
+    "label": "famine · Bhadrabahu south"
+   },
+   {
+    "date": "c. 300 BCE",
+    "label": "1st council · Pataliputra"
+   },
+   {
+    "date": "later centuries",
+    "label": "the split takes shape"
+   },
+   {
+    "date": "5th–6th c. CE",
+    "label": "2nd council · Vallabhi"
+   }
+  ],
+  "sects": [
+   {
+    "date": "3rd c. BCE",
+    "label": "Theravada spreads"
+   },
+   {
+    "date": "1st c. CE",
+    "label": "Mahayana"
+   },
+   {
+    "date": "c. 8th c. CE",
+    "label": "Vajrayana · Palas → Tibet"
+   }
+  ],
+  "art": [
+   {
+    "date": "3rd c. BCE",
+    "label": "Sanchi (Ashoka)"
+   },
+   {
+    "date": "1st c. BCE",
+    "label": "Udayagiri (Kharavela)"
+   },
+   {
+    "date": "1st–3rd c. CE",
+    "label": "Kushan: Gandhara, Mathura"
+   },
+   {
+    "date": "2nd c. BCE–5th c. CE",
+    "label": "Amaravati, Ajanta"
+   },
+   {
+    "date": "6th–10th c. CE",
+    "label": "Ellora"
+   },
+   {
+    "date": "983 CE",
+    "label": "Gomateshwara"
+   },
+   {
+    "date": "1031 · 1230 CE",
+    "label": "Dilwara"
+   }
+  ]
  },
  "assets": {
   "terrain": [

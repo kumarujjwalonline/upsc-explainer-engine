@@ -726,7 +726,7 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
       {/* vignette + right-edge blend into the tracker gutter */}
       <div style={{position: 'absolute', inset: 0, boxShadow: `inset 0 0 ${160 * u}px rgba(0,0,0,0.45)`, pointerEvents: 'none'}} />
       <div style={{position: 'absolute', right: 0, top: 0, bottom: 0, width: 60 * u, background: 'linear-gradient(to right, rgba(11,23,38,0), rgba(11,23,38,0.9))'}} />
-      <div style={{position: 'absolute', left: 18 * u, bottom: 14 * u, fontFamily: fonts.body, fontSize: 15 * u, color: 'rgba(255,255,255,0.75)', letterSpacing: 0.5}}>
+      <div style={{position: 'absolute', left: 18 * u, top: 12 * u, fontFamily: fonts.body, fontSize: 15 * u, color: 'rgba(255,255,255,0.75)', letterSpacing: 0.5}}>
         {spec.globe && globeO > 0.5 ? 'NASA Blue Marble' : spec.credit || 'Imagery: Copernicus Sentinel-2 / Natural Earth · Elevation: Terrarium (SRTM et al.) · Borders: Survey of India outline'}
         {'   ·   '}
         {c.dist > 3500 ? `Eye alt ${Math.round(c.dist).toLocaleString('en-IN')} km` : `Eye alt ${eye >= 10000 ? Math.round(eye / 1000).toLocaleString('en-IN') + ' km' : Math.round(eye).toLocaleString('en-IN') + ' m'}`}

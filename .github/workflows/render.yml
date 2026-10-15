@@ -207,11 +207,13 @@ jobs:
           pip install --quiet numpy pillow
           python3 scripts/build_terrain.py jobs/${{ inputs.job_id }}.json
           python3 scripts/fetch_images.py jobs/${{ inputs.job_id }}.json
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+          mkdir -p out && python3 scripts/fetch_footage.py jobs/${{ inputs.job_id }}.json || true
       - name: Commit them
         run: |
           git config user.name "explainer-bot"
           git config user.email "explainer-bot@users.noreply.github.com"
-          git add -f public/terrain public/jobs/${{ inputs.job_id }}/img 2>/dev/null || true
+          for p in public/terrain public/jobs/${{ inputs.job_id }}/img public/jobs/${{ inputs.job_id }}/footage jobs/${{ inputs.job_id }}.json; do [ -e "$p" ] && git add -f "$p"; done; true
           if ! git diff --cached --quiet; then
             git commit -q -m "Terrain packs and photos for ${{ inputs.job_id }}"
             for i in 1 2 3; do git pull --rebase -q origin ${{ github.ref_name }} && git push -q origin HEAD:${{ github.ref_name }} && break; sleep 3; done

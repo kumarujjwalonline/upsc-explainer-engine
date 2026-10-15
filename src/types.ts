@@ -62,6 +62,7 @@ export type Scene = {
   sfx?: Sfx;
   compact?: boolean; // compact tracker for heavy numerical scenes
   visual: Visual;
+  era?: {set: string; steps: [number, number][]}; // bottom timeline: [seconds into scene, current period]
 };
 
 export type Job = {
@@ -72,6 +73,7 @@ export type Job = {
   scenes: Scene[];
   shorts?: {id: string; hook: string; scenes: string[]}[];
   thumbnail?: {headline: string; sub?: string; scene?: string};
+  eras?: Record<string, {date: string; label: string}[]>; // timelines shown at the foot while events are explained
 };
 
 export type RenderProps = {job: Job; format: Format; sceneIds?: string[]; hook?: string};
