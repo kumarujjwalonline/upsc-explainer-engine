@@ -1,0 +1,9 @@
+{
+ "west": 85.2,
+ "east": 85.65,
+ "south": 24.9,
+ "north": 25.2,
+ "minH": 49.66647508350434,
+ "maxH": 450.6945766002153,
+ "imagery": "Sentinel-2 cloudless 2016 by EOX IT Services GmbH (CC BY 4.0), contains modified Copernicus Sentinel data"
+}
