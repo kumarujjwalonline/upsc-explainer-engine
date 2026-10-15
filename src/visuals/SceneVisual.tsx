@@ -49,6 +49,7 @@ export const SceneVisual: React.FC<{scene: Scene; format: Format}> = ({scene}) =
     case 'molecule':
       return <Molecule3D {...v} />;
     case 'montage':
+    case 'intro':
       return null; // drawn full frame by Explainer, above the tracker
     case 'source':
       return <SourceCard {...v} />;

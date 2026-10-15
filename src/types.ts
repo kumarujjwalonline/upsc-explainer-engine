@@ -6,6 +6,7 @@ import type {MoleculeSpec} from './three/Molecule3D';
 import type {SourceSpec} from './visuals/SourceCard';
 import type {FootageSpec} from './visuals/Footage';
 import type {BrollSpec} from './visuals/Broll';
+import type {IntroSpec} from './visuals/Intro';
 import type {MontageSpec} from './visuals/Montage';
 import type {TimeBarSpec} from './components/TimeBar';
 
@@ -33,7 +34,8 @@ export type Visual =
   | ({type: 'molecule'} & MoleculeSpec)
   | ({type: 'source'} & SourceSpec)
   | ({type: 'footage'} & FootageSpec)
-  | ({type: 'montage'} & MontageSpec);
+  | ({type: 'montage'} & MontageSpec)
+  | ({type: 'intro'} & IntroSpec);
 
 export type IconName =
   | 'ship' | 'truck' | 'train' | 'plane' | 'person' | 'people' | 'robot' | 'code' | 'chat'

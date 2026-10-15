@@ -42,8 +42,8 @@
  "scenes": [
   {
    "id": "T00",
-   "narration": "Bill के पक्ष में 298 votes पड़े और विरोध में 230। इसलिए ये Bill गिर गया। ये freeze खुलेगा कब?",
-   "durationSec": 10.03,
+   "narration": "सोचिए, 1971 में भारत की आबादी लगभग 55 करोड़ थी, और आज 140 करोड़ से भी ज़्यादा है। Bill के पक्ष में 298 votes पड़े और विरोध में 230। लेकिन Constitutional Amendment के लिए, vote करने वाले सदस्यों का two-thirds बहुमत चाहिए, इसलिए ये Bill गिर गया। अब सबसे बड़ा सवाल, ये freeze खुलेगा कब?",
+   "durationSec": 26.33,
    "audio": "jobs/delimitation-north-south/T00.mp3",
    "objective": "o1",
    "completes": [],
@@ -54,56 +54,97 @@
       "at": 0.0,
       "kind": "media",
       "media": {
-       "title": "File:View of Lok Sabha chamber in the New Parliament building, New Delhi.jpg"
+       "title": "File:A Video clip of When Rolls-Royce Goes Holi Mode in Howrah.webm"
       },
-      "label": "17 April 2026 · Lok Sabha"
+      "label": "India: 1971 vs today"
      },
      {
-      "at": 1.4,
+      "at": 3.4,
+      "kind": "big",
+      "value": "55",
+      "label": "crore people in 1971",
+      "tone": "neutral"
+     },
+     {
+      "at": 5.9,
+      "kind": "big",
+      "value": "140",
+      "label": "crore+ people today",
+      "tone": "accent"
+     },
+     {
+      "at": 8.6,
+      "kind": "media",
+      "media": {
+       "title": "File:View of Lok Sabha chamber in the New Parliament building, New Delhi.jpg"
+      },
+      "label": "17 April 2026 · Lok Sabha vote"
+     },
+     {
+      "at": 10.1,
       "kind": "big",
       "value": "298",
       "label": "votes for",
-      "tone": "good",
-      "sfx": "hit"
+      "tone": "good"
      },
      {
-      "at": 3.9,
+      "at": 13.1,
       "kind": "big",
       "value": "230",
-      "label": "against",
-      "tone": "bad",
-      "sfx": "hit"
+      "label": "votes against",
+      "tone": "bad"
      },
      {
-      "at": 5.4,
-      "kind": "title",
-      "label": "The Bill |FAILED",
-      "tone": "bad",
-      "sfx": "hit"
-     },
-     {
-      "at": 6.5,
-      "kind": "media",
-      "media": {
-       "title": "File:A Video clip of When Rolls-Royce Goes Holi Mode in Howrah.webm"
-      },
-      "label": "140 crore people"
-     },
-     {
-      "at": 7.5,
+      "at": 14.4,
       "kind": "media",
       "media": {
        "title": "File:Sansad Bhavan, Delhi, BNK.jpg"
       },
+      "label": "An amendment needs two-thirds"
+     },
+     {
+      "at": 17.9,
+      "kind": "big",
+      "value": "2/3",
+      "label": "majority not reached",
+      "tone": "warn"
+     },
+     {
+      "at": 19.6,
+      "kind": "title",
+      "label": "So the Bill |FAILED",
+      "tone": "bad",
+      "sfx": "hit"
+     },
+     {
+      "at": 22.0,
+      "kind": "media",
+      "media": {
+       "title": "File:Parliament of India in New Delhi 04.jpg"
+      },
       "label": "543 seats, frozen since 1971"
      },
      {
-      "at": 8.6,
+      "at": 23.7,
       "kind": "title",
-      "label": "When will the |freeze end?",
-      "sfx": "whoosh"
+      "label": "When will the |freeze end?"
      }
     ]
+   }
+  },
+  {
+   "id": "I00",
+   "narration": "",
+   "durationSec": 4.5,
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "intro",
+    "channel": "EXPLAINERS",
+    "kicker": "GS-II · Polity · Prelims + Mains",
+    "title": "Delimitation & the North‑South Debate",
+    "host": "Ujjwal",
+    "hostImg": "branding/ujjwal-tutor.png"
    }
   },
   {
