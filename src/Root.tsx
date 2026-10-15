@@ -2,6 +2,8 @@ import React from 'react';
 import {Composition, Still} from 'remotion';
 import {Explainer, totalFrames} from './Explainer';
 import {Thumbnail} from './Thumbnail';
+import {ShortBeats, shortFrames} from './ShortBeats';
+import type {ShortProps} from './ShortBeats';
 import {FPS, size} from './theme';
 import type {Job, RenderProps} from './types';
 import sample from '../samples/sample-job.json';
@@ -22,6 +24,16 @@ export const Root: React.FC = () => (
         durationInFrames: Math.max(1, totalFrames(props)),
         ...size(props.format),
       })}
+    />
+    <Composition
+      id="ShortBeats"
+      component={ShortBeats}
+      fps={FPS}
+      width={1080}
+      height={1920}
+      durationInFrames={300}
+      defaultProps={{video: '', short: {id: 'x', hook: '', from: 0, dur: 10, beats: [[0, 'q', 'Beat', '']]}} as ShortProps}
+      calculateMetadata={({props}) => ({durationInFrames: Math.max(1, shortFrames(props))})}
     />
     <Still
       id="Thumbnail"

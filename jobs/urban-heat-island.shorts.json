@@ -1,0 +1,776 @@
+[
+ {
+  "id": "short-1",
+  "hook": "Why doesn't your city cool down at night?",
+  "from": 61.2,
+  "dur": 43.86666666666667,
+  "cover": "jobs/urban-heat-island/covers/short-1.png",
+  "beats": [
+   [
+    0.0,
+    "city",
+    "URBAN HEAT ISLAND",
+    "UHI"
+   ],
+   [
+    3.3,
+    "city",
+    "City hotter than",
+    "its surroundings"
+   ],
+   [
+    6.4,
+    "tree",
+    "vs rural areas",
+    "fields · trees · open land"
+   ],
+   [
+    9.5,
+    "doc",
+    "US EPA",
+    "official estimate"
+   ],
+   [
+    12.5,
+    "sun",
+    "DAY",
+    "+0.5 to 4°C"
+   ],
+   [
+    18.6,
+    "moon",
+    "NIGHT",
+    "+1 to 3°C"
+   ],
+   [
+    21.9,
+    "q",
+    "Sun sets…",
+    "so why no cooling?"
+   ],
+   [
+    27.4,
+    "road",
+    "Roads · roofs · walls",
+    "store heat all day"
+   ],
+   [
+    30.5,
+    "sun",
+    "Heat goes IN",
+    "absorbed by day"
+   ],
+   [
+    32.8,
+    "moon",
+    "Heat comes OUT",
+    "released slowly at night"
+   ],
+   [
+    36.6,
+    "thermo",
+    "Hits hardest",
+    "at NIGHT"
+   ],
+   [
+    40.9,
+    "person",
+    "No recovery",
+    "the body can't cool down"
+   ]
+  ]
+ },
+ {
+  "id": "short-2",
+  "hook": "5 reasons your city is a heat trap",
+  "from": 105.06666666666666,
+  "dur": 87.73333333333333,
+  "cover": "jobs/urban-heat-island/covers/short-2.png",
+  "beats": [
+   [
+    0.0,
+    "q",
+    "Who makes the",
+    "heat island?"
+   ],
+   [
+    2.9,
+    "five",
+    "5 REASONS",
+    ""
+   ],
+   [
+    5.0,
+    "one",
+    "ALBEDO",
+    "how much sunlight bounces back"
+   ],
+   [
+    9.9,
+    "sun",
+    "Reflect",
+    "vs absorb"
+   ],
+   [
+    11.5,
+    "road",
+    "Dark asphalt",
+    "reflects only 5–10%"
+   ],
+   [
+    15.5,
+    "fire",
+    "The rest",
+    "becomes heat"
+   ],
+   [
+    18.2,
+    "two",
+    "LESS GREENERY",
+    ""
+   ],
+   [
+    20.9,
+    "tree",
+    "Leaves release water",
+    "= natural cooling"
+   ],
+   [
+    24.2,
+    "drop",
+    "EVAPO-",
+    "TRANSPIRATION"
+   ],
+   [
+    27.4,
+    "wind",
+    "Cools the air",
+    "naturally"
+   ],
+   [
+    30.5,
+    "city",
+    "Concrete replaces trees",
+    "cooler switched off"
+   ],
+   [
+    35.5,
+    "three",
+    "URBAN CANYON",
+    ""
+   ],
+   [
+    37.8,
+    "city",
+    "Tall buildings",
+    "narrow lanes"
+   ],
+   [
+    42.0,
+    "fire",
+    "Heat bounces",
+    "between walls"
+   ],
+   [
+    46.0,
+    "wind",
+    "Less wind",
+    "heat stays trapped"
+   ],
+   [
+    48.3,
+    "four",
+    "WASTE HEAT",
+    ""
+   ],
+   [
+    50.4,
+    "car",
+    "Cars · factories · ACs",
+    "all release heat"
+   ],
+   [
+    54.2,
+    "cycle",
+    "VICIOUS CYCLE",
+    ""
+   ],
+   [
+    56.3,
+    "ac",
+    "More heat → more AC",
+    "→ more heat outside"
+   ],
+   [
+    63.0,
+    "five",
+    "POLLUTION",
+    ""
+   ],
+   [
+    65.4,
+    "smoke",
+    "Smoke + dust",
+    "a lid over the city"
+   ],
+   [
+    70.2,
+    "moon",
+    "Haze traps heat",
+    "at night"
+   ],
+   [
+    76.6,
+    "check",
+    "Recap",
+    "5 causes"
+   ],
+   [
+    78.7,
+    "one",
+    "Low albedo",
+    "· less greenery"
+   ],
+   [
+    81.0,
+    "three",
+    "Urban canyon",
+    "· waste heat · pollution"
+   ],
+   [
+    83.8,
+    "city",
+    "= HEAT TRAP",
+    ""
+   ]
+  ]
+ },
+ {
+  "id": "short-3",
+  "hook": "40, 37, 30: the heatwave numbers",
+  "from": 205.86666666666667,
+  "dur": 73.43333333333334,
+  "cover": "jobs/urban-heat-island/covers/short-3.png",
+  "beats": [
+   [
+    0.0,
+    "thermo",
+    "HEATWAVE",
+    "officially defined"
+   ],
+   [
+    2.3,
+    "q",
+    "How hot",
+    "is a heatwave?"
+   ],
+   [
+    6.7,
+    "doc",
+    "IMD",
+    "India Meteorological Department"
+   ],
+   [
+    9.9,
+    "one",
+    "Condition 1",
+    "max temperature at least"
+   ],
+   [
+    11.1,
+    "map",
+    "PLAINS",
+    "≥ 40°C"
+   ],
+   [
+    14.7,
+    "drop",
+    "COAST",
+    "≥ 37°C"
+   ],
+   [
+    16.8,
+    "hill",
+    "HILLS",
+    "≥ 30°C"
+   ],
+   [
+    20.1,
+    "two",
+    "Condition 2",
+    "departure from normal"
+   ],
+   [
+    24.3,
+    "up",
+    "+4.5 to 6.4°C",
+    "HEATWAVE"
+   ],
+   [
+    29.0,
+    "alert",
+    "above +6.4°C",
+    "SEVERE HEATWAVE"
+   ],
+   [
+    33.0,
+    "thermo",
+    "Or actual temperature",
+    "whatever the normal"
+   ],
+   [
+    35.7,
+    "fire",
+    "≥ 45°C",
+    "HEATWAVE"
+   ],
+   [
+    39.3,
+    "alert",
+    "≥ 47°C",
+    "SEVERE"
+   ],
+   [
+    43.5,
+    "pin",
+    "One station, one day?",
+    "not enough"
+   ],
+   [
+    47.5,
+    "map",
+    "≥ 2 stations",
+    "in a sub-division"
+   ],
+   [
+    51.5,
+    "calendar",
+    "2 days in a row",
+    "consecutive"
+   ],
+   [
+    53.8,
+    "alert",
+    "Declared",
+    "on DAY 2"
+   ],
+   [
+    56.8,
+    "doc",
+    "PRELIMS",
+    "remember these"
+   ],
+   [
+    59.0,
+    "map",
+    "40 · 37 · 30",
+    "plains · coast · hills"
+   ],
+   [
+    64.7,
+    "up",
+    "4.5 · 6.4",
+    "departure limits"
+   ],
+   [
+    68.9,
+    "fire",
+    "45 · 47",
+    "actual temperature"
+   ]
+  ]
+ },
+ {
+  "id": "short-4",
+  "hook": "35°C can kill. Here's why.",
+  "from": 300.5,
+  "dur": 85.83333333333333,
+  "cover": "jobs/urban-heat-island/covers/short-4.png",
+  "beats": [
+   [
+    0.0,
+    "person",
+    "The body cools",
+    "by sweating"
+   ],
+   [
+    2.6,
+    "drop",
+    "Sweat evaporates",
+    "and carries heat away"
+   ],
+   [
+    6.8,
+    "cloud",
+    "Humid air?",
+    "sweat can't evaporate"
+   ],
+   [
+    12.2,
+    "thermo",
+    "WET BULB",
+    "TEMPERATURE"
+   ],
+   [
+    14.5,
+    "drop",
+    "Wet cloth",
+    "on a thermometer"
+   ],
+   [
+    17.9,
+    "wind",
+    "Blow air",
+    "water evaporates"
+   ],
+   [
+    21.9,
+    "down",
+    "Lowest it can reach",
+    "= wet bulb"
+   ],
+   [
+    26.3,
+    "sun",
+    "Dry air",
+    "wet bulb far below"
+   ],
+   [
+    32.7,
+    "drop",
+    "100% humidity",
+    "evaporation stops"
+   ],
+   [
+    36.4,
+    "equal",
+    "Wet bulb",
+    "= air temperature"
+   ],
+   [
+    40.1,
+    "alert",
+    "Most important",
+    ""
+   ],
+   [
+    41.9,
+    "person",
+    "Skin ≈ 35°C",
+    ""
+   ],
+   [
+    45.5,
+    "thermo",
+    "Wet bulb 35°C",
+    "→ no cooling"
+   ],
+   [
+    48.2,
+    "fire",
+    "Heat can't",
+    "leave the body"
+   ],
+   [
+    52.0,
+    "doc",
+    "2010 · PNAS",
+    "Sherwood & Huber"
+   ],
+   [
+    55.5,
+    "alert",
+    "35°C wet bulb",
+    "theoretical survival limit"
+   ],
+   [
+    60.6,
+    "clock",
+    "~6 hours",
+    "can be fatal"
+   ],
+   [
+    63.0,
+    "tree",
+    "Even in shade",
+    "even if healthy"
+   ],
+   [
+    67.0,
+    "doc",
+    "2022 · Penn State",
+    "J. Applied Physiology"
+   ],
+   [
+    73.2,
+    "people",
+    "Tested on",
+    "real people"
+   ],
+   [
+    77.5,
+    "thermo",
+    "Real limit",
+    "≈ 30–31°C"
+   ],
+   [
+    81.7,
+    "alert",
+    "Danger starts",
+    "much earlier"
+   ]
+  ]
+ },
+ {
+  "id": "short-5",
+  "hook": "One city's plan against killer heat",
+  "from": 414.8666666666667,
+  "dur": 75.03333333333333,
+  "cover": "jobs/urban-heat-island/covers/short-5.png",
+  "beats": [
+   [
+    0.0,
+    "q",
+    "How do we",
+    "fight this?"
+   ],
+   [
+    2.6,
+    "pin",
+    "AHMEDABAD",
+    "had an answer"
+   ],
+   [
+    5.6,
+    "calendar",
+    "MAY 2010",
+    "deadly heatwave"
+   ],
+   [
+    9.4,
+    "doc",
+    "One study",
+    "one month"
+   ],
+   [
+    12.8,
+    "alert",
+    "~1,344",
+    "excess deaths"
+   ],
+   [
+    16.6,
+    "up",
+    "+43%",
+    "above normal"
+   ],
+   [
+    19.6,
+    "city",
+    "AMC",
+    "Municipal Corporation"
+   ],
+   [
+    22.3,
+    "hospital",
+    "+ public health",
+    "experts"
+   ],
+   [
+    24.5,
+    "calendar",
+    "2013",
+    "HEAT ACTION PLAN"
+   ],
+   [
+    27.7,
+    "check",
+    "South Asia's",
+    "FIRST"
+   ],
+   [
+    31.9,
+    "clipboard",
+    "HAP",
+    "4 pillars"
+   ],
+   [
+    36.2,
+    "one",
+    "Public awareness",
+    "do's and don'ts"
+   ],
+   [
+    42.1,
+    "two",
+    "Early warning",
+    "colour-coded alerts"
+   ],
+   [
+    46.3,
+    "people",
+    "Coordination",
+    "across departments"
+   ],
+   [
+    49.0,
+    "three",
+    "Health capacity",
+    "train doctors"
+   ],
+   [
+    52.2,
+    "hospital",
+    "Heatstroke",
+    "treated fast"
+   ],
+   [
+    54.8,
+    "four",
+    "Reduce exposure",
+    ""
+   ],
+   [
+    57.5,
+    "drop",
+    "Water · cool spaces",
+    "new work hours"
+   ],
+   [
+    62.3,
+    "q",
+    "Did it work?",
+    ""
+   ],
+   [
+    64.8,
+    "doc",
+    "2018 evaluation",
+    ""
+   ],
+   [
+    69.9,
+    "check",
+    "~1,190",
+    "deaths avoided / year"
+   ]
+  ]
+ },
+ {
+  "id": "short-6",
+  "hook": "Can white roofs cool a city?",
+  "from": 559.3,
+  "dur": 51.8,
+  "cover": "jobs/urban-heat-island/covers/short-6.png",
+  "beats": [
+   [
+    0.0,
+    "q",
+    "Way forward?",
+    ""
+   ],
+   [
+    1.7,
+    "city",
+    "Solutions are in",
+    "city design"
+   ],
+   [
+    4.8,
+    "one",
+    "COOL ROOFS",
+    ""
+   ],
+   [
+    6.7,
+    "house",
+    "White or reflective",
+    "coating on roofs"
+   ],
+   [
+    10.1,
+    "sun",
+    "Sunlight",
+    "sent back"
+   ],
+   [
+    12.2,
+    "pin",
+    "TELANGANA",
+    "Cool Roof Policy"
+   ],
+   [
+    14.1,
+    "calendar",
+    "2023–2028",
+    "target"
+   ],
+   [
+    17.0,
+    "house",
+    "300 sq km",
+    "of cool roofs"
+   ],
+   [
+    20.6,
+    "down",
+    "Indoors",
+    "2–4°C cooler"
+   ],
+   [
+    25.4,
+    "two",
+    "URBAN FORESTS",
+    "parks · water bodies"
+   ],
+   [
+    30.5,
+    "tree",
+    "Evapotranspiration",
+    "cools the city again"
+   ],
+   [
+    34.6,
+    "three",
+    "SMART PLANNING",
+    ""
+   ],
+   [
+    37.4,
+    "wind",
+    "Let the wind",
+    "flow through"
+   ],
+   [
+    40.2,
+    "four",
+    "BETTER ALERTS",
+    ""
+   ],
+   [
+    41.9,
+    "drop",
+    "Add humidity",
+    "+ wet bulb"
+   ],
+   [
+    44.8,
+    "five",
+    "PROTECT WORKERS",
+    ""
+   ],
+   [
+    47.3,
+    "clock",
+    "Shift work hours",
+    ""
+   ],
+   [
+    48.8,
+    "drop",
+    "Water + shade",
+    "for outdoor workers"
+   ]
+  ]
+ }
+]
