@@ -13,6 +13,8 @@ import os
 import re
 import subprocess
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -52,9 +54,20 @@ used = set()
 report = []
 
 
+def fetch(url, headers=None, timeout=40):
+    """GET with a pause before each call and backoff on HTTP 429 (Commons rate-limits bursts)."""
+    for attempt in range(5):
+        try:
+            time.sleep(1.5)
+            return urllib.request.urlopen(urllib.request.Request(url, headers={**UA, **(headers or {})}), timeout=timeout).read()
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or attempt == 4:
+                raise
+            time.sleep(15 * (attempt + 1))
+
+
 def get_json(url, headers=None):
-    req = urllib.request.Request(url, headers={**UA, **(headers or {})})
-    return json.load(urllib.request.urlopen(req, timeout=40))
+    return json.loads(fetch(url, headers))
 
 
 def strip_html(s):
@@ -155,7 +168,7 @@ for s in scenes:
 def commons_file(title):
     """Download URL, kind and credit of one Commons file, by its exact title."""
     params = {"action": "query", "format": "json", "titles": title, "prop": "videoinfo",
-              "viprop": "url|size|mime|extmetadata|derivatives"}
+              "viprop": "url|size|mime|extmetadata|derivatives", "viurlwidth": 1920}
     p = next(iter((get_json(COMMONS + "?" + urllib.parse.urlencode(params)).get("query") or {}).get("pages", {}).values()))
     info = (p.get("videoinfo") or [{}])[0]
     mime = info.get("mime") or ""
@@ -163,7 +176,8 @@ def commons_file(title):
     lic = strip_html((meta.get("LicenseShortName") or {}).get("value")) or "free licence"
     artist = strip_html((meta.get("Artist") or {}).get("value"))[:60] or "Wikimedia Commons"
     kind = "video" if mime.startswith("video") or mime in ("application/ogg",) else "photo"
-    url = info.get("url")
+    # photos come from the standard 1920 px thumbnail: Commons throttles original-file downloads
+    url = info.get("thumburl") or info.get("url") if kind == "photo" else info.get("url")
     if kind == "video":
         derivs = [d for d in info.get("derivatives") or [] if 1280 <= (d.get("width") or 0) <= 1920 and "webm" in (d.get("type") or "") + (d.get("src") or "")]
         derivs.sort(key=lambda d: -(d.get("width") or 0))
@@ -176,9 +190,8 @@ for key, b in picked:
     try:
         meta = commons_file(b["title"])
         raw = os.path.join(tmp_dir, f"{key}.src")
-        req = urllib.request.Request(meta["url"], headers=UA)
-        with urllib.request.urlopen(req, timeout=180) as r, open(raw, "wb") as f:
-            f.write(r.read())
+        with open(raw, "wb") as f:
+            f.write(fetch(meta["url"], timeout=180))
         if meta["kind"] == "video":
             dest = os.path.join(out_dir, f"{key}.mp4")
             need = float(b.get("sec", 3)) + 1.5 if not key.count("-cut") else 4.0

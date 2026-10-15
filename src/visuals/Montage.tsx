@@ -69,7 +69,8 @@ export const Montage: React.FC<MontageSpec> = ({cuts}) => {
         const len = (i + 1 < cuts.length ? starts[i + 1] : durationInFrames) - from;
         return (
           <Sequence key={i} from={from} durationInFrames={len}>
-            <Cut c={c} len={len} i={i} />
+            {/* a media cut whose footage could not be fetched becomes a title card, never a blank frame */}
+            <Cut c={c.kind === 'media' && !c.media?.src ? {...c, kind: 'title'} : c} len={len} i={i} />
             <Audio src={staticFile(`sfx/${c.sfx || (c.kind === 'big' ? 'hit' : 'whoosh')}.wav`)} volume={c.kind === 'big' ? 0.6 : 0.4} />
           </Sequence>
         );
