@@ -1,0 +1,14 @@
+{
+  "broll": [
+    {"key": "parliament", "queries": ["Parliament House New Delhi", "Sansad Bhavan", "New Parliament Building India"]},
+    {"key": "loksabha", "queries": ["Lok Sabha chamber", "Lok Sabha session", "Rajya Sabha chamber"]},
+    {"key": "crowd", "queries": ["crowd India street", "Mumbai crowd", "Old Delhi crowd", "Varanasi ghat crowd"]},
+    {"key": "voters", "queries": ["Indian voters queue", "voter ink finger India", "polling booth India"]},
+    {"key": "south", "queries": ["Chennai Marina", "Kerala backwaters", "Bengaluru skyline", "Hyderabad Charminar"]},
+    {"key": "north", "queries": ["Lucknow", "Patna", "Jaipur Hawa Mahal", "Ganga Varanasi"]},
+    {"key": "census", "queries": ["Census of India enumerator", "census India household survey", "family planning India poster"]},
+    {"key": "court", "queries": ["Supreme Court of India building"]},
+    {"key": "capitol", "queries": ["United States Capitol", "US House of Representatives chamber"]},
+    {"key": "delhi", "queries": ["India Gate New Delhi", "Rashtrapati Bhavan", "Rajpath New Delhi"]}
+  ]
+}
