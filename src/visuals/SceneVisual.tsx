@@ -17,6 +17,8 @@ import {Footage} from './Footage';
 import {Body3D} from '../three/Body3D';
 import {Molecule3D} from '../three/Molecule3D';
 import {Terrain3D} from '../three/Terrain3D';
+import {Montage} from './Montage';
+import {Cloud} from './Cloud';
 
 export const SceneVisual: React.FC<{scene: Scene; format: Format}> = ({scene, format}) => {
   const v = scene.visual;
@@ -53,6 +55,11 @@ export const SceneVisual: React.FC<{scene: Scene; format: Format}> = ({scene, fo
       return <SourceCard {...v} />;
     case 'footage':
       return <Footage {...v} />;
+    case 'cloud':
+      return <Cloud {...v} />;
+    case 'montage':
+      // Full-bleed, like terrain: the cinematic hook.
+      return <Montage spec={v} box={format === '9:16' ? {x: 0, y: 280, w: 1080, h: 1640} : {x: 0, y: 0, w: 1480, h: 1080}} />;
     case 'terrain':
       // Full-bleed: everything left of the tracker (16:9) or below it (9:16).
       return <Terrain3D spec={v} box={format === '9:16' ? {x: 0, y: 280, w: 1080, h: 1640} : {x: 0, y: 0, w: 1480, h: 1080}} />;

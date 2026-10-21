@@ -13,6 +13,8 @@ import os
 import re
 import subprocess
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -33,8 +35,20 @@ def relevant(query, text):
 
 path = sys.argv[1] if len(sys.argv) > 1 else "out/job.final.json"
 job = json.load(open(path, encoding="utf-8"))
-scenes = [s for s in job["scenes"] if (s.get("visual") or {}).get("type") == "footage"]
-if not scenes:
+# A "footage" scene is one clip; a "montage" scene's video shots each carry their own query.
+items = []
+for s in job["scenes"]:
+    v = s.get("visual") or {}
+    if v.get("type") == "footage":
+        items.append((s["id"], v, (s.get("durationSec") or 6) + 0.5))
+    elif v.get("type") == "montage":
+        shots = v.get("shots") or []
+        total = s.get("durationSec") or 8
+        for i, sh in enumerate(shots):
+            if sh.get("video") and sh.get("query"):
+                nxt = shots[i + 1]["t0"] if i + 1 < len(shots) else total
+                items.append((f"{s['id']}-{i}", sh, nxt - sh["t0"] + 1.2))
+if not items:
     print("No footage scenes")
     sys.exit(0)
 out_dir = os.path.join("public", "jobs", job["id"], "footage")
@@ -46,9 +60,20 @@ used = set()
 report = []
 
 
+def fetch(url, headers=None, timeout=40):
+    """GET with a pause before each call and backoff on HTTP 429 (Commons rate-limits bursts)."""
+    for attempt in range(5):
+        try:
+            time.sleep(1.5)
+            return urllib.request.urlopen(urllib.request.Request(url, headers={**UA, **(headers or {})}), timeout=timeout).read()
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or attempt == 4:
+                raise
+            time.sleep(15 * (attempt + 1))
+
+
 def get_json(url, headers=None):
-    req = urllib.request.Request(url, headers={**UA, **(headers or {})})
-    return json.load(urllib.request.urlopen(req, timeout=40))
+    return json.loads(fetch(url, headers))
 
 
 def strip_html(s):
@@ -104,10 +129,12 @@ def pexels(query, need):
     return None
 
 
-for s in scenes:
-    v = s["visual"]
+for sid, v, need in items:
     query = (v.get("query") or "").strip()
-    need = (s.get("durationSec") or 6) + 0.5
+    if v.get("src") and os.path.exists(os.path.join("public", v["src"])):  # fetched by an earlier assets run
+        used.add(v.get("src"))
+        report.append({"scene": sid, "query": query, "found": True, "credit": v.get("credit"), "page": "kept"})
+        continue
     pick, err = None, None
     words = query.split()
     tries = [query] + ([" ".join(words[:3])] if len(words) > 3 else [])
@@ -122,28 +149,27 @@ for s in scenes:
         if pick:
             break
     if not pick:
-        print(s["id"], "no clip for", repr(query), err or "")
-        report.append({"scene": s["id"], "query": query, "found": False, "error": err})
+        print(sid, "no clip for", repr(query), err or "")
+        report.append({"scene": sid, "query": query, "found": False, "error": err})
         continue
     used.add(pick["id"])
-    raw = os.path.join(tmp_dir, f"{s['id']}.src")
-    dest = os.path.join(out_dir, f"{s['id']}.mp4")
+    raw = os.path.join(tmp_dir, f"{sid}.src")
+    dest = os.path.join(out_dir, f"{sid}.mp4")
     try:
-        req = urllib.request.Request(pick["url"], headers=UA)
-        with urllib.request.urlopen(req, timeout=120) as r, open(raw, "wb") as f:
-            f.write(r.read())
+        with open(raw, "wb") as f:
+            f.write(fetch(pick["url"], timeout=180))
         loop = ["-stream_loop", "-1"] if pick["duration"] < need else []
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *loop, "-i", raw, "-t", f"{need:.2f}", "-an",
                         "-vf", "scale=1280:-2,fps=30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "23",
                         "-pix_fmt", "yuv420p", dest], check=True, timeout=300)
     except Exception as e:  # noqa: BLE001
-        print(s["id"], "download/convert failed", e)
-        report.append({"scene": s["id"], "query": query, "found": False, "error": str(e)[:200]})
+        print(sid, "download/convert failed", e)
+        report.append({"scene": sid, "query": query, "found": False, "error": str(e)[:200]})
         continue
-    v["src"] = f"jobs/{job['id']}/footage/{s['id']}.mp4"
+    v["src"] = f"jobs/{job['id']}/footage/{sid}.mp4"
     v["credit"] = pick["credit"]
-    print(s["id"], "->", v["src"], "|", pick["credit"])
-    report.append({"scene": s["id"], "query": query, "found": True, "credit": pick["credit"], "page": pick["page"]})
+    print(sid, "->", v["src"], "|", pick["credit"])
+    report.append({"scene": sid, "query": query, "found": True, "credit": pick["credit"], "page": pick["page"]})
 
 json.dump(job, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 json.dump(report, open(os.path.join("out", "footage-report.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
