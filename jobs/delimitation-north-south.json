@@ -1,0 +1,3099 @@
+{
+ "id": "delimitation-north-south",
+ "title": "Delimitation Explained | Why South India Fears Losing Lok Sabha Seats | Census 2027 | UPSC Polity",
+ "format": "16:9",
+ "tracker": {
+  "title": "Lesson progress",
+  "objectives": [
+   {
+    "id": "o1",
+    "label": "What is delimitation"
+   },
+   {
+    "id": "o2",
+    "label": "The freeze (1976 → 2026)"
+   },
+   {
+    "id": "o3",
+    "label": "Population vs representation"
+   },
+   {
+    "id": "o4",
+    "label": "The North-South debate"
+   },
+   {
+    "id": "o5",
+    "label": "The 2026 Bill & why it failed"
+   },
+   {
+    "id": "o6",
+    "label": "Census link & what's next"
+   },
+   {
+    "id": "o7",
+    "label": "Options for the future"
+   },
+   {
+    "id": "o8",
+    "label": "Recap & Mains angle"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "id": "T00",
+   "narration": "सोचिए, 1971 में भारत की आबादी लगभग 55 करोड़ थी, और आज 140 करोड़ से भी ज़्यादा है। फिर भी Lok Sabha में राज्यों की seats आज भी 1971 की census के हिसाब से ही बँटी हुई हैं।",
+   "durationSec": 16.25,
+   "audio": "jobs/delimitation-north-south/T00.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "montage",
+    "cuts": [
+     {
+      "at": 0.0,
+      "kind": "media",
+      "media": {
+       "title": "File:A Video clip of When Rolls-Royce Goes Holi Mode in Howrah.webm"
+      },
+      "label": "India: 1971 vs today"
+     },
+     {
+      "at": 3.4,
+      "kind": "big",
+      "value": "55",
+      "label": "crore people in 1971",
+      "tone": "neutral"
+     },
+     {
+      "at": 5.9,
+      "kind": "big",
+      "value": "140",
+      "label": "crore+ people today",
+      "tone": "accent"
+     },
+     {
+      "at": 8.6,
+      "kind": "media",
+      "media": {
+       "title": "File:View of Lok Sabha chamber in the New Parliament building, New Delhi.jpg"
+      },
+      "label": "Lok Sabha seats today"
+     },
+     {
+      "at": 10.6,
+      "kind": "big",
+      "value": "543",
+      "label": "seats, frozen since 1971",
+      "tone": "warn"
+     },
+     {
+      "at": 12.6,
+      "kind": "media",
+      "media": {
+       "title": "File:Parliament of India in New Delhi 04.jpg"
+      },
+      "label": "Still split by the 1971 census"
+     },
+     {
+      "at": 14.3,
+      "kind": "title",
+      "label": "Seats still on |1971 census",
+      "tone": "bad",
+      "sfx": "hit"
+     }
+    ]
+   }
+  },
+  {
+   "id": "I00",
+   "narration": "",
+   "durationSec": 4.5,
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "intro",
+    "channel": "EXPLAINERS",
+    "kicker": "GS-II · Polity · Prelims + Mains",
+    "title": "Delimitation & the North‑South Debate",
+    "host": "Ujjwal",
+    "hostImg": "branding/ujjwal-tutor.png"
+   }
+  },
+  {
+   "id": "S00",
+   "narration": "[curious] सरकार ने महिलाओं को one-third seats देने वाला कानून April 2026 में लागू कर दिया, लेकिन आज तक वो एक भी seat पर लागू नहीं हुआ। [pause] क्योंकि उसकी चाबी एक ऐसे ताले में बंद है जिसका नाम है delimitation, और उस ताले पर North और South आमने-सामने खड़े हैं।",
+   "durationSec": 18.92,
+   "audio": "jobs/delimitation-north-south/S00.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Women's reservation law",
+     "items": [
+      "In force: 16 April 2026",
+      "one-third of seats promised"
+     ],
+     "tone": "good"
+    },
+    "right": {
+     "heading": "Seats reserved for women today",
+     "items": [
+      "0",
+      "locked behind delimitation"
+     ],
+     "tone": "bad"
+    }
+   },
+   "onScreen": "Women's quota: in force since April 2026… seats reserved so far: 0",
+   "sfx": "hit"
+  },
+  {
+   "id": "S01",
+   "narration": "[serious] सोचिए, 1971 में भारत की आबादी लगभग 55 करोड़ थी, और आज 140 करोड़ से भी ज़्यादा है। [pause] फिर भी Lok Sabha में राज्यों की seats आज भी 1971 की census के हिसाब से ही बँटी हुई हैं।",
+   "durationSec": 16.35,
+   "audio": "jobs/delimitation-north-south/S01.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "stat",
+    "value": 140,
+    "from": 55,
+    "suffix": "+ crore",
+    "label": "India's population since 1971 · Lok Sabha seats still frozen at 543",
+    "source": "Census of India 1971; UN World Population Prospects"
+   },
+   "onScreen": "1971: ~55 crore people · Today: 140+ crore · Seats still based on 1971",
+   "sfx": "tick",
+   "compact": true,
+   "broll": {
+    "title": "File:A video clip of Rolls-Royce Holi in Kolkata 2026 packed with devotional energy color and street celebration.webm",
+    "sec": 3.5,
+    "from": 2
+   }
+  },
+  {
+   "id": "S02",
+   "narration": "[curious] अब ये freeze खुलने वाला है। [pause] और जब ये खुलेगा, तो सवाल उठेगा कि ज़्यादा आबादी वाले राज्यों को ज़्यादा seats मिलें, या उन राज्यों को सज़ा न मिले, जिन्होंने अपनी आबादी को control किया?",
+   "durationSec": 12.34,
+   "audio": "jobs/delimitation-north-south/S02.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "map",
+    "map": {
+     "focus": {
+      "center": [
+       80.5,
+       22.5
+      ],
+      "zoom": 4.6
+     },
+     "highlights": [
+      {
+       "iso3": "IND",
+       "tone": "neutral"
+      }
+     ],
+     "markers": [
+      {
+       "at": [
+        80.9,
+        26.8
+       ],
+       "label": "Uttar Pradesh: 80 seats",
+       "tone": "warn",
+       "delay": 40
+      },
+      {
+       "at": [
+        76.3,
+        10.2
+       ],
+       "label": "Kerala: 20 seats",
+       "tone": "accent",
+       "delay": 70
+      }
+     ],
+     "from": {
+      "center": [
+       78,
+       20
+      ],
+      "zoom": 1
+     },
+     "projection": "globe-to-flat"
+    }
+   },
+   "onScreen": "Population or performance?",
+   "sfx": "whoosh"
+  },
+  {
+   "id": "S03",
+   "narration": "[confident] आज के lesson में हम समझेंगे कि delimitation क्या है, seats 1976 से freeze क्यों हैं, North और South के बीच ये बहस क्यों है। [pause] फिर हम देखेंगे कि April 2026 में Lok Sabha में आया Bill क्यों गिरा, और Census 2027 से इसका क्या connection है।",
+   "durationSec": 18.54,
+   "audio": "jobs/delimitation-north-south/S03.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "title",
+    "kicker": "UPSC Polity · GS-II",
+    "title": "Delimitation & the North-South Debate",
+    "subtitle": "Freeze till 2026 · Population vs representation · Census link"
+   },
+   "sfx": "pop",
+   "broll": {
+    "title": "File:Parliament of India in New Delhi 04.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S04",
+   "narration": "[explaining] Delimitation का मतलब है, चुनाव के लिए constituencies की सीमाएँ तय करना। [pause] यानी ये तय करना कि किस राज्य को Lok Sabha और Vidhan Sabha में कितनी seats मिलेंगी, और हर seat का इलाका कहाँ से कहाँ तक होगा।",
+   "durationSec": 14.58,
+   "audio": "jobs/delimitation-north-south/S04.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "How many seats?",
+     "items": [
+      "for each state",
+      "in Lok Sabha and Vidhan Sabha"
+     ],
+     "tone": "accent"
+    },
+    "right": {
+     "heading": "Where are the boundaries?",
+     "items": [
+      "the area of each constituency"
+     ],
+     "tone": "good"
+    }
+   },
+   "onScreen": "Delimitation = fixing seats + boundaries of constituencies",
+   "broll": {
+    "title": "File:India Gate, New Delhi from West.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S05",
+   "narration": "[explaining] इसका आधार Constitution में है। [pause] Article 82 कहता है कि हर census के बाद Lok Sabha की seats का राज्यों में बँटवारा फिर से किया जाएगा। [pause] और Article 170 यही बात राज्यों की Vidhan Sabhas के लिए कहता है।",
+   "durationSec": 15.55,
+   "audio": "jobs/delimitation-north-south/S05.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Article 82",
+     "items": [
+      "Lok Sabha seats",
+      "readjusted after each census"
+     ],
+     "tone": "accent"
+    },
+    "right": {
+     "heading": "Article 170",
+     "items": [
+      "Vidhan Sabha seats",
+      "readjusted after each census"
+     ],
+     "tone": "good"
+    }
+   },
+   "onScreen": "Article 82 → Lok Sabha · Article 170 → State Assemblies"
+  },
+  {
+   "id": "S06",
+   "narration": "[explaining] ये काम करता है Delimitation Commission, जिसे Parliament के कानून के तहत बनाया जाता है। [pause] इसके chairperson Supreme Court के retired judge होते हैं, और साथ में Chief Election Commissioner और संबंधित राज्य के State Election Commissioner होते हैं।",
+   "durationSec": 15.3,
+   "audio": "jobs/delimitation-north-south/S06.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "hub",
+    "center": {
+     "label": "Delimitation Commission",
+     "icon": "doc"
+    },
+    "spokes": [
+     {
+      "label": "Chair: retired SC judge",
+      "icon": "person"
+     },
+     {
+      "label": "Chief Election Commissioner",
+      "icon": "check"
+     },
+     {
+      "label": "State Election Commissioner",
+      "icon": "person"
+     },
+     {
+      "label": "MPs, MLAs: associates, no vote",
+      "icon": "people"
+     }
+    ]
+   },
+   "onScreen": "Delimitation Commission: retired SC judge + CEC + State Election Commissioner",
+   "broll": {
+    "title": "File:New Delhi government block 03-2016 img3.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S07",
+   "narration": "[measured] अब तक 4 Delimitation Commissions बन चुके हैं, 1952, 1963, 1973 और 2002 में। [pause] आख़िरी commission ने 2008 में अपने orders दिए, और उन्होंने हर राज्य के अंदर constituencies की सीमाएँ बदलीं, पर राज्यों की seats की संख्या नहीं बदली।",
+   "durationSec": 19.22,
+   "audio": "jobs/delimitation-north-south/S07.mp3",
+   "objective": "o1",
+   "completes": [],
+   "visual": {
+    "type": "timeline",
+    "heading": "Delimitation Commissions",
+    "nodes": [
+     {
+      "date": "1952",
+      "label": "1st Commission"
+     },
+     {
+      "date": "1963",
+      "label": "2nd Commission"
+     },
+     {
+      "date": "1973",
+      "label": "3rd Commission"
+     },
+     {
+      "date": "2002",
+      "label": "4th Commission"
+     },
+     {
+      "date": "2008",
+      "label": "Orders: boundaries redrawn, seat numbers unchanged",
+      "tone": "accent"
+     }
+    ]
+   },
+   "onScreen": "Commissions: 1952 · 1963 · 1973 · 2002 (orders 2008)"
+  },
+  {
+   "id": "S08",
+   "narration": "[thoughtful] Prelims के लिए एक important point याद रखिए। [pause] Article 329 के अनुसार, delimitation से जुड़े कानूनों को court में चुनौती नहीं दी जा सकती। [pause] लेकिन July 2024 में Supreme Court ने कहा कि अगर commission का कोई order साफ़ तौर पर मनमाना हो, यानी manifestly arbitrary हो, तो court उसकी जाँच कर सकता है।",
+   "durationSec": 23.3,
+   "audio": "jobs/delimitation-north-south/S08.mp3",
+   "objective": "o1",
+   "completes": [
+    "o1"
+   ],
+   "visual": {
+    "type": "source",
+    "url": "https://api.sci.gov.in/supremecourt/2012/33795/33795_2012_4_10_53780_Judgement_23-Jul-2024.pdf",
+    "publisher": "Supreme Court of India",
+    "date": "23 Jul 2024",
+    "title": "Kishorchandra Chhanganlal Rathod v. Union of India, 2024 INSC 579",
+    "why": "Courts can review a delimitation order that is manifestly arbitrary"
+   },
+   "onScreen": "Art. 329: bar on courts · SC 2024: review if \"manifestly arbitrary\"",
+   "sfx": "ping"
+  },
+  {
+   "id": "S09",
+   "narration": "[curious] अगर Constitution कहता है कि हर census के बाद seats फिर से बँटेंगी, तो 1971 के बाद ऐसा हुआ क्यों नहीं?",
+   "durationSec": 8.1,
+   "audio": "jobs/delimitation-north-south/S09.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "question",
+    "text": "If seats must be redistributed after every census, why not after 1971?",
+    "highlight": [
+     "after 1971"
+    ]
+   },
+   "sfx": "whoosh",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "1971",
+      "label": "Census base"
+     },
+     {
+      "date": "1976",
+      "label": "42nd Amdt"
+     },
+     {
+      "date": "2001",
+      "label": "84th Amdt"
+     },
+     {
+      "date": "2003",
+      "label": "87th Amdt"
+     },
+     {
+      "date": "2008",
+      "label": "New boundaries"
+     },
+     {
+      "date": "after 2026",
+      "label": "Freeze ends"
+     }
+    ],
+    "at": 0
+   },
+   "broll": {
+    "title": "File:SansadBhavan.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S10",
+   "narration": "[explaining] इसका जवाब है 1976 का 42nd Constitutional Amendment। [pause] उस समय सरकार पूरे देश में family planning को बढ़ावा दे रही थी। [pause] चिंता ये थी कि जो राज्य आबादी कम करेंगे, उनकी seats घट जाएँगी, और ये उनके लिए सज़ा जैसा होगा।",
+   "durationSec": 17.6,
+   "audio": "jobs/delimitation-north-south/S10.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "flow",
+    "heading": "The worry in 1976",
+    "steps": [
+     {
+      "label": "Family planning",
+      "sub": "a state controls its population",
+      "icon": "people"
+     },
+     {
+      "label": "Fewer people",
+      "sub": "so fewer seats after the census",
+      "icon": "chart"
+     },
+     {
+      "label": "Feels like a penalty",
+      "sub": "so the seats were frozen",
+      "icon": "lock"
+     }
+    ]
+   },
+   "onScreen": "42nd Amendment (1976): freeze to protect family planning",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "1971",
+      "label": "Census base"
+     },
+     {
+      "date": "1976",
+      "label": "42nd Amdt"
+     },
+     {
+      "date": "2001",
+      "label": "84th Amdt"
+     },
+     {
+      "date": "2003",
+      "label": "87th Amdt"
+     },
+     {
+      "date": "2008",
+      "label": "New boundaries"
+     },
+     {
+      "date": "after 2026",
+      "label": "Freeze ends"
+     }
+    ],
+    "at": 1,
+    "from": 0
+   },
+   "broll": {
+    "title": "File:India - Varanasi street rickshaws - 1690.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S11",
+   "narration": "[explaining] इसलिए 42nd Amendment ने राज्यों के बीच seats का बँटवारा 1971 की census पर freeze कर दिया, 2000 के बाद की पहली census तक के लिए।",
+   "durationSec": 10.03,
+   "audio": "jobs/delimitation-north-south/S11.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "timeline",
+    "heading": "42nd Amendment, 1976",
+    "nodes": [
+     {
+      "date": "1971",
+      "label": "Census used for seats",
+      "tone": "accent"
+     },
+     {
+      "date": "1976",
+      "label": "Freeze begins"
+     },
+     {
+      "date": "2001",
+      "label": "Freeze was to end"
+     }
+    ]
+   },
+   "onScreen": "Seat allocation frozen on Census 1971 → till first census after 2000",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "1971",
+      "label": "Census base"
+     },
+     {
+      "date": "1976",
+      "label": "42nd Amdt"
+     },
+     {
+      "date": "2001",
+      "label": "84th Amdt"
+     },
+     {
+      "date": "2003",
+      "label": "87th Amdt"
+     },
+     {
+      "date": "2008",
+      "label": "New boundaries"
+     },
+     {
+      "date": "after 2026",
+      "label": "Freeze ends"
+     }
+    ],
+    "at": 1,
+    "from": 1
+   }
+  },
+  {
+   "id": "S12",
+   "narration": "[explaining] फिर 2001 में 84th Amendment आया, जिसने इस freeze को और 25 साल बढ़ा दिया, यानी 2026 के बाद होने वाली पहली census तक। [pause] साथ ही इसने राज्यों के अंदर boundaries को नए सिरे से खींचने की इजाज़त दी, और 2003 के 87th Amendment ने उसके लिए 2001 की census को आधार बना दिया।",
+   "durationSec": 22.35,
+   "audio": "jobs/delimitation-north-south/S12.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "timeline",
+    "heading": "The freeze is extended",
+    "nodes": [
+     {
+      "date": "2001",
+      "label": "84th Amendment: freeze extended by 25 years"
+     },
+     {
+      "date": "2003",
+      "label": "87th Amendment: boundaries on Census 2001"
+     },
+     {
+      "date": "2008",
+      "label": "New boundaries in force"
+     },
+     {
+      "date": "after 2026",
+      "label": "First census after 2026: freeze ends",
+      "tone": "accent"
+     }
+    ]
+   },
+   "onScreen": "84th (2001): freeze till first census after 2026 · 87th (2003): boundaries on Census 2001",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "1971",
+      "label": "Census base"
+     },
+     {
+      "date": "1976",
+      "label": "42nd Amdt"
+     },
+     {
+      "date": "2001",
+      "label": "84th Amdt"
+     },
+     {
+      "date": "2003",
+      "label": "87th Amdt"
+     },
+     {
+      "date": "2008",
+      "label": "New boundaries"
+     },
+     {
+      "date": "after 2026",
+      "label": "Freeze ends"
+     }
+    ],
+    "at": 2,
+    "from": 1
+   }
+  },
+  {
+   "id": "S13",
+   "narration": "[emphatic] तो याद रखिए, यहाँ 2 अलग चीज़ें हैं। [pause] राज्यों के बीच seats की संख्या अभी भी 1971 की census पर टिकी है, जबकि राज्यों के अंदर constituencies की सीमाएँ 2001 की census पर बनी हैं।",
+   "durationSec": 14.32,
+   "audio": "jobs/delimitation-north-south/S13.mp3",
+   "objective": "o2",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Seats between states",
+     "items": [
+      "still based on Census 1971"
+     ],
+     "tone": "warn"
+    },
+    "right": {
+     "heading": "Boundaries inside each state",
+     "items": [
+      "based on Census 2001"
+     ],
+     "tone": "accent"
+    }
+   },
+   "onScreen": "Seats per state → 1971 · Boundaries within states → 2001",
+   "sfx": "ping",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "1971",
+      "label": "Census base"
+     },
+     {
+      "date": "1976",
+      "label": "42nd Amdt"
+     },
+     {
+      "date": "2001",
+      "label": "84th Amdt"
+     },
+     {
+      "date": "2003",
+      "label": "87th Amdt"
+     },
+     {
+      "date": "2008",
+      "label": "New boundaries"
+     },
+     {
+      "date": "after 2026",
+      "label": "Freeze ends"
+     }
+    ],
+    "at": 4,
+    "from": 2
+   }
+  },
+  {
+   "id": "S14",
+   "narration": "[measured] इसी वजह से Lok Sabha में आज भी 543 elected seats हैं। [pause] और Article 81 के अनुसार, ये संख्या ज़्यादा से ज़्यादा 550 हो सकती है, राज्यों से 530 और Union Territories से 20।",
+   "durationSec": 15.42,
+   "audio": "jobs/delimitation-north-south/S14.mp3",
+   "objective": "o2",
+   "completes": [
+    "o2"
+   ],
+   "visual": {
+    "type": "formula",
+    "heading": "Article 81: the size of the Lok Sabha",
+    "lines": [
+     {
+      "text": "States: up to 530"
+     },
+     {
+      "text": "Union Territories: up to 20"
+     },
+     {
+      "text": "Maximum 550 · elected today: 543",
+      "final": true
+     }
+    ]
+   },
+   "onScreen": "Lok Sabha today: 543 · Art. 81 cap: 530 (States) + 20 (UTs) = 550",
+   "compact": true,
+   "timebar": {
+    "nodes": [
+     {
+      "date": "1971",
+      "label": "Census base"
+     },
+     {
+      "date": "1976",
+      "label": "42nd Amdt"
+     },
+     {
+      "date": "2001",
+      "label": "84th Amdt"
+     },
+     {
+      "date": "2003",
+      "label": "87th Amdt"
+     },
+     {
+      "date": "2008",
+      "label": "New boundaries"
+     },
+     {
+      "date": "after 2026",
+      "label": "Freeze ends"
+     }
+    ],
+    "at": 4,
+    "from": 4
+   }
+  },
+  {
+   "id": "S15",
+   "narration": "[curious] अब असली सवाल। [pause] आपका एक vote, किसी दूसरे राज्य के vote के बराबर है या नहीं?",
+   "durationSec": 7.27,
+   "audio": "jobs/delimitation-north-south/S15.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "question",
+    "text": "Is your vote worth the same as a vote in another state?",
+    "highlight": [
+     "worth the same"
+    ]
+   },
+   "onScreen": "Is your vote equal to mine?",
+   "sfx": "whoosh",
+   "broll": {
+    "title": "File:The Polling official administering indelible ink at the finger of a voter who came first time to exercising his franchise at a polling booth in DAV Sr. Sec. School, Lakkar Bazar, Shimla.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S16",
+   "narration": "[explaining] Democracy का एक बुनियादी सिद्धांत है, one person, one vote, one value। [pause] यानी हर MP लगभग बराबर लोगों का प्रतिनिधित्व करे, ताकि हर नागरिक की आवाज़ का वज़न बराबर हो।",
+   "durationSec": 13.0,
+   "audio": "jobs/delimitation-north-south/S16.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "flow",
+    "heading": "The basic principle",
+    "steps": [
+     {
+      "label": "One person",
+      "icon": "person"
+     },
+     {
+      "label": "One vote",
+      "icon": "check"
+     },
+     {
+      "label": "One value",
+      "sub": "each MP for about the same number of people",
+      "icon": "people"
+     }
+    ]
+   },
+   "onScreen": "One person, one vote, one value",
+   "broll": {
+    "title": "File:Queues of Indian voters - Flickr - Al Jazeera English.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S17",
+   "narration": "[measured] 1951 में एक MP औसतन लगभग 7 लाख लोगों का प्रतिनिधित्व करता था। [pause] आज ये आँकड़ा लगभग 25 लाख तक पहुँच गया है, जो दुनिया के बड़े लोकतंत्रों में सबसे ज़्यादा में से एक है।",
+   "durationSec": 13.61,
+   "audio": "jobs/delimitation-north-south/S17.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "stat",
+    "value": 25,
+    "from": 7,
+    "prefix": "~",
+    "suffix": " lakh",
+    "label": "people per MP, up from about 7 lakh in 1951",
+    "source": "Carnegie Endowment (2019); ISAS NUS Brief 1230 (2025)"
+   },
+   "onScreen": "People per MP: ~7 lakh (1951) → ~25 lakh (today)",
+   "sfx": "ping",
+   "compact": true,
+   "broll": {
+    "title": "File:Inside view of Lok Sabha chamber in New Parliament building.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S18",
+   "narration": "[explaining] लेकिन ये बोझ हर राज्य में बराबर नहीं है, क्योंकि 1971 के बाद हर राज्य की आबादी अलग रफ़्तार से बढ़ी। [pause] इसे समझने का सबसे आसान तरीका है Total Fertility Rate, यानी TFR, जो बताता है कि एक महिला औसतन कितने बच्चों को जन्म देती है।",
+   "durationSec": 17.68,
+   "audio": "jobs/delimitation-north-south/S18.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "formula",
+    "heading": "Total Fertility Rate (TFR)",
+    "lines": [
+     {
+      "text": "Average number of children per woman",
+      "note": "over her lifetime"
+     },
+     {
+      "text": "Replacement level = 2.1",
+      "final": true,
+      "note": "the population holds steady"
+     }
+    ]
+   },
+   "onScreen": "TFR = average children per woman · Replacement level = 2.1",
+   "compact": true
+  },
+  {
+   "id": "S19",
+   "narration": "[measured] NFHS-5 के अनुसार, भारत का TFR 2.0 है। [pause] Bihar में ये लगभग 3 है, और Uttar Pradesh में लगभग 2.4। [pause] वहीं Kerala और Tamil Nadu में ये लगभग 1.8 है, यानी replacement level से भी नीचे।",
+   "durationSec": 16.49,
+   "audio": "jobs/delimitation-north-south/S19.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "map",
+    "map": {
+     "focus": {
+      "center": [
+       80.5,
+       22.5
+      ],
+      "zoom": 4.6
+     },
+     "highlights": [
+      {
+       "iso3": "IND",
+       "tone": "neutral"
+      }
+     ],
+     "markers": [
+      {
+       "at": [
+        85.6,
+        25.6
+       ],
+       "label": "Bihar 2.98",
+       "tone": "warn",
+       "delay": 15
+      },
+      {
+       "at": [
+        80.9,
+        26.8
+       ],
+       "label": "UP 2.35",
+       "tone": "warn",
+       "delay": 40
+      },
+      {
+       "at": [
+        76.3,
+        10.2
+       ],
+       "label": "Kerala ~1.8",
+       "tone": "accent",
+       "delay": 80
+      },
+      {
+       "at": [
+        78.6,
+        11.1
+       ],
+       "label": "Tamil Nadu ~1.8",
+       "tone": "accent",
+       "delay": 95
+      }
+     ],
+     "labels": [
+      {
+       "at": [
+        68.5,
+        8.5
+       ],
+       "text": "India TFR 2.0 (NFHS-5)"
+      }
+     ]
+    }
+   },
+   "onScreen": "TFR (NFHS-5): India 2.0 · Bihar 2.98 · UP 2.35 · Kerala ~1.8 · Tamil Nadu ~1.8"
+  },
+  {
+   "id": "S20",
+   "narration": "[explaining] अब इसका असर देखिए। [pause] 2011 की census के हिसाब से, Uttar Pradesh का एक MP लगभग 25 लाख लोगों का प्रतिनिधित्व करता है, जबकि Kerala का एक MP लगभग 17 लाख लोगों का।",
+   "durationSec": 14.0,
+   "audio": "jobs/delimitation-north-south/S20.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "map",
+    "map": {
+     "focus": {
+      "center": [
+       79,
+       19
+      ],
+      "zoom": 5.2
+     },
+     "highlights": [
+      {
+       "iso3": "IND",
+       "tone": "neutral"
+      }
+     ],
+     "markers": [
+      {
+       "at": [
+        80.9,
+        26.8
+       ],
+       "label": "UP: ~25 lakh per MP",
+       "tone": "warn",
+       "delay": 10
+      },
+      {
+       "at": [
+        76.3,
+        10.2
+       ],
+       "label": "Kerala: ~17 lakh per MP",
+       "tone": "accent",
+       "delay": 120
+      }
+     ],
+     "from": {
+      "center": [
+       80.9,
+       26.8
+      ],
+      "zoom": 9
+     }
+    }
+   },
+   "onScreen": "People per MP (Census 2011): UP ~25 lakh · Kerala ~17 lakh",
+   "broll": {
+    "title": "File:Bara Imambara, Lucknow 2.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S21",
+   "narration": "[thoughtful] और Rajasthan का एक MP तो लगभग 27 लाख लोगों का प्रतिनिधित्व करता है। [pause] यानी Rajasthan के एक voter के vote का वज़न, Kerala के voter के मुक़ाबले काफ़ी कम हो जाता है।",
+   "durationSec": 12.36,
+   "audio": "jobs/delimitation-north-south/S21.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Rajasthan",
+     "items": [
+      "~27 lakh people per MP",
+      "each vote weighs less"
+     ],
+     "tone": "warn"
+    },
+    "right": {
+     "heading": "Kerala",
+     "items": [
+      "~17 lakh people per MP",
+      "each vote weighs more"
+     ],
+     "tone": "accent"
+    }
+   },
+   "onScreen": "Rajasthan ~27 lakh per MP vs Kerala ~17 lakh"
+  },
+  {
+   "id": "S22",
+   "narration": "[curious] तो अगर freeze खुले, और seats आज की आबादी के हिसाब से बँटें, तो क्या होगा?",
+   "durationSec": 5.88,
+   "audio": "jobs/delimitation-north-south/S22.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "question",
+    "text": "What if the freeze ends and seats follow today’s population?",
+    "highlight": [
+     "today’s population"
+    ]
+   },
+   "sfx": "tick"
+  },
+  {
+   "id": "S23",
+   "narration": "[measured] Carnegie Endowment की 2019 की एक study ने 2026 की अनुमानित आबादी पर हिसाब लगाया। [pause] अगर seats 543 ही रहें, तो Uttar Pradesh को 11 और Bihar को 10 seats ज़्यादा मिलेंगी, जबकि Tamil Nadu और Kerala, दोनों की 8 seats घट जाएँगी।",
+   "durationSec": 18.51,
+   "audio": "jobs/delimitation-north-south/S23.mp3",
+   "objective": "o3",
+   "completes": [],
+   "visual": {
+    "type": "map",
+    "map": {
+     "focus": {
+      "center": [
+       80.5,
+       22.5
+      ],
+      "zoom": 4.6
+     },
+     "highlights": [
+      {
+       "iso3": "IND",
+       "tone": "neutral"
+      }
+     ],
+     "markers": [
+      {
+       "at": [
+        80.9,
+        26.8
+       ],
+       "label": "UP +11",
+       "tone": "good",
+       "delay": 15
+      },
+      {
+       "at": [
+        85.6,
+        25.6
+       ],
+       "label": "Bihar +10",
+       "tone": "good",
+       "delay": 35
+      },
+      {
+       "at": [
+        78.6,
+        11.1
+       ],
+       "label": "Tamil Nadu −8",
+       "tone": "bad",
+       "delay": 90
+      },
+      {
+       "at": [
+        76.3,
+        10.2
+       ],
+       "label": "Kerala −8",
+       "tone": "bad",
+       "delay": 110
+      }
+     ],
+     "labels": [
+      {
+       "at": [
+        66.5,
+        30.5
+       ],
+       "text": "Carnegie (2019), total kept at 543"
+      }
+     ]
+    }
+   },
+   "onScreen": "If 543 seats (2026 projection): UP +11 · Bihar +10 · Tamil Nadu −8 · Kerala −8"
+  },
+  {
+   "id": "S24",
+   "narration": "[explaining] और अगर तय किया जाए कि किसी भी राज्य की एक भी seat न घटे, तो उसी study के अनुसार Lok Sabha को लगभग 848 seats तक बढ़ाना पड़ेगा। [pause] तब Uttar Pradesh की seats 80 से बढ़कर 143 हो जाएँगी, लेकिन Kerala की seats 20 ही रहेंगी।",
+   "durationSec": 18.34,
+   "audio": "jobs/delimitation-north-south/S24.mp3",
+   "objective": "o3",
+   "completes": [
+    "o3"
+   ],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Uttar Pradesh",
+     "items": [
+      "80 → 143 seats"
+     ],
+     "tone": "warn"
+    },
+    "right": {
+     "heading": "Kerala",
+     "items": [
+      "20 → 20 seats"
+     ],
+     "tone": "accent"
+    }
+   },
+   "onScreen": "No state loses → ~848 seats · UP 80 → 143 · Kerala 20 → 20",
+   "sfx": "ping"
+  },
+  {
+   "id": "S25",
+   "narration": "[serious] यहीं से North-South debate शुरू होती है। [pause] क्योंकि seats बढ़ें या घटें, दोनों हालात में Lok Sabha में South का हिस्सा कम हो जाता है।",
+   "durationSec": 10.23,
+   "audio": "jobs/delimitation-north-south/S25.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Total stays 543",
+     "items": [
+      "South loses seats",
+      "share falls"
+     ],
+     "tone": "bad"
+    },
+    "right": {
+     "heading": "Total grows to ~848",
+     "items": [
+      "South keeps its seats",
+      "share still falls"
+     ],
+     "tone": "warn"
+    }
+   },
+   "onScreen": "Seats up or down: the South's share falls either way",
+   "sfx": "hit",
+   "broll": {
+    "title": "File:Chennai - bird's-eye view.ogv",
+    "sec": 3.5
+   }
+  },
+  {
+   "id": "S26",
+   "narration": "[explaining] South के राज्यों का पहला तर्क है, fairness। [pause] उन्होंने केंद्र की population policy को सफलतापूर्वक लागू किया, तो उसी सफलता के लिए उन्हें Parliament में कम आवाज़ क्यों मिले?",
+   "durationSec": 11.78,
+   "audio": "jobs/delimitation-north-south/S26.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "flow",
+    "heading": "The South's first argument: fairness",
+    "steps": [
+     {
+      "label": "Followed the national policy",
+      "icon": "check"
+     },
+     {
+      "label": "Population controlled",
+      "icon": "people"
+     },
+     {
+      "label": "Rewarded with fewer seats?",
+      "icon": "cross"
+     }
+    ]
+   },
+   "onScreen": "Argument 1: don't penalise success in population control",
+   "broll": {
+    "title": "File:A boat sailing in Alappuzha canal, Alappuzha, Kerala.webm",
+    "sec": 3,
+    "from": 2
+   }
+  },
+  {
+   "id": "S27",
+   "narration": "[explaining] दूसरा तर्क है federalism। [pause] अगर Lok Sabha में कुछ बड़े राज्यों का हिस्सा बहुत बढ़ जाए, तो कोई भी सरकार सिर्फ़ उन्हीं राज्यों के दम पर बन सकती है, और बाकी राज्यों की बात अनसुनी रह सकती है।",
+   "durationSec": 12.59,
+   "audio": "jobs/delimitation-north-south/S27.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "map",
+    "map": {
+     "focus": {
+      "center": [
+       80,
+       25
+      ],
+      "zoom": 5
+     },
+     "highlights": [
+      {
+       "iso3": "IND",
+       "tone": "neutral"
+      }
+     ],
+     "markers": [
+      {
+       "at": [
+        80.9,
+        26.8
+       ],
+       "label": "UP",
+       "tone": "warn",
+       "delay": 10
+      },
+      {
+       "at": [
+        85.6,
+        25.6
+       ],
+       "label": "Bihar",
+       "tone": "warn",
+       "delay": 20
+      },
+      {
+       "at": [
+        73.8,
+        26.6
+       ],
+       "label": "Rajasthan",
+       "tone": "warn",
+       "delay": 30
+      }
+     ],
+     "labels": [
+      {
+       "at": [
+        68,
+        12
+       ],
+       "text": "A few big states could form a majority"
+      }
+     ]
+    }
+   },
+   "onScreen": "Argument 2: federal balance"
+  },
+  {
+   "id": "S28",
+   "narration": "[measured] आज Andhra Pradesh, Telangana, Karnataka, Tamil Nadu और Kerala, इन 5 southern states के पास मिलाकर 129 seats हैं, यानी Lok Sabha का लगभग 24 percent।",
+   "durationSec": 11.71,
+   "audio": "jobs/delimitation-north-south/S28.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "map",
+    "map": {
+     "focus": {
+      "center": [
+       78.5,
+       14.0
+      ],
+      "zoom": 7
+     },
+     "highlights": [
+      {
+       "iso3": "IND",
+       "tone": "muted"
+      }
+     ],
+     "markers": [
+      {
+       "at": [
+        79.7,
+        15.6
+       ],
+       "label": "Andhra Pradesh 25",
+       "tone": "good",
+       "delay": 10
+      },
+      {
+       "at": [
+        79.0,
+        17.9
+       ],
+       "label": "Telangana 17",
+       "tone": "good",
+       "delay": 25
+      },
+      {
+       "at": [
+        75.7,
+        14.8
+       ],
+       "label": "Karnataka 28",
+       "tone": "good",
+       "delay": 40
+      },
+      {
+       "at": [
+        78.6,
+        11.1
+       ],
+       "label": "Tamil Nadu 39",
+       "tone": "good",
+       "delay": 55
+      },
+      {
+       "at": [
+        76.3,
+        10.2
+       ],
+       "label": "Kerala 20",
+       "tone": "good",
+       "delay": 70
+      }
+     ],
+     "from": {
+      "center": [
+       80.5,
+       22.5
+      ],
+      "zoom": 4.6
+     },
+     "labels": [
+      {
+       "at": [
+        71,
+        19
+       ],
+       "text": "129 of 543 seats ≈ 24%"
+      }
+     ]
+    }
+   },
+   "onScreen": "5 southern states: 129 / 543 ≈ 24%",
+   "sfx": "ping"
+  },
+  {
+   "id": "S29",
+   "narration": "[explaining] तीसरा तर्क पैसे से जुड़ा है। [pause] South के राज्य देश के tax revenue में बड़ा योगदान देते हैं, और Finance Commission के formula में आबादी को पहले से weight मिलता है। [pause] इसीलिए 15th Finance Commission ने 2011 की आबादी के साथ, demographic performance नाम का एक criterion भी जोड़ा, ताकि आबादी कम करने वाले राज्यों को नुकसान न हो।",
+   "durationSec": 24.39,
+   "audio": "jobs/delimitation-north-south/S29.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "formula",
+    "heading": "15th Finance Commission: how tax shares are weighted",
+    "lines": [
+     {
+      "text": "Population (Census 2011): 15%"
+     },
+     {
+      "text": "Area: 15%  ·  Forest and ecology: 10%"
+     },
+     {
+      "text": "Income distance: 45%  ·  Tax effort: 2.5%"
+     },
+     {
+      "text": "Demographic performance: 12.5%",
+      "final": true,
+      "note": "rewards states that controlled population"
+     }
+    ]
+   },
+   "onScreen": "15th FC: Population 2011 (15%) + Demographic performance (12.5%)",
+   "compact": true,
+   "broll": {
+    "title": "File:Marina beach, Chennai aerial view.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S30",
+   "narration": "[measured] इसी चिंता को लेकर 22 March 2025 को Chennai में एक Joint Action Committee की बैठक हुई। [pause] इसमें Tamil Nadu, Kerala, Telangana और Punjab के मुख्यमंत्री शामिल हुए, और माँग रखी कि 1971 की census पर आधारित freeze को 25 साल और बढ़ाया जाए।",
+   "durationSec": 18.85,
+   "audio": "jobs/delimitation-north-south/S30.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://scroll.in/latest/1080552/scroll_in",
+    "publisher": "Scroll",
+    "date": "22 Mar 2025",
+    "title": "Joint Action Committee in Chennai demands 25-year extension of the freeze",
+    "why": "Tamil Nadu, Kerala, Telangana and Punjab at one table"
+   },
+   "onScreen": "Chennai, 22 March 2025: JAC demands 25-year extension of the freeze"
+  },
+  {
+   "id": "S31",
+   "narration": "[explaining] अब North का पक्ष भी समझिए। [pause] उनका तर्क है कि democracy में representation लोगों की संख्या से तय होना चाहिए, और 50 साल तक freeze रखने से UP, Bihar और Rajasthan जैसे राज्यों के करोड़ों नागरिकों की आवाज़ कम हो गई है।",
+   "durationSec": 15.73,
+   "audio": "jobs/delimitation-north-south/S31.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "map",
+    "map": {
+     "focus": {
+      "center": [
+       80,
+       26
+      ],
+      "zoom": 6
+     },
+     "highlights": [
+      {
+       "iso3": "IND",
+       "tone": "neutral"
+      }
+     ],
+     "markers": [
+      {
+       "at": [
+        80.9,
+        26.8
+       ],
+       "label": "Uttar Pradesh",
+       "tone": "warn",
+       "delay": 10
+      },
+      {
+       "at": [
+        85.6,
+        25.6
+       ],
+       "label": "Bihar",
+       "tone": "warn",
+       "delay": 25
+      },
+      {
+       "at": [
+        73.8,
+        26.6
+       ],
+       "label": "Rajasthan",
+       "tone": "warn",
+       "delay": 40
+      }
+     ],
+     "labels": [
+      {
+       "at": [
+        72,
+        21
+       ],
+       "text": "50 years of freeze: crores of voices weigh less"
+      }
+     ]
+    }
+   },
+   "onScreen": "North's argument: one person, one vote, one value",
+   "broll": {
+    "title": "File:Bara Imambara, Lucknow 3.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S32",
+   "narration": "[thoughtful] यानी दोनों तरफ़ के तर्क सही लगते हैं। [pause] एक तरफ़ है बराबर vote का सिद्धांत, और दूसरी तरफ़ है federal balance और fairness का सिद्धांत।",
+   "durationSec": 9.8,
+   "audio": "jobs/delimitation-north-south/S32.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Equality of votes",
+     "items": [
+      "one person, one vote, one value"
+     ],
+     "tone": "warn"
+    },
+    "right": {
+     "heading": "Federal balance",
+     "items": [
+      "fairness to every state"
+     ],
+     "tone": "accent"
+    }
+   },
+   "onScreen": "Equality of votes ⚖ Federal balance",
+   "broll": {
+    "title": "File:Crowd in Canning Street in Kolkata, West Bengal, India, photo taken on December 31, 2023.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S33",
+   "narration": "[measured] इस बहस पर Home Minister Amit Shah ने 26 February 2025 को Coimbatore में कहा कि delimitation से किसी भी southern state की एक भी seat कम नहीं होगी, और जो भी बढ़ोतरी होगी, उसमें South को fair share मिलेगा।",
+   "durationSec": 15.13,
+   "audio": "jobs/delimitation-north-south/S33.mp3",
+   "objective": "o4",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://scroll.in/latest/1079653/scroll_in",
+    "publisher": "Scroll",
+    "date": "26 Feb 2025",
+    "title": "Amit Shah in Coimbatore on delimitation",
+    "why": "The Home Minister’s assurance to the southern states"
+   },
+   "onScreen": "\"Not a single seat will be reduced in any southern state\" (26 Feb 2025)"
+  },
+  {
+   "id": "S34",
+   "narration": "[thoughtful] लेकिन ध्यान दीजिए, ये एक राजनीतिक आश्वासन है, कोई कानून नहीं। [pause] और जैसा हमने देखा, अगर किसी की seat न भी घटे, तब भी Lok Sabha में South का percentage share घट सकता है।",
+   "durationSec": 13.07,
+   "audio": "jobs/delimitation-north-south/S34.mp3",
+   "objective": "o4",
+   "completes": [
+    "o4"
+   ],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Political assurance",
+     "items": [
+      "not a law",
+      "no seat cut"
+     ],
+     "tone": "muted"
+    },
+    "right": {
+     "heading": "What can still happen",
+     "items": [
+      "the South's share of the House can fall"
+     ],
+     "tone": "bad"
+    }
+   },
+   "onScreen": "Assurance ≠ law · Seats safe ≠ share safe"
+  },
+  {
+   "id": "S35",
+   "narration": "[curious] और इसी साल, ये बहस सीधे Lok Sabha तक पहुँच गई। [pause] April 2026 में सरकार एक साथ 3 Bills लेकर आई।",
+   "durationSec": 9.29,
+   "audio": "jobs/delimitation-north-south/S35.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "points",
+    "heading": "16 April 2026: three Bills",
+    "items": [
+     "Constitution (131st Amendment) Bill, 2026",
+     "Delimitation Bill, 2026",
+     "Union Territories Laws (Amendment) Bill, 2026"
+    ],
+    "highlight": [
+     "131st Amendment"
+    ]
+   },
+   "onScreen": "16 April 2026: three Bills in the Lok Sabha",
+   "sfx": "pop",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 0
+   },
+   "broll": {
+    "title": "File:New Parliament Building.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S36",
+   "narration": "[explaining] पहला था Constitution (131st Amendment) Bill, 2026, जिसे Law Minister Arjun Ram Meghwal ने 16 April को पेश किया। [pause] इसमें Lok Sabha की maximum seats 550 से बढ़ाकर 850 करने का प्रस्ताव था। [pause] इनमें से 815 seats राज्यों से और 35 seats Union Territories से होतीं।",
+   "durationSec": 22.7,
+   "audio": "jobs/delimitation-north-south/S36.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "stat",
+    "value": 850,
+    "from": 550,
+    "label": "proposed maximum Lok Sabha seats (815 from States + 35 from UTs)",
+    "source": "LiveLaw, 17 Apr 2026"
+   },
+   "onScreen": "131st Amendment Bill: cap 550 → 850 (815 States + 35 UTs)",
+   "compact": true,
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 0,
+    "from": 0
+   },
+   "broll": {
+    "title": "File:Inside view of Lok Sabha chamber in New Parliament building (2).jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S37",
+   "narration": "[explaining] इस Bill में Article 82 से वो शर्त भी हटाई जा रही थी, जो कहती है कि delimitation 2026 के बाद की पहली census के बाद ही होगा। [pause] साथ में आए नए Delimitation Bill में seats का बँटवारा 2011 की census के आधार पर करने की बात थी।",
+   "durationSec": 16.8,
+   "audio": "jobs/delimitation-north-south/S37.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "131st Amendment Bill",
+     "items": [
+      "remove \"first census after 2026\" from Article 82"
+     ],
+     "tone": "warn"
+    },
+    "right": {
+     "heading": "Delimitation Bill, 2026",
+     "items": [
+      "seats shared on Census 2011",
+      "while Census 2027 is under way"
+     ],
+     "tone": "bad"
+    }
+   },
+   "onScreen": "Remove \"first census after 2026\" · New delimitation on Census 2011",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 0,
+    "from": 0
+   }
+  },
+  {
+   "id": "S38",
+   "narration": "[explaining] सरकार का मुख्य तर्क women's reservation था। [pause] Bill के objects में लिखा था कि नई census और उसके बाद का delimitation बहुत समय लेगा। [pause] सरकार के अनुसार, इससे Parliament में महिलाओं की भागीदारी और देर से शुरू होती।",
+   "durationSec": 14.64,
+   "audio": "jobs/delimitation-north-south/S38.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://www.livelaw.in/top-stories/lok-sabha-rejects-constitution-131st-bill-2026-on-delimitation-530736",
+    "publisher": "LiveLaw",
+    "date": "17 Apr 2026",
+    "title": "Lok Sabha rejects Constitution (131st Amendment) Bill, 2026",
+    "why": "The government linked the Bill to women’s reservation"
+   },
+   "onScreen": "Govt's case: don't delay women's reservation",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 0,
+    "from": 0
+   }
+  },
+  {
+   "id": "S39",
+   "narration": "[measured] Home Minister Amit Shah ने Lok Sabha में एक 50 percent model समझाया। [pause] इसके हिसाब से हर राज्य की seats लगभग डेढ़ गुना होतीं, जैसे Tamil Nadu की 39 से 59 और Kerala की 20 से 30। [pause] उनके अनुसार South की कुल seats 129 से 195 हो जातीं, और उसका share लगभग 24 percent ही बना रहता।",
+   "durationSec": 23.79,
+   "audio": "jobs/delimitation-north-south/S39.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2252748&reg=3&lang=1",
+    "publisher": "Press Information Bureau",
+    "date": "16 Apr 2026",
+    "title": "Amit Shah's intervention on the three Bills",
+    "why": "The 50 percent model and the South’s share"
+   },
+   "onScreen": "\"50% model\": TN 39 → 59 · Kerala 20 → 30 · South 129 → 195 · share 23.76% → 23.87%",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 0,
+    "from": 0
+   }
+  },
+  {
+   "id": "S40",
+   "narration": "[serious] फिर 17 April 2026 को voting हुई। [pause] Bill के पक्ष में 298 votes पड़े और विरोध में 230। [pause] लेकिन Constitutional Amendment के लिए, vote करने वाले सदस्यों का two-thirds बहुमत चाहिए, इसलिए ये Bill गिर गया।",
+   "durationSec": 17.23,
+   "audio": "jobs/delimitation-north-south/S40.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Votes for",
+     "items": [
+      "298"
+     ],
+     "tone": "good"
+    },
+    "right": {
+     "heading": "Needed (two-thirds of 528)",
+     "items": [
+      "352 · Bill defeated"
+     ],
+     "tone": "bad"
+    }
+   },
+   "onScreen": "17 April 2026: 298 for · 230 against · two-thirds of 528 = 352 needed → defeated",
+   "sfx": "hit",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 1,
+    "from": 0
+   }
+  },
+  {
+   "id": "S41",
+   "narration": "[explaining] इसके बाद सरकार ने Delimitation Bill और Union Territories वाला Bill भी वापस ले लिया। [pause] अब सवाल ये है कि opposition ने इन Bills का विरोध क्यों किया?",
+   "durationSec": 10.49,
+   "audio": "jobs/delimitation-north-south/S41.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "question",
+    "text": "Why did the opposition vote against the Bills?",
+    "highlight": [
+     "opposition"
+    ]
+   },
+   "onScreen": "Delimitation Bill + UT Bill withdrawn · Why did the opposition say no?",
+   "sfx": "whoosh",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 1,
+    "from": 1
+   },
+   "broll": {
+    "title": "File:Sansad Bhavan, Delhi, BNK.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S42",
+   "narration": "[explaining] पहली आपत्ति थी, guarantee कहाँ है? [pause] 50 percent वाला formula Bill के text में लिखा ही नहीं था, ये सिर्फ़ एक मौखिक आश्वासन था। [pause] Opposition का कहना था कि अगर हर राज्य को बराबर बढ़ोतरी मिलनी है, तो ये बात कानून में लिखी जाए।",
+   "durationSec": 15.89,
+   "audio": "jobs/delimitation-north-south/S42.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://carnegieendowment.org/research/2026/05/india-parliament-lok-sabha-representation-reapportionment-vote-women-elections",
+    "publisher": "Carnegie Endowment",
+    "date": "May 2026",
+    "title": "Delimitation After Defeat",
+    "why": "The 50 percent formula was not written into the Bill"
+   },
+   "onScreen": "Objection 1: the 50% formula was not in the Bill",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 1,
+    "from": 1
+   }
+  },
+  {
+   "id": "S43",
+   "narration": "[explaining] दूसरी आपत्ति timing और data की थी। [pause] Census 2027 का काम चल रहा है, फिर भी seats 15 साल पुरानी 2011 की census पर बाँटने की बात थी। [pause] DMK की MP Kanimozhi ने इसे federal structure पर सबसे बड़ा हमला कहा, और कहा कि ये उन राज्यों के साथ अन्याय है जिन्होंने आबादी control की।",
+   "durationSec": 21.76,
+   "audio": "jobs/delimitation-north-south/S43.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://thenewsmill.com/2026/04/dmk-mp-kanimozhi-calls-delimitation-the-greatest-assault-on-federal-structure/",
+    "publisher": "The News Mill",
+    "date": "17 Apr 2026",
+    "title": "Kanimozhi calls delimitation the greatest assault on the federal structure",
+    "why": "The DMK’s objection in the Lok Sabha"
+   },
+   "onScreen": "Objection 2: why Census 2011 when Census 2027 is under way?",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 1,
+    "from": 1
+   }
+  },
+  {
+   "id": "S44",
+   "narration": "[explaining] तीसरी आपत्ति women's reservation को लेकर थी। [pause] Congress ने कहा कि वो women's reservation के साथ है, लेकिन इसे आज की 543 seats पर ही लागू किया जाए। [pause] Leader of the Opposition Rahul Gandhi ने आरोप लगाया कि सरकार महिलाओं के नाम के पीछे छिपकर चुनावी नक्शा बदलना चाहती है।",
+   "durationSec": 19.31,
+   "audio": "jobs/delimitation-north-south/S44.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://inc.in/congress-sandesh/national/the-delimitation-bill-2026",
+    "publisher": "Congress Sandesh",
+    "date": "Apr 2026",
+    "title": "The Delimitation Bill, 2026",
+    "why": "Congress: women’s reservation on the current 543 seats"
+   },
+   "onScreen": "Objection 3: give women's reservation on today's 543 seats",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 1,
+    "from": 1
+   }
+  },
+  {
+   "id": "S45",
+   "narration": "[explaining] Opposition ने ये सवाल भी उठाया कि Delimitation Commission के chairperson को केंद्र सरकार ही नियुक्त करती, और राज्यों के सदस्यों के पास vote का अधिकार नहीं होता। [pause] Congress ने Northeast के छोटे राज्यों और OBC representation की चिंता भी उठाई।",
+   "durationSec": 15.99,
+   "audio": "jobs/delimitation-north-south/S45.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "map",
+    "map": {
+     "focus": {
+      "center": [
+       92.5,
+       25.8
+      ],
+      "zoom": 9
+     },
+     "highlights": [
+      {
+       "iso3": "IND",
+       "tone": "muted"
+      }
+     ],
+     "markers": [
+      {
+       "at": [
+        92.9,
+        26.2
+       ],
+       "label": "Assam",
+       "tone": "accent",
+       "delay": 20
+      },
+      {
+       "at": [
+        91.3,
+        25.5
+       ],
+       "label": "Meghalaya",
+       "tone": "accent",
+       "delay": 30
+      },
+      {
+       "at": [
+        94.4,
+        26.1
+       ],
+       "label": "Nagaland",
+       "tone": "accent",
+       "delay": 40
+      },
+      {
+       "at": [
+        93.9,
+        24.7
+       ],
+       "label": "Manipur",
+       "tone": "accent",
+       "delay": 50
+      },
+      {
+       "at": [
+        92.8,
+        23.3
+       ],
+       "label": "Mizoram",
+       "tone": "accent",
+       "delay": 60
+      },
+      {
+       "at": [
+        91.7,
+        23.8
+       ],
+       "label": "Tripura",
+       "tone": "accent",
+       "delay": 70
+      },
+      {
+       "at": [
+        94.5,
+        28.1
+       ],
+       "label": "Arunachal Pradesh",
+       "tone": "accent",
+       "delay": 80
+      }
+     ],
+     "from": {
+      "center": [
+       80.5,
+       22.5
+      ],
+      "zoom": 4.6
+     }
+    }
+   },
+   "onScreen": "Other objections: who appoints the Commission · voice of the Northeast · OBC representation",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 1,
+    "from": 1
+   },
+   "broll": {
+    "title": "File:Supreme Court of India 01.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S46",
+   "narration": "[thoughtful] July 2026 में सरकार ने संकेत दिया कि वो एक revised Bill ला सकती है, जिसमें हर राज्य को 50 percent बढ़ोतरी की guarantee लिखी हो। [pause] लेकिन August में ख़त्म हुए Monsoon Session में ये Bill पेश नहीं हुआ, और फ़िलहाल ये मामला रुका हुआ है।",
+   "durationSec": 16.44,
+   "audio": "jobs/delimitation-north-south/S46.mp3",
+   "objective": "o5",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://www.theweek.in/news/india/2026/08/13/monsoon-session-12-bills-pass-amid-disruptions-in-parliament-delimitation-fcra-shelved-as-focus-shifts-to-2027-polls.html",
+    "publisher": "The Week",
+    "date": "13 Aug 2026",
+    "title": "Monsoon Session: delimitation shelved as focus shifts to 2027 polls",
+    "why": "The revised Bill was not brought in the Monsoon Session"
+   },
+   "onScreen": "July 2026: revised Bill floated · Monsoon Session: held back",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 3,
+    "from": 1
+   }
+  },
+  {
+   "id": "S47",
+   "narration": "[emphatic] Prelims और Mains दोनों के लिए इसका सबक याद रखिए। [pause] Seats की सीमा बढ़ाने के लिए Constitutional Amendment चाहिए, और उसके लिए special majority चाहिए। [pause] इसलिए delimitation का कोई भी रास्ता, सभी दलों की सहमति के बिना नहीं निकल सकता।",
+   "durationSec": 17.42,
+   "audio": "jobs/delimitation-north-south/S47.mp3",
+   "objective": "o5",
+   "completes": [
+    "o5"
+   ],
+   "visual": {
+    "type": "flow",
+    "heading": "The lesson",
+    "steps": [
+     {
+      "label": "Raise the seat cap",
+      "icon": "chart"
+     },
+     {
+      "label": "Constitutional Amendment",
+      "sub": "special majority, Article 368",
+      "icon": "doc"
+     },
+     {
+      "label": "All-party consensus",
+      "icon": "people"
+     }
+    ]
+   },
+   "onScreen": "Article 368: special majority → consensus is unavoidable",
+   "sfx": "ping",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 3,
+    "from": 3
+   }
+  },
+  {
+   "id": "S48",
+   "narration": "[curious] अब सबसे बड़ा सवाल, ये freeze खुलेगा कब?",
+   "durationSec": 4.01,
+   "audio": "jobs/delimitation-north-south/S48.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "question",
+    "text": "So when will the freeze end?",
+    "highlight": [
+     "freeze end"
+    ]
+   },
+   "sfx": "whoosh",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 3,
+    "from": 3
+   },
+   "broll": {
+    "title": "File:View of Rashtrapati bhavan.webm",
+    "sec": 3,
+    "from": 3
+   }
+  },
+  {
+   "id": "S49",
+   "narration": "[explaining] 84th Amendment के शब्द हैं, \"2026 के बाद होने वाली पहली census\"। [pause] भारत की पिछली census 2011 में हुई थी, और 2021 की census COVID की वजह से टल गई।",
+   "durationSec": 12.44,
+   "audio": "jobs/delimitation-north-south/S49.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "timeline",
+    "heading": "Proviso to Article 82: \"first census taken after the year 2026\"",
+    "nodes": [
+     {
+      "date": "2011",
+      "label": "Last census held",
+      "tone": "good"
+     },
+     {
+      "date": "2021",
+      "label": "Postponed (COVID)",
+      "tone": "bad"
+     },
+     {
+      "date": "2027",
+      "label": "Census 2027",
+      "tone": "accent"
+     }
+    ]
+   },
+   "onScreen": "\"First census taken after the year 2026\"",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 3,
+    "from": 3
+   }
+  },
+  {
+   "id": "S50",
+   "narration": "[measured] June 2025 में सरकार ने Census 2027 की notification जारी की, और इस समय census का काम चल रहा है। [pause] इसकी reference date 1 March 2027 है। [pause] Ladakh, Jammu and Kashmir, Himachal Pradesh और Uttarakhand के बर्फ़ीले इलाकों के लिए reference date 1 October 2026 है।",
+   "durationSec": 21.35,
+   "audio": "jobs/delimitation-north-south/S50.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "source",
+    "url": "https://www.deccanherald.com/india/centre-issues-notification-for-16th-census-3587712",
+    "publisher": "Deccan Herald",
+    "date": "16 Jun 2025",
+    "title": "Centre issues notification for the 16th Census",
+    "why": "Reference dates: 1 March 2027, and 1 October 2026 for snow-bound areas"
+   },
+   "onScreen": "Census 2027 · Reference date: 1 March 2027 (snow-bound areas: 1 Oct 2026)",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 5,
+    "from": 3
+   }
+  },
+  {
+   "id": "S51",
+   "narration": "[emphatic] यानी Census 2027 ही 2026 के बाद की पहली census होगी। [pause] जैसे ही इसके आँकड़े publish होंगे, constitutional freeze हट जाएगा, और नया delimitation संभव हो जाएगा।",
+   "durationSec": 12.89,
+   "audio": "jobs/delimitation-north-south/S51.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "flow",
+    "heading": "Why Census 2027 matters",
+    "steps": [
+     {
+      "label": "Census 2027",
+      "sub": "first census after 2026",
+      "icon": "doc"
+     },
+     {
+      "label": "Data published",
+      "icon": "chart"
+     },
+     {
+      "label": "Freeze ends",
+      "sub": "new delimitation possible",
+      "icon": "lock"
+     }
+    ]
+   },
+   "onScreen": "Census 2027 = the first census after 2026 → freeze ends",
+   "sfx": "ping",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 5,
+    "from": 5
+   },
+   "broll": {
+    "title": "File:Prime Minister of Bharat, Shri Narendra Damodardas Modi fills out the self-enumeration for Census 2027.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S52",
+   "narration": "[explaining] ये census एक और वजह से ख़ास है। [pause] 1931 के बाद पहली बार इसमें सभी जातियों की गिनती होगी, यानी caste enumeration।",
+   "durationSec": 9.59,
+   "audio": "jobs/delimitation-north-south/S52.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "stat",
+    "value": 1931,
+    "label": "last time every caste was counted · Census 2027 counts them again"
+   },
+   "onScreen": "First caste enumeration since 1931",
+   "compact": true,
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 5,
+    "from": 5
+   },
+   "broll": {
+    "title": "File:The Union Home Minister, Shri P. Chidambaram at the unveiling function of the mascot of the census enumerator, in New Delhi on February 02, 2011.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S53",
+   "narration": "[explaining] Delimitation सिर्फ़ seats का मामला नहीं है। [pause] 2023 के 106th Amendment, यानी Nari Shakti Vandan Adhiniyam, ने Lok Sabha और Vidhan Sabhas में महिलाओं के लिए one-third seats reserve कीं। [pause] सरकार ने 16 April 2026 को इस कानून को लागू करने की notification जारी की। [pause] लेकिन Article 334A के अनुसार, ये reservation नई census के बाद होने वाले delimitation के बाद ही असल में शुरू होगा।",
+   "durationSec": 28.44,
+   "audio": "jobs/delimitation-north-south/S53.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "flow",
+    "heading": "Women's reservation (106th Amendment, 2023)",
+    "steps": [
+     {
+      "label": "Census 2027",
+      "icon": "doc"
+     },
+     {
+      "label": "Delimitation",
+      "sub": "Article 334A",
+      "icon": "gear"
+     },
+     {
+      "label": "One-third seats for women",
+      "sub": "notified 16 Apr 2026",
+      "icon": "people"
+     }
+    ]
+   },
+   "onScreen": "106th Amendment (2023): 1/3 seats for women · notified 16 Apr 2026 · starts after delimitation (Art. 334A)",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 5,
+    "from": 5
+   },
+   "broll": {
+    "title": "File:India - Sights & Culture - 001 - crowd shopping (342043908).jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S54",
+   "narration": "[explaining] इसी के साथ SC और ST के लिए reserved seats भी नई आबादी के हिसाब से फिर से तय होंगी। [pause] आज Lok Sabha में 84 seats SC के लिए और 47 seats ST के लिए reserved हैं।",
+   "durationSec": 12.94,
+   "audio": "jobs/delimitation-north-south/S54.mp3",
+   "objective": "o6",
+   "completes": [],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "SC reserved seats",
+     "items": [
+      "84"
+     ],
+     "tone": "accent"
+    },
+    "right": {
+     "heading": "ST reserved seats",
+     "items": [
+      "47"
+     ],
+     "tone": "good"
+    }
+   },
+   "onScreen": "Reserved today: SC 84 · ST 47 (Arts. 330, 332)",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 5,
+    "from": 5
+   }
+  },
+  {
+   "id": "S55",
+   "narration": "[thoughtful] Process कुछ इस तरह होगा। [pause] पहले census के आँकड़े publish होंगे, फिर Parliament एक नया Delimitation Act पास करेगी, फिर commission बनेगा और राज्यों में सुनवाई के बाद अपने orders देगा। [pause] ये सब 2029 के चुनाव से पहले पूरा होगा या नहीं, ये अभी तय नहीं है।",
+   "durationSec": 18.51,
+   "audio": "jobs/delimitation-north-south/S55.mp3",
+   "objective": "o6",
+   "completes": [
+    "o6"
+   ],
+   "visual": {
+    "type": "flow",
+    "heading": "What happens next (before 2029?)",
+    "steps": [
+     {
+      "label": "Census data",
+      "icon": "chart"
+     },
+     {
+      "label": "Delimitation Act",
+      "icon": "doc"
+     },
+     {
+      "label": "Commission",
+      "icon": "people"
+     },
+     {
+      "label": "Hearings",
+      "icon": "chat"
+     },
+     {
+      "label": "Orders",
+      "icon": "check"
+     }
+    ]
+   },
+   "onScreen": "Census data → Delimitation Act → Commission → Hearings → Orders",
+   "timebar": {
+    "nodes": [
+     {
+      "date": "16 Apr 2026",
+      "label": "Bills"
+     },
+     {
+      "date": "17 Apr",
+      "label": "Defeated"
+     },
+     {
+      "date": "Jul 2026",
+      "label": "Revised Bill"
+     },
+     {
+      "date": "Aug 2026",
+      "label": "Held back"
+     },
+     {
+      "date": "Oct 2026",
+      "label": "Census (snow)"
+     },
+     {
+      "date": "Mar 2027",
+      "label": "Census"
+     },
+     {
+      "date": "2029",
+      "label": "Elections"
+     }
+    ],
+    "at": 6,
+    "from": 5
+   }
+  },
+  {
+   "id": "S56",
+   "narration": "[confident] तो इस उलझन का हल क्या हो सकता है? [pause] Experts कुछ रास्ते सुझाते हैं।",
+   "durationSec": 5.79,
+   "audio": "jobs/delimitation-north-south/S56.mp3",
+   "objective": "o7",
+   "completes": [],
+   "visual": {
+    "type": "question",
+    "text": "So what is the way out?",
+    "highlight": [
+     "way out"
+    ]
+   },
+   "sfx": "pop"
+  },
+  {
+   "id": "S57",
+   "narration": "[explaining] पहला रास्ता है, Lok Sabha की seats बढ़ाना, ताकि किसी राज्य की seats न घटें। [pause] नई Parliament building के Lok Sabha chamber में 888 सदस्यों के बैठने की जगह है, और April 2026 का Bill इसी रास्ते पर था। [pause] लेकिन जैसा हमने देखा, ये रास्ता तभी चलेगा जब हर राज्य का share कानून में सुरक्षित लिखा हो।",
+   "durationSec": 21.58,
+   "audio": "jobs/delimitation-north-south/S57.mp3",
+   "objective": "o7",
+   "completes": [],
+   "visual": {
+    "type": "stat",
+    "value": 888,
+    "label": "seats in the new Lok Sabha chamber · Option 1: expand the House",
+    "source": "PIB, New India Samachar (June 2023)"
+   },
+   "onScreen": "Option 1: expand the House (new chamber seats 888) · needs a written guarantee of each state's share",
+   "compact": true,
+   "broll": {
+    "title": "File:Parliament of India in New Delhi 03.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S58",
+   "narration": "[explaining] दूसरा रास्ता है, सीमा तय करना। [pause] जैसे USA में House of Representatives की seats 1911 से 435 पर fixed हैं, लेकिन हर census के बाद राज्यों के बीच उनका बँटवारा बदलता है।",
+   "durationSec": 13.77,
+   "audio": "jobs/delimitation-north-south/S58.mp3",
+   "objective": "o7",
+   "completes": [],
+   "visual": {
+    "type": "map",
+    "map": {
+     "projection": "globe-to-flat",
+     "from": {
+      "center": [
+       78,
+       20
+      ],
+      "zoom": 1
+     },
+     "focus": {
+      "center": [
+       -98,
+       39
+      ],
+      "zoom": 2.6
+     },
+     "highlights": [
+      {
+       "iso3": "USA",
+       "tone": "accent"
+      }
+     ],
+     "markers": [
+      {
+       "at": [
+        -77.0,
+        38.9
+       ],
+       "label": "House of Representatives: 435 seats",
+       "tone": "accent",
+       "delay": 60
+      }
+     ],
+     "labels": [
+      {
+       "at": [
+        -110,
+        27
+       ],
+       "text": "Total fixed since 1911, shared out again after every census"
+      }
+     ]
+    }
+   },
+   "onScreen": "Option 2: fixed total, reallocated (USA: 435 since 1911)",
+   "sfx": "whoosh",
+   "broll": {
+    "title": "File:Capitol at Dusk 2.jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S59",
+   "narration": "[explaining] तीसरा रास्ता है, freeze को कुछ और साल बढ़ाना, जैसी South की माँग है। [pause] और चौथा रास्ता है, Rajya Sabha और federal संस्थाओं को मज़बूत करना, ताकि Lok Sabha में आबादी के हिसाब से seats बँटें, लेकिन राज्यों की बराबर आवाज़ दूसरे सदन में बनी रहे।",
+   "durationSec": 16.64,
+   "audio": "jobs/delimitation-north-south/S59.mp3",
+   "objective": "o7",
+   "completes": [
+    "o7"
+   ],
+   "visual": {
+    "type": "points",
+    "heading": "Four ways out",
+    "items": [
+     "1. Expand the House, with each state’s share in law",
+     "2. Fix the total, reallocate after each census",
+     "3. Extend the freeze",
+     "4. Strengthen the Rajya Sabha and federal bodies"
+    ],
+    "highlight": [
+     "3. Extend the freeze",
+     "4. Strengthen the Rajya Sabha"
+    ]
+   },
+   "onScreen": "Option 3: extend the freeze · Option 4: stronger Rajya Sabha / federal bodies",
+   "broll": {
+    "title": "File:India Gate - Delhi (37282946605).jpg",
+    "sec": 3
+   }
+  },
+  {
+   "id": "S60",
+   "narration": "[calm] तो आज हमने सीखा कि Articles 82 और 170 हर census के बाद seats के बँटवारे की बात करते हैं, लेकिन 42nd और 84th Amendments ने राज्यों की seats 1971 की census पर freeze कर दीं। [pause] April 2026 में freeze को पहले खोलने वाला Bill two-thirds majority न मिलने से गिर गया। [pause] अब Census 2027 के साथ ये freeze खुल सकता है, और महिलाओं का reservation भी इसी से जुड़ा है।",
+   "durationSec": 29.59,
+   "audio": "jobs/delimitation-north-south/S60.mp3",
+   "objective": "o8",
+   "completes": [],
+   "visual": {
+    "type": "points",
+    "heading": "Recap",
+    "items": [
+     "Articles 82, 170: seats after every census",
+     "42nd & 84th Amendments: frozen on Census 1971",
+     "April 2026: the Bill fell short of two-thirds",
+     "Census 2027 can end the freeze, and start women's reservation"
+    ],
+    "highlight": [
+     "Census 1971",
+     "two-thirds",
+     "Census 2027"
+    ]
+   }
+  },
+  {
+   "id": "S61",
+   "narration": "[confident] Mains में इस topic को one person, one vote, one value और federal balance के टकराव की तरह लिखिए। [pause] Conclusion में लिखिए कि हल ऐसा होना चाहिए, जिसमें हर voter का vote बराबर गिना जाए, और हर राज्य को भरोसा रहे कि उसकी आवाज़ सुनी जाएगी।",
+   "durationSec": 17.32,
+   "audio": "jobs/delimitation-north-south/S61.mp3",
+   "objective": "o8",
+   "completes": [
+    "o8"
+   ],
+   "visual": {
+    "type": "compare",
+    "left": {
+     "heading": "Every vote counts equally",
+     "items": [
+      "one person, one vote, one value"
+     ],
+     "tone": "accent"
+    },
+    "right": {
+     "heading": "Every state is heard",
+     "items": [
+      "federal balance"
+     ],
+     "tone": "good"
+    }
+   },
+   "onScreen": "Mains: equality of votes vs federal balance"
+  }
+ ],
+ "shorts": [
+  {
+   "id": "short-1",
+   "hook": "Who decides how many MPs your state gets?",
+   "scenes": [
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08"
+   ]
+  },
+  {
+   "id": "short-2",
+   "hook": "India grew by 85 crore people. Seats didn't change.",
+   "scenes": [
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14"
+   ]
+  },
+  {
+   "id": "short-3",
+   "hook": "One MP for 27 lakh people, another for 17 lakh",
+   "scenes": [
+    "S15",
+    "S16",
+    "S17",
+    "S20",
+    "S21"
+   ]
+  },
+  {
+   "id": "short-4",
+   "hook": "Why the South fears delimitation",
+   "scenes": [
+    "S25",
+    "S26",
+    "S27",
+    "S28",
+    "S32"
+   ]
+  },
+  {
+   "id": "short-5",
+   "hook": "298 votes for, and the Bill still failed",
+   "scenes": [
+    "S35",
+    "S36",
+    "S39",
+    "S40",
+    "S47"
+   ]
+  },
+  {
+   "id": "short-6",
+   "hook": "The census that can redraw Parliament",
+   "scenes": [
+    "S48",
+    "S49",
+    "S51",
+    "S53",
+    "S55"
+   ]
+  },
+  {
+   "id": "short-7",
+   "hook": "848 seats? Four ways out",
+   "scenes": [
+    "S56",
+    "S57",
+    "S58",
+    "S59"
+   ]
+  }
+ ],
+ "thumbnail": {
+  "headline": "WOMEN'S QUOTA: 0 SEATS?",
+  "sub": "Delimitation · North vs South",
+  "scene": "S02"
+ }
+}

@@ -12,6 +12,13 @@ const [jobPath = 'out/job.final.json', what = 'all'] = process.argv.slice(2);
 const job = JSON.parse(fs.readFileSync(jobPath, 'utf8'));
 fs.mkdirSync('out', {recursive: true});
 
+// 3D scenes (body walkthrough, molecules) need WebGL; GitHub runners have no GPU, so Chrome renders it
+// in software through SwiftShader via ANGLE. That mode paints big SVGs (world maps) ~15x slower,
+// so jobs without 3D scenes use plain SwiftShader.
+const has3D = job.scenes.some((s) => ['body', 'molecule'].includes((s.visual || {}).type));
+const gl = has3D ? 'swangle' : 'swiftshader';
+console.log(`WebGL mode: ${gl}`);
+
 const serveUrl = await bundle({entryPoint: path.resolve('src/index.ts'), publicDir: path.resolve('public')});
 
 const video = async (name, inputProps, scale = 1) => {
@@ -27,9 +34,7 @@ const video = async (name, inputProps, scale = 1) => {
     inputProps,
     outputLocation,
     audioCodec: 'aac',
-    // 3D scenes (body walkthrough, molecules) need WebGL; GitHub runners have no GPU,
-    // so Chrome renders it in software (SwiftShader via ANGLE).
-    chromiumOptions: {gl: 'swangle'},
+    chromiumOptions: {gl},
     concurrency: Math.max(2, os.cpus().length),
     onProgress: ({progress}) => {
       const p = Math.floor(progress * 10);
@@ -48,6 +53,6 @@ if (what === 'all' || what === 'shorts' || what === 'preview')
   for (const s of job.shorts || []) await video(`${job.id}-${s.id}`, {job, format: '9:16', sceneIds: s.scenes, hook: s.hook}, what === 'preview' ? 0.5 : 1);
 if (what === 'all' || what === 'thumb' || what === 'preview') {
   const composition = await selectComposition({serveUrl, id: 'Thumbnail', inputProps: {job}});
-  await renderStill({composition, serveUrl, output: `out/${job.id}-thumbnail.png`, inputProps: {job}, chromiumOptions: {gl: 'swangle'}});
+  await renderStill({composition, serveUrl, output: `out/${job.id}-thumbnail.png`, inputProps: {job}, chromiumOptions: {gl}});
   console.log('Rendered thumbnail');
 }

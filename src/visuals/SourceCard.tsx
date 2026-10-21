@@ -7,7 +7,7 @@ import {Region, useBox, useEnter, useFade, useUnit} from '../components/Box';
 // when and why. The screenshot is taken from the live page on GitHub (scripts/fetch_sources.py).
 // If the page could not be captured, the card shows the details without a picture: a source is
 // never recreated or faked.
-export type SourceSpec = {url: string; publisher: string; authors?: string; date?: string; title?: string; why?: string; shot?: string; shotRatio?: number; capturedUrl?: string};
+export type SourceSpec = {url: string; publisher: string; authors?: string; date?: string; title?: string; why?: string; shot?: string; shotRatio?: number; capturedUrl?: string; clipped?: boolean};
 
 const domain = (u: string) => {
   try {
@@ -17,7 +17,78 @@ const domain = (u: string) => {
   }
 };
 
-export const SourceCard: React.FC<SourceSpec> = ({url, publisher, authors, date, title, why, shot, shotRatio, capturedUrl}) => {
+export const SourceCard: React.FC<SourceSpec> = (props) =>
+  props.shot ? props.clipped ? <Clipping {...props} /> : <BrowserCard {...props} /> : <Quote {...props} />;
+
+// The page could not be captured: quote its headline and outlet (never a mock-up of the page).
+const Quote: React.FC<SourceSpec> = ({url, publisher, date, title, why}) => {
+  const u = useUnit();
+  const e = useEnter(2, 16);
+  const q = useFade(14);
+  const side = useFade(26);
+  return (
+    <Region style={{display: 'flex', alignItems: 'center', gap: 50 * u, padding: `0 ${40 * u}px`, boxSizing: 'border-box'}}>
+      <div style={{flex: 1.5, display: 'flex', flexDirection: 'column', gap: 22 * u, transform: `translateY(${(1 - e) * 40}px)`, opacity: e}}>
+        <div style={{fontFamily: fonts.display, fontWeight: 800, fontSize: 150 * u, lineHeight: 0.6, color: colors.orange, height: 70 * u}}>“</div>
+        <div style={{fontFamily: fonts.display, fontWeight: 800, fontSize: 52 * u, lineHeight: 1.18, color: colors.text}}>{title || publisher}</div>
+        <div style={{display: 'flex', alignItems: 'center', gap: 14 * u, opacity: q}}>
+          <div style={{width: 8 * u, alignSelf: 'stretch', background: colors.orange, borderRadius: 3}} />
+          <div>
+            <div style={{fontFamily: fonts.display, fontWeight: 800, fontSize: 32 * u, color: colors.text}}>— {publisher}{date ? `, ${date}` : ''}</div>
+            <div style={{fontSize: 20 * u, color: colors.sub}}>{domain(url)}</div>
+          </div>
+        </div>
+      </div>
+      {why ? (
+        <div style={{flex: 1, display: 'flex', flexDirection: 'column', gap: 12 * u, opacity: side, transform: `translateX(${(1 - side) * 30}px)`}}>
+          <div style={{fontSize: 18 * u, letterSpacing: 1.5, color: colors.sub, fontWeight: 700, textTransform: 'uppercase'}}>Why it matters</div>
+          <div style={{fontSize: 30 * u, fontWeight: 700, color: colors.text, lineHeight: 1.3}}>{why}</div>
+        </div>
+      ) : null}
+    </Region>
+  );
+};
+
+// A clean crop of the news itself (headline, byline, start of the story; pop-ups and ads removed
+// before capture), with the outlet quoted under it.
+const Clipping: React.FC<SourceSpec> = ({url, publisher, date, why, shot, shotRatio, capturedUrl}) => {
+  const u = useUnit();
+  const b = useBox();
+  const f = useCurrentFrame();
+  const {durationInFrames} = useVideoConfig();
+  const e = useEnter(2, 15);
+  const q = useFade(16);
+  const side = [useFade(24), useFade(34)];
+  const maxW = b.w * 0.66;
+  const maxH = b.h * 0.7;
+  const ratio = shotRatio || 0.6;
+  const w = Math.min(maxW, maxH / ratio);
+  const push = interpolate(f, [0, durationInFrames], [1, 1.04]);
+  return (
+    <Region style={{display: 'flex', alignItems: 'center', gap: 40 * u, padding: `0 ${20 * u}px`, boxSizing: 'border-box'}}>
+      <div style={{display: 'flex', flexDirection: 'column', gap: 18 * u, width: w, flex: 'none'}}>
+        <div style={{width: w, height: w * ratio, borderRadius: 10 * u, overflow: 'hidden', background: '#FFFFFF', boxShadow: '0 24px 70px rgba(0,0,0,0.5)', transform: `translateY(${(1 - e) * 60}px) rotate(${(1 - e) * -3 - 0.6}deg) scale(${(0.92 + 0.08 * e) * push})`, opacity: e}}>
+          <Img src={staticFile(shot as string)} style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top'}} />
+        </div>
+        <div style={{display: 'flex', alignItems: 'center', gap: 14 * u, opacity: q, transform: `translateX(${(1 - q) * -30}px)`}}>
+          <div style={{width: 8 * u, alignSelf: 'stretch', background: colors.orange, borderRadius: 3}} />
+          <div>
+            <div style={{fontFamily: fonts.display, fontWeight: 800, fontSize: 32 * u, color: colors.text}}>— {publisher}{date ? `, ${date}` : ''}</div>
+            <div style={{fontSize: 20 * u, color: colors.sub}}>{domain(capturedUrl || url)}</div>
+          </div>
+        </div>
+      </div>
+      {why ? (
+        <div style={{flex: 1, display: 'flex', flexDirection: 'column', gap: 12 * u, opacity: side[0], transform: `translateX(${(1 - side[0]) * 30}px)`}}>
+          <div style={{fontSize: 18 * u, letterSpacing: 1.5, color: colors.sub, fontWeight: 700, textTransform: 'uppercase'}}>Why it matters</div>
+          <div style={{fontSize: 30 * u, fontWeight: 700, color: colors.text, lineHeight: 1.3}}>{why}</div>
+        </div>
+      ) : null}
+    </Region>
+  );
+};
+
+const BrowserCard: React.FC<SourceSpec> = ({url, publisher, authors, date, title, why, shot, shotRatio, capturedUrl}) => {
   const u = useUnit();
   const b = useBox();
   const f = useCurrentFrame();
