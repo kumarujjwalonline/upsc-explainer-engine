@@ -1,2636 +1,2646 @@
 {
- "id": "cloudbursts-extreme-rainfall",
- "title": "Cloudburst Explained | Why Clouds Don't Actually Burst | Extreme Rainfall & Himalayan Disasters | UPSC",
- "format": "16:9",
- "tracker": {
-  "title": "Lesson progress",
-  "objectives": [
-   {
-    "id": "o1",
-    "label": "What is a cloudburst?"
-   },
-   {
-    "id": "o2",
-    "label": "How it forms"
-   },
-   {
-    "id": "o3",
-    "label": "Why the mountains"
-   },
-   {
-    "id": "o4",
-    "label": "Case files"
-   },
-   {
-    "id": "o5",
-    "label": "Cloudburst vs extreme rain"
-   },
-   {
-    "id": "o6",
-    "label": "Forecasting & preparedness"
-   },
-   {
-    "id": "o7",
-    "label": "Recap & exam traps"
-   }
-  ]
- },
- "scenes": [
-  {
-   "id": "S00",
-   "narration": "6 August 2010 की रात Leh में 255 से ज़्यादा लोगों की जान गई, लेकिन वहाँ के इकलौते weather station ने उस पूरी रात में सिर्फ़ 12.8 mm बारिश दर्ज की। इतनी कम दर्ज बारिश में इतनी बड़ी तबाही, आख़िर ये हुआ कैसे?",
-   "durationSec": 17.8,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S00.mp3",
-   "objective": "o1",
-   "completes": [],
-   "visual": {
-    "type": "montage",
-    "shots": [
-     {
-      "t0": 0,
-      "move": "in",
-      "video": true,
-      "query": "thunderstorm lightning night"
-     },
-     {
-      "t0": 2.0,
-      "move": "left"
-     },
-     {
-      "t0": 4.5,
-      "move": "in"
-     },
-     {
-      "t0": 6.6,
-      "move": "in",
-      "video": true,
-      "query": "heavy rain night"
-     },
-     {
-      "t0": 12.3,
-      "move": "out",
-      "video": true,
-      "query": "flash flood muddy river"
-     }
-    ],
-    "stamps": [
-     {
-      "text": "255+",
-      "t0": 2.95,
-      "tone": "bad",
-      "y": 0.36,
-      "sub": "lives lost in one night",
-      "out": 6.0
-     },
-     {
-      "text": "12.8 mm",
-      "t0": 9.75,
-      "tone": "warn",
-      "y": 0.36,
-      "sub": "all the rain the only gauge recorded",
-      "out": 12.2
-     },
-     {
-      "text": "HOW?",
-      "t0": 15.8,
-      "tone": "accent",
-      "y": 0.32
-     }
-    ],
-    "kicker": {
-     "text": "6 AUGUST 2010 · LEH, LADAKH",
-     "t0": 0.3,
-     "out": 2.7
-    },
-    "flashes": [
-     0.6,
-     1.9,
-     2.85,
-     15.65
-    ],
-    "rain": 1,
-    "grade": "night"
-   },
-   "sfx": "hit"
-  },
-  {
-   "id": "S01",
-   "narration": "इसका जवाब एक ऐसे शब्द में छिपा है, जो आप हर monsoon में news में सुनते हैं, यानी cloudburst। और पहली हैरानी की बात ये है, कि cloudburst में कोई बादल असल में फटता ही नहीं।",
-   "durationSec": 12.95,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S01.mp3",
-   "objective": "o1",
-   "completes": [],
-   "visual": {
-    "type": "montage",
-    "shots": [
-     {
-      "t0": 0,
-      "move": "right",
-      "video": true,
-      "query": "monsoon rain street India"
-     },
-     {
-      "t0": 5.3,
-      "move": "out",
-      "focus": [
-       0.5,
-       0.4
-      ]
-     },
-     {
-      "t0": 8.7,
-      "move": "in",
-      "video": true,
-      "query": "storm clouds timelapse"
-     }
-    ],
-    "stamps": [
-     {
-      "text": "CLOUDBURST",
-      "t0": 5.6,
-      "tone": "accent",
-      "y": 0.36,
-      "sub": "बादल फटना",
-      "out": 8.6
-     },
-     {
-      "text": "No cloud bursts",
-      "t0": 11.0,
-      "tone": "warn",
-      "y": 0.36,
-      "sub": "the name is a myth"
-     }
-    ],
-    "flashes": [
-     5.5
-    ],
-    "rain": 0.6,
-    "grade": "storm"
-   },
-   "sfx": "pop"
-  },
-  {
-   "id": "S02",
-   "narration": "दूसरी हैरानी ये है, कि जिन हादसों को हम cloudburst कहते हैं, उनमें से कई असल में cloudburst होते ही नहीं। UPSC के लिए यही फ़र्क़ समझना सबसे ज़रूरी है, Prelims की definition के लिए भी और Mains के analysis के लिए भी।",
-   "durationSec": 15.62,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S02.mp3",
-   "objective": "o1",
-   "completes": [],
-   "visual": {
-    "type": "montage",
-    "shots": [
-     {
-      "t0": 0,
-      "move": "left"
-     },
-     {
-      "t0": 4.0,
-      "move": "in"
-     },
-     {
-      "t0": 7.5,
-      "move": "out",
-      "video": true,
-      "query": "flood river Himalaya"
-     }
-    ],
-    "stamps": [
-     {
-      "text": "Not every \"cloudburst\" is one",
-      "t0": 4.2,
-      "tone": "warn",
-      "y": 0.36,
-      "out": 7.5
-     },
-     {
-      "text": "PRELIMS",
-      "t0": 11.0,
-      "tone": "accent",
-      "y": 0.24,
-      "sub": "the exact definition"
-     },
-     {
-      "text": "MAINS",
-      "t0": 12.95,
-      "tone": "warn",
-      "y": 0.52,
-      "sub": "the real cause of the damage"
-     }
-    ],
-    "rain": 0.3,
-    "grade": "storm"
-   }
-  },
-  {
-   "id": "S03",
-   "narration": "आज के lesson में पहले हम cloudburst की असली definition समझेंगे, और फिर ये कि वो बनता कैसे है। उसके बाद हम देखेंगे कि पहाड़ों में ये बार-बार क्यों होता है, और Leh, Kedarnath और Dharali के cases हमें क्या सिखाते हैं। आख़िर में हम extreme rainfall, climate change और India की तैयारी की बात करेंगे।",
-   "durationSec": 21.63,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S03.mp3",
-   "objective": "o1",
-   "completes": [],
-   "visual": {
-    "type": "title",
-    "kicker": "UPSC Geography GS-I · Disaster Management GS-III",
-    "title": "Cloudbursts & Extreme Rainfall",
-    "subtitle": "Definition · Physics · Mountains · Case files · Climate · Preparedness"
-   },
-   "sfx": "pop"
-  },
-  {
-   "id": "S04",
-   "narration": "India Meteorological Department, यानी IMD, cloudburst को बादल से नहीं, बल्कि बारिश की मात्रा से define करता है। अगर लगभग 20 से 30 square kilometre के छोटे से इलाके में, एक घंटे के अंदर 100 mm या उससे ज़्यादा बारिश गिर जाए, तो उसे cloudburst कहते हैं।",
-   "durationSec": 19.39,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S04.mp3",
-   "objective": "o1",
-   "completes": [],
-   "visual": {
-    "type": "cloud",
-    "mode": "gauge",
-    "value": 100,
-    "unit": "mm",
-    "minutes": 60,
-    "label": "≥ 100 mm in 1 hour",
-    "sub": "over ~20–30 sq km (IMD)",
-    "t0": 8.39,
-    "dur": 8.5
-   },
-   "onScreen": "IMD: ≥ 100 mm in 1 hour over ~20–30 sq km",
-   "sfx": "tick"
-  },
-  {
-   "id": "S05",
-   "narration": "अब 100 mm सुनने में बहुत छोटा लगता है, है ना? तो इसे ऐसे समझिए। 1 mm बारिश का मतलब है, ज़मीन के हर square metre पर लगभग 1 litre पानी।",
-   "durationSec": 12.71,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S05.mp3",
-   "objective": "o1",
-   "completes": [],
-   "visual": {
-    "type": "formula",
-    "heading": "What 1 mm of rain means",
-    "lines": [
-     {
-      "text": "1 mm of rain on 1 m²"
-     },
-     {
-      "text": "= 0.001 m × 1 m² = 0.001 m³"
-     },
-     {
-      "text": "= 1 litre per square metre",
-      "final": true
-     }
-    ]
-   },
-   "onScreen": "1 mm of rain = 1 litre per m²",
-   "sfx": "ping",
-   "compact": true
-  },
-  {
-   "id": "S06",
-   "narration": "यानी 20 square kilometre के इलाके पर, एक घंटे में 100 mm बारिश का मतलब है लगभग 2 billion litres पानी। ये करीब 800 Olympic swimming pools जितना पानी है, जो सिर्फ़ एक घंटे में एक घाटी पर गिर जाता है।",
-   "durationSec": 15.63,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S06.mp3",
-   "objective": "o1",
-   "completes": [],
-   "visual": {
-    "type": "formula",
-    "heading": "One cloudburst over one valley",
-    "lines": [
-     {
-      "text": "100 mm = 0.1 m of water"
-     },
-     {
-      "text": "0.1 m × 20,000,000 m² = 2,000,000 m³"
-     },
-     {
-      "text": "≈ 2 billion litres",
-      "final": true
-     },
-     {
-      "text": "÷ 2.5 million litres per Olympic pool ≈ 800 pools",
-      "final": true
-     }
-    ]
-   },
-   "onScreen": "≈ 2 billion litres ≈ 800 Olympic pools",
-   "sfx": "hit",
-   "compact": true
-  },
-  {
-   "id": "S07",
-   "narration": "एक बात और ध्यान दीजिए। Cloudburst की definition सिर्फ़ एक घंटे की बारिश पर बनती है, जबकि IMD की heavy rainfall वाली categories 24 घंटे की बारिश पर बनती हैं। Prelims में घंटे और दिन का यही फ़र्क़ अक्सर trap बनता है।",
-   "durationSec": 15.63,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S07.mp3",
-   "objective": "o1",
-   "completes": [],
-   "visual": {
-    "type": "compare",
-    "left": {
-     "heading": "Cloudburst",
-     "items": [
-      "measured per 1 hour",
-      "≥ 100 mm",
-      "tiny area"
-     ],
-     "tone": "accent"
-    },
-    "right": {
-     "heading": "IMD rainfall categories",
-     "items": [
-      "measured per 24 hours",
-      "heavy · very heavy · extremely heavy"
-     ],
-     "tone": "warn"
-    }
-   },
-   "onScreen": "Cloudburst: per hour · categories: per 24 hours",
-   "sfx": "hit"
-  },
-  {
-   "id": "S08",
-   "narration": "इसीलिए \"बादल फटना\" एक मुहावरा है, किसी scientific घटना का नाम नहीं। बादल कोई गुब्बारा नहीं है, जो भरकर फट जाए। तो फिर इतना सारा पानी एक साथ नीचे कैसे आता है?",
-   "durationSec": 13.43,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S08.mp3",
-   "objective": "o1",
-   "completes": [
-    "o1"
-   ],
-   "visual": {
-    "type": "question",
-    "text": "So how does so much water fall at once?",
-    "highlight": [
-     "at once"
-    ]
-   },
-   "onScreen": "A cloud is not a balloon"
-  },
-  {
-   "id": "S09",
-   "narration": "इसकी शुरुआत होती है cumulonimbus बादल से। ये वो ऊँचे, गहरे और मीनार जैसे बादल हैं, जो 12 से 15 kilometre तक ऊपर उठ सकते हैं, यानी Mount Everest से भी ऊँचे।",
-   "durationSec": 12.84,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S09.mp3",
-   "objective": "o2",
-   "completes": [],
-   "visual": {
-    "type": "cloud",
-    "mode": "tower",
-    "t0": 0.5,
-    "dur": 9.879999999999999
-   },
-   "onScreen": "Cumulonimbus: 12–15 km tall",
-   "sfx": "whoosh"
-  },
-  {
-   "id": "S10",
-   "narration": "ये बादल गर्म और नमी से भरी हवा से बनते हैं। जब ऐसी हवा तेज़ी से ऊपर उठती है, तो वो ठंडी होती है, और उसमें मौजूद भाप पानी की बूँदों में बदल जाती है। इस process को condensation कहते हैं।",
-   "durationSec": 14.44,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S10.mp3",
-   "objective": "o2",
-   "completes": [],
-   "visual": {
-    "type": "flow",
-    "heading": "How the cloud builds",
-    "steps": [
-     {
-      "label": "Warm, moist air",
-      "sub": "rises fast",
-      "icon": "bolt"
-     },
-     {
-      "label": "It cools",
-      "sub": "as it climbs",
-      "icon": "gear"
-     },
-     {
-      "label": "Condensation",
-      "sub": "vapour → droplets",
-      "icon": "check"
-     }
-    ]
-   },
-   "onScreen": "Warm moist air rises → cools → vapour condenses into droplets"
-  },
-  {
-   "id": "S11",
-   "narration": "अब असली खेल updraft का है, यानी नीचे से ऊपर की तरफ़ चलने वाली तेज़ हवा। Cumulonimbus बादल के अंदर ये updraft 60 से 120 kilometre per hour तक की रफ़्तार पकड़ सकता है। ये हवा बूँदों को नीचे गिरने ही नहीं देती, और उन्हें बार-बार ऊपर उछालती रहती है।",
-   "durationSec": 19.51,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S11.mp3",
-   "objective": "o2",
-   "completes": [],
-   "visual": {
-    "type": "cloud",
-    "mode": "updraft",
-    "speed": "60–120 km/h",
-    "meterAt": 0
-   },
-   "onScreen": "Updraft: 60–120 km/h",
-   "sfx": "whoosh"
-  },
-  {
-   "id": "S12",
-   "narration": "ऊपर-नीचे होते हुए ये बूँदें आपस में टकराती हैं, और जुड़कर बड़ी और भारी होती जाती हैं। इस तरह बादल के अंदर बहुत सारा पानी जमा होता जाता है, जिसे updraft ने हवा में थाम रखा है।",
-   "durationSec": 13.33,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S12.mp3",
-   "objective": "o2",
-   "completes": [],
-   "visual": {
-    "type": "cloud",
-    "mode": "updraft",
-    "speed": "droplets collide and grow",
-    "meterAt": 0
-   },
-   "onScreen": "Droplets collide → grow → water piles up in the cloud"
-  },
-  {
-   "id": "S13",
-   "narration": "फिर एक moment आता है, जब या तो बूँदों का वज़न updraft से ज़्यादा हो जाता है, या updraft ख़ुद कमज़ोर पड़ जाता है। उसी पल जमा हुआ सारा पानी एक साथ, एक छोटे से इलाके पर गिर पड़ता है। यही है cloudburst।",
-   "durationSec": 16.25,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S13.mp3",
-   "objective": "o2",
-   "completes": [],
-   "visual": {
-    "type": "cloud",
-    "mode": "updraft",
-    "speed": "holding the water…",
-    "meterAt": 0,
-    "releaseAt": 8.88
-   },
-   "onScreen": "Weight beats the updraft → water falls at once",
-   "sfx": "hit"
-  },
-  {
-   "id": "S14",
-   "narration": "Research बताती है कि एक अकेला cumulonimbus बादल लगभग एक घंटे तक टिकता है, और अपनी ज़्यादातर बारिश आख़िरी 20 से 30 minutes में गिराता है। इसीलिए ये बारिश इतनी अचानक और इतनी तेज़ लगती है।",
-   "durationSec": 15.25,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S14.mp3",
-   "objective": "o2",
-   "completes": [
-    "o2"
-   ],
-   "visual": {
-    "type": "timeline",
-    "heading": "Life of one storm cell (~1 hour)",
-    "nodes": [
-     {
-      "date": "0 min",
-      "label": "tower grows",
-      "tone": "muted"
-     },
-     {
-      "date": "~30 min",
-      "label": "water piles up",
-      "tone": "accent"
-     },
-     {
-      "date": "last 20–30 min",
-      "label": "most of the rain falls",
-      "tone": "warn"
-     }
-    ]
-   },
-   "onScreen": "Most rain in the last 20–30 minutes"
-  },
-  {
-   "id": "S15",
-   "narration": "अब सवाल ये है, कि cloudbursts ज़्यादातर Himalaya, Western Ghats और North-East की पहाड़ियों में ही क्यों होते हैं? इसका जवाब है orographic lifting।",
-   "durationSec": 11.3,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S15.mp3",
-   "objective": "o3",
-   "completes": [],
-   "visual": {
-    "type": "terrain",
-    "packs": [
-     "cb-subcont"
-    ],
-    "cam": [
-     {
-      "t": 0,
-      "lon": 80,
-      "lat": 22,
-      "dist": 3300,
-      "tilt": 12,
-      "heading": 0
-     },
-     {
-      "t": 11.3,
-      "lon": 81,
-      "lat": 22,
-      "dist": 3000,
-      "tilt": 22,
-      "heading": 0
-     }
-    ],
-    "layers": [
-     {
-      "kind": "label",
-      "at": [
-       80.5,
-       30.6
-      ],
-      "text": "HIMALAYA",
-      "t0": 2.93,
-      "size": 40,
-      "tone": "warn"
-     },
-     {
-      "kind": "label",
-      "at": [
-       74.6,
-       14.5
-      ],
-      "text": "WESTERN GHATS",
-      "t0": 3.65,
-      "size": 34,
-      "tone": "warn"
-     },
-     {
-      "kind": "label",
-      "at": [
-       93.0,
-       25.6
-      ],
-      "text": "NORTH-EAST HILLS",
-      "t0": 4.88,
-      "size": 32,
-      "tone": "warn"
-     },
-     {
-      "kind": "stamp",
-      "text": "OROGRAPHIC LIFTING",
-      "t0": 9.22,
-      "tone": "accent",
-      "y": 0.1
-     }
-    ],
-    "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
-    "drift": 0.3
-   },
-   "onScreen": "Orographic lifting",
-   "sfx": "whoosh"
-  },
-  {
-   "id": "S16",
-   "narration": "Monsoon की नमी भरी हवाएँ जब किसी पहाड़ से टकराती हैं, तो उनके पास ऊपर चढ़ने के अलावा कोई रास्ता नहीं होता। पहाड़ इन हवाओं को ज़बरदस्ती ऊपर धकेलता है, और यही धक्का बादलों को और ऊँचा और ताक़तवर बना देता है।",
-   "durationSec": 16.04,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S16.mp3",
-   "objective": "o3",
-   "completes": [],
-   "visual": {
-    "type": "cloud",
-    "mode": "orographic",
-    "label": "Forced up the slope"
-   },
-   "onScreen": "Mountains force moist air up"
-  },
-  {
-   "id": "S17",
-   "narration": "पहाड़ों की गहरी घाटियाँ भी इसमें बड़ा रोल निभाती हैं। कई बार अलग-अलग दिशाओं से आई हवाएँ घाटी में फँस जाती हैं, और बादल आगे नहीं बढ़ पाता। नतीजा ये होता है, कि सारी बारिश एक ही जगह पर गिरती है।",
-   "durationSec": 14.79,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S17.mp3",
-   "objective": "o3",
-   "completes": [],
-   "visual": {
-    "type": "cloud",
-    "mode": "orographic",
-    "trap": true,
-    "label": "Rain on one spot"
-   },
-   "onScreen": "Winds trapped in a valley"
-  },
-  {
-   "id": "S18",
-   "narration": "और पहाड़ों पर गिरा पानी रुकता नहीं है। ढलान तेज़ होने की वजह से वो कुछ ही minutes में नालों और नदियों में पहुँच जाता है, और साथ में मिट्टी, पत्थर और पेड़ भी बहा ले जाता है। इसीलिए पहाड़ों में cloudburst का मतलब अक्सर flash flood और landslide होता है।",
-   "durationSec": 19.12,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S18.mp3",
-   "objective": "o3",
-   "completes": [],
-   "visual": {
-    "type": "cloud",
-    "mode": "orographic",
-    "runoffAt": 2.91,
-    "label": "Minutes, not hours"
-   },
-   "onScreen": "Steep slopes → flash flood · landslide",
-   "sfx": "whoosh"
-  },
-  {
-   "id": "S19",
-   "narration": "Himalaya में एक और ख़तरनाक combination बनता है। जब monsoon की नमी Western Disturbance से मिलती है, तो बहुत ज़्यादा बारिश होती है। Western Disturbance यानी Mediterranean इलाके से आने वाला एक weather system, जो आम तौर पर सर्दियों में North India में बारिश और बर्फ़ लाता है।",
-   "durationSec": 19.39,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S19.mp3",
-   "objective": "o3",
-   "completes": [],
-   "visual": {
-    "type": "map",
-    "map": {
-     "projection": "flat",
-     "from": {
-      "center": [
-       60,
-       30
-      ],
-      "zoom": 1.6
-     },
-     "focus": {
-      "center": [
-       68,
-       28
-      ],
-      "zoom": 2.3
-     },
-     "highlights": [
+  "id": "cloudbursts-extreme-rainfall",
+  "title": "Cloudburst Explained | Why Clouds Don't Actually Burst | Extreme Rainfall & Himalayan Disasters | UPSC",
+  "format": "16:9",
+  "tracker": {
+    "title": "Lesson progress",
+    "objectives": [
       {
-       "iso3": "IND",
-       "tone": "accent"
+        "id": "o1",
+        "label": "What is a cloudburst?"
+      },
+      {
+        "id": "o2",
+        "label": "How it forms"
+      },
+      {
+        "id": "o3",
+        "label": "Why the mountains"
+      },
+      {
+        "id": "o4",
+        "label": "Case files"
+      },
+      {
+        "id": "o5",
+        "label": "Cloudburst vs extreme rain"
+      },
+      {
+        "id": "o6",
+        "label": "Forecasting & preparedness"
+      },
+      {
+        "id": "o7",
+        "label": "Recap & exam traps"
       }
-     ],
-     "routes": [
-      {
-       "points": [
-        [
-         18,
-         36
+    ]
+  },
+  "scenes": [
+    {
+      "id": "S00",
+      "narration": "6 August 2010 की रात Leh में 255 से ज़्यादा लोगों की जान गई, लेकिन वहाँ के इकलौते weather station ने उस पूरी रात में सिर्फ़ 12.8 mm बारिश दर्ज की। इतनी कम दर्ज बारिश में इतनी बड़ी तबाही, आख़िर ये हुआ कैसे?",
+      "durationSec": 17.8,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S00.mp3",
+      "objective": "o1",
+      "completes": [],
+      "visual": {
+        "type": "montage",
+        "shots": [
+          {
+            "t0": 0,
+            "move": "in",
+            "video": true,
+            "query": "thunderstorm lightning night",
+            "src": "jobs/cloudbursts-extreme-rainfall/footage/S00-0.mp4",
+            "credit": "Video: GOES imagery: CSU/CIRA &amp; NOAA / Wikimedia Commons (Public domain)"
+          },
+          {
+            "t0": 2.0,
+            "move": "left"
+          },
+          {
+            "t0": 4.5,
+            "move": "in"
+          },
+          {
+            "t0": 6.6,
+            "move": "in",
+            "video": true,
+            "query": "heavy rain night",
+            "src": "jobs/cloudbursts-extreme-rainfall/footage/S00-3.mp4",
+            "credit": "Video: Fumikas Sagisavas / Wikimedia Commons (CC BY 4.0)"
+          },
+          {
+            "t0": 12.3,
+            "move": "out",
+            "video": true,
+            "query": "flash flood muddy river",
+            "src": "jobs/cloudbursts-extreme-rainfall/footage/S00-4.mp4",
+            "credit": "Video: Grand Canyon NPS / Wikimedia Commons (Public domain)"
+          }
         ],
-        [
-         35,
-         34
+        "stamps": [
+          {
+            "text": "255+",
+            "t0": 2.95,
+            "tone": "bad",
+            "y": 0.36,
+            "sub": "lives lost in one night",
+            "out": 6.0
+          },
+          {
+            "text": "12.8 mm",
+            "t0": 9.75,
+            "tone": "warn",
+            "y": 0.36,
+            "sub": "all the rain the only gauge recorded",
+            "out": 12.2
+          },
+          {
+            "text": "HOW?",
+            "t0": 15.8,
+            "tone": "accent",
+            "y": 0.32
+          }
         ],
-        [
-         52,
-         33
+        "kicker": {
+          "text": "6 AUGUST 2010 · LEH, LADAKH",
+          "t0": 0.3,
+          "out": 2.7
+        },
+        "flashes": [
+          0.6,
+          1.9,
+          2.85,
+          15.65
         ],
-        [
-         66,
-         33
+        "rain": 1,
+        "grade": "night"
+      },
+      "sfx": "hit"
+    },
+    {
+      "id": "S01",
+      "narration": "इसका जवाब एक ऐसे शब्द में छिपा है, जो आप हर monsoon में news में सुनते हैं, यानी cloudburst। और पहली हैरानी की बात ये है, कि cloudburst में कोई बादल असल में फटता ही नहीं।",
+      "durationSec": 12.95,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S01.mp3",
+      "objective": "o1",
+      "completes": [],
+      "visual": {
+        "type": "montage",
+        "shots": [
+          {
+            "t0": 0,
+            "move": "right",
+            "video": true,
+            "query": "monsoon rain street India"
+          },
+          {
+            "t0": 5.3,
+            "move": "out",
+            "focus": [
+              0.5,
+              0.4
+            ]
+          },
+          {
+            "t0": 8.7,
+            "move": "in",
+            "video": true,
+            "query": "storm clouds timelapse",
+            "src": "jobs/cloudbursts-extreme-rainfall/footage/S01-2.mp4",
+            "credit": "Video: NathanScientific / Wikimedia Commons (CC0)"
+          }
         ],
-        [
-         76,
-         33
+        "stamps": [
+          {
+            "text": "CLOUDBURST",
+            "t0": 5.6,
+            "tone": "accent",
+            "y": 0.36,
+            "sub": "बादल फटना",
+            "out": 8.6
+          },
+          {
+            "text": "No cloud bursts",
+            "t0": 11.0,
+            "tone": "warn",
+            "y": 0.36,
+            "sub": "the name is a myth"
+          }
+        ],
+        "flashes": [
+          5.5
+        ],
+        "rain": 0.6,
+        "grade": "storm"
+      },
+      "sfx": "pop"
+    },
+    {
+      "id": "S02",
+      "narration": "दूसरी हैरानी ये है, कि जिन हादसों को हम cloudburst कहते हैं, उनमें से कई असल में cloudburst होते ही नहीं। UPSC के लिए यही फ़र्क़ समझना सबसे ज़रूरी है, Prelims की definition के लिए भी और Mains के analysis के लिए भी।",
+      "durationSec": 15.62,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S02.mp3",
+      "objective": "o1",
+      "completes": [],
+      "visual": {
+        "type": "montage",
+        "shots": [
+          {
+            "t0": 0,
+            "move": "left"
+          },
+          {
+            "t0": 4.0,
+            "move": "in"
+          },
+          {
+            "t0": 7.5,
+            "move": "out",
+            "video": true,
+            "query": "flood river Himalaya"
+          }
+        ],
+        "stamps": [
+          {
+            "text": "Not every \"cloudburst\" is one",
+            "t0": 4.2,
+            "tone": "warn",
+            "y": 0.36,
+            "out": 7.5
+          },
+          {
+            "text": "PRELIMS",
+            "t0": 11.0,
+            "tone": "accent",
+            "y": 0.24,
+            "sub": "the exact definition"
+          },
+          {
+            "text": "MAINS",
+            "t0": 12.95,
+            "tone": "warn",
+            "y": 0.52,
+            "sub": "the real cause of the damage"
+          }
+        ],
+        "rain": 0.3,
+        "grade": "storm"
+      }
+    },
+    {
+      "id": "S03",
+      "narration": "आज के lesson में पहले हम cloudburst की असली definition समझेंगे, और फिर ये कि वो बनता कैसे है। उसके बाद हम देखेंगे कि पहाड़ों में ये बार-बार क्यों होता है, और Leh, Kedarnath और Dharali के cases हमें क्या सिखाते हैं। आख़िर में हम extreme rainfall, climate change और India की तैयारी की बात करेंगे।",
+      "durationSec": 21.63,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S03.mp3",
+      "objective": "o1",
+      "completes": [],
+      "visual": {
+        "type": "title",
+        "kicker": "UPSC Geography GS-I · Disaster Management GS-III",
+        "title": "Cloudbursts & Extreme Rainfall",
+        "subtitle": "Definition · Physics · Mountains · Case files · Climate · Preparedness"
+      },
+      "sfx": "pop"
+    },
+    {
+      "id": "S04",
+      "narration": "India Meteorological Department, यानी IMD, cloudburst को बादल से नहीं, बल्कि बारिश की मात्रा से define करता है। अगर लगभग 20 से 30 square kilometre के छोटे से इलाके में, एक घंटे के अंदर 100 mm या उससे ज़्यादा बारिश गिर जाए, तो उसे cloudburst कहते हैं।",
+      "durationSec": 19.39,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S04.mp3",
+      "objective": "o1",
+      "completes": [],
+      "visual": {
+        "type": "cloud",
+        "mode": "gauge",
+        "value": 100,
+        "unit": "mm",
+        "minutes": 60,
+        "label": "≥ 100 mm in 1 hour",
+        "sub": "over ~20–30 sq km (IMD)",
+        "t0": 8.39,
+        "dur": 8.5
+      },
+      "onScreen": "IMD: ≥ 100 mm in 1 hour over ~20–30 sq km",
+      "sfx": "tick"
+    },
+    {
+      "id": "S05",
+      "narration": "अब 100 mm सुनने में बहुत छोटा लगता है, है ना? तो इसे ऐसे समझिए। 1 mm बारिश का मतलब है, ज़मीन के हर square metre पर लगभग 1 litre पानी।",
+      "durationSec": 12.71,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S05.mp3",
+      "objective": "o1",
+      "completes": [],
+      "visual": {
+        "type": "formula",
+        "heading": "What 1 mm of rain means",
+        "lines": [
+          {
+            "text": "1 mm of rain on 1 m²"
+          },
+          {
+            "text": "= 0.001 m × 1 m² = 0.001 m³"
+          },
+          {
+            "text": "= 1 litre per square metre",
+            "final": true
+          }
         ]
-       ],
-       "tone": "good",
-       "delay": 137,
-       "duration": 70,
-       "label": "Western Disturbance"
       },
-      {
-       "points": [
-        [
-         88,
-         15
-        ],
-        [
-         87,
-         22
-        ],
-        [
-         82,
-         27
-        ],
-        [
-         78,
-         30.5
+      "onScreen": "1 mm of rain = 1 litre per m²",
+      "sfx": "ping",
+      "compact": true
+    },
+    {
+      "id": "S06",
+      "narration": "यानी 20 square kilometre के इलाके पर, एक घंटे में 100 mm बारिश का मतलब है लगभग 2 billion litres पानी। ये करीब 800 Olympic swimming pools जितना पानी है, जो सिर्फ़ एक घंटे में एक घाटी पर गिर जाता है।",
+      "durationSec": 15.63,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S06.mp3",
+      "objective": "o1",
+      "completes": [],
+      "visual": {
+        "type": "formula",
+        "heading": "One cloudburst over one valley",
+        "lines": [
+          {
+            "text": "100 mm = 0.1 m of water"
+          },
+          {
+            "text": "0.1 m × 20,000,000 m² = 2,000,000 m³"
+          },
+          {
+            "text": "≈ 2 billion litres",
+            "final": true
+          },
+          {
+            "text": "÷ 2.5 million litres per Olympic pool ≈ 800 pools",
+            "final": true
+          }
         ]
-       ],
-       "tone": "accent",
-       "delay": 106,
-       "duration": 50,
-       "label": "Monsoon (Bay of Bengal)"
       },
-      {
-       "points": [
-        [
-         64,
-         14
-        ],
-        [
-         70,
-         20
-        ],
-        [
-         74,
-         27
-        ],
-        [
-         77,
-         31
+      "onScreen": "≈ 2 billion litres ≈ 800 Olympic pools",
+      "sfx": "hit",
+      "compact": true
+    },
+    {
+      "id": "S07",
+      "narration": "एक बात और ध्यान दीजिए। Cloudburst की definition सिर्फ़ एक घंटे की बारिश पर बनती है, जबकि IMD की heavy rainfall वाली categories 24 घंटे की बारिश पर बनती हैं। Prelims में घंटे और दिन का यही फ़र्क़ अक्सर trap बनता है।",
+      "durationSec": 15.63,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S07.mp3",
+      "objective": "o1",
+      "completes": [],
+      "visual": {
+        "type": "compare",
+        "left": {
+          "heading": "Cloudburst",
+          "items": [
+            "measured per 1 hour",
+            "≥ 100 mm",
+            "tiny area"
+          ],
+          "tone": "accent"
+        },
+        "right": {
+          "heading": "IMD rainfall categories",
+          "items": [
+            "measured per 24 hours",
+            "heavy · very heavy · extremely heavy"
+          ],
+          "tone": "warn"
+        }
+      },
+      "onScreen": "Cloudburst: per hour · categories: per 24 hours",
+      "sfx": "hit"
+    },
+    {
+      "id": "S08",
+      "narration": "इसीलिए \"बादल फटना\" एक मुहावरा है, किसी scientific घटना का नाम नहीं। बादल कोई गुब्बारा नहीं है, जो भरकर फट जाए। तो फिर इतना सारा पानी एक साथ नीचे कैसे आता है?",
+      "durationSec": 13.43,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S08.mp3",
+      "objective": "o1",
+      "completes": [
+        "o1"
+      ],
+      "visual": {
+        "type": "question",
+        "text": "So how does so much water fall at once?",
+        "highlight": [
+          "at once"
         ]
-       ],
-       "tone": "accent",
-       "delay": 118,
-       "duration": 50,
-       "label": "Monsoon (Arabian Sea)"
-      }
-     ],
-     "markers": [
-      {
-       "at": [
-        18,
-        36
-       ],
-       "label": "Mediterranean",
-       "tone": "good",
-       "delay": 321
       },
-      {
-       "at": [
-        77.5,
-        32.0
-       ],
-       "label": "Western Himalaya: they meet",
-       "tone": "bad",
-       "delay": 211
-      }
-     ]
-    }
-   },
-   "onScreen": "Monsoon + Western Disturbance",
-   "sfx": "hit"
-  },
-  {
-   "id": "S20",
-   "narration": "Ministry of Earth Sciences के पूर्व secretary M. Rajeevan ने 2025 की Himalayan बाढ़ों के लिए इसी मेल को \"deadly combination\" कहा था। Mains में आप यही point लिख सकते हैं, कि Himalayan disasters के पीछे अक्सर एक नहीं, बल्कि कई weather systems का मेल होता है।",
-   "durationSec": 18.89,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S20.mp3",
-   "objective": "o3",
-   "completes": [
-    "o3"
-   ],
-   "visual": {
-    "type": "source",
-    "url": "https://dialogue.earth/en/climate/are-cloudbursts-a-scapegoat-for-indias-floods/",
-    "publisher": "Dialogue Earth",
-    "date": "9 Sep 2025",
-    "title": "Are cloudbursts a scapegoat for India's floods?",
-    "why": "M. Rajeevan: western disturbance + monsoon moisture, a \"deadly combination\""
-   },
-   "onScreen": "\"Deadly combination\" · M. Rajeevan, former Secretary, MoES (2025)"
-  },
-  {
-   "id": "S21",
-   "narration": "अब आते हैं शुरुआत वाले सवाल पर, यानी Leh, 6 August 2010। आधी रात के आसपास Leh के ऊपर एक बहुत तेज़ storm आया। अनुमान है कि कुछ जगहों पर लगभग आधे घंटे में उतनी बारिश गिरी, जितनी Leh में आम तौर पर पूरे साल में होती है।",
-   "durationSec": 18.96,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S21.mp3",
-   "objective": "o4",
-   "completes": [],
-   "visual": {
-    "type": "terrain",
-    "packs": [
-     "cb-subcont",
-     "cb-whimalaya",
-     "cb-leh"
-    ],
-    "cam": [
-     {
-      "t": 0,
-      "lon": 77.6,
-      "lat": 34.0,
-      "dist": 400,
-      "tilt": 30,
-      "heading": 0
-     },
-     {
-      "t": 4,
-      "lon": 77.585,
-      "lat": 34.164,
-      "dist": 40,
-      "tilt": 50,
-      "heading": 340
-     },
-     {
-      "t": 18.96,
-      "lon": 77.585,
-      "lat": 34.164,
-      "dist": 30,
-      "tilt": 56,
-      "heading": 10
-     }
-    ],
-    "layers": [
-     {
-      "kind": "pin",
-      "at": [
-       77.585,
-       34.164
-      ],
-      "label": "Leh",
-      "t0": 2.5,
-      "tone": "accent",
-      "sub": "~00:00–00:30 IST"
-     },
-     {
-      "kind": "zone",
-      "at": [
-       77.62,
-       34.2
-      ],
-      "rx": 60,
-      "ry": 40,
-      "t0": 4.87,
-      "label": "storm",
-      "color": "#5B7DA6"
-     },
-     {
-      "kind": "stamp",
-      "text": "~1 YEAR",
-      "t0": 9.27,
-      "tone": "warn",
-      "y": 0.1,
-      "sub": "of Leh's rain in ~30 min (estimate)"
-     }
-    ],
-    "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
-    "drift": 0.3,
-    "night": true
-   },
-   "onScreen": "Leh: ~a year's rain in ~30 minutes (estimate)",
-   "sfx": "whoosh",
-   "era": {
-    "set": "cases",
-    "steps": [
-     [
-      0,
-      0
-     ]
-    ]
-   }
-  },
-  {
-   "id": "S22",
-   "narration": "पहाड़ों से मलबे वाली बाढ़ नीचे आई, और Choglamsar जैसे इलाके सबसे बुरी तरह प्रभावित हुए। सरकारी दस्तावेज़ों के मुताबिक कम से कम 255 लोगों की मौत हुई, और 71 गाँव और कस्बे इसकी चपेट में आए।",
-   "durationSec": 14.64,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S22.mp3",
-   "objective": "o4",
-   "completes": [],
-   "visual": {
-    "type": "terrain",
-    "packs": [
-     "cb-subcont",
-     "cb-whimalaya",
-     "cb-leh"
-    ],
-    "cam": [
-     {
-      "t": 0,
-      "lon": 77.585,
-      "lat": 34.164,
-      "dist": 30,
-      "tilt": 55,
-      "heading": 10
-     },
-     {
-      "t": 14.64,
-      "lon": 77.62,
-      "lat": 34.1,
-      "dist": 28,
-      "tilt": 58,
-      "heading": 40
-     }
-    ],
-    "layers": [
-     {
-      "kind": "line",
-      "pts": [
-       [
-        77.66,
-        34.22
-       ],
-       [
-        77.64,
-        34.16
-       ],
-       [
-        77.62,
-        34.1
-       ]
-      ],
-      "t0": 0.6,
-      "tone": "warn",
-      "dur": 1.8,
-      "width": 4,
-      "label": "debris flow"
-     },
-     {
-      "kind": "line",
-      "pts": [
-       [
-        77.58,
-        34.24
-       ],
-       [
-        77.585,
-        34.164
-       ]
-      ],
-      "t0": 1.2,
-      "tone": "warn",
-      "dur": 1.6,
-      "width": 4
-     },
-     {
-      "kind": "pin",
-      "at": [
-       77.62,
-       34.1
-      ],
-      "label": "Choglamsar",
-      "t0": 2.88,
-      "tone": "bad",
-      "sub": "worst hit",
-      "side": "right"
-     },
-     {
-      "kind": "photo",
-      "src": "jobs/cloudbursts-extreme-rainfall/img/leh_2010.jpg",
-      "t0": 6.21,
-      "side": "left",
-      "w": 0.36,
-      "at": [
-       77.585,
-       34.164
-      ]
-     },
-     {
-      "kind": "stamp",
-      "text": "255+",
-      "t0": 9.52,
-      "tone": "bad",
-      "y": 0.64,
-      "sub": "lives lost",
-      "out": 11.290000000000001
-     },
-     {
-      "kind": "stamp",
-      "text": "71",
-      "t0": 11.39,
-      "tone": "warn",
-      "y": 0.64,
-      "sub": "towns & villages hit"
-     }
-    ],
-    "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
-    "drift": 0.3
-   },
-   "onScreen": "255+ dead · 71 towns and villages hit",
-   "sfx": "hit",
-   "era": {
-    "set": "cases",
-    "steps": [
-     [
-      0,
-      0
-     ]
-    ]
-   }
-  },
-  {
-   "id": "S23",
-   "narration": "तो weather station ने सिर्फ़ 12.8 mm क्यों दर्ज किया? क्योंकि बारिश की सबसे तेज़ पट्टी airport वाले station के ऊपर नहीं, बल्कि आसपास की घाटियों के ऊपर थी। Cloudburst इतना local होता है, कि कुछ kilometre दूर रखा rain gauge भी उसे miss कर सकता है।",
-   "durationSec": 18.59,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S23.mp3",
-   "objective": "o4",
-   "completes": [],
-   "visual": {
-    "type": "terrain",
-    "packs": [
-     "cb-subcont",
-     "cb-whimalaya",
-     "cb-leh"
-    ],
-    "cam": [
-     {
-      "t": 0,
-      "lon": 77.585,
-      "lat": 34.164,
-      "dist": 34,
-      "tilt": 50,
-      "heading": 0
-     },
-     {
-      "t": 18.59,
-      "lon": 77.57,
-      "lat": 34.16,
-      "dist": 26,
-      "tilt": 56,
-      "heading": 330
-     }
-    ],
-    "layers": [
-     {
-      "kind": "pin",
-      "at": [
-       77.546,
-       34.136
-      ],
-      "label": "Rain gauge",
-      "t0": 0.6,
-      "tone": "warn",
-      "sub": "12.8 mm",
-      "side": "left"
-     },
-     {
-      "kind": "zone",
-      "at": [
-       77.62,
-       34.21
-      ],
-      "rx": 45,
-      "ry": 26,
-      "t0": 5.21,
-      "label": "heaviest rain band",
-      "color": "#E5383B"
-     },
-     {
-      "kind": "line",
-      "pts": [
-       [
-        77.546,
-        34.136
-       ],
-       [
-        77.62,
-        34.21
-       ]
-      ],
-      "t0": 11.33,
-      "tone": "warn",
-      "dur": 1.0,
-      "width": 4,
-      "dashed": true,
-      "label": "a few km away"
-     }
-    ],
-    "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
-    "drift": 0.3,
-    "night": true
-   },
-   "onScreen": "The gauge was outside the rain band",
-   "era": {
-    "set": "cases",
-    "steps": [
-     [
-      0,
-      0
-     ]
-    ]
-   }
-  },
-  {
-   "id": "S24",
-   "narration": "अब चलते हैं Kedarnath, June 2013। उस साल monsoon बहुत जल्दी पहुँचा, और Uttarakhand में लगातार कई दिन भारी बारिश हुई। ऊपर से पिघलती बर्फ़ और बारिश ने Chorabari Lake को भर दिया, और उसका पानी नीचे Kedarnath की तरफ़ टूट पड़ा।",
-   "durationSec": 18.36,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S24.mp3",
-   "objective": "o4",
-   "completes": [],
-   "visual": {
-    "type": "terrain",
-    "packs": [
-     "cb-subcont",
-     "cb-whimalaya",
-     "cb-kedar"
-    ],
-    "cam": [
-     {
-      "t": 0,
-      "lon": 79.5,
-      "lat": 30.5,
-      "dist": 500,
-      "tilt": 30,
-      "heading": 0
-     },
-     {
-      "t": 4,
-      "lon": 79.0669,
-      "lat": 30.7346,
-      "dist": 18,
-      "tilt": 55,
-      "heading": 0
-     },
-     {
-      "t": 18.36,
-      "lon": 79.0669,
-      "lat": 30.7346,
-      "dist": 13,
-      "tilt": 58,
-      "heading": 20
-     }
-    ],
-    "layers": [
-     {
-      "kind": "pin",
-      "at": [
-       79.0669,
-       30.7346
-      ],
-      "label": "Kedarnath",
-      "t0": 3.0,
-      "tone": "accent",
-      "sub": "16–17 June 2013"
-     },
-     {
-      "kind": "pin",
-      "at": [
-       79.058,
-       30.753
-      ],
-      "label": "Chorabari Lake",
-      "t0": 11.92,
-      "tone": "warn",
-      "side": "left"
-     },
-     {
-      "kind": "line",
-      "pts": [
-       [
-        79.058,
-        30.753
-       ],
-       [
-        79.0669,
-        30.7346
-       ],
-       [
-        78.993,
-        30.652
-       ]
-      ],
-      "t0": 16.540000000000003,
-      "tone": "bad",
-      "dur": 2.0,
-      "width": 6,
-      "label": "Mandakini"
-     }
-    ],
-    "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
-    "drift": 0.3
-   },
-   "onScreen": "Kedarnath, June 2013",
-   "sfx": "whoosh",
-   "era": {
-    "set": "cases",
-    "steps": [
-     [
-      0,
-      1
-     ]
-    ]
-   }
-  },
-  {
-   "id": "S25",
-   "narration": "Uttarakhand सरकार के मुताबिक 5,700 से ज़्यादा लोगों को presumed dead माना गया। उस समय इसे भी cloudburst कहा गया, लेकिन असल में ये कई दिनों की extreme rainfall, बर्फ़ के पिघलने और lake के टूटने का मेल था।",
-   "durationSec": 16.18,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S25.mp3",
-   "objective": "o4",
-   "completes": [],
-   "visual": {
-    "type": "compare",
-    "left": {
-     "heading": "Called",
-     "items": [
-      "a cloudburst"
-     ],
-     "tone": "muted"
+      "onScreen": "A cloud is not a balloon"
     },
-    "right": {
-     "heading": "Actually",
-     "items": [
-      "days of extreme rain",
-      "snowmelt",
-      "Chorabari Lake outburst",
-      "5,700+ presumed dead"
-     ],
-     "tone": "bad"
-    }
-   },
-   "onScreen": "5,700+ presumed dead (Govt. of Uttarakhand)",
-   "sfx": "hit",
-   "era": {
-    "set": "cases",
-    "steps": [
-     [
-      0,
-      1
-     ]
-    ]
-   }
-  },
-  {
-   "id": "S26",
-   "narration": "अब February 2021 का Chamoli disaster देखिए। शुरू में इसे cloudburst भी कहा गया, और glacial lake outburst भी। लेकिन ICIMOD की जाँच में पता चला, कि असली वजह एक rock और ice avalanche थी, यानी पहाड़ से चट्टान और बर्फ़ का एक भारी हिस्सा टूटकर नीचे गिरा था।",
-   "durationSec": 20.95,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S26.mp3",
-   "objective": "o4",
-   "completes": [],
-   "visual": {
-    "type": "terrain",
-    "packs": [
-     "cb-subcont",
-     "cb-whimalaya",
-     "cb-chamoli"
-    ],
-    "cam": [
-     {
-      "t": 0,
-      "lon": 79.6,
-      "lat": 30.6,
-      "dist": 120,
-      "tilt": 40,
-      "heading": 0
-     },
-     {
-      "t": 20.95,
-      "lon": 79.735,
-      "lat": 30.525,
-      "dist": 22,
-      "tilt": 55,
-      "heading": 60
-     }
-    ],
-    "layers": [
-     {
-      "kind": "pin",
-      "at": [
-       79.735,
-       30.525
-      ],
-      "label": "Rishiganga valley",
-      "t0": 1.5,
-      "tone": "accent",
-      "sub": "Chamoli · 7 Feb 2021"
-     },
-     {
-      "kind": "stamp",
-      "text": "CLOUDBURST?",
-      "t0": 3.58,
-      "tone": "muted",
-      "y": 0.1,
-      "out": 8.71
-     },
-     {
-      "kind": "arrow",
-      "from": [
-       79.82,
-       30.42
-      ],
-      "to": [
-       79.735,
-       30.525
-      ],
-      "t0": 13.72,
-      "dur": 1.6,
-      "tone": "bad",
-      "label": "rock + ice"
-     },
-     {
-      "kind": "stamp",
-      "text": "ROCK-ICE AVALANCHE",
-      "t0": 13.72,
-      "tone": "bad",
-      "y": 0.1,
-      "sub": "ICIMOD"
-     }
-    ],
-    "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
-    "drift": 0.3
-   },
-   "onScreen": "Chamoli 2021: a rock-ice avalanche (ICIMOD)",
-   "sfx": "whoosh",
-   "era": {
-    "set": "cases",
-    "steps": [
-     [
-      0,
-      2
-     ]
-    ]
-   }
-  },
-  {
-   "id": "S27",
-   "narration": "और फिर आया August 2025। 5 August को Uttarkashi के Dharali गाँव में Kheer Ganga से मलबे वाली बाढ़ आई, और घर, पुल और सड़कें बह गईं। शुरू में इसे cloudburst बताया गया, लेकिन IMD ने कहा कि उसके किसी भी station ने वहाँ cloudburst दर्ज नहीं किया।",
-   "durationSec": 19.86,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S27.mp3",
-   "objective": "o4",
-   "completes": [],
-   "visual": {
-    "type": "terrain",
-    "packs": [
-     "cb-subcont",
-     "cb-whimalaya",
-     "cb-dharali"
-    ],
-    "cam": [
-     {
-      "t": 0,
-      "lon": 78.6,
-      "lat": 30.9,
-      "dist": 140,
-      "tilt": 35,
-      "heading": 0
-     },
-     {
-      "t": 4,
-      "lon": 78.786,
-      "lat": 31.04,
-      "dist": 16,
-      "tilt": 55,
-      "heading": 30
-     },
-     {
-      "t": 19.86,
-      "lon": 78.786,
-      "lat": 31.04,
-      "dist": 12,
-      "tilt": 58,
-      "heading": 50
-     }
-    ],
-    "layers": [
-     {
-      "kind": "pin",
-      "at": [
-       78.786,
-       31.04
-      ],
-      "label": "Dharali",
-      "t0": 3.0,
-      "tone": "accent",
-      "sub": "5 Aug 2025"
-     },
-     {
-      "kind": "pin",
-      "at": [
-       78.745,
-       31.04
-      ],
-      "label": "Harsil",
-      "t0": 3.4,
-      "tone": "muted",
-      "side": "left"
-     },
-     {
-      "kind": "line",
-      "pts": [
-       [
-        78.8,
-        30.98
-       ],
-       [
-        78.795,
-        31.01
-       ],
-       [
-        78.786,
-        31.04
-       ]
-      ],
-      "t0": 5.37,
-      "tone": "bad",
-      "dur": 1.4,
-      "width": 6,
-      "label": "Kheer Ganga"
-     },
-     {
-      "kind": "stamp",
-      "text": "IMD: NO CLOUDBURST RECORDED",
-      "t0": 13.18,
-      "tone": "warn",
-      "y": 0.1
-     }
-    ],
-    "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
-    "drift": 0.3
-   },
-   "onScreen": "Dharali 2025: IMD recorded no cloudburst",
-   "sfx": "whoosh",
-   "era": {
-    "set": "cases",
-    "steps": [
-     [
-      0,
-      3
-     ]
-    ]
-   }
-  },
-  {
-   "id": "S28",
-   "narration": "Experts के analysis के मुताबिक उस दिन Uttarkashi में लगभग 27 mm बारिश हुई थी, जो cloudburst की 100 mm की सीमा से बहुत कम है। नौ दिन बाद Kishtwar के Chashoti में आई flash flood में 60 से ज़्यादा लोगों की जान गई, और वहाँ भी ये सवाल उठा, कि क्या सच में cloudburst हुआ था।",
-   "durationSec": 20.3,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S28.mp3",
-   "objective": "o4",
-   "completes": [],
-   "visual": {
-    "type": "cloud",
-    "mode": "bars",
-    "heading": "Was it a cloudburst?",
-    "unit": "mm",
-    "max": 120,
-    "bars": [
-     {
-      "label": "Uttarkashi, 5 Aug",
-      "value": 27,
-      "tone": "warn",
-      "t0": 0.6,
-      "sub": "whole day (expert estimate)"
-     }
-    ],
-    "line": {
-     "value": 100,
-     "label": "Cloudburst: 100 mm in 1 hour",
-     "t0": 6.97
-    }
-   },
-   "onScreen": "Kishtwar (Chashoti), 14 Aug 2025: 60+ dead",
-   "era": {
-    "set": "cases",
-    "steps": [
-     [
-      0,
-      3
-     ],
-     [
-      9.16,
-      4
-     ]
-    ]
-   }
-  },
-  {
-   "id": "S29",
-   "narration": "अब इस पूरी तस्वीर पर गौर कीजिए। IMD ने 1970 से 2016 तक पूरे देश में सिर्फ़ लगभग 30 cloudbursts दर्ज किए थे। लेकिन news reports के मुताबिक 2026 में तो अकेले Jammu and Kashmir में, August की शुरुआत तक ही 35 \"cloudbursts\" गिने जा चुके थे।",
-   "durationSec": 19.95,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S29.mp3",
-   "objective": "o4",
-   "completes": [],
-   "visual": {
-    "type": "cloud",
-    "mode": "bars",
-    "heading": "Counted as \"cloudbursts\"",
-    "unit": "",
-    "bars": [
-     {
-      "label": "IMD record",
-      "value": 30,
-      "tone": "accent",
-      "t0": 2.65,
-      "sub": "all India · 1970–2016"
-     },
-     {
-      "label": "News count",
-      "value": 35,
-      "tone": "bad",
-      "t0": 9.35,
-      "sub": "J&K only · 2026"
-     }
-    ]
-   },
-   "onScreen": "IMD: ~30 cloudbursts in 46 years · news: 35 in J&K in 2026",
-   "sfx": "hit",
-   "era": {
-    "set": "cases",
-    "steps": [
-     [
-      0,
-      4
-     ],
-     [
-      9.35,
-      5
-     ]
-    ]
-   }
-  },
-  {
-   "id": "S30",
-   "narration": "इसका मतलब ये नहीं कि ये हादसे छोटे थे। मतलब ये है कि हम हर पहाड़ी बाढ़ को cloudburst कह देते हैं, जबकि उसकी वजह GLOF, landslide, avalanche या कई दिनों की बारिश भी हो सकती है। GLOF यानी Glacial Lake Outburst Flood, जब किसी glacier की झील का किनारा टूट जाता है।",
-   "durationSec": 21.75,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S30.mp3",
-   "objective": "o4",
-   "completes": [],
-   "visual": {
-    "type": "hub",
-    "center": {
-     "label": "Flash flood",
-     "icon": "bolt"
+    {
+      "id": "S09",
+      "narration": "इसकी शुरुआत होती है cumulonimbus बादल से। ये वो ऊँचे, गहरे और मीनार जैसे बादल हैं, जो 12 से 15 kilometre तक ऊपर उठ सकते हैं, यानी Mount Everest से भी ऊँचे।",
+      "durationSec": 12.84,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S09.mp3",
+      "objective": "o2",
+      "completes": [],
+      "visual": {
+        "type": "cloud",
+        "mode": "tower",
+        "t0": 0.5,
+        "dur": 9.879999999999999
+      },
+      "onScreen": "Cumulonimbus: 12–15 km tall",
+      "sfx": "whoosh"
     },
-    "spokes": [
-     {
-      "label": "Cloudburst",
-      "icon": "globe"
-     },
-     {
-      "label": "GLOF",
-      "icon": "link"
-     },
-     {
-      "label": "Landslide",
-      "icon": "home"
-     },
-     {
-      "label": "Avalanche",
-      "icon": "cross"
-     },
-     {
-      "label": "Days of rain",
-      "icon": "chart"
-     }
-    ]
-   },
-   "onScreen": "GLOF = Glacial Lake Outburst Flood"
-  },
-  {
-   "id": "S31",
-   "narration": "और ये label सिर्फ़ शब्दों का मामला नहीं है। Experts कहते हैं, कि हर हादसे को \"cloudburst\" कहने से सारा दोष आसमान पर चला जाता है। जबकि नदी के किनारे पर हुआ construction, पहाड़ काटकर बनी सड़कें, जंगलों की कटाई और कमज़ोर drainage भी उतने ही ज़िम्मेदार होते हैं।",
-   "durationSec": 19.37,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S31.mp3",
-   "objective": "o4",
-   "completes": [
-    "o4"
-   ],
-   "visual": {
-    "type": "points",
-    "heading": "What the \"cloudburst\" label hides",
-    "items": [
-     "Construction on riverbeds",
-     "Roads cut into slopes",
-     "Deforestation",
-     "Weak drainage"
-    ],
-    "highlight": [
-     "riverbeds"
-    ]
-   },
-   "onScreen": "Mains: the label hides land-use failures",
-   "sfx": "ping"
-  },
-  {
-   "id": "S32",
-   "narration": "अब cloudburst को extreme rainfall से अलग करके समझते हैं। IMD रोज़ की बारिश को 24 घंटे के हिसाब से categories में बाँटता है। 64.5 से 115.5 mm को heavy, 115.6 से 204.4 mm को very heavy, और 204.5 mm या उससे ज़्यादा को extremely heavy rainfall कहते हैं।",
-   "durationSec": 26.65,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S32.mp3",
-   "objective": "o5",
-   "completes": [],
-   "visual": {
-    "type": "cloud",
-    "mode": "bars",
-    "heading": "IMD rainfall categories (24 hours)",
-    "unit": "mm",
-    "max": 240,
-    "bars": [
-     {
-      "label": "Heavy",
-      "value": 64.5,
-      "tone": "accent",
-      "t0": 12.94,
-      "sub": "64.5–115.5"
-     },
-     {
-      "label": "Very heavy",
-      "value": 115.6,
-      "tone": "warn",
-      "t0": 15.75,
-      "sub": "115.6–204.4"
-     },
-     {
-      "label": "Extremely heavy",
-      "value": 204.5,
-      "tone": "bad",
-      "t0": 19.49,
-      "sub": "≥ 204.5"
-     }
-    ]
-   },
-   "onScreen": "IMD categories are per 24 hours",
-   "sfx": "tick"
-  },
-  {
-   "id": "S33",
-   "narration": "26 July 2005 को Mumbai में 24 घंटे में लगभग 944 mm बारिश हुई, और पूरा शहर ठप हो गया। July 2024 में Wayanad के landslide वाले इलाके में दो दिन में लगभग 570 mm बारिश हुई, और 200 से ज़्यादा लोगों की जान गई।",
-   "durationSec": 19.79,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S33.mp3",
-   "objective": "o5",
-   "completes": [],
-   "visual": {
-    "type": "terrain",
-    "packs": [
-     "cb-subcont",
-     "cb-mumbai",
-     "cb-wayanad"
-    ],
-    "cam": [
-     {
-      "t": 0,
-      "lon": 72.877,
-      "lat": 19.076,
-      "dist": 60,
-      "tilt": 40,
-      "heading": 0
-     },
-     {
-      "t": 8.93,
-      "lon": 72.877,
-      "lat": 19.076,
-      "dist": 50,
-      "tilt": 44,
-      "heading": 15
-     },
-     {
-      "t": 11.33,
-      "lon": 76.135,
-      "lat": 11.583,
-      "dist": 22,
-      "tilt": 55,
-      "heading": 30
-     },
-     {
-      "t": 19.79,
-      "lon": 76.135,
-      "lat": 11.583,
-      "dist": 16,
-      "tilt": 58,
-      "heading": 50
-     }
-    ],
-    "layers": [
-     {
-      "kind": "pin",
-      "at": [
-       72.877,
-       19.076
-      ],
-      "label": "Mumbai",
-      "t0": 0.6,
-      "tone": "accent",
-      "sub": "26 Jul 2005",
-      "out": 9.33
-     },
-     {
-      "kind": "stamp",
-      "text": "~944 mm",
-      "t0": 4.17,
-      "tone": "warn",
-      "y": 0.1,
-      "sub": "in 24 hours",
-      "out": 9.23
-     },
-     {
-      "kind": "pin",
-      "at": [
-       76.135,
-       11.583
-      ],
-      "label": "Mundakkai",
-      "t0": 11.13,
-      "tone": "bad",
-      "sub": "Wayanad · 30 Jul 2024"
-     },
-     {
-      "kind": "pin",
-      "at": [
-       76.14,
-       11.565
-      ],
-      "label": "Chooralmala",
-      "t0": 11.530000000000001,
-      "tone": "bad",
-      "side": "left"
-     },
-     {
-      "kind": "stamp",
-      "text": "~570 mm",
-      "t0": 14.2,
-      "tone": "bad",
-      "y": 0.1,
-      "sub": "in 48 hours · 200+ deaths"
-     }
-    ],
-    "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
-    "drift": 0.3
-   },
-   "onScreen": "Mumbai 2005 · Wayanad 2024",
-   "sfx": "whoosh"
-  },
-  {
-   "id": "S34",
-   "narration": "ऐसी घटनाओं में ख़तरा एक घंटे के burst से कम, और कई घंटों या दिनों तक लगातार गिरती बारिश से ज़्यादा होता है। इसलिए हर बड़ी बाढ़ cloudburst नहीं होती, लेकिन extreme rainfall भी उतनी ही जानलेवा हो सकती है।",
-   "durationSec": 15.62,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S34.mp3",
-   "objective": "o5",
-   "completes": [],
-   "visual": {
-    "type": "compare",
-    "left": {
-     "heading": "Cloudburst",
-     "items": [
-      "very intense",
-      "1 hour",
-      "~20–30 sq km"
-     ],
-     "tone": "accent"
-    },
-    "right": {
-     "heading": "Extreme rainfall",
-     "items": [
-      "heavy for hours or days",
-      "wide area",
-      "just as deadly"
-     ],
-     "tone": "bad"
-    }
-   },
-   "onScreen": "Cloudburst vs extreme rainfall"
-  },
-  {
-   "id": "S35",
-   "narration": "तो क्या ऐसी extreme बारिश बढ़ रही है? IITM Pune के scientist Roxy Mathew Koll और उनके साथियों की 2017 की study के मुताबिक, हाँ। 1950 से 2015 के बीच central India में widespread extreme rain events लगभग तीन गुना हो गए।",
-   "durationSec": 18.69,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S35.mp3",
-   "objective": "o5",
-   "completes": [],
-   "visual": {
-    "type": "stat",
-    "value": 3,
-    "from": 1,
-    "suffix": "×",
-    "label": "Widespread extreme rain events over central India, 1950–2015",
-    "source": "Roxy et al., Nature Communications (2017)"
-   },
-   "onScreen": "Central India: extreme rain events ~3× (1950–2015)",
-   "sfx": "hit"
-  },
-  {
-   "id": "S36",
-   "narration": "इस study के मुताबिक ये अतिरिक्त नमी Arabian Sea से आ रही है, जो लगातार गर्म हो रहा है। और इसके पीछे का physics सीधा है, जिसे Clausius-Clapeyron relation कहते हैं। Temperature में हर 1 degree Celsius की बढ़त पर, हवा लगभग 7 percent ज़्यादा नमी पकड़ सकती है।",
-   "durationSec": 19.09,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S36.mp3",
-   "objective": "o5",
-   "completes": [],
-   "visual": {
-    "type": "map",
-    "map": {
-     "projection": "flat",
-     "focus": {
-      "center": [
-       74,
-       19
-      ],
-      "zoom": 3.4
-     },
-     "highlights": [
-      {
-       "iso3": "IND",
-       "tone": "accent"
-      }
-     ],
-     "routes": [
-      {
-       "points": [
-        [
-         62,
-         14
-        ],
-        [
-         70,
-         18
-        ],
-        [
-         78,
-         21
+    {
+      "id": "S10",
+      "narration": "ये बादल गर्म और नमी से भरी हवा से बनते हैं। जब ऐसी हवा तेज़ी से ऊपर उठती है, तो वो ठंडी होती है, और उसमें मौजूद भाप पानी की बूँदों में बदल जाती है। इस process को condensation कहते हैं।",
+      "durationSec": 14.44,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S10.mp3",
+      "objective": "o2",
+      "completes": [],
+      "visual": {
+        "type": "flow",
+        "heading": "How the cloud builds",
+        "steps": [
+          {
+            "label": "Warm, moist air",
+            "sub": "rises fast",
+            "icon": "bolt"
+          },
+          {
+            "label": "It cools",
+            "sub": "as it climbs",
+            "icon": "gear"
+          },
+          {
+            "label": "Condensation",
+            "sub": "vapour → droplets",
+            "icon": "check"
+          }
         ]
-       ],
-       "tone": "accent",
-       "delay": 10,
-       "duration": 40,
-       "label": "moisture surges"
       },
-      {
-       "points": [
-        [
-         62,
-         18
-        ],
-        [
-         71,
-         21
-        ],
-        [
-         80,
-         23
+      "onScreen": "Warm moist air rises → cools → vapour condenses into droplets"
+    },
+    {
+      "id": "S11",
+      "narration": "अब असली खेल updraft का है, यानी नीचे से ऊपर की तरफ़ चलने वाली तेज़ हवा। Cumulonimbus बादल के अंदर ये updraft 60 से 120 kilometre per hour तक की रफ़्तार पकड़ सकता है। ये हवा बूँदों को नीचे गिरने ही नहीं देती, और उन्हें बार-बार ऊपर उछालती रहती है।",
+      "durationSec": 19.51,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S11.mp3",
+      "objective": "o2",
+      "completes": [],
+      "visual": {
+        "type": "cloud",
+        "mode": "updraft",
+        "speed": "60–120 km/h",
+        "meterAt": 0
+      },
+      "onScreen": "Updraft: 60–120 km/h",
+      "sfx": "whoosh"
+    },
+    {
+      "id": "S12",
+      "narration": "ऊपर-नीचे होते हुए ये बूँदें आपस में टकराती हैं, और जुड़कर बड़ी और भारी होती जाती हैं। इस तरह बादल के अंदर बहुत सारा पानी जमा होता जाता है, जिसे updraft ने हवा में थाम रखा है।",
+      "durationSec": 13.33,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S12.mp3",
+      "objective": "o2",
+      "completes": [],
+      "visual": {
+        "type": "cloud",
+        "mode": "updraft",
+        "speed": "droplets collide and grow",
+        "meterAt": 0
+      },
+      "onScreen": "Droplets collide → grow → water piles up in the cloud"
+    },
+    {
+      "id": "S13",
+      "narration": "फिर एक moment आता है, जब या तो बूँदों का वज़न updraft से ज़्यादा हो जाता है, या updraft ख़ुद कमज़ोर पड़ जाता है। उसी पल जमा हुआ सारा पानी एक साथ, एक छोटे से इलाके पर गिर पड़ता है। यही है cloudburst।",
+      "durationSec": 16.25,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S13.mp3",
+      "objective": "o2",
+      "completes": [],
+      "visual": {
+        "type": "cloud",
+        "mode": "updraft",
+        "speed": "holding the water…",
+        "meterAt": 0,
+        "releaseAt": 8.88
+      },
+      "onScreen": "Weight beats the updraft → water falls at once",
+      "sfx": "hit"
+    },
+    {
+      "id": "S14",
+      "narration": "Research बताती है कि एक अकेला cumulonimbus बादल लगभग एक घंटे तक टिकता है, और अपनी ज़्यादातर बारिश आख़िरी 20 से 30 minutes में गिराता है। इसीलिए ये बारिश इतनी अचानक और इतनी तेज़ लगती है।",
+      "durationSec": 15.25,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S14.mp3",
+      "objective": "o2",
+      "completes": [
+        "o2"
+      ],
+      "visual": {
+        "type": "timeline",
+        "heading": "Life of one storm cell (~1 hour)",
+        "nodes": [
+          {
+            "date": "0 min",
+            "label": "tower grows",
+            "tone": "muted"
+          },
+          {
+            "date": "~30 min",
+            "label": "water piles up",
+            "tone": "accent"
+          },
+          {
+            "date": "last 20–30 min",
+            "label": "most of the rain falls",
+            "tone": "warn"
+          }
         ]
-       ],
-       "tone": "accent",
-       "delay": 24,
-       "duration": 40
-      }
-     ],
-     "labels": [
-      {
-       "at": [
-        62,
-        12
-       ],
-       "text": "Arabian Sea: warming"
       },
-      {
-       "at": [
-        79,
-        24.5
-       ],
-       "text": "Central India"
-      }
-     ],
-     "markers": [
-      {
-       "at": [
-        66,
-        9
-       ],
-       "label": "+1 °C → ~7% more moisture",
-       "tone": "warn",
-       "delay": 352
-      }
-     ]
-    }
-   },
-   "onScreen": "+1 °C → ~7% more moisture"
-  },
-  {
-   "id": "S37",
-   "narration": "लेकिन एक ईमानदार caveat भी जान लीजिए। Cloudbursts के लिए India में लंबे समय का hourly data नहीं है, इसलिए scientists अभी पक्के तौर पर नहीं कह सकते, कि cloudbursts ख़ुद बढ़ रहे हैं। हाँ, गर्म होती हवा इनकी संभावना ज़रूर बढ़ाती है।",
-   "durationSec": 17.53,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S37.mp3",
-   "objective": "o5",
-   "completes": [
-    "o5"
-   ],
-   "visual": {
-    "type": "compare",
-    "left": {
-     "heading": "Not proven yet",
-     "items": [
-      "no long-term hourly data",
-      "cloudburst trend unclear"
-     ],
-     "tone": "muted"
+      "onScreen": "Most rain in the last 20–30 minutes"
     },
-    "right": {
-     "heading": "What we do know",
-     "items": [
-      "warmer air holds more water",
-      "higher odds of extreme bursts"
-     ],
-     "tone": "warn"
-    }
-   },
-   "onScreen": "Cloudburst trend: not proven yet"
-  },
-  {
-   "id": "S38",
-   "narration": "अब सबसे practical सवाल, क्या cloudburst का पहले से पता लगाया जा सकता है? Widespread heavy rain का forecast दो-तीन दिन पहले मिल जाता है, लेकिन cloudburst का सटीक forecast आज भी मुश्किल है।",
-   "durationSec": 13.13,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S38.mp3",
-   "objective": "o6",
-   "completes": [],
-   "visual": {
-    "type": "compare",
-    "left": {
-     "heading": "Widespread heavy rain",
-     "items": [
-      "forecast 2–3 days ahead"
-     ],
-     "tone": "good"
+    {
+      "id": "S15",
+      "narration": "अब सवाल ये है, कि cloudbursts ज़्यादातर Himalaya, Western Ghats और North-East की पहाड़ियों में ही क्यों होते हैं? इसका जवाब है orographic lifting।",
+      "durationSec": 11.3,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S15.mp3",
+      "objective": "o3",
+      "completes": [],
+      "visual": {
+        "type": "terrain",
+        "packs": [
+          "cb-subcont"
+        ],
+        "cam": [
+          {
+            "t": 0,
+            "lon": 80,
+            "lat": 22,
+            "dist": 3300,
+            "tilt": 12,
+            "heading": 0
+          },
+          {
+            "t": 11.3,
+            "lon": 81,
+            "lat": 22,
+            "dist": 3000,
+            "tilt": 22,
+            "heading": 0
+          }
+        ],
+        "layers": [
+          {
+            "kind": "label",
+            "at": [
+              80.5,
+              30.6
+            ],
+            "text": "HIMALAYA",
+            "t0": 2.93,
+            "size": 40,
+            "tone": "warn"
+          },
+          {
+            "kind": "label",
+            "at": [
+              74.6,
+              14.5
+            ],
+            "text": "WESTERN GHATS",
+            "t0": 3.65,
+            "size": 34,
+            "tone": "warn"
+          },
+          {
+            "kind": "label",
+            "at": [
+              93.0,
+              25.6
+            ],
+            "text": "NORTH-EAST HILLS",
+            "t0": 4.88,
+            "size": 32,
+            "tone": "warn"
+          },
+          {
+            "kind": "stamp",
+            "text": "OROGRAPHIC LIFTING",
+            "t0": 9.22,
+            "tone": "accent",
+            "y": 0.1
+          }
+        ],
+        "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
+        "drift": 0.3
+      },
+      "onScreen": "Orographic lifting",
+      "sfx": "whoosh"
     },
-    "right": {
-     "heading": "Cloudburst",
-     "items": [
-      "exact forecast still very hard"
-     ],
-     "tone": "bad"
-    }
-   },
-   "onScreen": "Cloudburst forecasts are still hard"
-  },
-  {
-   "id": "S39",
-   "narration": "इसकी पहली वजह इसका छोटा size है। Satellite का एक pixel अक्सर पूरे cloudburst से बड़ा होता है, इसलिए वो उसे ठीक से पकड़ ही नहीं पाता। दूसरी वजह ये है, कि पहाड़ों में weather stations बहुत कम हैं, और Doppler radar के लिए भी पहाड़ों के पीछे blind spots रह जाते हैं।",
-   "durationSec": 18.12,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S39.mp3",
-   "objective": "o6",
-   "completes": [],
-   "visual": {
-    "type": "points",
-    "heading": "Why cloudbursts escape forecasts",
-    "items": [
-     "Smaller than one satellite pixel",
-     "Very few weather stations in the mountains",
-     "Ridges block radar beams: blind spots"
-    ]
-   },
-   "onScreen": "1. Too small for a satellite pixel · 2. Few mountain stations + radar blind spots"
-  },
-  {
-   "id": "S40",
-   "narration": "इसीलिए असली हथियार है nowcasting, यानी अगले कुछ घंटों का forecast, जो Doppler Weather Radar से मिलता है। सरकारी आँकड़ों के मुताबिक India में 2014 में सिर्फ़ 14 Doppler radars थे, और अब ये संख्या लगभग 50 हो गई है।",
-   "durationSec": 16.35,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S40.mp3",
-   "objective": "o6",
-   "completes": [],
-   "visual": {
-    "type": "image",
-    "src": "jobs/cloudbursts-extreme-rainfall/img/radar.jpg",
-    "fit": "cover",
-    "focus": [
-     0.5,
-     0.45
-    ],
-    "caption": "Doppler Weather Radars: 14 (2014) → ~50 (2026)"
-   },
-   "onScreen": "Nowcasting with Doppler Weather Radar",
-   "sfx": "ping"
-  },
-  {
-   "id": "S41",
-   "narration": "January 2025 में सरकार ने Mission Mausam शुरू किया, जिसके पहले दो साल का budget 2,000 crore रुपये है। इसका लक्ष्य है ज़्यादा radars, AI पर आधारित models और panchayat level तक का forecast। इसके तहत IITM Pune में एक cloud chamber भी बन रहा है, जहाँ बादलों के अंदर की physics पर research होगी।",
-   "durationSec": 22.33,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S41.mp3",
-   "objective": "o6",
-   "completes": [],
-   "visual": {
-    "type": "hub",
-    "center": {
-     "label": "Mission Mausam · ₹2,000 cr",
-     "icon": "globe"
+    {
+      "id": "S16",
+      "narration": "Monsoon की नमी भरी हवाएँ जब किसी पहाड़ से टकराती हैं, तो उनके पास ऊपर चढ़ने के अलावा कोई रास्ता नहीं होता। पहाड़ इन हवाओं को ज़बरदस्ती ऊपर धकेलता है, और यही धक्का बादलों को और ऊँचा और ताक़तवर बना देता है।",
+      "durationSec": 16.04,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S16.mp3",
+      "objective": "o3",
+      "completes": [],
+      "visual": {
+        "type": "cloud",
+        "mode": "orographic",
+        "label": "Forced up the slope"
+      },
+      "onScreen": "Mountains force moist air up"
     },
-    "spokes": [
-     {
-      "label": "More radars",
-      "icon": "bolt"
-     },
-     {
-      "label": "AI weather models",
-      "icon": "brain"
-     },
-     {
-      "label": "Panchayat-level forecasts",
-      "icon": "home"
-     },
-     {
-      "label": "Cloud chamber, IITM Pune",
-      "icon": "gear"
-     }
-    ]
-   },
-   "onScreen": "Mission Mausam (Jan 2025)"
-  },
-  {
-   "id": "S42",
-   "narration": "Flash floods के लिए IMD, 2020 से South Asia Flash Flood Guidance System भी चलाता है। ये India के साथ Nepal, Bhutan, Bangladesh और Sri Lanka को भी flash flood का threat 6 घंटे पहले, और risk 24 घंटे पहले बताता है।",
-   "durationSec": 16.79,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S42.mp3",
-   "objective": "o6",
-   "completes": [],
-   "visual": {
-    "type": "map",
-    "map": {
-     "projection": "flat",
-     "focus": {
-      "center": [
-       83,
-       20
+    {
+      "id": "S17",
+      "narration": "पहाड़ों की गहरी घाटियाँ भी इसमें बड़ा रोल निभाती हैं। कई बार अलग-अलग दिशाओं से आई हवाएँ घाटी में फँस जाती हैं, और बादल आगे नहीं बढ़ पाता। नतीजा ये होता है, कि सारी बारिश एक ही जगह पर गिरती है।",
+      "durationSec": 14.79,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S17.mp3",
+      "objective": "o3",
+      "completes": [],
+      "visual": {
+        "type": "cloud",
+        "mode": "orographic",
+        "trap": true,
+        "label": "Rain on one spot"
+      },
+      "onScreen": "Winds trapped in a valley"
+    },
+    {
+      "id": "S18",
+      "narration": "और पहाड़ों पर गिरा पानी रुकता नहीं है। ढलान तेज़ होने की वजह से वो कुछ ही minutes में नालों और नदियों में पहुँच जाता है, और साथ में मिट्टी, पत्थर और पेड़ भी बहा ले जाता है। इसीलिए पहाड़ों में cloudburst का मतलब अक्सर flash flood और landslide होता है।",
+      "durationSec": 19.12,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S18.mp3",
+      "objective": "o3",
+      "completes": [],
+      "visual": {
+        "type": "cloud",
+        "mode": "orographic",
+        "runoffAt": 2.91,
+        "label": "Minutes, not hours"
+      },
+      "onScreen": "Steep slopes → flash flood · landslide",
+      "sfx": "whoosh"
+    },
+    {
+      "id": "S19",
+      "narration": "Himalaya में एक और ख़तरनाक combination बनता है। जब monsoon की नमी Western Disturbance से मिलती है, तो बहुत ज़्यादा बारिश होती है। Western Disturbance यानी Mediterranean इलाके से आने वाला एक weather system, जो आम तौर पर सर्दियों में North India में बारिश और बर्फ़ लाता है।",
+      "durationSec": 19.39,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S19.mp3",
+      "objective": "o3",
+      "completes": [],
+      "visual": {
+        "type": "map",
+        "map": {
+          "projection": "flat",
+          "from": {
+            "center": [
+              60,
+              30
+            ],
+            "zoom": 1.6
+          },
+          "focus": {
+            "center": [
+              68,
+              28
+            ],
+            "zoom": 2.3
+          },
+          "highlights": [
+            {
+              "iso3": "IND",
+              "tone": "accent"
+            }
+          ],
+          "routes": [
+            {
+              "points": [
+                [
+                  18,
+                  36
+                ],
+                [
+                  35,
+                  34
+                ],
+                [
+                  52,
+                  33
+                ],
+                [
+                  66,
+                  33
+                ],
+                [
+                  76,
+                  33
+                ]
+              ],
+              "tone": "good",
+              "delay": 137,
+              "duration": 70,
+              "label": "Western Disturbance"
+            },
+            {
+              "points": [
+                [
+                  88,
+                  15
+                ],
+                [
+                  87,
+                  22
+                ],
+                [
+                  82,
+                  27
+                ],
+                [
+                  78,
+                  30.5
+                ]
+              ],
+              "tone": "accent",
+              "delay": 106,
+              "duration": 50,
+              "label": "Monsoon (Bay of Bengal)"
+            },
+            {
+              "points": [
+                [
+                  64,
+                  14
+                ],
+                [
+                  70,
+                  20
+                ],
+                [
+                  74,
+                  27
+                ],
+                [
+                  77,
+                  31
+                ]
+              ],
+              "tone": "accent",
+              "delay": 118,
+              "duration": 50,
+              "label": "Monsoon (Arabian Sea)"
+            }
+          ],
+          "markers": [
+            {
+              "at": [
+                18,
+                36
+              ],
+              "label": "Mediterranean",
+              "tone": "good",
+              "delay": 321
+            },
+            {
+              "at": [
+                77.5,
+                32.0
+              ],
+              "label": "Western Himalaya: they meet",
+              "tone": "bad",
+              "delay": 211
+            }
+          ]
+        }
+      },
+      "onScreen": "Monsoon + Western Disturbance",
+      "sfx": "hit"
+    },
+    {
+      "id": "S20",
+      "narration": "Ministry of Earth Sciences के पूर्व secretary M. Rajeevan ने 2025 की Himalayan बाढ़ों के लिए इसी मेल को \"deadly combination\" कहा था। Mains में आप यही point लिख सकते हैं, कि Himalayan disasters के पीछे अक्सर एक नहीं, बल्कि कई weather systems का मेल होता है।",
+      "durationSec": 18.89,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S20.mp3",
+      "objective": "o3",
+      "completes": [
+        "o3"
       ],
-      "zoom": 3.0
-     },
-     "highlights": [
-      {
-       "iso3": "IND",
-       "tone": "accent",
-       "delay": 5
+      "visual": {
+        "type": "source",
+        "url": "https://dialogue.earth/en/climate/are-cloudbursts-a-scapegoat-for-indias-floods/",
+        "publisher": "Dialogue Earth",
+        "date": "9 Sep 2025",
+        "title": "Are cloudbursts a scapegoat for India's floods?",
+        "why": "M. Rajeevan: western disturbance + monsoon moisture, a \"deadly combination\""
       },
-      {
-       "iso3": "NPL",
-       "tone": "warn",
-       "delay": 231
+      "onScreen": "\"Deadly combination\" · M. Rajeevan, former Secretary, MoES (2025)"
+    },
+    {
+      "id": "S21",
+      "narration": "अब आते हैं शुरुआत वाले सवाल पर, यानी Leh, 6 August 2010। आधी रात के आसपास Leh के ऊपर एक बहुत तेज़ storm आया। अनुमान है कि कुछ जगहों पर लगभग आधे घंटे में उतनी बारिश गिरी, जितनी Leh में आम तौर पर पूरे साल में होती है।",
+      "durationSec": 18.96,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S21.mp3",
+      "objective": "o4",
+      "completes": [],
+      "visual": {
+        "type": "terrain",
+        "packs": [
+          "cb-subcont",
+          "cb-whimalaya",
+          "cb-leh"
+        ],
+        "cam": [
+          {
+            "t": 0,
+            "lon": 77.6,
+            "lat": 34.0,
+            "dist": 400,
+            "tilt": 30,
+            "heading": 0
+          },
+          {
+            "t": 4,
+            "lon": 77.585,
+            "lat": 34.164,
+            "dist": 40,
+            "tilt": 50,
+            "heading": 340
+          },
+          {
+            "t": 18.96,
+            "lon": 77.585,
+            "lat": 34.164,
+            "dist": 30,
+            "tilt": 56,
+            "heading": 10
+          }
+        ],
+        "layers": [
+          {
+            "kind": "pin",
+            "at": [
+              77.585,
+              34.164
+            ],
+            "label": "Leh",
+            "t0": 2.5,
+            "tone": "accent",
+            "sub": "~00:00–00:30 IST"
+          },
+          {
+            "kind": "zone",
+            "at": [
+              77.62,
+              34.2
+            ],
+            "rx": 60,
+            "ry": 40,
+            "t0": 4.87,
+            "label": "storm",
+            "color": "#5B7DA6"
+          },
+          {
+            "kind": "stamp",
+            "text": "~1 YEAR",
+            "t0": 9.27,
+            "tone": "warn",
+            "y": 0.1,
+            "sub": "of Leh's rain in ~30 min (estimate)"
+          }
+        ],
+        "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
+        "drift": 0.3,
+        "night": true
       },
-      {
-       "iso3": "BTN",
-       "tone": "warn",
-       "delay": 247
-      },
-      {
-       "iso3": "BGD",
-       "tone": "warn",
-       "delay": 265
-      },
-      {
-       "iso3": "LKA",
-       "tone": "warn",
-       "delay": 297
+      "onScreen": "Leh: ~a year's rain in ~30 minutes (estimate)",
+      "sfx": "whoosh",
+      "era": {
+        "set": "cases",
+        "steps": [
+          [
+            0,
+            0
+          ]
+        ]
       }
-     ],
-     "labels": [
-      {
-       "at": [
-        70,
-        10
-       ],
-       "text": "Threat: 6 h ahead · Risk: 24 h ahead"
+    },
+    {
+      "id": "S22",
+      "narration": "पहाड़ों से मलबे वाली बाढ़ नीचे आई, और Choglamsar जैसे इलाके सबसे बुरी तरह प्रभावित हुए। सरकारी दस्तावेज़ों के मुताबिक कम से कम 255 लोगों की मौत हुई, और 71 गाँव और कस्बे इसकी चपेट में आए।",
+      "durationSec": 14.64,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S22.mp3",
+      "objective": "o4",
+      "completes": [],
+      "visual": {
+        "type": "terrain",
+        "packs": [
+          "cb-subcont",
+          "cb-whimalaya",
+          "cb-leh"
+        ],
+        "cam": [
+          {
+            "t": 0,
+            "lon": 77.585,
+            "lat": 34.164,
+            "dist": 30,
+            "tilt": 55,
+            "heading": 10
+          },
+          {
+            "t": 14.64,
+            "lon": 77.62,
+            "lat": 34.1,
+            "dist": 28,
+            "tilt": 58,
+            "heading": 40
+          }
+        ],
+        "layers": [
+          {
+            "kind": "line",
+            "pts": [
+              [
+                77.66,
+                34.22
+              ],
+              [
+                77.64,
+                34.16
+              ],
+              [
+                77.62,
+                34.1
+              ]
+            ],
+            "t0": 0.6,
+            "tone": "warn",
+            "dur": 1.8,
+            "width": 4,
+            "label": "debris flow"
+          },
+          {
+            "kind": "line",
+            "pts": [
+              [
+                77.58,
+                34.24
+              ],
+              [
+                77.585,
+                34.164
+              ]
+            ],
+            "t0": 1.2,
+            "tone": "warn",
+            "dur": 1.6,
+            "width": 4
+          },
+          {
+            "kind": "pin",
+            "at": [
+              77.62,
+              34.1
+            ],
+            "label": "Choglamsar",
+            "t0": 2.88,
+            "tone": "bad",
+            "sub": "worst hit",
+            "side": "right"
+          },
+          {
+            "kind": "photo",
+            "src": "jobs/cloudbursts-extreme-rainfall/img/leh_2010.jpg",
+            "t0": 6.21,
+            "side": "left",
+            "w": 0.36,
+            "at": [
+              77.585,
+              34.164
+            ]
+          },
+          {
+            "kind": "stamp",
+            "text": "255+",
+            "t0": 9.52,
+            "tone": "bad",
+            "y": 0.64,
+            "sub": "lives lost",
+            "out": 11.290000000000001
+          },
+          {
+            "kind": "stamp",
+            "text": "71",
+            "t0": 11.39,
+            "tone": "warn",
+            "y": 0.64,
+            "sub": "towns & villages hit"
+          }
+        ],
+        "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
+        "drift": 0.3
+      },
+      "onScreen": "255+ dead · 71 towns and villages hit",
+      "sfx": "hit",
+      "era": {
+        "set": "cases",
+        "steps": [
+          [
+            0,
+            0
+          ]
+        ]
       }
-     ],
-     "markers": [
-      {
-       "at": [
-        77.21,
-        28.61
-       ],
-       "label": "IMD: regional centre",
-       "tone": "accent",
-       "delay": 10
+    },
+    {
+      "id": "S23",
+      "narration": "तो weather station ने सिर्फ़ 12.8 mm क्यों दर्ज किया? क्योंकि बारिश की सबसे तेज़ पट्टी airport वाले station के ऊपर नहीं, बल्कि आसपास की घाटियों के ऊपर थी। Cloudburst इतना local होता है, कि कुछ kilometre दूर रखा rain gauge भी उसे miss कर सकता है।",
+      "durationSec": 18.59,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S23.mp3",
+      "objective": "o4",
+      "completes": [],
+      "visual": {
+        "type": "terrain",
+        "packs": [
+          "cb-subcont",
+          "cb-whimalaya",
+          "cb-leh"
+        ],
+        "cam": [
+          {
+            "t": 0,
+            "lon": 77.585,
+            "lat": 34.164,
+            "dist": 34,
+            "tilt": 50,
+            "heading": 0
+          },
+          {
+            "t": 18.59,
+            "lon": 77.57,
+            "lat": 34.16,
+            "dist": 26,
+            "tilt": 56,
+            "heading": 330
+          }
+        ],
+        "layers": [
+          {
+            "kind": "pin",
+            "at": [
+              77.546,
+              34.136
+            ],
+            "label": "Rain gauge",
+            "t0": 0.6,
+            "tone": "warn",
+            "sub": "12.8 mm",
+            "side": "left"
+          },
+          {
+            "kind": "zone",
+            "at": [
+              77.62,
+              34.21
+            ],
+            "rx": 45,
+            "ry": 26,
+            "t0": 5.21,
+            "label": "heaviest rain band",
+            "color": "#E5383B"
+          },
+          {
+            "kind": "line",
+            "pts": [
+              [
+                77.546,
+                34.136
+              ],
+              [
+                77.62,
+                34.21
+              ]
+            ],
+            "t0": 11.33,
+            "tone": "warn",
+            "dur": 1.0,
+            "width": 4,
+            "dashed": true,
+            "label": "a few km away"
+          }
+        ],
+        "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
+        "drift": 0.3,
+        "night": true
+      },
+      "onScreen": "The gauge was outside the rain band",
+      "era": {
+        "set": "cases",
+        "steps": [
+          [
+            0,
+            0
+          ]
+        ]
       }
-     ]
+    },
+    {
+      "id": "S24",
+      "narration": "अब चलते हैं Kedarnath, June 2013। उस साल monsoon बहुत जल्दी पहुँचा, और Uttarakhand में लगातार कई दिन भारी बारिश हुई। ऊपर से पिघलती बर्फ़ और बारिश ने Chorabari Lake को भर दिया, और उसका पानी नीचे Kedarnath की तरफ़ टूट पड़ा।",
+      "durationSec": 18.36,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S24.mp3",
+      "objective": "o4",
+      "completes": [],
+      "visual": {
+        "type": "terrain",
+        "packs": [
+          "cb-subcont",
+          "cb-whimalaya",
+          "cb-kedar"
+        ],
+        "cam": [
+          {
+            "t": 0,
+            "lon": 79.5,
+            "lat": 30.5,
+            "dist": 500,
+            "tilt": 30,
+            "heading": 0
+          },
+          {
+            "t": 4,
+            "lon": 79.0669,
+            "lat": 30.7346,
+            "dist": 18,
+            "tilt": 55,
+            "heading": 0
+          },
+          {
+            "t": 18.36,
+            "lon": 79.0669,
+            "lat": 30.7346,
+            "dist": 13,
+            "tilt": 58,
+            "heading": 20
+          }
+        ],
+        "layers": [
+          {
+            "kind": "pin",
+            "at": [
+              79.0669,
+              30.7346
+            ],
+            "label": "Kedarnath",
+            "t0": 3.0,
+            "tone": "accent",
+            "sub": "16–17 June 2013"
+          },
+          {
+            "kind": "pin",
+            "at": [
+              79.058,
+              30.753
+            ],
+            "label": "Chorabari Lake",
+            "t0": 11.92,
+            "tone": "warn",
+            "side": "left"
+          },
+          {
+            "kind": "line",
+            "pts": [
+              [
+                79.058,
+                30.753
+              ],
+              [
+                79.0669,
+                30.7346
+              ],
+              [
+                78.993,
+                30.652
+              ]
+            ],
+            "t0": 16.540000000000003,
+            "tone": "bad",
+            "dur": 2.0,
+            "width": 6,
+            "label": "Mandakini"
+          }
+        ],
+        "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
+        "drift": 0.3
+      },
+      "onScreen": "Kedarnath, June 2013",
+      "sfx": "whoosh",
+      "era": {
+        "set": "cases",
+        "steps": [
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "S25",
+      "narration": "Uttarakhand सरकार के मुताबिक 5,700 से ज़्यादा लोगों को presumed dead माना गया। उस समय इसे भी cloudburst कहा गया, लेकिन असल में ये कई दिनों की extreme rainfall, बर्फ़ के पिघलने और lake के टूटने का मेल था।",
+      "durationSec": 16.18,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S25.mp3",
+      "objective": "o4",
+      "completes": [],
+      "visual": {
+        "type": "compare",
+        "left": {
+          "heading": "Called",
+          "items": [
+            "a cloudburst"
+          ],
+          "tone": "muted"
+        },
+        "right": {
+          "heading": "Actually",
+          "items": [
+            "days of extreme rain",
+            "snowmelt",
+            "Chorabari Lake outburst",
+            "5,700+ presumed dead"
+          ],
+          "tone": "bad"
+        }
+      },
+      "onScreen": "5,700+ presumed dead (Govt. of Uttarakhand)",
+      "sfx": "hit",
+      "era": {
+        "set": "cases",
+        "steps": [
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "S26",
+      "narration": "अब February 2021 का Chamoli disaster देखिए। शुरू में इसे cloudburst भी कहा गया, और glacial lake outburst भी। लेकिन ICIMOD की जाँच में पता चला, कि असली वजह एक rock और ice avalanche थी, यानी पहाड़ से चट्टान और बर्फ़ का एक भारी हिस्सा टूटकर नीचे गिरा था।",
+      "durationSec": 20.95,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S26.mp3",
+      "objective": "o4",
+      "completes": [],
+      "visual": {
+        "type": "terrain",
+        "packs": [
+          "cb-subcont",
+          "cb-whimalaya",
+          "cb-chamoli"
+        ],
+        "cam": [
+          {
+            "t": 0,
+            "lon": 79.6,
+            "lat": 30.6,
+            "dist": 120,
+            "tilt": 40,
+            "heading": 0
+          },
+          {
+            "t": 20.95,
+            "lon": 79.735,
+            "lat": 30.525,
+            "dist": 22,
+            "tilt": 55,
+            "heading": 60
+          }
+        ],
+        "layers": [
+          {
+            "kind": "pin",
+            "at": [
+              79.735,
+              30.525
+            ],
+            "label": "Rishiganga valley",
+            "t0": 1.5,
+            "tone": "accent",
+            "sub": "Chamoli · 7 Feb 2021"
+          },
+          {
+            "kind": "stamp",
+            "text": "CLOUDBURST?",
+            "t0": 3.58,
+            "tone": "muted",
+            "y": 0.1,
+            "out": 8.71
+          },
+          {
+            "kind": "arrow",
+            "from": [
+              79.82,
+              30.42
+            ],
+            "to": [
+              79.735,
+              30.525
+            ],
+            "t0": 13.72,
+            "dur": 1.6,
+            "tone": "bad",
+            "label": "rock + ice"
+          },
+          {
+            "kind": "stamp",
+            "text": "ROCK-ICE AVALANCHE",
+            "t0": 13.72,
+            "tone": "bad",
+            "y": 0.1,
+            "sub": "ICIMOD"
+          }
+        ],
+        "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
+        "drift": 0.3
+      },
+      "onScreen": "Chamoli 2021: a rock-ice avalanche (ICIMOD)",
+      "sfx": "whoosh",
+      "era": {
+        "set": "cases",
+        "steps": [
+          [
+            0,
+            2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "S27",
+      "narration": "और फिर आया August 2025। 5 August को Uttarkashi के Dharali गाँव में Kheer Ganga से मलबे वाली बाढ़ आई, और घर, पुल और सड़कें बह गईं। शुरू में इसे cloudburst बताया गया, लेकिन IMD ने कहा कि उसके किसी भी station ने वहाँ cloudburst दर्ज नहीं किया।",
+      "durationSec": 19.86,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S27.mp3",
+      "objective": "o4",
+      "completes": [],
+      "visual": {
+        "type": "terrain",
+        "packs": [
+          "cb-subcont",
+          "cb-whimalaya",
+          "cb-dharali"
+        ],
+        "cam": [
+          {
+            "t": 0,
+            "lon": 78.6,
+            "lat": 30.9,
+            "dist": 140,
+            "tilt": 35,
+            "heading": 0
+          },
+          {
+            "t": 4,
+            "lon": 78.786,
+            "lat": 31.04,
+            "dist": 16,
+            "tilt": 55,
+            "heading": 30
+          },
+          {
+            "t": 19.86,
+            "lon": 78.786,
+            "lat": 31.04,
+            "dist": 12,
+            "tilt": 58,
+            "heading": 50
+          }
+        ],
+        "layers": [
+          {
+            "kind": "pin",
+            "at": [
+              78.786,
+              31.04
+            ],
+            "label": "Dharali",
+            "t0": 3.0,
+            "tone": "accent",
+            "sub": "5 Aug 2025"
+          },
+          {
+            "kind": "pin",
+            "at": [
+              78.745,
+              31.04
+            ],
+            "label": "Harsil",
+            "t0": 3.4,
+            "tone": "muted",
+            "side": "left"
+          },
+          {
+            "kind": "line",
+            "pts": [
+              [
+                78.8,
+                30.98
+              ],
+              [
+                78.795,
+                31.01
+              ],
+              [
+                78.786,
+                31.04
+              ]
+            ],
+            "t0": 5.37,
+            "tone": "bad",
+            "dur": 1.4,
+            "width": 6,
+            "label": "Kheer Ganga"
+          },
+          {
+            "kind": "stamp",
+            "text": "IMD: NO CLOUDBURST RECORDED",
+            "t0": 13.18,
+            "tone": "warn",
+            "y": 0.1
+          }
+        ],
+        "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
+        "drift": 0.3
+      },
+      "onScreen": "Dharali 2025: IMD recorded no cloudburst",
+      "sfx": "whoosh",
+      "era": {
+        "set": "cases",
+        "steps": [
+          [
+            0,
+            3
+          ]
+        ]
+      }
+    },
+    {
+      "id": "S28",
+      "narration": "Experts के analysis के मुताबिक उस दिन Uttarkashi में लगभग 27 mm बारिश हुई थी, जो cloudburst की 100 mm की सीमा से बहुत कम है। नौ दिन बाद Kishtwar के Chashoti में आई flash flood में 60 से ज़्यादा लोगों की जान गई, और वहाँ भी ये सवाल उठा, कि क्या सच में cloudburst हुआ था।",
+      "durationSec": 20.3,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S28.mp3",
+      "objective": "o4",
+      "completes": [],
+      "visual": {
+        "type": "cloud",
+        "mode": "bars",
+        "heading": "Was it a cloudburst?",
+        "unit": "mm",
+        "max": 120,
+        "bars": [
+          {
+            "label": "Uttarkashi, 5 Aug",
+            "value": 27,
+            "tone": "warn",
+            "t0": 0.6,
+            "sub": "whole day (expert estimate)"
+          }
+        ],
+        "line": {
+          "value": 100,
+          "label": "Cloudburst: 100 mm in 1 hour",
+          "t0": 6.97
+        }
+      },
+      "onScreen": "Kishtwar (Chashoti), 14 Aug 2025: 60+ dead",
+      "era": {
+        "set": "cases",
+        "steps": [
+          [
+            0,
+            3
+          ],
+          [
+            9.16,
+            4
+          ]
+        ]
+      }
+    },
+    {
+      "id": "S29",
+      "narration": "अब इस पूरी तस्वीर पर गौर कीजिए। IMD ने 1970 से 2016 तक पूरे देश में सिर्फ़ लगभग 30 cloudbursts दर्ज किए थे। लेकिन news reports के मुताबिक 2026 में तो अकेले Jammu and Kashmir में, August की शुरुआत तक ही 35 \"cloudbursts\" गिने जा चुके थे।",
+      "durationSec": 19.95,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S29.mp3",
+      "objective": "o4",
+      "completes": [],
+      "visual": {
+        "type": "cloud",
+        "mode": "bars",
+        "heading": "Counted as \"cloudbursts\"",
+        "unit": "",
+        "bars": [
+          {
+            "label": "IMD record",
+            "value": 30,
+            "tone": "accent",
+            "t0": 2.65,
+            "sub": "all India · 1970–2016"
+          },
+          {
+            "label": "News count",
+            "value": 35,
+            "tone": "bad",
+            "t0": 9.35,
+            "sub": "J&K only · 2026"
+          }
+        ]
+      },
+      "onScreen": "IMD: ~30 cloudbursts in 46 years · news: 35 in J&K in 2026",
+      "sfx": "hit",
+      "era": {
+        "set": "cases",
+        "steps": [
+          [
+            0,
+            4
+          ],
+          [
+            9.35,
+            5
+          ]
+        ]
+      }
+    },
+    {
+      "id": "S30",
+      "narration": "इसका मतलब ये नहीं कि ये हादसे छोटे थे। मतलब ये है कि हम हर पहाड़ी बाढ़ को cloudburst कह देते हैं, जबकि उसकी वजह GLOF, landslide, avalanche या कई दिनों की बारिश भी हो सकती है। GLOF यानी Glacial Lake Outburst Flood, जब किसी glacier की झील का किनारा टूट जाता है।",
+      "durationSec": 21.75,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S30.mp3",
+      "objective": "o4",
+      "completes": [],
+      "visual": {
+        "type": "hub",
+        "center": {
+          "label": "Flash flood",
+          "icon": "bolt"
+        },
+        "spokes": [
+          {
+            "label": "Cloudburst",
+            "icon": "globe"
+          },
+          {
+            "label": "GLOF",
+            "icon": "link"
+          },
+          {
+            "label": "Landslide",
+            "icon": "home"
+          },
+          {
+            "label": "Avalanche",
+            "icon": "cross"
+          },
+          {
+            "label": "Days of rain",
+            "icon": "chart"
+          }
+        ]
+      },
+      "onScreen": "GLOF = Glacial Lake Outburst Flood"
+    },
+    {
+      "id": "S31",
+      "narration": "और ये label सिर्फ़ शब्दों का मामला नहीं है। Experts कहते हैं, कि हर हादसे को \"cloudburst\" कहने से सारा दोष आसमान पर चला जाता है। जबकि नदी के किनारे पर हुआ construction, पहाड़ काटकर बनी सड़कें, जंगलों की कटाई और कमज़ोर drainage भी उतने ही ज़िम्मेदार होते हैं।",
+      "durationSec": 19.37,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S31.mp3",
+      "objective": "o4",
+      "completes": [
+        "o4"
+      ],
+      "visual": {
+        "type": "points",
+        "heading": "What the \"cloudburst\" label hides",
+        "items": [
+          "Construction on riverbeds",
+          "Roads cut into slopes",
+          "Deforestation",
+          "Weak drainage"
+        ],
+        "highlight": [
+          "riverbeds"
+        ]
+      },
+      "onScreen": "Mains: the label hides land-use failures",
+      "sfx": "ping"
+    },
+    {
+      "id": "S32",
+      "narration": "अब cloudburst को extreme rainfall से अलग करके समझते हैं। IMD रोज़ की बारिश को 24 घंटे के हिसाब से categories में बाँटता है। 64.5 से 115.5 mm को heavy, 115.6 से 204.4 mm को very heavy, और 204.5 mm या उससे ज़्यादा को extremely heavy rainfall कहते हैं।",
+      "durationSec": 26.65,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S32.mp3",
+      "objective": "o5",
+      "completes": [],
+      "visual": {
+        "type": "cloud",
+        "mode": "bars",
+        "heading": "IMD rainfall categories (24 hours)",
+        "unit": "mm",
+        "max": 240,
+        "bars": [
+          {
+            "label": "Heavy",
+            "value": 64.5,
+            "tone": "accent",
+            "t0": 12.94,
+            "sub": "64.5–115.5"
+          },
+          {
+            "label": "Very heavy",
+            "value": 115.6,
+            "tone": "warn",
+            "t0": 15.75,
+            "sub": "115.6–204.4"
+          },
+          {
+            "label": "Extremely heavy",
+            "value": 204.5,
+            "tone": "bad",
+            "t0": 19.49,
+            "sub": "≥ 204.5"
+          }
+        ]
+      },
+      "onScreen": "IMD categories are per 24 hours",
+      "sfx": "tick"
+    },
+    {
+      "id": "S33",
+      "narration": "26 July 2005 को Mumbai में 24 घंटे में लगभग 944 mm बारिश हुई, और पूरा शहर ठप हो गया। July 2024 में Wayanad के landslide वाले इलाके में दो दिन में लगभग 570 mm बारिश हुई, और 200 से ज़्यादा लोगों की जान गई।",
+      "durationSec": 19.79,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S33.mp3",
+      "objective": "o5",
+      "completes": [],
+      "visual": {
+        "type": "terrain",
+        "packs": [
+          "cb-subcont",
+          "cb-mumbai",
+          "cb-wayanad"
+        ],
+        "cam": [
+          {
+            "t": 0,
+            "lon": 72.877,
+            "lat": 19.076,
+            "dist": 60,
+            "tilt": 40,
+            "heading": 0
+          },
+          {
+            "t": 8.93,
+            "lon": 72.877,
+            "lat": 19.076,
+            "dist": 50,
+            "tilt": 44,
+            "heading": 15
+          },
+          {
+            "t": 11.33,
+            "lon": 76.135,
+            "lat": 11.583,
+            "dist": 22,
+            "tilt": 55,
+            "heading": 30
+          },
+          {
+            "t": 19.79,
+            "lon": 76.135,
+            "lat": 11.583,
+            "dist": 16,
+            "tilt": 58,
+            "heading": 50
+          }
+        ],
+        "layers": [
+          {
+            "kind": "pin",
+            "at": [
+              72.877,
+              19.076
+            ],
+            "label": "Mumbai",
+            "t0": 0.6,
+            "tone": "accent",
+            "sub": "26 Jul 2005",
+            "out": 9.33
+          },
+          {
+            "kind": "stamp",
+            "text": "~944 mm",
+            "t0": 4.17,
+            "tone": "warn",
+            "y": 0.1,
+            "sub": "in 24 hours",
+            "out": 9.23
+          },
+          {
+            "kind": "pin",
+            "at": [
+              76.135,
+              11.583
+            ],
+            "label": "Mundakkai",
+            "t0": 11.13,
+            "tone": "bad",
+            "sub": "Wayanad · 30 Jul 2024"
+          },
+          {
+            "kind": "pin",
+            "at": [
+              76.14,
+              11.565
+            ],
+            "label": "Chooralmala",
+            "t0": 11.530000000000001,
+            "tone": "bad",
+            "side": "left"
+          },
+          {
+            "kind": "stamp",
+            "text": "~570 mm",
+            "t0": 14.2,
+            "tone": "bad",
+            "y": 0.1,
+            "sub": "in 48 hours · 200+ deaths"
+          }
+        ],
+        "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
+        "drift": 0.3
+      },
+      "onScreen": "Mumbai 2005 · Wayanad 2024",
+      "sfx": "whoosh"
+    },
+    {
+      "id": "S34",
+      "narration": "ऐसी घटनाओं में ख़तरा एक घंटे के burst से कम, और कई घंटों या दिनों तक लगातार गिरती बारिश से ज़्यादा होता है। इसलिए हर बड़ी बाढ़ cloudburst नहीं होती, लेकिन extreme rainfall भी उतनी ही जानलेवा हो सकती है।",
+      "durationSec": 15.62,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S34.mp3",
+      "objective": "o5",
+      "completes": [],
+      "visual": {
+        "type": "compare",
+        "left": {
+          "heading": "Cloudburst",
+          "items": [
+            "very intense",
+            "1 hour",
+            "~20–30 sq km"
+          ],
+          "tone": "accent"
+        },
+        "right": {
+          "heading": "Extreme rainfall",
+          "items": [
+            "heavy for hours or days",
+            "wide area",
+            "just as deadly"
+          ],
+          "tone": "bad"
+        }
+      },
+      "onScreen": "Cloudburst vs extreme rainfall"
+    },
+    {
+      "id": "S35",
+      "narration": "तो क्या ऐसी extreme बारिश बढ़ रही है? IITM Pune के scientist Roxy Mathew Koll और उनके साथियों की 2017 की study के मुताबिक, हाँ। 1950 से 2015 के बीच central India में widespread extreme rain events लगभग तीन गुना हो गए।",
+      "durationSec": 18.69,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S35.mp3",
+      "objective": "o5",
+      "completes": [],
+      "visual": {
+        "type": "stat",
+        "value": 3,
+        "from": 1,
+        "suffix": "×",
+        "label": "Widespread extreme rain events over central India, 1950–2015",
+        "source": "Roxy et al., Nature Communications (2017)"
+      },
+      "onScreen": "Central India: extreme rain events ~3× (1950–2015)",
+      "sfx": "hit"
+    },
+    {
+      "id": "S36",
+      "narration": "इस study के मुताबिक ये अतिरिक्त नमी Arabian Sea से आ रही है, जो लगातार गर्म हो रहा है। और इसके पीछे का physics सीधा है, जिसे Clausius-Clapeyron relation कहते हैं। Temperature में हर 1 degree Celsius की बढ़त पर, हवा लगभग 7 percent ज़्यादा नमी पकड़ सकती है।",
+      "durationSec": 19.09,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S36.mp3",
+      "objective": "o5",
+      "completes": [],
+      "visual": {
+        "type": "map",
+        "map": {
+          "projection": "flat",
+          "focus": {
+            "center": [
+              74,
+              19
+            ],
+            "zoom": 3.4
+          },
+          "highlights": [
+            {
+              "iso3": "IND",
+              "tone": "accent"
+            }
+          ],
+          "routes": [
+            {
+              "points": [
+                [
+                  62,
+                  14
+                ],
+                [
+                  70,
+                  18
+                ],
+                [
+                  78,
+                  21
+                ]
+              ],
+              "tone": "accent",
+              "delay": 10,
+              "duration": 40,
+              "label": "moisture surges"
+            },
+            {
+              "points": [
+                [
+                  62,
+                  18
+                ],
+                [
+                  71,
+                  21
+                ],
+                [
+                  80,
+                  23
+                ]
+              ],
+              "tone": "accent",
+              "delay": 24,
+              "duration": 40
+            }
+          ],
+          "labels": [
+            {
+              "at": [
+                62,
+                12
+              ],
+              "text": "Arabian Sea: warming"
+            },
+            {
+              "at": [
+                79,
+                24.5
+              ],
+              "text": "Central India"
+            }
+          ],
+          "markers": [
+            {
+              "at": [
+                66,
+                9
+              ],
+              "label": "+1 °C → ~7% more moisture",
+              "tone": "warn",
+              "delay": 352
+            }
+          ]
+        }
+      },
+      "onScreen": "+1 °C → ~7% more moisture"
+    },
+    {
+      "id": "S37",
+      "narration": "लेकिन एक ईमानदार caveat भी जान लीजिए। Cloudbursts के लिए India में लंबे समय का hourly data नहीं है, इसलिए scientists अभी पक्के तौर पर नहीं कह सकते, कि cloudbursts ख़ुद बढ़ रहे हैं। हाँ, गर्म होती हवा इनकी संभावना ज़रूर बढ़ाती है।",
+      "durationSec": 17.53,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S37.mp3",
+      "objective": "o5",
+      "completes": [
+        "o5"
+      ],
+      "visual": {
+        "type": "compare",
+        "left": {
+          "heading": "Not proven yet",
+          "items": [
+            "no long-term hourly data",
+            "cloudburst trend unclear"
+          ],
+          "tone": "muted"
+        },
+        "right": {
+          "heading": "What we do know",
+          "items": [
+            "warmer air holds more water",
+            "higher odds of extreme bursts"
+          ],
+          "tone": "warn"
+        }
+      },
+      "onScreen": "Cloudburst trend: not proven yet"
+    },
+    {
+      "id": "S38",
+      "narration": "अब सबसे practical सवाल, क्या cloudburst का पहले से पता लगाया जा सकता है? Widespread heavy rain का forecast दो-तीन दिन पहले मिल जाता है, लेकिन cloudburst का सटीक forecast आज भी मुश्किल है।",
+      "durationSec": 13.13,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S38.mp3",
+      "objective": "o6",
+      "completes": [],
+      "visual": {
+        "type": "compare",
+        "left": {
+          "heading": "Widespread heavy rain",
+          "items": [
+            "forecast 2–3 days ahead"
+          ],
+          "tone": "good"
+        },
+        "right": {
+          "heading": "Cloudburst",
+          "items": [
+            "exact forecast still very hard"
+          ],
+          "tone": "bad"
+        }
+      },
+      "onScreen": "Cloudburst forecasts are still hard"
+    },
+    {
+      "id": "S39",
+      "narration": "इसकी पहली वजह इसका छोटा size है। Satellite का एक pixel अक्सर पूरे cloudburst से बड़ा होता है, इसलिए वो उसे ठीक से पकड़ ही नहीं पाता। दूसरी वजह ये है, कि पहाड़ों में weather stations बहुत कम हैं, और Doppler radar के लिए भी पहाड़ों के पीछे blind spots रह जाते हैं।",
+      "durationSec": 18.12,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S39.mp3",
+      "objective": "o6",
+      "completes": [],
+      "visual": {
+        "type": "points",
+        "heading": "Why cloudbursts escape forecasts",
+        "items": [
+          "Smaller than one satellite pixel",
+          "Very few weather stations in the mountains",
+          "Ridges block radar beams: blind spots"
+        ]
+      },
+      "onScreen": "1. Too small for a satellite pixel · 2. Few mountain stations + radar blind spots"
+    },
+    {
+      "id": "S40",
+      "narration": "इसीलिए असली हथियार है nowcasting, यानी अगले कुछ घंटों का forecast, जो Doppler Weather Radar से मिलता है। सरकारी आँकड़ों के मुताबिक India में 2014 में सिर्फ़ 14 Doppler radars थे, और अब ये संख्या लगभग 50 हो गई है।",
+      "durationSec": 16.35,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S40.mp3",
+      "objective": "o6",
+      "completes": [],
+      "visual": {
+        "type": "image",
+        "src": "jobs/cloudbursts-extreme-rainfall/img/radar.jpg",
+        "fit": "cover",
+        "focus": [
+          0.5,
+          0.45
+        ],
+        "caption": "Doppler Weather Radars: 14 (2014) → ~50 (2026)"
+      },
+      "onScreen": "Nowcasting with Doppler Weather Radar",
+      "sfx": "ping"
+    },
+    {
+      "id": "S41",
+      "narration": "January 2025 में सरकार ने Mission Mausam शुरू किया, जिसके पहले दो साल का budget 2,000 crore रुपये है। इसका लक्ष्य है ज़्यादा radars, AI पर आधारित models और panchayat level तक का forecast। इसके तहत IITM Pune में एक cloud chamber भी बन रहा है, जहाँ बादलों के अंदर की physics पर research होगी।",
+      "durationSec": 22.33,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S41.mp3",
+      "objective": "o6",
+      "completes": [],
+      "visual": {
+        "type": "hub",
+        "center": {
+          "label": "Mission Mausam · ₹2,000 cr",
+          "icon": "globe"
+        },
+        "spokes": [
+          {
+            "label": "More radars",
+            "icon": "bolt"
+          },
+          {
+            "label": "AI weather models",
+            "icon": "brain"
+          },
+          {
+            "label": "Panchayat-level forecasts",
+            "icon": "home"
+          },
+          {
+            "label": "Cloud chamber, IITM Pune",
+            "icon": "gear"
+          }
+        ]
+      },
+      "onScreen": "Mission Mausam (Jan 2025)"
+    },
+    {
+      "id": "S42",
+      "narration": "Flash floods के लिए IMD, 2020 से South Asia Flash Flood Guidance System भी चलाता है। ये India के साथ Nepal, Bhutan, Bangladesh और Sri Lanka को भी flash flood का threat 6 घंटे पहले, और risk 24 घंटे पहले बताता है।",
+      "durationSec": 16.79,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S42.mp3",
+      "objective": "o6",
+      "completes": [],
+      "visual": {
+        "type": "map",
+        "map": {
+          "projection": "flat",
+          "focus": {
+            "center": [
+              83,
+              20
+            ],
+            "zoom": 3.0
+          },
+          "highlights": [
+            {
+              "iso3": "IND",
+              "tone": "accent",
+              "delay": 5
+            },
+            {
+              "iso3": "NPL",
+              "tone": "warn",
+              "delay": 231
+            },
+            {
+              "iso3": "BTN",
+              "tone": "warn",
+              "delay": 247
+            },
+            {
+              "iso3": "BGD",
+              "tone": "warn",
+              "delay": 265
+            },
+            {
+              "iso3": "LKA",
+              "tone": "warn",
+              "delay": 297
+            }
+          ],
+          "labels": [
+            {
+              "at": [
+                70,
+                10
+              ],
+              "text": "Threat: 6 h ahead · Risk: 24 h ahead"
+            }
+          ],
+          "markers": [
+            {
+              "at": [
+                77.21,
+                28.61
+              ],
+              "label": "IMD: regional centre",
+              "tone": "accent",
+              "delay": 10
+            }
+          ]
+        }
+      },
+      "onScreen": "South Asia Flash Flood Guidance System"
+    },
+    {
+      "id": "S43",
+      "narration": "लेकिन सिर्फ़ forecast काफ़ी नहीं है। Experts सुझाते हैं कि पहाड़ों में हर दो-तीन kilometre पर automatic rain gauges लगें, cloudburst और landslide वाले इलाकों की mapping हो, और ऐसे zones में construction पर रोक लगे। यानी disaster management का असली काम ज़मीन पर होता है, आसमान में नहीं।",
+      "durationSec": 20.67,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S43.mp3",
+      "objective": "o6",
+      "completes": [
+        "o6"
+      ],
+      "visual": {
+        "type": "flow",
+        "heading": "Preparedness on the ground",
+        "steps": [
+          {
+            "label": "Rain gauge every 2–3 km",
+            "icon": "chart"
+          },
+          {
+            "label": "Map hazard zones",
+            "sub": "cloudburst + landslide",
+            "icon": "globe"
+          },
+          {
+            "label": "No building there",
+            "icon": "cross"
+          }
+        ]
+      },
+      "onScreen": "Preparedness happens on the ground",
+      "sfx": "ping"
+    },
+    {
+      "id": "S44",
+      "narration": "तो चलिए, पूरा lesson एक बार दोहरा लेते हैं। Cloudburst का मतलब है लगभग 20 से 30 square kilometre पर, एक घंटे में 100 mm या उससे ज़्यादा बारिश। ये cumulonimbus बादलों से होता है, जब updraft जमा हुए पानी को और नहीं थाम पाता।",
+      "durationSec": 18.8,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S44.mp3",
+      "objective": "o7",
+      "completes": [],
+      "visual": {
+        "type": "footage",
+        "query": "cumulonimbus clouds timelapse",
+        "caption": "Cumulonimbus",
+        "src": "jobs/cloudbursts-extreme-rainfall/footage/S44.mp4",
+        "credit": "Video: Jose Calvo / Wikimedia Commons (CC BY 3.0)"
+      },
+      "onScreen": "Recap"
+    },
+    {
+      "id": "S45",
+      "narration": "पहाड़ों में orographic lifting, संकरी घाटियाँ और तेज़ ढलानें इसे और ख़तरनाक बनाती हैं। और Himalaya में monsoon और Western Disturbance का मेल extreme rainfall की एक बड़ी वजह बनता है।",
+      "durationSec": 13.87,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S45.mp3",
+      "objective": "o7",
+      "completes": [],
+      "visual": {
+        "type": "terrain",
+        "packs": [
+          "cb-subcont",
+          "cb-whimalaya"
+        ],
+        "cam": [
+          {
+            "t": 0,
+            "lon": 78.5,
+            "lat": 32,
+            "dist": 900,
+            "tilt": 30,
+            "heading": 0
+          },
+          {
+            "t": 13.87,
+            "lon": 78.5,
+            "lat": 31.5,
+            "dist": 700,
+            "tilt": 38,
+            "heading": 15
+          }
+        ],
+        "layers": [
+          {
+            "kind": "arrow",
+            "from": [
+              72,
+              26
+            ],
+            "to": [
+              77.5,
+              31.5
+            ],
+            "t0": 0.8,
+            "dur": 2.0,
+            "tone": "accent",
+            "label": "monsoon"
+          },
+          {
+            "kind": "arrow",
+            "from": [
+              66,
+              34
+            ],
+            "to": [
+              75.5,
+              33.5
+            ],
+            "t0": 1.6,
+            "dur": 2.0,
+            "tone": "good",
+            "label": "Western Disturbance"
+          },
+          {
+            "kind": "pin",
+            "at": [
+              77.585,
+              34.164
+            ],
+            "label": "Leh",
+            "t0": 2.5,
+            "tone": "muted"
+          },
+          {
+            "kind": "pin",
+            "at": [
+              79.0669,
+              30.7346
+            ],
+            "label": "Kedarnath",
+            "t0": 2.8,
+            "tone": "muted",
+            "side": "left"
+          },
+          {
+            "kind": "pin",
+            "at": [
+              78.786,
+              31.04
+            ],
+            "label": "Dharali",
+            "t0": 3.1,
+            "tone": "muted"
+          },
+          {
+            "kind": "pin",
+            "at": [
+              75.77,
+              33.31
+            ],
+            "label": "Kishtwar",
+            "t0": 3.4,
+            "tone": "muted",
+            "side": "left"
+          }
+        ],
+        "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
+        "drift": 0.3
+      },
+      "onScreen": "Orographic lift · narrow valleys · steep slopes · monsoon + Western Disturbance"
+    },
+    {
+      "id": "S46",
+      "narration": "अब तीन traps, जो Prelims में आपको फँसा सकते हैं। पहला, cloudburst एक घंटे की बारिश से तय होता है, जबकि heavy और extremely heavy rainfall की categories 24 घंटे की बारिश से। दूसरा, cloudburst cumulonimbus बादल से होता है, nimbostratus से नहीं। और तीसरा, हर flash flood cloudburst नहीं होती, वो GLOF, landslide या avalanche से भी आ सकती है।",
+      "durationSec": 27.15,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S46.mp3",
+      "objective": "o7",
+      "completes": [],
+      "visual": {
+        "type": "points",
+        "heading": "3 Prelims traps",
+        "items": [
+          "Cloudburst: per hour · IMD categories: per 24 hours",
+          "Cumulonimbus, not nimbostratus",
+          "Flash flood ≠ always a cloudburst (GLOF, landslide, avalanche)"
+        ]
+      },
+      "onScreen": "3 Prelims traps",
+      "sfx": "hit"
+    },
+    {
+      "id": "S47",
+      "narration": "अब शुरुआत वाले सवाल का पूरा जवाब। Leh में तबाही इसलिए हुई, क्योंकि बहुत तेज़ बारिश एक छोटे इलाके पर गिरी, तेज़ ढलानों ने उसे मलबे की बाढ़ बना दिया, और इकलौता rain gauge उस पट्टी से बाहर था। Mains में यही लिखिए, कि cloudburst एक trigger है, लेकिन तबाही कितनी बड़ी होगी, ये हमारी तैयारी और ज़मीन के इस्तेमाल से तय होता है।",
+      "durationSec": 24.33,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S47.mp3",
+      "objective": "o7",
+      "completes": [],
+      "visual": {
+        "type": "terrain",
+        "packs": [
+          "cb-subcont",
+          "cb-whimalaya",
+          "cb-leh"
+        ],
+        "cam": [
+          {
+            "t": 0,
+            "lon": 77.585,
+            "lat": 34.164,
+            "dist": 40,
+            "tilt": 50,
+            "heading": 0
+          },
+          {
+            "t": 24.33,
+            "lon": 77.585,
+            "lat": 34.164,
+            "dist": 30,
+            "tilt": 56,
+            "heading": 30
+          }
+        ],
+        "layers": [
+          {
+            "kind": "zone",
+            "at": [
+              77.62,
+              34.21
+            ],
+            "rx": 45,
+            "ry": 26,
+            "t0": 0.5,
+            "label": "intense rain",
+            "color": "#E5383B"
+          },
+          {
+            "kind": "line",
+            "pts": [
+              [
+                77.66,
+                34.22
+              ],
+              [
+                77.64,
+                34.16
+              ],
+              [
+                77.62,
+                34.1
+              ]
+            ],
+            "t0": 7.85,
+            "tone": "warn",
+            "dur": 1.5,
+            "width": 4,
+            "label": "debris flow"
+          },
+          {
+            "kind": "pin",
+            "at": [
+              77.546,
+              34.136
+            ],
+            "label": "Rain gauge",
+            "t0": 11.68,
+            "tone": "warn",
+            "sub": "outside the band",
+            "side": "left"
+          },
+          {
+            "kind": "stamp",
+            "text": "TRIGGER ≠ DAMAGE",
+            "t0": 14.04,
+            "tone": "accent",
+            "y": 0.1,
+            "sub": "preparedness + land use decide the damage"
+          }
+        ],
+        "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
+        "drift": 0.3,
+        "night": true
+      },
+      "onScreen": "The cloudburst is the trigger; we decide the damage"
+    },
+    {
+      "id": "S48",
+      "narration": "तो अगली बार जब आप news में \"बादल फटा\" सुनें, तो ख़ुद से दो सवाल पूछिए। क्या सच में एक घंटे में 100 mm बारिश हुई थी? और अगर नहीं, तो तबाही की असली वजह क्या थी?",
+      "durationSec": 13.4,
+      "audio": "jobs/cloudbursts-extreme-rainfall/S48.mp3",
+      "objective": "o7",
+      "completes": [
+        "o7"
+      ],
+      "visual": {
+        "type": "terrain",
+        "packs": [
+          "cb-subcont",
+          "cb-whimalaya"
+        ],
+        "cam": [
+          {
+            "t": 0,
+            "lon": 78.5,
+            "lat": 31.5,
+            "dist": 700,
+            "tilt": 38,
+            "heading": 15
+          },
+          {
+            "t": 13.4,
+            "lon": 80,
+            "lat": 22,
+            "dist": 3300,
+            "tilt": 8,
+            "heading": 0
+          }
+        ],
+        "layers": [
+          {
+            "kind": "stamp",
+            "text": "100 mm in 1 hour?",
+            "t0": 5.72,
+            "tone": "warn",
+            "y": 0.3,
+            "out": 9.23
+          },
+          {
+            "kind": "stamp",
+            "text": "If not, what was the real cause?",
+            "t0": 9.33,
+            "tone": "accent",
+            "y": 0.3
+          }
+        ],
+        "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
+        "drift": 0.3
+      },
+      "onScreen": "100 mm in 1 hour? If not, what really caused it?",
+      "sfx": "pop"
     }
-   },
-   "onScreen": "South Asia Flash Flood Guidance System"
-  },
-  {
-   "id": "S43",
-   "narration": "लेकिन सिर्फ़ forecast काफ़ी नहीं है। Experts सुझाते हैं कि पहाड़ों में हर दो-तीन kilometre पर automatic rain gauges लगें, cloudburst और landslide वाले इलाकों की mapping हो, और ऐसे zones में construction पर रोक लगे। यानी disaster management का असली काम ज़मीन पर होता है, आसमान में नहीं।",
-   "durationSec": 20.67,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S43.mp3",
-   "objective": "o6",
-   "completes": [
-    "o6"
-   ],
-   "visual": {
-    "type": "flow",
-    "heading": "Preparedness on the ground",
-    "steps": [
-     {
-      "label": "Rain gauge every 2–3 km",
-      "icon": "chart"
-     },
-     {
-      "label": "Map hazard zones",
-      "sub": "cloudburst + landslide",
-      "icon": "globe"
-     },
-     {
-      "label": "No building there",
-      "icon": "cross"
-     }
-    ]
-   },
-   "onScreen": "Preparedness happens on the ground",
-   "sfx": "ping"
-  },
-  {
-   "id": "S44",
-   "narration": "तो चलिए, पूरा lesson एक बार दोहरा लेते हैं। Cloudburst का मतलब है लगभग 20 से 30 square kilometre पर, एक घंटे में 100 mm या उससे ज़्यादा बारिश। ये cumulonimbus बादलों से होता है, जब updraft जमा हुए पानी को और नहीं थाम पाता।",
-   "durationSec": 18.8,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S44.mp3",
-   "objective": "o7",
-   "completes": [],
-   "visual": {
-    "type": "footage",
-    "query": "cumulonimbus clouds timelapse",
-    "caption": "Cumulonimbus"
-   },
-   "onScreen": "Recap"
-  },
-  {
-   "id": "S45",
-   "narration": "पहाड़ों में orographic lifting, संकरी घाटियाँ और तेज़ ढलानें इसे और ख़तरनाक बनाती हैं। और Himalaya में monsoon और Western Disturbance का मेल extreme rainfall की एक बड़ी वजह बनता है।",
-   "durationSec": 13.87,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S45.mp3",
-   "objective": "o7",
-   "completes": [],
-   "visual": {
-    "type": "terrain",
-    "packs": [
-     "cb-subcont",
-     "cb-whimalaya"
-    ],
-    "cam": [
-     {
-      "t": 0,
-      "lon": 78.5,
-      "lat": 32,
-      "dist": 900,
-      "tilt": 30,
-      "heading": 0
-     },
-     {
-      "t": 13.87,
-      "lon": 78.5,
-      "lat": 31.5,
-      "dist": 700,
-      "tilt": 38,
-      "heading": 15
-     }
-    ],
-    "layers": [
-     {
-      "kind": "arrow",
-      "from": [
-       72,
-       26
-      ],
-      "to": [
-       77.5,
-       31.5
-      ],
-      "t0": 0.8,
-      "dur": 2.0,
-      "tone": "accent",
-      "label": "monsoon"
-     },
-     {
-      "kind": "arrow",
-      "from": [
-       66,
-       34
-      ],
-      "to": [
-       75.5,
-       33.5
-      ],
-      "t0": 1.6,
-      "dur": 2.0,
-      "tone": "good",
-      "label": "Western Disturbance"
-     },
-     {
-      "kind": "pin",
-      "at": [
-       77.585,
-       34.164
-      ],
-      "label": "Leh",
-      "t0": 2.5,
-      "tone": "muted"
-     },
-     {
-      "kind": "pin",
-      "at": [
-       79.0669,
-       30.7346
-      ],
-      "label": "Kedarnath",
-      "t0": 2.8,
-      "tone": "muted",
-      "side": "left"
-     },
-     {
-      "kind": "pin",
-      "at": [
-       78.786,
-       31.04
-      ],
-      "label": "Dharali",
-      "t0": 3.1,
-      "tone": "muted"
-     },
-     {
-      "kind": "pin",
-      "at": [
-       75.77,
-       33.31
-      ],
-      "label": "Kishtwar",
-      "t0": 3.4,
-      "tone": "muted",
-      "side": "left"
-     }
-    ],
-    "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
-    "drift": 0.3
-   },
-   "onScreen": "Orographic lift · narrow valleys · steep slopes · monsoon + Western Disturbance"
-  },
-  {
-   "id": "S46",
-   "narration": "अब तीन traps, जो Prelims में आपको फँसा सकते हैं। पहला, cloudburst एक घंटे की बारिश से तय होता है, जबकि heavy और extremely heavy rainfall की categories 24 घंटे की बारिश से। दूसरा, cloudburst cumulonimbus बादल से होता है, nimbostratus से नहीं। और तीसरा, हर flash flood cloudburst नहीं होती, वो GLOF, landslide या avalanche से भी आ सकती है।",
-   "durationSec": 27.15,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S46.mp3",
-   "objective": "o7",
-   "completes": [],
-   "visual": {
-    "type": "points",
-    "heading": "3 Prelims traps",
-    "items": [
-     "Cloudburst: per hour · IMD categories: per 24 hours",
-     "Cumulonimbus, not nimbostratus",
-     "Flash flood ≠ always a cloudburst (GLOF, landslide, avalanche)"
-    ]
-   },
-   "onScreen": "3 Prelims traps",
-   "sfx": "hit"
-  },
-  {
-   "id": "S47",
-   "narration": "अब शुरुआत वाले सवाल का पूरा जवाब। Leh में तबाही इसलिए हुई, क्योंकि बहुत तेज़ बारिश एक छोटे इलाके पर गिरी, तेज़ ढलानों ने उसे मलबे की बाढ़ बना दिया, और इकलौता rain gauge उस पट्टी से बाहर था। Mains में यही लिखिए, कि cloudburst एक trigger है, लेकिन तबाही कितनी बड़ी होगी, ये हमारी तैयारी और ज़मीन के इस्तेमाल से तय होता है।",
-   "durationSec": 24.33,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S47.mp3",
-   "objective": "o7",
-   "completes": [],
-   "visual": {
-    "type": "terrain",
-    "packs": [
-     "cb-subcont",
-     "cb-whimalaya",
-     "cb-leh"
-    ],
-    "cam": [
-     {
-      "t": 0,
-      "lon": 77.585,
-      "lat": 34.164,
-      "dist": 40,
-      "tilt": 50,
-      "heading": 0
-     },
-     {
-      "t": 24.33,
-      "lon": 77.585,
-      "lat": 34.164,
-      "dist": 30,
-      "tilt": 56,
-      "heading": 30
-     }
-    ],
-    "layers": [
-     {
-      "kind": "zone",
-      "at": [
-       77.62,
-       34.21
-      ],
-      "rx": 45,
-      "ry": 26,
-      "t0": 0.5,
-      "label": "intense rain",
-      "color": "#E5383B"
-     },
-     {
-      "kind": "line",
-      "pts": [
-       [
-        77.66,
-        34.22
-       ],
-       [
-        77.64,
-        34.16
-       ],
-       [
-        77.62,
-        34.1
-       ]
-      ],
-      "t0": 7.85,
-      "tone": "warn",
-      "dur": 1.5,
-      "width": 4,
-      "label": "debris flow"
-     },
-     {
-      "kind": "pin",
-      "at": [
-       77.546,
-       34.136
-      ],
-      "label": "Rain gauge",
-      "t0": 11.68,
-      "tone": "warn",
-      "sub": "outside the band",
-      "side": "left"
-     },
-     {
-      "kind": "stamp",
-      "text": "TRIGGER ≠ DAMAGE",
-      "t0": 14.04,
-      "tone": "accent",
-      "y": 0.1,
-      "sub": "preparedness + land use decide the damage"
-     }
-    ],
-    "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
-    "drift": 0.3,
-    "night": true
-   },
-   "onScreen": "The cloudburst is the trigger; we decide the damage"
-  },
-  {
-   "id": "S48",
-   "narration": "तो अगली बार जब आप news में \"बादल फटा\" सुनें, तो ख़ुद से दो सवाल पूछिए। क्या सच में एक घंटे में 100 mm बारिश हुई थी? और अगर नहीं, तो तबाही की असली वजह क्या थी?",
-   "durationSec": 13.4,
-   "audio": "jobs/cloudbursts-extreme-rainfall/S48.mp3",
-   "objective": "o7",
-   "completes": [
-    "o7"
-   ],
-   "visual": {
-    "type": "terrain",
-    "packs": [
-     "cb-subcont",
-     "cb-whimalaya"
-    ],
-    "cam": [
-     {
-      "t": 0,
-      "lon": 78.5,
-      "lat": 31.5,
-      "dist": 700,
-      "tilt": 38,
-      "heading": 15
-     },
-     {
-      "t": 13.4,
-      "lon": 80,
-      "lat": 22,
-      "dist": 3300,
-      "tilt": 8,
-      "heading": 0
-     }
-    ],
-    "layers": [
-     {
-      "kind": "stamp",
-      "text": "100 mm in 1 hour?",
-      "t0": 5.72,
-      "tone": "warn",
-      "y": 0.3,
-      "out": 9.23
-     },
-     {
-      "kind": "stamp",
-      "text": "If not, what was the real cause?",
-      "t0": 9.33,
-      "tone": "accent",
-      "y": 0.3
-     }
-    ],
-    "credit": "Imagery: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0), NASA Blue Marble · Elevation: AWS Terrain Tiles (SRTM) · Borders: Survey of India outline",
-    "drift": 0.3
-   },
-   "onScreen": "100 mm in 1 hour? If not, what really caused it?",
-   "sfx": "pop"
-  }
- ],
- "shorts": [
-  {
-   "id": "short-1",
-   "hook": "A cloudburst has nothing to do with a bursting cloud",
-   "scenes": [
-    "S04",
-    "S05",
-    "S06",
-    "S07",
-    "S08"
-   ]
-  },
-  {
-   "id": "short-2",
-   "hook": "800 Olympic pools of water held up by wind",
-   "scenes": [
-    "S09",
-    "S10",
-    "S11",
-    "S12",
-    "S13",
-    "S14"
-   ]
-  },
-  {
-   "id": "short-3",
-   "hook": "Why the Himalaya gets the deadliest rain",
-   "scenes": [
-    "S15",
-    "S16",
-    "S17",
-    "S18",
-    "S19"
-   ]
-  },
-  {
-   "id": "short-4",
-   "hook": "255 dead, but the rain gauge said 12.8 mm",
-   "scenes": [
-    "S00",
-    "S21",
-    "S22",
-    "S23"
-   ]
-  },
-  {
-   "id": "short-5",
-   "hook": "Dharali was called a cloudburst. The data says otherwise",
-   "scenes": [
-    "S27",
-    "S28",
-    "S29",
-    "S30",
-    "S31"
-   ]
-  },
-  {
-   "id": "short-6",
-   "hook": "Extreme rain in central India has tripled",
-   "scenes": [
-    "S35",
-    "S36",
-    "S37"
-   ]
-  },
-  {
-   "id": "short-7",
-   "hook": "3 cloudburst traps UPSC can set",
-   "scenes": [
-    "S46"
-   ]
-  }
- ],
- "thumbnail": {
-  "headline": "CLOUDS DON'T BURST?",
-  "sub": "Cloudbursts · Extreme rain",
-  "scene": "S09",
-  "images": [
-   "jobs/cloudbursts-extreme-rainfall/img/cumulonimbus.jpg"
-  ]
- },
- "eras": {
-  "cases": [
-   {
-    "date": "2010",
-    "label": "Leh"
-   },
-   {
-    "date": "2013",
-    "label": "Kedarnath"
-   },
-   {
-    "date": "2021",
-    "label": "Chamoli"
-   },
-   {
-    "date": "Aug 2025",
-    "label": "Dharali"
-   },
-   {
-    "date": "Aug 2025",
-    "label": "Kishtwar"
-   },
-   {
-    "date": "2026",
-    "label": "J&K count"
-   }
-  ]
- },
- "assets": {
-  "terrain": [
-   {
-    "name": "cb-subcont",
-    "west": 60,
-    "east": 100,
-    "south": 4,
-    "north": 38,
-    "hw": 1600,
-    "tw": 6000
-   },
-   {
-    "name": "cb-whimalaya",
-    "west": 73.0,
-    "east": 81.5,
-    "south": 28.8,
-    "north": 36.0,
-    "hw": 1600,
-    "tw": 6000
-   },
-   {
-    "name": "cb-leh",
-    "west": 77.3,
-    "east": 77.85,
-    "south": 33.95,
-    "north": 34.32,
-    "hw": 1000,
-    "tw": 4000
-   },
-   {
-    "name": "cb-kedar",
-    "west": 78.9,
-    "east": 79.2,
-    "south": 30.6,
-    "north": 30.82,
-    "hw": 800,
-    "tw": 3500
-   },
-   {
-    "name": "cb-chamoli",
-    "west": 79.5,
-    "east": 79.95,
-    "south": 30.4,
-    "north": 30.68,
-    "hw": 800,
-    "tw": 3500
-   },
-   {
-    "name": "cb-dharali",
-    "west": 78.6,
-    "east": 78.98,
-    "south": 30.93,
-    "north": 31.15,
-    "hw": 800,
-    "tw": 3500
-   },
-   {
-    "name": "cb-kishtwar",
-    "west": 75.6,
-    "east": 76.3,
-    "south": 33.1,
-    "north": 33.5,
-    "hw": 900,
-    "tw": 3500
-   },
-   {
-    "name": "cb-wayanad",
-    "west": 75.95,
-    "east": 76.32,
-    "south": 11.42,
-    "north": 11.72,
-    "hw": 800,
-    "tw": 3500
-   },
-   {
-    "name": "cb-mumbai",
-    "west": 72.7,
-    "east": 73.15,
-    "south": 18.85,
-    "north": 19.32,
-    "hw": 700,
-    "tw": 3500
-   }
   ],
-  "images": {
-   "cumulonimbus": [
-    "Cumulonimbus incus",
-    "cumulonimbus cloud anvil",
-    "cumulonimbus"
-   ],
-   "monsoon_hills": [
-    "monsoon clouds Western Ghats",
-    "monsoon clouds mountains India",
-    "Sahyadri monsoon"
-   ],
-   "leh": [
-    "Leh town panorama Ladakh",
-    "Leh Ladakh city view",
-    "View of Leh"
-   ],
-   "leh_2010": [
-    "Leh flash flood 2010",
-    "2010 Ladakh floods",
-    "Choglamsar flood"
-   ],
-   "kedarnath_2013": [
-    "Kedarnath temple after flood 2013",
-    "Kedarnath 2013 flood",
-    "Kedarnath after flash flood"
-   ],
-   "chorabari": [
-    "Chorabari Tal",
-    "Chorabari lake Kedarnath",
-    "Chorabari glacier"
-   ],
-   "chamoli": [
-    "2021 Uttarakhand flood Rishiganga",
-    "Rishiganga river Raini",
-    "Rishiganga"
-   ],
-   "bhagirathi": [
-    "Harsil valley Bhagirathi",
-    "Bhagirathi river Harsil",
-    "Bhagirathi river Uttarakhand"
-   ],
-   "himalayan_river": [
-    "Alaknanda river monsoon",
-    "Mandakini river Uttarakhand",
-    "Himalayan river flood India"
-   ],
-   "mumbai_2005": [
-    "Mumbai floods 2005",
-    "Mumbai monsoon flooding street",
-    "Mumbai rain flooding"
-   ],
-   "wayanad": [
-    "2024 Wayanad landslides",
-    "Chooralmala landslide",
-    "Mundakkai landslide"
-   ],
-   "radar": [
-    "Doppler weather radar India IMD",
-    "Doppler weather radar dome",
-    "weather radar dome"
-   ]
+  "shorts": [
+    {
+      "id": "short-1",
+      "hook": "A cloudburst has nothing to do with a bursting cloud",
+      "scenes": [
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08"
+      ]
+    },
+    {
+      "id": "short-2",
+      "hook": "800 Olympic pools of water held up by wind",
+      "scenes": [
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ]
+    },
+    {
+      "id": "short-3",
+      "hook": "Why the Himalaya gets the deadliest rain",
+      "scenes": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19"
+      ]
+    },
+    {
+      "id": "short-4",
+      "hook": "255 dead, but the rain gauge said 12.8 mm",
+      "scenes": [
+        "S00",
+        "S21",
+        "S22",
+        "S23"
+      ]
+    },
+    {
+      "id": "short-5",
+      "hook": "Dharali was called a cloudburst. The data says otherwise",
+      "scenes": [
+        "S27",
+        "S28",
+        "S29",
+        "S30",
+        "S31"
+      ]
+    },
+    {
+      "id": "short-6",
+      "hook": "Extreme rain in central India has tripled",
+      "scenes": [
+        "S35",
+        "S36",
+        "S37"
+      ]
+    },
+    {
+      "id": "short-7",
+      "hook": "3 cloudburst traps UPSC can set",
+      "scenes": [
+        "S46"
+      ]
+    }
+  ],
+  "thumbnail": {
+    "headline": "CLOUDS DON'T BURST?",
+    "sub": "Cloudbursts · Extreme rain",
+    "scene": "S09",
+    "images": [
+      "jobs/cloudbursts-extreme-rainfall/img/cumulonimbus.jpg"
+    ]
+  },
+  "eras": {
+    "cases": [
+      {
+        "date": "2010",
+        "label": "Leh"
+      },
+      {
+        "date": "2013",
+        "label": "Kedarnath"
+      },
+      {
+        "date": "2021",
+        "label": "Chamoli"
+      },
+      {
+        "date": "Aug 2025",
+        "label": "Dharali"
+      },
+      {
+        "date": "Aug 2025",
+        "label": "Kishtwar"
+      },
+      {
+        "date": "2026",
+        "label": "J&K count"
+      }
+    ]
+  },
+  "assets": {
+    "terrain": [
+      {
+        "name": "cb-subcont",
+        "west": 60,
+        "east": 100,
+        "south": 4,
+        "north": 38,
+        "hw": 1600,
+        "tw": 6000
+      },
+      {
+        "name": "cb-whimalaya",
+        "west": 73.0,
+        "east": 81.5,
+        "south": 28.8,
+        "north": 36.0,
+        "hw": 1600,
+        "tw": 6000
+      },
+      {
+        "name": "cb-leh",
+        "west": 77.3,
+        "east": 77.85,
+        "south": 33.95,
+        "north": 34.32,
+        "hw": 1000,
+        "tw": 4000
+      },
+      {
+        "name": "cb-kedar",
+        "west": 78.9,
+        "east": 79.2,
+        "south": 30.6,
+        "north": 30.82,
+        "hw": 800,
+        "tw": 3500
+      },
+      {
+        "name": "cb-chamoli",
+        "west": 79.5,
+        "east": 79.95,
+        "south": 30.4,
+        "north": 30.68,
+        "hw": 800,
+        "tw": 3500
+      },
+      {
+        "name": "cb-dharali",
+        "west": 78.6,
+        "east": 78.98,
+        "south": 30.93,
+        "north": 31.15,
+        "hw": 800,
+        "tw": 3500
+      },
+      {
+        "name": "cb-kishtwar",
+        "west": 75.6,
+        "east": 76.3,
+        "south": 33.1,
+        "north": 33.5,
+        "hw": 900,
+        "tw": 3500
+      },
+      {
+        "name": "cb-wayanad",
+        "west": 75.95,
+        "east": 76.32,
+        "south": 11.42,
+        "north": 11.72,
+        "hw": 800,
+        "tw": 3500
+      },
+      {
+        "name": "cb-mumbai",
+        "west": 72.7,
+        "east": 73.15,
+        "south": 18.85,
+        "north": 19.32,
+        "hw": 700,
+        "tw": 3500
+      }
+    ],
+    "images": {
+      "cumulonimbus": [
+        "Cumulonimbus incus",
+        "cumulonimbus cloud anvil",
+        "cumulonimbus"
+      ],
+      "monsoon_hills": [
+        "monsoon clouds Western Ghats",
+        "monsoon clouds mountains India",
+        "Sahyadri monsoon"
+      ],
+      "leh": [
+        "Leh town panorama Ladakh",
+        "Leh Ladakh city view",
+        "View of Leh"
+      ],
+      "leh_2010": [
+        "Leh flash flood 2010",
+        "2010 Ladakh floods",
+        "Choglamsar flood"
+      ],
+      "kedarnath_2013": [
+        "Kedarnath temple after flood 2013",
+        "Kedarnath 2013 flood",
+        "Kedarnath after flash flood"
+      ],
+      "chorabari": [
+        "Chorabari Tal",
+        "Chorabari lake Kedarnath",
+        "Chorabari glacier"
+      ],
+      "chamoli": [
+        "2021 Uttarakhand flood Rishiganga",
+        "Rishiganga river Raini",
+        "Rishiganga"
+      ],
+      "bhagirathi": [
+        "Harsil valley Bhagirathi",
+        "Bhagirathi river Harsil",
+        "Bhagirathi river Uttarakhand"
+      ],
+      "himalayan_river": [
+        "Alaknanda river monsoon",
+        "Mandakini river Uttarakhand",
+        "Himalayan river flood India"
+      ],
+      "mumbai_2005": [
+        "Mumbai floods 2005",
+        "Mumbai monsoon flooding street",
+        "Mumbai rain flooding"
+      ],
+      "wayanad": [
+        "2024 Wayanad landslides",
+        "Chooralmala landslide",
+        "Mundakkai landslide"
+      ],
+      "radar": [
+        "Doppler weather radar India IMD",
+        "Doppler weather radar dome",
+        "weather radar dome"
+      ]
+    }
   }
- }
 }
