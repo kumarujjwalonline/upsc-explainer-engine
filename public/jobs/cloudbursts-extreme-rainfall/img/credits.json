@@ -154,5 +154,31 @@
    1820,
    1188
   ]
+ },
+ "rain_gauge": {
+  "file": "File:Geltsdale Rain Gauge - geograph.org.uk - 3164975.jpg",
+  "query": "standard rain gauge",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Geltsdale_Rain_Gauge_-_geograph.org.uk_-_3164975.jpg/1920px-Geltsdale_Rain_Gauge_-_geograph.org.uk_-_3164975.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Geltsdale_Rain_Gauge_-_geograph.org.uk_-_3164975.jpg",
+  "author": "Mr A Beaty",
+  "license": "CC BY-SA 2.0",
+  "credit": "Mr A Beaty · CC BY-SA 2.0 · Wikimedia Commons",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "uk_flood_2012": {
+  "file": "File:Flash floods in Uttarakhand 2012.jpg",
+  "query": "File:Flash floods in Uttarakhand 2012.jpg",
+  "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Flash_floods_in_Uttarakhand_2012.jpg/1920px-Flash_floods_in_Uttarakhand_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Flash_floods_in_Uttarakhand_2012.jpg",
+  "author": "European Commission DG ECHO",
+  "license": "CC BY-SA 2.0",
+  "credit": "European Commission DG ECHO · CC BY-SA 2.0 · Wikimedia Commons",
+  "size": [
+   1920,
+   1440
+  ]
  }
 }
