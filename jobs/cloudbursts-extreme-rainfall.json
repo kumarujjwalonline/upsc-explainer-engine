@@ -1892,7 +1892,8 @@
    "art": {
     "src": "jobs/cloudbursts-extreme-rainfall/art/split.jpg",
     "url": "https://ideogram.ai/assets/image/balanced/response/TivKk-5CVL-67Kf1ZxiFxw@2k",
-    "caption": "One hillside vs a whole region"
+    "caption": "One hillside vs a whole region",
+    "scale": 1.05
    }
   },
   {
