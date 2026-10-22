@@ -1,6 +1,6 @@
 import React from 'react';
 import {Img, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig, Easing} from 'remotion';
-import {fonts, onDark, toneOnDark} from '../theme';
+import {colors, fonts, onDark, toneOnDark} from '../theme';
 import type {Tone} from '../types';
 
 // Cinematic hook: full-bleed shots (real footage or photos with a slow camera move) cut together with
@@ -59,7 +59,7 @@ const Shot: React.FC<{s: MontageShot; from: number; len: number; grade: keyof ty
   };
   let body: React.ReactNode;
   if (!s.src) {
-    body = <div style={{position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 30%, #23364F 0%, #0A1422 60%, #04080F 100%)', transform: `scale(${zoom})`}} />;
+    body = <div style={{position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 30%, #FFFFFF 0%, #EFE6D2 60%, #E4D6B8 100%)', transform: `scale(${zoom})`}} />;
   } else if (s.video) {
     body = (
       <Sequence from={from} layout="none">
@@ -129,7 +129,7 @@ export const Montage: React.FC<{spec: MontageSpec; box: {x: number; y: number; w
   const kOut = k?.out != null ? interpolate(t, [k.out, k.out + 0.4], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 1;
 
   return (
-    <div style={{position: 'absolute', left: box.x, top: box.y, width: W, height: H, overflow: 'hidden', background: '#04080F', opacity: fadeIn * fadeOut}}>
+    <div style={{position: 'absolute', left: box.x, top: box.y, width: W, height: H, overflow: 'hidden', background: colors.bg, opacity: fadeIn * fadeOut}}>
       {shots.map((s, i) => {
         const next = i + 1 < shots.length ? shots[i + 1].t0 : total + 1;
         return <Shot key={i} s={s} from={Math.round(s.t0 * fps)} len={next - s.t0} grade={grade} />;
@@ -144,8 +144,8 @@ export const Montage: React.FC<{spec: MontageSpec; box: {x: number; y: number; w
         </filter>
         <rect width="100%" height="100%" filter={`url(#grain${seed})`} />
       </svg>
-      <div style={{position: 'absolute', left: 0, right: 0, top: 0, height: bar, background: '#000'}} />
-      <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: bar, background: '#000'}} />
+      <div style={{position: 'absolute', left: 0, right: 0, top: 0, height: bar, background: colors.bg}} />
+      <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: bar, background: colors.bg}} />
       {k ? (
         <div style={{position: 'absolute', left: 48 * u, top: 64 * u + 26 * u, opacity: kOut, fontFamily: fonts.display, fontWeight: 700, fontSize: 30 * u, letterSpacing: 6 * u, color: '#FFFFFF', textShadow: '0 2px 14px rgba(0,0,0,0.9)'}}>
           {k.text.slice(0, kChars)}
