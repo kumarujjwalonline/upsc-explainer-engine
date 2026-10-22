@@ -29,7 +29,7 @@ export const ImageReveal: React.FC<{src: string; credit?: string; caption?: stri
       <div style={{position: 'absolute', inset: 0, overflow: 'hidden', clipPath: `inset(0 ${100 - wipe}% 0 0 round ${18 * u}px)`}}>
         {fit === 'contain' ? (
           <>
-            <Img src={url} style={{position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', filter: 'blur(28px) brightness(0.45)', transform: 'scale(1.15)'}} />
+            <Img src={url} style={{position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', filter: 'blur(28px) brightness(0.8)', transform: 'scale(1.15)'}} />
             <Img src={url} style={{position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', ...move}} />
           </>
         ) : (

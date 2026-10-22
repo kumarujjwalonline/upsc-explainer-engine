@@ -29,9 +29,9 @@ export type MontageSpec = {
 const XF = 0.6; // crossfade between shots, seconds
 
 const GRADE = {
-  storm: {filter: 'contrast(1.15) saturate(0.7) brightness(0.78)', tint: 'rgba(14,38,62,0.38)'},
-  night: {filter: 'contrast(1.2) saturate(0.55) brightness(0.62)', tint: 'rgba(8,20,48,0.5)'},
-  warm: {filter: 'contrast(1.1) saturate(0.85) brightness(0.85)', tint: 'rgba(60,32,10,0.25)'},
+  storm: {filter: 'brightness(1.18) contrast(1.06) saturate(1.1)', tint: 'rgba(205,222,240,0.12)'},
+  night: {filter: 'brightness(1.3) contrast(1.05) saturate(1.05)', tint: 'rgba(200,215,240,0.1)'},
+  warm: {filter: 'brightness(1.15) contrast(1.05) saturate(1.1)', tint: 'rgba(255,236,210,0.12)'},
 };
 
 const Shot: React.FC<{s: MontageShot; from: number; len: number; grade: keyof typeof GRADE}> = ({s, from, len, grade}) => {
@@ -134,8 +134,8 @@ export const Montage: React.FC<{spec: MontageSpec; box: {x: number; y: number; w
         const next = i + 1 < shots.length ? shots[i + 1].t0 : total + 1;
         return <Shot key={i} s={s} from={Math.round(s.t0 * fps)} len={next - s.t0} grade={grade} />;
       })}
-      <div style={{position: 'absolute', inset: 0, background: GRADE[grade].tint, mixBlendMode: 'multiply'}} />
-      <div style={{position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.72) 100%)'}} />
+      <div style={{position: 'absolute', inset: 0, background: GRADE[grade].tint, mixBlendMode: 'screen'}} />
+      <div style={{position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%)'}} />
       {rainLayers}
       <div style={{position: 'absolute', inset: 0, background: '#EAF2FF', opacity: flash, mixBlendMode: 'screen'}} />
       <svg width={W} height={H} style={{position: 'absolute', inset: 0, opacity: 0.09, mixBlendMode: 'overlay'}}>
