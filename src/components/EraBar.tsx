@@ -35,7 +35,7 @@ export const EraBar: React.FC<{periods: EraPeriod[]; state: EraState; format: Fo
         const now = i === cur;
         const past = !now && seen.has(i);
         const fill = now ? (fresh ? Math.min(1, changed) : 1) : 0;
-        const bg = past ? colors.green : now ? colors.orange : 'rgba(91,107,130,0.25)';
+        const bg = past ? colors.green : now ? colors.orange : 'rgba(162,168,174,0.25)';
         return (
           <div
             key={i}
@@ -45,7 +45,7 @@ export const EraBar: React.FC<{periods: EraPeriod[]; state: EraState; format: Fo
               borderRadius: 8 * s,
               position: 'relative',
               overflow: 'hidden',
-              background: past ? 'rgba(59,178,115,0.9)' : 'rgba(19,36,59,0.92)',
+              background: past ? colors.green : colors.panel,
               border: `${2 * s}px solid ${now ? colors.orange : past ? colors.green : colors.border}`,
               display: 'flex',
               flexDirection: 'column',
@@ -56,10 +56,10 @@ export const EraBar: React.FC<{periods: EraPeriod[]; state: EraState; format: Fo
             }}
           >
             {now ? <div style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: `${fill * 100}%`, background: bg, opacity: 0.95}} /> : null}
-            <div style={{position: 'relative', fontSize: (n > 6 ? 15 : 17) * s, fontWeight: 800, color: now ? colors.bg : past ? colors.bg : colors.sub, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', lineHeight: 1.1}}>
+            <div style={{position: 'relative', fontSize: (n > 6 ? 15 : 17) * s, fontWeight: 800, color: now || past ? colors.ink : colors.sub, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', lineHeight: 1.1}}>
               {p.date}
             </div>
-            <div style={{position: 'relative', fontSize: (n > 6 ? 13 : 14) * s, fontWeight: 600, color: now ? colors.bg : past ? '#0B2A1A' : colors.muted, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', lineHeight: 1.15}}>
+            <div style={{position: 'relative', fontSize: (n > 6 ? 13 : 14) * s, fontWeight: 600, color: now || past ? colors.ink : colors.muted, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', lineHeight: 1.15}}>
               {p.label}
             </div>
           </div>

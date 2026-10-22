@@ -22,7 +22,7 @@ export const Formula: React.FC<{heading?: string; lines: {text: string; note?: s
         const focus = i === latest;
         return (
           <div key={i} style={{display: 'flex', alignItems: 'baseline', gap: 30 * u, opacity: e * (focus ? 1 : 0.6), transform: `translateY(${(1 - e) * 24}px)`}}>
-            <div style={{fontSize: size * u, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: l.final ? colors.bg : focus ? colors.yellow : colors.text, background: l.final ? colors.orange : 'transparent', padding: l.final ? `${6 * u}px ${20 * u}px` : 0, borderRadius: 10 * u, whiteSpace: 'pre'}}>
+            <div style={{fontSize: size * u, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: l.final ? colors.ink : focus ? colors.yellow : colors.text, background: l.final ? colors.orange : 'transparent', padding: l.final ? `${6 * u}px ${20 * u}px` : 0, borderRadius: 10 * u, whiteSpace: 'pre'}}>
               {l.text}
             </div>
             {l.note ? <div style={{fontSize: 28 * u, color: colors.sub}}>{l.note}</div> : null}

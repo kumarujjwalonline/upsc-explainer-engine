@@ -35,7 +35,8 @@ export type Visual =
   | ({type: 'footage'} & FootageSpec)
   | ({type: 'terrain'} & TerrainSpec)
   | ({type: 'cloud'} & CloudSpec)
-  | ({type: 'montage'} & MontageSpec);
+  | ({type: 'montage'} & MontageSpec)
+  | {type: 'notes'; heading: string; kicker?: string; groups: {title: string; tone?: Tone; items: string[]}[]};
 
 export type IconName =
   | 'ship' | 'truck' | 'train' | 'plane' | 'person' | 'people' | 'robot' | 'code' | 'chat'
@@ -67,6 +68,8 @@ export type Scene = {
   compact?: boolean; // compact tracker for heavy numerical scenes
   visual: Visual;
   era?: {set: string; steps: [number, number][]}; // bottom timeline: [seconds into scene, current period]
+  process?: {set: string; steps: [number, number][]}; // bottom flowchart: [seconds into scene, current step]
+  art?: {src: string; url?: string; caption?: string; scale?: number}; // generated illustration beside the visual (rule 35)
 };
 
 export type Job = {
@@ -78,6 +81,7 @@ export type Job = {
   shorts?: {id: string; hook: string; scenes: string[]}[];
   thumbnail?: {headline: string; sub?: string; scene?: string; images?: string[]};
   eras?: Record<string, {date: string; label: string}[]>; // timelines shown at the foot while events are explained
+  processes?: Record<string, {title: string; steps: string[]}>; // flowcharts shown at the foot while a process is explained
 };
 
 export type RenderProps = {job: Job; format: Format; sceneIds?: string[]; hook?: string};

@@ -3,7 +3,7 @@ import {ThreeCanvas} from '@remotion/three';
 import {useThree} from '@react-three/fiber';
 import * as THREE from 'three';
 import {continueRender, delayRender, Easing, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
-import {colors, fonts, toneColor} from '../theme';
+import {colors, fonts, onDark, toneOnDark} from '../theme';
 import type {LonLat, Tone} from '../types';
 
 // Production rule 23: full-screen, Google Earth-style flights over real terrain.
@@ -388,8 +388,8 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
     const b = L.out !== undefined ? interpolate(t, [L.out, L.out + 0.4], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 1;
     return a * b * (spec.globe ? terrainO : 1);
   };
-  const col = (L: Base) => L.color || toneColor(L.tone || 'accent');
-  const textStyle = (size: number, color = colors.text): React.CSSProperties => ({
+  const col = (L: Base) => L.color || toneOnDark(L.tone || 'accent');
+  const textStyle = (size: number, color = onDark.text): React.CSSProperties => ({
     paintOrder: 'stroke',
     stroke: 'rgba(6,14,26,0.85)',
     strokeWidth: size * 0.16,
@@ -418,7 +418,7 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
 
   const layers: TerrainLayer[] = [];
   if (spec.india !== false) layers.push({kind: 'area', ref: 'india', color: '#FFFFFF', opacity: 0, t0: -1});
-  if (spec.lac) layers.push(...['lac_west', 'lac_middle', 'lac_sikkim', 'lac_east'].map((r) => ({kind: 'line' as const, ref: r, dashed: true, color: colors.yellow, t0: -1, width: 3})));
+  if (spec.lac) layers.push(...['lac_west', 'lac_middle', 'lac_sikkim', 'lac_east'].map((r) => ({kind: 'line' as const, ref: r, dashed: true, color: onDark.yellow, t0: -1, width: 3})));
   layers.push(...(spec.layers || []));
 
   const els: React.ReactNode[] = [];
@@ -505,7 +505,7 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
       const d = pathOf(ring).d;
       const p = proj(L.at[0], L.at[1]);
       const grow = interpolate(t, [L.t0 ?? 0, (L.t0 ?? 0) + 0.7], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-      const C2 = L.color || colors.yellow;
+      const C2 = L.color || onDark.yellow;
       els.push(
         <g key={i} opacity={o}>
           <path d={d} fill={C2} fillOpacity={0.32 * grow} stroke={C2} strokeWidth={3 * u} strokeDasharray={`${10 * u} ${7 * u}`} />
@@ -514,7 +514,7 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
               {L.label}
             </text>
           ) : null}
-          <text x={p[0]} y={p[1] + 22 * u} textAnchor="middle" style={textStyle(19 * u, colors.yellow)}>
+          <text x={p[0]} y={p[1] + 22 * u} textAnchor="middle" style={textStyle(19 * u, onDark.yellow)}>
             APPROXIMATE
           </text>
         </g>,
@@ -534,7 +534,7 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
             {L.label}
           </text>
           {L.sub ? (
-            <text x={left ? -12 * u : 12 * u} y={-18 * u} textAnchor={left ? 'end' : 'start'} style={{...textStyle(22 * u, colors.yellow), fontWeight: 600}} opacity={Math.min(1, e)}>
+            <text x={left ? -12 * u : 12 * u} y={-18 * u} textAnchor={left ? 'end' : 'start'} style={{...textStyle(22 * u, onDark.yellow), fontWeight: 600}} opacity={Math.min(1, e)}>
               {L.sub}
             </text>
           ) : null}
@@ -546,11 +546,11 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
       const s = (L.size ?? 30) * u;
       els.push(
         <g key={i} opacity={o}>
-          <text x={x} y={y} textAnchor="middle" letterSpacing={2 * u} style={textStyle(s, L.color || (L.tone ? toneColor(L.tone) : '#FFFFFF'))}>
+          <text x={x} y={y} textAnchor="middle" letterSpacing={2 * u} style={textStyle(s, L.color || (L.tone ? toneOnDark(L.tone) : '#FFFFFF'))}>
             {L.text}
           </text>
           {L.sub ? (
-            <text x={x} y={y + s * 0.95} textAnchor="middle" style={{...textStyle(s * 0.62, colors.sub), fontWeight: 600}}>
+            <text x={x} y={y + s * 0.95} textAnchor="middle" style={{...textStyle(s * 0.62, onDark.sub), fontWeight: 600}}>
               {L.sub}
             </text>
           ) : null}
@@ -725,7 +725,7 @@ export const Terrain3D: React.FC<{spec: TerrainSpec; box: {x: number; y: number;
       {stamps}
       {/* vignette + right-edge blend into the tracker gutter */}
       <div style={{position: 'absolute', inset: 0, boxShadow: `inset 0 0 ${160 * u}px rgba(0,0,0,0.45)`, pointerEvents: 'none'}} />
-      <div style={{position: 'absolute', right: 0, top: 0, bottom: 0, width: 60 * u, background: 'linear-gradient(to right, rgba(11,23,38,0), rgba(11,23,38,0.9))'}} />
+      <div style={{position: 'absolute', right: 0, top: 0, bottom: 0, width: 60 * u, background: 'linear-gradient(to right, rgba(247,240,225,0), rgba(247,240,225,0.95))'}} />
       <div style={{position: 'absolute', left: 18 * u, top: 12 * u, fontFamily: fonts.body, fontSize: 15 * u, color: 'rgba(255,255,255,0.75)', letterSpacing: 0.5}}>
         {spec.globe && globeO > 0.5 ? 'NASA Blue Marble' : spec.credit || 'Imagery: Copernicus Sentinel-2 / Natural Earth · Elevation: Terrarium (SRTM et al.) · Borders: Survey of India outline'}
         {'   ·   '}

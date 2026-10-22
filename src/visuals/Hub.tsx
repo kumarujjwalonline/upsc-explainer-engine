@@ -49,8 +49,8 @@ export const Hub: React.FC<{center: {label: string; icon?: IconName}; spokes: {l
         );
       })}
       <div style={{position: 'absolute', left: cx, top: cy, transform: `translate(-50%,-50%) scale(${ce})`, width: 220 * u, height: 220 * u, borderRadius: '50%', background: colors.orange, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', boxShadow: `0 0 ${60 * u}px rgba(255,138,31,0.45)`, gap: 6 * u}}>
-        <Icon name={center.icon} size={70 * u} color={colors.bg} stroke={2.2} />
-        <div style={{fontSize: 34 * u, fontWeight: 800, color: colors.bg}}>{center.label}</div>
+        <Icon name={center.icon} size={70 * u} color={colors.ink} stroke={2.2} />
+        <div style={{fontSize: 34 * u, fontWeight: 800, color: colors.ink}}>{center.label}</div>
       </div>
     </Region>
   );

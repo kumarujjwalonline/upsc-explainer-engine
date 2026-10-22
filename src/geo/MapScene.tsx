@@ -73,7 +73,7 @@ export const MapScene: React.FC<{spec: MapSpec}> = ({spec}) => {
     const dim = new Set(spec.dim || []);
     return (
       <g opacity={opacity}>
-        {isGlobe ? <path d={path({type: 'Sphere'}) || ''} fill={colors.bg2} stroke={colors.border} strokeWidth={2} /> : null}
+        {isGlobe ? <path d={path({type: 'Sphere'}) || ''} fill="#D3E4F1" stroke="#9FB8CC" strokeWidth={2} /> : null}
         {countries.map((c) => {
           const h = hl.get(c.properties.iso3);
           const d = path(c as any);
@@ -85,7 +85,7 @@ export const MapScene: React.FC<{spec: MapSpec}> = ({spec}) => {
               {h && h.wall && !isGlobe
                 ? [6, 4, 2].map((dy) => <path key={dy} d={d} fill="#5c1517" opacity={ha} transform={`translate(0 ${dy * u * ha})`} />)
                 : null}
-              <path d={d} fill={colors.land} stroke={colors.border} strokeWidth={1.1} opacity={dim.has(c.properties.iso3) ? 0.35 : 1} />
+              <path d={d} fill="#D9C79F" stroke="#9C8862" strokeWidth={1.1} opacity={dim.has(c.properties.iso3) ? 0.35 : 1} />
               {h ? <path d={d} fill={fill} fillOpacity={0.85 * ha} stroke={fill} strokeWidth={2 * ha} style={{filter: `drop-shadow(0 0 ${10 * ha}px ${fill})`}} /> : null}
             </g>
           );

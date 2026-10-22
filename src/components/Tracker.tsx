@@ -79,7 +79,7 @@ export const Tracker: React.FC<Props> = (p) => {
   if (p.format === '9:16') {
     const cur = all.find((l) => l.id === st.current) || currentParent;
     return (
-      <div style={{position: 'absolute', left: p.box.x, top: p.box.y, width: p.box.w, height: p.box.h, overflow: 'hidden', boxSizing: 'border-box', border: `2px solid ${colors.border}`, borderRadius: 18, background: 'rgba(19,36,59,0.92)', padding: '18px 24px', display: 'flex', flexDirection: 'column', gap: 12}}>
+      <div style={{position: 'absolute', left: p.box.x, top: p.box.y, width: p.box.w, height: p.box.h, overflow: 'hidden', boxSizing: 'border-box', border: `2px solid ${colors.border}`, borderRadius: 18, background: 'rgba(255,255,255,0.94)', boxShadow: '0 8px 30px rgba(19,35,58,0.10)', padding: '18px 24px', display: 'flex', flexDirection: 'column', gap: 12}}>
         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline'}}>
           <div style={{fontSize: 22, letterSpacing: 2, color: colors.sub, fontWeight: 600}}>{(p.title || 'Lesson progress').toUpperCase()}</div>
           <div style={{fontFamily: fonts.display, fontWeight: 800, fontSize: 40, color: colors.green}}>{pctShown}%</div>
@@ -99,7 +99,7 @@ export const Tracker: React.FC<Props> = (p) => {
   const showAllChildren = !p.compact && totalRows <= 14;
 
   return (
-    <div style={{position: 'absolute', left: p.box.x, top: p.box.y, width: p.box.w, height: p.box.h, overflow: 'hidden', boxSizing: 'border-box', border: `2px solid ${colors.border}`, borderRadius: 18, background: 'rgba(19,36,59,0.92)', padding: 26, display: 'flex', flexDirection: 'column', gap: 18}}>
+    <div style={{position: 'absolute', left: p.box.x, top: p.box.y, width: p.box.w, height: p.box.h, overflow: 'hidden', boxSizing: 'border-box', border: `2px solid ${colors.border}`, borderRadius: 18, background: 'rgba(255,255,255,0.94)', boxShadow: '0 8px 30px rgba(19,35,58,0.10)', padding: 26, display: 'flex', flexDirection: 'column', gap: 18}}>
       <div style={{fontSize: 20, letterSpacing: 2.5, color: colors.sub, fontWeight: 600}}>{(p.title || 'Lesson progress').toUpperCase()}</div>
       <div style={{display: 'flex', alignItems: 'baseline', gap: 10}}>
         <div style={{fontFamily: fonts.display, fontWeight: 800, fontSize: p.compact ? 46 : 64, color: colors.green, lineHeight: 1}}>{pctShown}%</div>
@@ -136,7 +136,7 @@ const Row: React.FC<{label: string; state: RowState; pulse: number; level: numbe
     <div style={{display: 'flex', alignItems: 'flex-start', gap: 12, paddingLeft: level * 26}}>
       <div style={{width: 22, height: 22, flex: 'none', marginTop: 2, borderRadius: 6, border: `2px solid ${c}`, background: state === 'done' ? colors.green : 'transparent', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: state === 'current' ? pulse : 1, boxShadow: state === 'current' ? `0 0 ${12 * pulse}px ${colors.orange}` : 'none'}}>
         {state === 'done' ? (
-          <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7.5 L5.5 11 L12 3.5" stroke={colors.bg} strokeWidth="2.6" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7.5 L5.5 11 L12 3.5" stroke={colors.ink} strokeWidth="2.6" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
         ) : null}
       </div>
       <div style={{fontSize: size, lineHeight: 1.3, fontWeight: level === 0 ? 600 : 500, color: state === 'upcoming' ? colors.muted : state === 'current' ? colors.orange : colors.text, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden'}}>

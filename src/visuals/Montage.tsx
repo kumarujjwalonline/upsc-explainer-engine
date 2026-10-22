@@ -1,6 +1,6 @@
 import React from 'react';
 import {Img, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig, Easing} from 'remotion';
-import {colors, fonts, toneColor} from '../theme';
+import {fonts, onDark, toneOnDark} from '../theme';
 import type {Tone} from '../types';
 
 // Cinematic hook: full-bleed shots (real footage or photos with a slow camera move) cut together with
@@ -149,7 +149,7 @@ export const Montage: React.FC<{spec: MontageSpec; box: {x: number; y: number; w
       {k ? (
         <div style={{position: 'absolute', left: 48 * u, top: 64 * u + 26 * u, opacity: kOut, fontFamily: fonts.display, fontWeight: 700, fontSize: 30 * u, letterSpacing: 6 * u, color: '#FFFFFF', textShadow: '0 2px 14px rgba(0,0,0,0.9)'}}>
           {k.text.slice(0, kChars)}
-          <span style={{opacity: f % 16 < 8 && kChars < k.text.length + 1 ? 1 : 0, color: colors.orange}}>▍</span>
+          <span style={{opacity: f % 16 < 8 && kChars < k.text.length + 1 ? 1 : 0, color: onDark.orange}}>▍</span>
         </div>
       ) : null}
       {(spec.stamps ?? []).map((s, i) => {
@@ -157,7 +157,7 @@ export const Montage: React.FC<{spec: MontageSpec; box: {x: number; y: number; w
         const e = spring({frame: f - s.t0 * fps, fps, config: {damping: 10, mass: 0.8}});
         const out = s.out != null ? interpolate(t, [s.out, s.out + 0.35], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 1;
         if (out <= 0) return null;
-        const C = toneColor(s.tone ?? 'warn');
+        const C = toneOnDark(s.tone ?? 'warn');
         const big = s.text.length <= 7;
         return (
           <div key={i} style={{position: 'absolute', left: 0, right: 0, top: (s.y ?? 0.36) * H, display: 'flex', flexDirection: 'column', alignItems: 'center', opacity: out * Math.min(1, e * 1.4), transform: `scale(${1.5 - 0.5 * Math.min(1, e)})`}}>

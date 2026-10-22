@@ -4,6 +4,8 @@ import {interpolate, spring, useCurrentFrame, useVideoConfig, Easing} from 'remo
 export type BoxRect = {x: number; y: number; w: number; h: number};
 export const BoxContext = createContext<BoxRect>({x: 0, y: 0, w: 1920, h: 1080});
 export const useBox = () => useContext(BoxContext);
+// Scenes that share the canvas with an illustration get a narrower box; this keeps their text readable.
+export const UnitScale = createContext(1);
 
 // Everything a visual draws goes inside its canvas region; overflow is clipped so
 // nothing can cross into the tracker or the safe margins.
@@ -19,7 +21,8 @@ export const Region: React.FC<{children: React.ReactNode; style?: React.CSSPrope
 // Unit that scales with the region, so the same visual works in 16:9 and 9:16.
 export const useUnit = () => {
   const b = useBox();
-  return Math.min(b.w / 1390, b.h / 940) * (b.w < b.h ? 1.5 : 1);
+  const k = useContext(UnitScale);
+  return Math.min(b.w / 1390, b.h / 940) * (b.w < b.h ? 1.5 : 1) * k;
 };
 
 export const useEnter = (delay = 0, damping = 18) => {

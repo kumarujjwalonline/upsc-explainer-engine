@@ -20,7 +20,7 @@ export const Points: React.FC<{heading?: string; items: string[]; highlight?: st
         const focus = i === latest;
         return (
           <div key={i} style={{display: 'flex', gap: 26 * u, alignItems: 'flex-start', opacity: e * (focus || latest < i ? 1 : 0.55), transform: `translateX(${(1 - e) * -60 * u}px)`}}>
-            <div style={{flex: 'none', width: 46 * u, height: 46 * u, marginTop: 6 * u, borderRadius: 12 * u, background: focus ? colors.orange : colors.panel, border: `2px solid ${focus ? colors.orange : colors.border}`, color: focus ? colors.bg : colors.sub, fontWeight: 800, fontSize: 26 * u, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>{i + 1}</div>
+            <div style={{flex: 'none', width: 46 * u, height: 46 * u, marginTop: 6 * u, borderRadius: 12 * u, background: focus ? colors.orange : colors.panel, border: `2px solid ${focus ? colors.orange : colors.border}`, color: focus ? colors.ink : colors.sub, fontWeight: 800, fontSize: 26 * u, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>{i + 1}</div>
             <div style={{fontSize: 46 * u, lineHeight: 1.3, fontWeight: 600}}>
               <Highlight text={it} words={highlight} />
             </div>

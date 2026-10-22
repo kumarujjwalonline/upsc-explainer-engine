@@ -1,6 +1,6 @@
 import React from 'react';
 import {Img, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
-import {colors} from '../theme';
+import {colors, onDark} from '../theme';
 import {Region, useFade, useUnit} from '../components/Box';
 
 // Licensed photo or generated art: mask wipe in, then a slow camera move (push in and drift, never a
@@ -37,8 +37,8 @@ export const ImageReveal: React.FC<{src: string; credit?: string; caption?: stri
         )}
         <div style={{position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(11,23,38,0.85) 0%, rgba(11,23,38,0) 45%)'}} />
       </div>
-      {caption ? <div style={{position: 'absolute', left: 40 * u, bottom: 70 * u, fontSize: 40 * u, fontWeight: 700, opacity: c}}>{caption}</div> : null}
-      {credit ? <div style={{position: 'absolute', left: 40 * u, bottom: 24 * u, fontSize: 20 * u, color: colors.sub, opacity: c}}>{credit}</div> : null}
+      {caption ? <div style={{position: 'absolute', left: 40 * u, bottom: 70 * u, fontSize: 40 * u, fontWeight: 700, color: colors.ink, opacity: c}}>{caption}</div> : null}
+      {credit ? <div style={{position: 'absolute', left: 40 * u, bottom: 24 * u, fontSize: 20 * u, color: onDark.sub, opacity: c}}>{credit}</div> : null}
     </Region>
   );
 };

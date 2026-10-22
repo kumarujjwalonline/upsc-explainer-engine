@@ -4,10 +4,12 @@ import {colors, fonts, FPS, layout} from './theme';
 import type {Job, RenderProps, Scene} from './types';
 import {Tracker, trackerStates} from './components/Tracker';
 import {SceneVisual} from './visuals/SceneVisual';
-import {BoxContext} from './components/Box';
+import {BoxContext, UnitScale} from './components/Box';
 import {Caption} from './components/Caption';
 import {Backdrop} from './components/Backdrop';
 import {EraBar} from './components/EraBar';
+import {ProcessBar} from './components/ProcessBar';
+import {Art} from './components/Art';
 
 export const sceneFrames = (s: Scene) => Math.max(15, Math.round((s.durationSec || 4) * FPS));
 
@@ -37,10 +39,32 @@ export const Explainer: React.FC<RenderProps> = ({job, format, sceneIds, hook}) 
       <Backdrop />
       {seqs.map(({s, from, dur}, k) => (
         <Sequence key={s.id} from={from} durationInFrames={dur} name={s.id}>
-          <BoxContext.Provider value={L.canvas}>
-            <SceneVisual scene={s} format={format} />
-            {s.onScreen ? <Caption text={s.onScreen} /> : null}
-          </BoxContext.Provider>
+          {s.art ? (
+            // Rule 35: the illustration takes the right part of the canvas, the graphic keeps the left.
+            <>
+              <BoxContext.Provider value={format === '9:16' ? {...L.canvas, h: L.canvas.h * 0.56} : {...L.canvas, w: L.canvas.w * 0.6}}>
+                <UnitScale.Provider value={s.art.scale ?? (format === '9:16' ? 1.3 : 1.35)}>
+                  <SceneVisual scene={s} format={format} />
+                </UnitScale.Provider>
+              </BoxContext.Provider>
+              <Art src={s.art.src} caption={s.art.caption} box={format === '9:16' ? {x: L.canvas.x + 60, y: L.canvas.y + L.canvas.h * 0.58, w: L.canvas.w - 120, h: L.canvas.h * 0.4} : {x: L.canvas.x + L.canvas.w * 0.62, y: L.canvas.y + 10, w: L.canvas.w * 0.38, h: L.canvas.h - 130}} />
+              <BoxContext.Provider value={L.canvas}>{s.onScreen ? <Caption text={s.onScreen} /> : null}</BoxContext.Provider>
+            </>
+          ) : (
+            <BoxContext.Provider value={L.canvas}>
+              <SceneVisual scene={s} format={format} />
+              {s.onScreen ? <Caption text={s.onScreen} /> : null}
+            </BoxContext.Provider>
+          )}
+          {s.process && job.processes?.[s.process.set] ? (
+            <ProcessBar
+              title={job.processes[s.process.set].title}
+              steps={job.processes[s.process.set].steps}
+              state={s.process}
+              format={format}
+              visited={seqs.slice(0, k).flatMap((q) => (q.s.process && q.s.process.set === s.process!.set ? q.s.process.steps.map((x) => x[1]) : []))}
+            />
+          ) : null}
           {s.era && job.eras?.[s.era.set] ? (
             <EraBar
               periods={job.eras[s.era.set]}
@@ -78,7 +102,7 @@ const HookBanner: React.FC<{text: string}> = ({text}) => {
         style={{
           transform: `translateY(${y}px)`,
           background: colors.orange,
-          color: colors.bg,
+          color: colors.ink,
           fontFamily: fonts.display,
           fontWeight: 800,
           fontSize: 56,

@@ -1,26 +1,33 @@
 import {staticFile} from 'remotion';
 import type {Format, Tone} from './types';
 
-// Production rules: deep navy ground, white primary text, orange/yellow emphasis,
-// other colours only where they carry meaning.
+// Production rules (rule 34, 2026-10-22): bright cream ground, dark navy text, orange/yellow emphasis,
+// other colours only where they carry meaning. `ink` is the text colour on photos, footage and dark fills.
 export const colors = {
-  bg: '#0B1726',
-  bg2: '#0F1E33',
-  panel: '#13243B',
-  land: '#16263A',
-  border: '#2E4562',
-  text: '#FFFFFF',
-  sub: '#B8C4D6',
-  muted: '#5B6B82',
-  orange: '#FF8A1F',
-  yellow: '#F2C94C',
-  green: '#3BB273',
-  red: '#E5383B',
-  blue: '#5B7DA6',
+  bg: '#F7F0E1',
+  bg2: '#FDF9F1',
+  panel: '#FFFFFF',
+  land: '#E4D6B8',
+  border: '#D8C9AA',
+  text: '#13233A',
+  sub: '#4F5B6B',
+  muted: '#A2A8AE',
+  orange: '#E36A00',
+  yellow: '#C98A00',
+  green: '#2E9E62',
+  red: '#D62F33',
+  blue: '#2F6DB5',
+  ink: '#FFFFFF',
+  dark: '#13233A',
 };
+
+// Over photos, footage, terrain and other dark surfaces the brighter originals read better.
+export const onDark = {text: '#FFFFFF', sub: '#D3DCE8', muted: '#8C9BB0', orange: '#FF8A1F', yellow: '#F2C94C', green: '#3BB273', red: '#E5383B', blue: '#7FA6D6'};
 
 export const toneColor = (t: Tone = 'accent') =>
   ({neutral: colors.text, accent: colors.orange, warn: colors.yellow, good: colors.green, bad: colors.red, muted: colors.muted}[t]);
+export const toneOnDark = (t: Tone = 'accent') =>
+  ({neutral: onDark.text, accent: onDark.orange, warn: onDark.yellow, good: onDark.green, bad: onDark.red, muted: onDark.muted}[t]);
 
 // Fonts are bundled in public/fonts (Inter variable + Poppins 600/700/800, Google Fonts, OFL) so
 // renders never depend on reaching fonts.gstatic.com.

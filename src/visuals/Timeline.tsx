@@ -27,7 +27,7 @@ export const Timeline: React.FC<{heading?: string; nodes: {date: string; label: 
           const up = i % 2 === 0;
           return (
             <div key={i} style={{position: 'relative', flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', opacity: e}}>
-              <div style={{width: 34 * u, height: 34 * u, borderRadius: '50%', background: colors.bg, border: `${6 * u}px solid ${c}`, transform: `scale(${e})`, zIndex: 1}} />
+              <div style={{width: 34 * u, height: 34 * u, borderRadius: '50%', background: colors.panel, border: `${6 * u}px solid ${c}`, transform: `scale(${e})`, zIndex: 1}} />
               <div style={{position: 'absolute', ...(vertical ? {left: '58%', top: '50%', transform: 'translateY(-50%)', textAlign: 'left'} : up ? {bottom: 60 * u, textAlign: 'center'} : {top: 60 * u, textAlign: 'center'}), width: vertical ? 380 * u : 300 * u}}>
                 <div style={{fontFamily: fonts.display, fontWeight: 800, fontSize: 40 * u, color: c}}>{n.date}</div>
                 <div style={{fontSize: 30 * u, lineHeight: 1.3, fontWeight: 500, marginTop: 6 * u}}>{n.label}</div>
